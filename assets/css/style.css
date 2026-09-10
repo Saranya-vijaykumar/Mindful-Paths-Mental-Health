@@ -118,7 +118,14 @@ blockquote, .quote-editorial {
 
 /* Dark Mode Styles */
 html.dark body {
-  background-color: var(--color-dark-bg);
+  background-color: #11191f;
+  background-image:
+    radial-gradient(ellipse 75% 50% at 15% 10%, rgba(29, 76, 86, 0.28) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(215, 183, 165, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 50% 55%, rgba(41, 70, 87, 0.20) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 90%, rgba(29, 76, 86, 0.25) 0%, transparent 65%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #e5ddd5;
 }
 
@@ -429,7 +436,6 @@ html.dark article.card-wellness:hover {
 /* Organic 3-Lobe Scalloped Cloud / Blob Shape */
 .organic-scallop-cloud {
   border-radius: 60% 40% 55% 45% / 55% 45% 60% 40%;
-  animation: blobMorph 9s ease-in-out infinite alternate, blobFloat 6s ease-in-out infinite;
   box-shadow: 0 20px 40px -15px rgba(41, 70, 87, 0.2);
 }
 
@@ -604,114 +610,19 @@ html.dark article.card-wellness:hover {
 }
 
 /* ===================================================================
-   Ambient Zen Scroll-Reactive Background Suite 🌊✨
+   Static Calming Sanctuary Background System 🌿🏛️
+   Zero Moving Elements / Zero Background Animations
    =================================================================== */
 
-.ambient-scroll-canvas-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 5;
-  overflow: hidden;
-}
-
-#ambient-zen-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-/* Ambient Floating Glow Orbs in the background */
-.ambient-bg-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  will-change: transform;
-  pointer-events: none;
-  opacity: 0.38;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-}
-
-html.dark .ambient-bg-orb {
-  opacity: 0.25;
-}
-
-.orb-top-right {
-  width: 560px;
-  height: 560px;
-  top: -8%;
-  right: -6%;
-  background: radial-gradient(circle, rgba(143, 175, 192, 0.6) 0%, rgba(29, 76, 86, 0.22) 65%, transparent 80%);
-}
-
-.orb-mid-left {
-  width: 520px;
-  height: 520px;
-  top: 38%;
-  left: -8%;
-  background: radial-gradient(circle, rgba(215, 183, 165, 0.65) 0%, rgba(178, 83, 56, 0.22) 65%, transparent 80%);
-}
-
-.orb-lower-right {
-  width: 600px;
-  height: 600px;
-  top: 78%;
-  right: -10%;
-  background: radial-gradient(circle, rgba(165, 196, 189, 0.55) 0%, rgba(143, 175, 192, 0.2) 65%, transparent 80%);
-}
-
-/* Section-level Parallax Background Elements */
+.ambient-scroll-canvas-wrap,
+#ambient-zen-canvas,
+.ambient-bg-orb,
 .section-bg-deco {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-  will-change: transform;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Smooth organic idle wave motion */
-@keyframes waveShift {
-  0% {
-    transform: translateX(0) translateZ(0) scaleY(1);
-  }
-  50% {
-    transform: translateX(-15%) translateZ(0) scaleY(1.05);
-  }
-  100% {
-    transform: translateX(0) translateZ(0) scaleY(1);
-  }
+  display: none !important;
 }
 
 .animate-wave-slow {
-  animation: waveShift 20s ease-in-out infinite;
-}
-
-/* Accessibility: Respect Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  .reveal-on-scroll,
-  .reveal-scale,
-  .reveal-slide-left,
-  .reveal-slide-right {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-  .animate-breathe,
-  .animate-wave-slow {
-    animation: none !important;
-  }
-  .ambient-scroll-canvas-wrap,
-  #ambient-zen-canvas,
-  .ambient-bg-orb,
-  .section-bg-deco {
-    display: none !important;
-  }
+  animation: none !important;
 }
 
 /* Toast Container */
@@ -772,6 +683,14 @@ html.dark .ambient-bg-orb {
 
 html:not(.dark) body {
   background-color: #F8F6F1;
+  background-image: 
+    radial-gradient(ellipse 70% 50% at 12% 8%, rgba(143, 175, 192, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(215, 183, 165, 0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 40% at 50% 50%, rgba(165, 196, 189, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 50% at 18% 85%, rgba(215, 183, 165, 0.10) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 50% at 85% 90%, rgba(143, 175, 192, 0.10) 0%, transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #162229; /* Crisp deep oceanic obsidian */
 }
 
