@@ -40,53 +40,67 @@
       theme: {
         extend: {
           colors: {
-            sand: {
-              50: '#FAF6FB',
-              100: '#F4EEF7',
-              200: '#E7DCED',
-              300: '#D5C4DD',
-              400: '#B892B0', // Sunset Mauve
-              500: '#A3799A',
+            primary: {
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Warm Sand / Coastal Blush
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
+            },
+            cream: {
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Alabaster Background
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
             },
             teal: {
-              50: '#F7F3FA',
-              100: '#EDE4F2',
-              200: '#DCCCE6',
-              300: '#BFA8CE',
-              400: '#9478A7',
-              500: '#6E4E84',
-              600: '#4A355A', // Signature Deep Velvet Plum
-              700: '#3A2648',
-              800: '#2A1A35',
-              900: '#1C1024',
-              950: '#120818',
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Deep Oceanic Slate
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#FAF8FC',
-              100: '#F3EEF7',
-              200: '#E4DBEC',
-              300: '#CDBFDB',
-              400: '#AF9EC0',
-              500: '#937FA3', // Signature Lavender Mist
-              600: '#7B678C',
-              700: '#635073',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Glacier Mist
+              600: '#6f886d',
+              700: '#576c55',
             },
             brown: {
-              50: '#FBF9FC',
-              100: '#F5EFF8',
-              200: '#EBE0F0',
-              300: '#7D6D87',
-              400: '#8E7B9B',
-              500: '#534360',
-              600: '#2A2132', // Signature Deep Plum Charcoal Body Text
-              700: '#221929',
-              800: '#1B1321',
-              900: '#140D1A',
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Charcoal body
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#140F1A', // Midnight Plum Velvet
-              800: '#1E1726', // Rich Aubergine Surface
-              700: '#281F33',
+              900: '#11191f',
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -104,14 +118,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-[#F8F5FA] text-[#2A2132] dark:bg-[#140F1A] dark:text-[#F5EEFA] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <section class="min-h-screen flex items-stretch bg-white dark:bg-[#140F1A]">
+  <section class="min-h-screen flex items-stretch bg-white dark:bg-[#11191f]">
     
     <!-- Left Hero Image Banner -->
     <div class="hidden lg:block lg:w-1/2 relative bg-[#17232b] overflow-hidden">
       <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80" alt="Serene forest sunlight canopy" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-1000 hover:scale-100">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#140F1A]/95 via-[#17232b]/40 to-transparent flex flex-col justify-between p-12 text-white">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#11191f]/95 via-[#17232b]/40 to-transparent flex flex-col justify-between p-12 text-white">
         <a href="index.html" class="flex items-center gap-3 group w-fit">
           <div class="w-11 h-11 rounded-2xl bg-[#D7B7A5] flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -149,16 +163,16 @@
     </div>
 
     <!-- Right Login Form Area -->
-    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 md:p-12 bg-[#F8F5FA] dark:bg-[#140F1A] overflow-y-auto">
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 md:p-12 bg-[#F8F6F1] dark:bg-[#11191f] overflow-y-auto">
       <div class="w-full max-w-md space-y-5 my-auto">
         
         <!-- Top Controls: Back and Theme -->
         <div class="flex items-center justify-between">
-          <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#2A2132] dark:text-[#7d8d96] hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] transition-colors py-1.5 px-2.5 rounded-lg hover:bg-white/60 dark:hover:bg-white/5">
+          <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#27343B] dark:text-[#7d8d96] hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] transition-colors py-1.5 px-2.5 rounded-lg hover:bg-white/60 dark:hover:bg-white/5">
             <i class="fas fa-arrow-left"></i>
             <span>Back to Home</span>
           </a>
-          <button type="button" class="theme-toggle-btn w-9 h-9 rounded-full bg-white dark:bg-[#1e2d37] text-[#2A2132] dark:text-[#F8F5FA] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:scale-105 transition-all" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <button type="button" class="theme-toggle-btn w-9 h-9 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:scale-105 transition-all" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
             <i class="fas fa-moon moon-icon text-xs"></i>
             <i class="fas fa-sun sun-icon text-xs hidden"></i>
           </button>
@@ -172,8 +186,8 @@
                 <i class="fas fa-user-check"></i>
               </div>
               <div>
-                <p class="text-[11px] text-[#2A2132]/70 dark:text-[#7d8d96]">Currently logged in as</p>
-                <h4 id="active-user-display" class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">Alex Morgan</h4>
+                <p class="text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">Currently logged in as</p>
+                <h4 id="active-user-display" class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">Alex Morgan</h4>
               </div>
             </div>
             <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-bold">Active</span>
@@ -183,7 +197,7 @@
               <span>Enter Sanctuary</span>
               <i class="fas fa-arrow-right text-[10px]"></i>
             </a>
-            <button type="button" id="active-logout-btn" class="py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/15 text-[#2A2132] dark:text-[#F8F5FA] text-xs font-semibold transition-all" title="Sign out of this session">
+            <button type="button" id="active-logout-btn" class="py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/15 text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all" title="Sign out of this session">
               Sign Out
             </button>
           </div>
@@ -192,8 +206,8 @@
         <!-- Header Titles -->
         <div class="space-y-1.5">
           <span id="portal-subtitle" class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">Welcome Back</span>
-          <h1 id="portal-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F5FA]">Sign in to your sanctuary</h1>
-          <p id="portal-desc" class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96]">Manage appointments, review clinical reflection notes, and track your wellness journey.</p>
+          <h1 id="portal-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">Sign in to your sanctuary</h1>
+          <p id="portal-desc" class="text-xs text-[#27343B]/80 dark:text-[#7d8d96]">Manage appointments, review clinical reflection notes, and track your wellness journey.</p>
         </div>
 
         <!-- Portal Role Selector Tabs -->
@@ -202,7 +216,7 @@
             <i class="fas fa-heart text-[11px]"></i>
             <span>Client Sanctuary</span>
           </button>
-          <button type="button" id="tab-clinician" role="tab" aria-selected="false" class="flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 text-[#2A2132] dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white">
+          <button type="button" id="tab-clinician" role="tab" aria-selected="false" class="flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 text-[#27343B] dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white">
             <i class="fas fa-user-md text-[11px]"></i>
             <span>Clinician &amp; Staff</span>
           </button>
@@ -218,7 +232,7 @@
               <i class="fas fa-key text-[10px] text-[#D7B7A5]"></i>
               Demo Accounts
             </span>
-            <span class="text-[#2A2132]/70 dark:text-[#7d8d96]/70">Password: <strong class="font-mono text-[#294657] dark:text-[#F8F5FA]">demo12345</strong></span>
+            <span class="text-[#27343B]/70 dark:text-[#7d8d96]/70">Password: <strong class="font-mono text-[#294657] dark:text-[#F8F6F1]">demo12345</strong></span>
           </div>
           
           <div class="grid grid-cols-2 gap-2">
@@ -233,7 +247,7 @@
           </div>
 
           <!-- Instant 1-Click Login Helper -->
-          <div class="pt-1 flex items-center justify-between text-[11px] text-[#2A2132]/70 dark:text-[#7d8d96]">
+          <div class="pt-1 flex items-center justify-between text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">
             <span>Need fast test access?</span>
             <button type="button" id="instant-login-btn" class="font-bold text-[#D7B7A5] hover:underline flex items-center gap-1">
               <span>Instant Client Sign In</span>
@@ -254,9 +268,9 @@
               </span>
             </label>
             <div class="relative">
-              <input type="email" id="login-email" required placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
-              <i class="far fa-envelope absolute left-3 top-3.5 text-[#2A2132]/40 dark:text-[#7d8d96]/50"></i>
-              <button type="button" id="clear-email-btn" class="hidden absolute right-3 top-3 text-[#2A2132]/40 hover:text-[#2A2132] dark:text-white/40 dark:hover:text-white" title="Clear email">
+              <input type="email" id="login-email" required placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <i class="far fa-envelope absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
+              <button type="button" id="clear-email-btn" class="hidden absolute right-3 top-3 text-[#27343B]/40 hover:text-[#27343B] dark:text-white/40 dark:hover:text-white" title="Clear email">
                 <i class="fas fa-times-circle"></i>
               </button>
             </div>
@@ -274,9 +288,9 @@
               </button>
             </div>
             <div class="relative">
-              <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
-              <i class="fas fa-lock absolute left-3 top-3.5 text-[#2A2132]/40 dark:text-[#7d8d96]/50"></i>
-              <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#2A2132]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
+              <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <i class="fas fa-lock absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
+              <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
                 <i class="far fa-eye" id="login-pass-eye"></i>
               </button>
             </div>
@@ -290,11 +304,11 @@
 
           <!-- Remember Me & Security Badge -->
           <div class="flex items-center justify-between text-[11px] pt-1">
-            <label class="flex items-center gap-2 text-[#2A2132] dark:text-[#7d8d96] cursor-pointer select-none">
+            <label class="flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96] cursor-pointer select-none">
               <input type="checkbox" id="remember-me" checked class="rounded border-gray-300 text-[#D7B7A5] focus:ring-[#D7B7A5] dark:bg-[#1e2d37] dark:border-white/20">
               <span>Remember this browser</span>
             </label>
-            <span class="text-[#2A2132]/60 dark:text-[#7d8d96]/70 flex items-center gap-1">
+            <span class="text-[#27343B]/60 dark:text-[#7d8d96]/70 flex items-center gap-1">
               <i class="fas fa-shield-alt text-emerald-600 text-[10px]"></i>
               <span>256-Bit SSL</span>
             </span>
@@ -310,24 +324,24 @@
         <!-- Alternative SSO Divider -->
         <div class="relative flex py-1 items-center">
           <div class="flex-grow border-t border-[#EBF1F4] dark:border-white/10"></div>
-          <span class="flex-shrink mx-3 text-[10px] text-[#2A2132]/50 dark:text-white/40 uppercase tracking-widest font-semibold">Or continue with</span>
+          <span class="flex-shrink mx-3 text-[10px] text-[#27343B]/50 dark:text-white/40 uppercase tracking-widest font-semibold">Or continue with</span>
           <div class="flex-grow border-t border-[#EBF1F4] dark:border-white/10"></div>
         </div>
 
         <!-- SSO Quick Buttons -->
         <div class="grid grid-cols-2 gap-2.5">
-          <button type="button" id="sso-google-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#D7B7A5] text-[#2A2132] dark:text-[#F8F5FA] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
+          <button type="button" id="sso-google-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#D7B7A5] text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
             <i class="fab fa-google text-red-500"></i>
             <span>Google</span>
           </button>
-          <button type="button" id="sso-health-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-[#2A2132] dark:text-[#F8F5FA] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
+          <button type="button" id="sso-health-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
             <i class="fas fa-hospital-user text-[#8FAFC0]"></i>
             <span>Epic / MyChart</span>
           </button>
         </div>
 
         <!-- Registration Link -->
-        <div class="text-center text-xs text-[#2A2132] dark:text-[#7d8d96] pt-2 border-t border-[#EBF1F4] dark:border-white/10">
+        <div class="text-center text-xs text-[#27343B] dark:text-[#7d8d96] pt-2 border-t border-[#EBF1F4] dark:border-white/10">
           Don't have an account yet? <a href="register.html" class="font-bold text-[#D7B7A5] hover:underline">Complete Intake Registration</a>
         </div>
 
@@ -349,12 +363,12 @@
           <i class="fas fa-key"></i>
         </div>
         <div>
-          <h3 id="forgot-modal-title" class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA]">Recover Confidential Account</h3>
-          <p class="text-[11px] text-[#2A2132]/70 dark:text-[#7d8d96]">Password reset &amp; account lookup service</p>
+          <h3 id="forgot-modal-title" class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Recover Confidential Account</h3>
+          <p class="text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">Password reset &amp; account lookup service</p>
         </div>
       </div>
 
-      <p class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96] leading-relaxed">
+      <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
         Enter your registered email address below. We'll search our HIPAA-compliant database and provide your verified credentials immediately.
       </p>
 
@@ -366,8 +380,8 @@
         <div>
           <label for="recovery-email" class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Registered Email Address</label>
           <div class="relative">
-            <input type="email" id="recovery-email" required placeholder="alex@example.com" class="w-full pl-9 pr-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
-            <i class="far fa-envelope absolute left-3 top-3 text-[#2A2132]/40 dark:text-[#7d8d96]/50"></i>
+            <input type="email" id="recovery-email" required placeholder="alex@example.com" class="w-full pl-9 pr-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+            <i class="far fa-envelope absolute left-3 top-3 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
           </div>
         </div>
 
@@ -375,7 +389,7 @@
           <button type="submit" id="recovery-submit-btn" class="flex-1 py-2.5 px-4 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all">
             Find My Password
           </button>
-          <button type="button" id="cancel-recovery-btn" class="py-2.5 px-4 rounded-full bg-gray-100 dark:bg-white/10 text-[#2A2132] dark:text-[#F8F5FA] text-xs font-semibold hover:bg-gray-200 dark:hover:bg-white/15 transition-all">
+          <button type="button" id="cancel-recovery-btn" class="py-2.5 px-4 rounded-full bg-gray-100 dark:bg-white/10 text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold hover:bg-gray-200 dark:hover:bg-white/15 transition-all">
             Cancel
           </button>
         </div>
@@ -390,9 +404,9 @@
         <p class="text-[11px] text-emerald-900/90 dark:text-emerald-200">
           Account for <strong id="recovery-found-name">User</strong> is active.
         </p>
-        <div class="p-2 rounded-lg bg-white dark:bg-[#140F1A] border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-between text-xs">
+        <div class="p-2 rounded-lg bg-white dark:bg-[#11191f] border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-between text-xs">
           <span class="text-gray-500 dark:text-gray-400">Password:</span>
-          <span class="font-mono font-bold text-[#294657] dark:text-[#F8F5FA]" id="recovery-found-password">demo12345</span>
+          <span class="font-mono font-bold text-[#294657] dark:text-[#F8F6F1]" id="recovery-found-password">demo12345</span>
         </div>
         <button type="button" id="recovery-autofill-btn" class="w-full py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition-all shadow-sm flex items-center justify-center gap-1.5">
           <i class="fas fa-magic"></i>
@@ -400,7 +414,7 @@
         </button>
       </div>
 
-      <div class="pt-2 border-t border-[#EBF1F4] dark:border-white/10 text-[11px] text-[#2A2132]/60 dark:text-white/40 flex items-center justify-between">
+      <div class="pt-2 border-t border-[#EBF1F4] dark:border-white/10 text-[11px] text-[#27343B]/60 dark:text-white/40 flex items-center justify-between">
         <span>Clinical Hotline: <strong>(555) 234-7890</strong></span>
         <span>HIPAA Verification</span>
       </div>
@@ -535,11 +549,11 @@
         hideAlert();
         if (role === 'client') {
           tabClient.classList.add('bg-[#D7B7A5]', 'text-white', 'shadow-sm');
-          tabClient.classList.remove('text-[#2A2132]', 'dark:text-[#7d8d96]');
+          tabClient.classList.remove('text-[#27343B]', 'dark:text-[#7d8d96]');
           tabClient.setAttribute('aria-selected', 'true');
 
           tabClinician.classList.remove('bg-[#294657]', 'text-white', 'shadow-sm');
-          tabClinician.classList.add('text-[#2A2132]', 'dark:text-[#7d8d96]');
+          tabClinician.classList.add('text-[#27343B]', 'dark:text-[#7d8d96]');
           tabClinician.setAttribute('aria-selected', 'false');
 
           if (portalSubtitle) portalSubtitle.textContent = 'Welcome Back';
@@ -549,11 +563,11 @@
           emailInput.placeholder = 'alex@example.com';
         } else {
           tabClinician.classList.add('bg-[#294657]', 'text-white', 'shadow-sm');
-          tabClinician.classList.remove('text-[#2A2132]', 'dark:text-[#7d8d96]');
+          tabClinician.classList.remove('text-[#27343B]', 'dark:text-[#7d8d96]');
           tabClinician.setAttribute('aria-selected', 'true');
 
           tabClient.classList.remove('bg-[#D7B7A5]', 'text-white', 'shadow-sm');
-          tabClient.classList.add('text-[#2A2132]', 'dark:text-[#7d8d96]');
+          tabClient.classList.add('text-[#27343B]', 'dark:text-[#7d8d96]');
           tabClient.setAttribute('aria-selected', 'false');
 
           if (portalSubtitle) portalSubtitle.textContent = 'Clinical Oversight';

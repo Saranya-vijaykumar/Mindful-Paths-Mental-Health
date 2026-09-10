@@ -40,53 +40,67 @@
       theme: {
         extend: {
           colors: {
-            sand: {
-              50: '#FAF6FB',
-              100: '#F4EEF7',
-              200: '#E7DCED',
-              300: '#D5C4DD',
-              400: '#B892B0', // Sunset Mauve
-              500: '#A3799A',
+            primary: {
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Mindful Paths signature terracotta
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
+            },
+            cream: {
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Signature Warm Cream
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
             },
             teal: {
-              50: '#F7F3FA',
-              100: '#EDE4F2',
-              200: '#DCCCE6',
-              300: '#BFA8CE',
-              400: '#9478A7',
-              500: '#6E4E84',
-              600: '#4A355A', // Signature Deep Velvet Plum
-              700: '#3A2648',
-              800: '#2A1A35',
-              900: '#1C1024',
-              950: '#120818',
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Signature Deep Teal
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#FAF8FC',
-              100: '#F3EEF7',
-              200: '#E4DBEC',
-              300: '#CDBFDB',
-              400: '#AF9EC0',
-              500: '#937FA3', // Signature Lavender Mist
-              600: '#7B678C',
-              700: '#635073',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Signature Sage Green
+              600: '#6f886d',
+              700: '#576c55',
             },
             brown: {
-              50: '#FBF9FC',
-              100: '#F5EFF8',
-              200: '#EBE0F0',
-              300: '#7D6D87',
-              400: '#8E7B9B',
-              500: '#534360',
-              600: '#2A2132', // Signature Deep Plum Charcoal Body Text
-              700: '#221929',
-              800: '#1B1321',
-              900: '#140D1A',
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Signature Warm Brown body text
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#140F1A', // Midnight Plum Velvet
-              800: '#1E1726', // Rich Aubergine Surface
-              700: '#281F33',
+              900: '#11191f', // Deep Teal Charcoal
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -105,10 +119,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F8F5FA] text-[#2A2132] dark:bg-[#140F1A] dark:text-[#F5EEFA] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F5FA] text-xs font-medium py-2.5 px-4 border-b border-white/10">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
@@ -129,7 +143,7 @@
   </div>
 
   <!-- Main Navbar Header -->
-  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F5FA]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
+  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -139,13 +153,13 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F5FA] leading-none">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-none">
           Mindful Paths
         </span>
       </a>
 
       <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#2A2132] dark:text-[#EBF1F4]">
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
         <!-- Home Dropdown -->
         <div class="relative group py-2 flex items-center">
           <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-[#D7B7A5] dark:text-[#e6c8b9] font-bold">
@@ -240,13 +254,13 @@
       <!-- Right Action Controls (Desktop Only) -->
       <div class="hidden lg:flex items-center gap-3 shrink-0">
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#2A2132] dark:text-[#F8F5FA] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
 
         <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#2A2132] dark:text-[#F8F5FA] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
           <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
 
@@ -258,7 +272,7 @@
 
       <!-- Mobile Navbar: STRICTLY Logo + Hamburger ONLY -->
       <div class="flex lg:hidden items-center">
-        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F5FA] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
+        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -267,7 +281,7 @@
   </header>
 
   <!-- Signature Hero Section with Generated Embrace Image -->
-  <section class="relative pt-12 pb-24 md:py-32 bg-gradient-to-b from-[#F8F5FA] via-[#EBF1F4]/50 to-[#F8F5FA] dark:from-[#140F1A] dark:via-[#17232b] dark:to-[#140F1A] overflow-hidden">
+  <section class="relative pt-12 pb-24 md:py-32 bg-gradient-to-b from-[#F8F6F1] via-[#EBF1F4]/50 to-[#F8F6F1] dark:from-[#11191f] dark:via-[#17232b] dark:to-[#11191f] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
         
@@ -277,11 +291,11 @@
             <i class="fas fa-heart text-[#D7B7A5]"></i> Flagship Mental Wellness Demo
           </div>
 
-          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#294657] dark:text-[#F8F5FA] leading-[1.12]">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-[1.12]">
             Your journey toward <span class="italic text-[#D7B7A5]">inner peace</span> begins with one breath.
           </h1>
 
-          <p class="text-base sm:text-lg text-[#2A2132] dark:text-[#EBF1F4] leading-relaxed">
+          <p class="text-base sm:text-lg text-[#27343B] dark:text-[#EBF1F4] leading-relaxed">
             Welcome to a non-clinical, empathetic psychological wellness space designed around your emotional needs. Here, you are never judged—only understood, supported, and guided.
           </p>
 
@@ -289,7 +303,7 @@
             <a href="#wellness-journey-section" class="px-7 py-4 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-105 active:scale-95 flex items-center gap-2">
               <i class="fas fa-route"></i> Start Your Wellness Journey
             </a>
-            <a href="#breathing-tool-section" class="px-7 py-4 rounded-full bg-white dark:bg-[#17232b] hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] text-[#294657] dark:text-[#F8F5FA] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 shadow-sm transition-all duration-200 flex items-center gap-2">
+            <a href="#breathing-tool-section" class="px-7 py-4 rounded-full bg-white dark:bg-[#17232b] hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 shadow-sm transition-all duration-200 flex items-center gap-2">
               <i class="fas fa-lungs text-[#8FAFC0]"></i> Take a Breath (4-4-4)
             </a>
           </div>
@@ -299,13 +313,13 @@
             <div class="flex items-center gap-2 text-xs font-bold text-[#D7B7A5]">
               <i class="fas fa-sparkles text-amber-400"></i> The Safe Harbor Philosophy
             </div>
-            <p class="font-heading text-sm sm:text-base font-semibold italic text-[#294657] dark:text-[#F8F5FA]">
+            <p class="font-heading text-sm sm:text-base font-semibold italic text-[#294657] dark:text-[#F8F6F1]">
               "Healing happens when we are accepted exactly as we are."
             </p>
           </div>
 
           <!-- Compassionate Statement -->
-          <div class="pt-1 flex items-center gap-3 text-xs text-[#2A2132] dark:text-[#7d8d96]">
+          <div class="pt-1 flex items-center gap-3 text-xs text-[#27343B] dark:text-[#7d8d96]">
             <i class="fas fa-shield-halved text-[#8FAFC0] text-base"></i>
             <span>No referral needed &middot; 100% confidential &middot; In-person &amp; secure telehealth</span>
           </div>
@@ -326,8 +340,8 @@
               <i class="fas fa-heart text-[#D7B7A5]"></i>
             </div>
             <div>
-              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">Warm Welcome</div>
-              <div class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">Compassionate &middot; Non-judgmental</div>
+              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">Warm Welcome</div>
+              <div class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">Compassionate &middot; Non-judgmental</div>
             </div>
           </div>
 
@@ -337,8 +351,8 @@
               <i class="fas fa-user-shield"></i>
             </div>
             <div>
-              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">Safe Client Sanctuary</div>
-              <div class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">Confidential care &amp; guidance</div>
+              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">Safe Client Sanctuary</div>
+              <div class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">Confidential care &amp; guidance</div>
             </div>
           </div>
         </div>
@@ -353,73 +367,73 @@
       
       <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
         <span class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">Interactive Care Recommendation</span>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA]">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
           Where would you like to begin?
         </h2>
-        <p class="text-sm text-[#2A2132] dark:text-[#EBF1F4]">
+        <p class="text-sm text-[#27343B] dark:text-[#EBF1F4]">
           Select the focus area that best aligns with what you are experiencing. We will match you with the ideal modality, clinician, and timeline.
         </p>
       </div>
 
       <!-- 6 Journey Options (Wellness Journey Selector) -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10" id="journey-options-container">
-        <button type="button" data-journey="anxiety" class="journey-btn active p-4 rounded-2xl border-2 text-center transition-all bg-[#F8F5FA] border-[#D7B7A5] text-[#294657] dark:bg-[#1e2d37] dark:border-[#D7B7A5] dark:text-[#F8F5FA] shadow-sm">
+        <button type="button" data-journey="anxiety" class="journey-btn active p-4 rounded-2xl border-2 text-center transition-all bg-[#F8F6F1] border-[#D7B7A5] text-[#294657] dark:bg-[#1e2d37] dark:border-[#D7B7A5] dark:text-[#F8F6F1] shadow-sm">
           <div class="text-xl mb-2 text-[#D7B7A5]"><i class="fas fa-cloud-sun"></i></div>
           <div class="text-xs font-bold">Stress &amp; Anxiety</div>
         </button>
 
-        <button type="button" data-journey="relationships" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#2A2132] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
+        <button type="button" data-journey="relationships" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#27343B] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
           <div class="text-xl mb-2 text-[#294657] dark:text-[#8FAFC0]"><i class="fas fa-hand-holding-heart"></i></div>
           <div class="text-xs font-bold">Relationships</div>
         </button>
 
-        <button type="button" data-journey="trauma" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#2A2132] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
+        <button type="button" data-journey="trauma" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#27343B] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
           <div class="text-xl mb-2 text-[#8FAFC0]"><i class="fas fa-shield-heart"></i></div>
           <div class="text-xs font-bold">Trauma &amp; EMDR</div>
         </button>
 
-        <button type="button" data-journey="growth" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#2A2132] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
+        <button type="button" data-journey="growth" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#27343B] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
           <div class="text-xl mb-2 text-[#D7B7A5]"><i class="fas fa-seedling"></i></div>
           <div class="text-xs font-bold">Personal Growth</div>
         </button>
 
-        <button type="button" data-journey="teen" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#2A2132] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
+        <button type="button" data-journey="teen" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#27343B] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
           <div class="text-xl mb-2 text-[#294657] dark:text-[#8FAFC0]"><i class="fas fa-user-graduate"></i></div>
           <div class="text-xs font-bold">Teen Support</div>
         </button>
 
-        <button type="button" data-journey="burnout" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#2A2132] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
+        <button type="button" data-journey="burnout" class="journey-btn p-4 rounded-2xl border-2 text-center transition-all bg-white border-[#EBF1F4] text-[#27343B] hover:border-[#D7B7A5]/50 dark:bg-[#17232b] dark:border-white/10 dark:text-[#EBF1F4]">
           <div class="text-xl mb-2 text-[#8FAFC0]"><i class="fas fa-battery-half"></i></div>
           <div class="text-xs font-bold">Burnout &amp; Career</div>
         </button>
       </div>
 
       <!-- Dynamic Journey Match Result Card -->
-      <div id="journey-result-card" class="bg-[#F8F5FA] dark:bg-[#140F1A] p-8 sm:p-10 rounded-3xl border border-[#EBF1F4] dark:border-white/10 shadow-lg transition-all">
+      <div id="journey-result-card" class="bg-[#F8F6F1] dark:bg-[#11191f] p-8 sm:p-10 rounded-3xl border border-[#EBF1F4] dark:border-white/10 shadow-lg transition-all">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           <div class="lg:col-span-8 space-y-4">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D7B7A5]/10 text-[#D7B7A5] text-xs font-bold">
               <span id="journey-badge">Recommended Pathway: Anxiety &amp; Nervous System Balance</span>
             </div>
-            <h3 id="journey-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F5FA]">
+            <h3 id="journey-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">
               Cognitive Behavioral &amp; Somatic Reset
             </h3>
-            <p id="journey-description" class="text-sm text-[#2A2132] dark:text-[#EBF1F4] leading-relaxed">
+            <p id="journey-description" class="text-sm text-[#27343B] dark:text-[#EBF1F4] leading-relaxed">
               Designed specifically for persistent tension, overthinking, and nervous system fatigue. We integrate cognitive restructuring with polyvagal somatic breathing to quiet mental noise and ground your body.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs">
               <div class="p-3 bg-white dark:bg-[#17232b] rounded-xl border border-[#EBF1F4] dark:border-white/10">
-                <span class="text-[#2A2132] dark:text-[#7d8d96] block">Session Frequency</span>
-                <span id="journey-frequency" class="font-bold text-[#294657] dark:text-[#F8F5FA]">50-min weekly session</span>
+                <span class="text-[#27343B] dark:text-[#7d8d96] block">Session Frequency</span>
+                <span id="journey-frequency" class="font-bold text-[#294657] dark:text-[#F8F6F1]">50-min weekly session</span>
               </div>
               <div class="p-3 bg-white dark:bg-[#17232b] rounded-xl border border-[#EBF1F4] dark:border-white/10">
-                <span class="text-[#2A2132] dark:text-[#7d8d96] block">Recommended Format</span>
-                <span id="journey-format" class="font-bold text-[#294657] dark:text-[#F8F5FA]">In-Person or Telehealth</span>
+                <span class="text-[#27343B] dark:text-[#7d8d96] block">Recommended Format</span>
+                <span id="journey-format" class="font-bold text-[#294657] dark:text-[#F8F6F1]">In-Person or Telehealth</span>
               </div>
               <div class="p-3 bg-white dark:bg-[#17232b] rounded-xl border border-[#EBF1F4] dark:border-white/10">
-                <span class="text-[#2A2132] dark:text-[#7d8d96] block">Next Intake Opening</span>
+                <span class="text-[#27343B] dark:text-[#7d8d96] block">Next Intake Opening</span>
                 <span id="journey-opening" class="font-bold text-[#8FAFC0]">This Thursday 2:00 PM</span>
               </div>
             </div>
@@ -431,11 +445,11 @@
               <img id="journey-therapist-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Sarah Jenkins" class="w-20 h-20 rounded-2xl object-cover object-center border-2 border-[#D7B7A5]/30 shadow-md shrink-0">
               <div class="space-y-1">
                 <div class="text-[11px] text-[#D7B7A5] font-bold uppercase tracking-wider" id="journey-therapist-spec">Lead Psychologist</div>
-                <div class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F5FA] leading-snug" id="journey-therapist-name">Dr. Sarah Jenkins, Psy.D.</div>
+                <div class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F6F1] leading-snug" id="journey-therapist-name">Dr. Sarah Jenkins, Psy.D.</div>
                 <span class="inline-flex items-center gap-1 text-[11px] text-[#8FAFC0] font-semibold"><i class="fas fa-check-circle text-[10px]"></i> Board Certified</span>
               </div>
             </div>
-            <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]" id="journey-therapist-quote">
+            <p class="text-xs text-[#27343B] dark:text-[#7d8d96]" id="journey-therapist-quote">
               &ldquo;We don't try to eliminate all anxiety—we help your nervous system realize it is safe right here.&rdquo;
             </p>
             <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all">
@@ -450,15 +464,15 @@
   </section>
 
   <!-- INTERACTIVE "TAKE A BREATH" 4-4-4 BOX BREATHING SECTION -->
-  <section id="breathing-tool-section" class="py-20 bg-[#F8F5FA] dark:bg-[#140F1A] scroll-mt-24">
+  <section id="breathing-tool-section" class="py-20 bg-[#F8F6F1] dark:bg-[#11191f] scroll-mt-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
       
       <div class="space-y-3">
         <span class="text-xs font-bold uppercase tracking-wider text-[#8FAFC0]">Somatic Reset Tool</span>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA]">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
           Take a Gentle Breath
         </h2>
-        <p class="text-xs sm:text-sm text-[#2A2132] dark:text-[#EBF1F4] max-w-md mx-auto">
+        <p class="text-xs sm:text-sm text-[#27343B] dark:text-[#EBF1F4] max-w-md mx-auto">
           Box breathing stimulates the vagus nerve and lowers acute cortisol within 90 seconds. Follow the circle below:
         </p>
       </div>
@@ -481,12 +495,12 @@
         <button type="button" id="breathing-start-btn" class="px-8 py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all hover:scale-105 active:scale-95">
           <i class="fas fa-play mr-1.5"></i> Begin 4-4-4 Breathing
         </button>
-        <button type="button" id="breathing-reset-btn" class="px-6 py-3.5 rounded-full bg-white dark:bg-[#17232b] hover:bg-[#EBF1F4] text-[#294657] dark:text-[#F8F5FA] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all">
+        <button type="button" id="breathing-reset-btn" class="px-6 py-3.5 rounded-full bg-white dark:bg-[#17232b] hover:bg-[#EBF1F4] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all">
           <i class="fas fa-rotate-left mr-1.5"></i> Reset
         </button>
       </div>
 
-      <p class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">
+      <p class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">
         Inhale 4s &middot; Hold 4s &middot; Exhale 4s &middot; Hold 4s
       </p>
 
@@ -500,10 +514,10 @@
         
         <div class="lg:col-span-6 space-y-6">
           <span class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">Private Client Sanctuary</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA]">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
             Your confidential therapeutic space between sessions.
           </h2>
-          <p class="text-sm text-[#2A2132] dark:text-[#EBF1F4] leading-relaxed">
+          <p class="text-sm text-[#27343B] dark:text-[#EBF1F4] leading-relaxed">
             Healing doesn't pause when your 50-minute appointment concludes. Every client receives complimentary access to their encrypted Mindful Paths Sanctuary:
           </p>
 
@@ -512,21 +526,21 @@
               <div class="w-7 h-7 rounded-lg bg-[#D7B7A5]/10 text-[#D7B7A5] flex items-center justify-center shrink-0 text-xs">
                 <i class="fas fa-smile"></i>
               </div>
-              <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F5FA]">Private Mood Journal:</strong> Track daily emotional fluctuations and identify recurring situational triggers.</p>
+              <p class="text-xs text-[#27343B] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F6F1]">Private Mood Journal:</strong> Track daily emotional fluctuations and identify recurring situational triggers.</p>
             </div>
 
             <div class="flex items-start gap-3">
               <div class="w-7 h-7 rounded-lg bg-[#294657]/10 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center shrink-0 text-xs">
                 <i class="fas fa-file-lines"></i>
               </div>
-              <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F5FA]">Shared Clinical Notes:</strong> Re-read coping tools, journal prompts, and breakthroughs recorded together in session.</p>
+              <p class="text-xs text-[#27343B] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F6F1]">Shared Clinical Notes:</strong> Re-read coping tools, journal prompts, and breakthroughs recorded together in session.</p>
             </div>
 
             <div class="flex items-start gap-3">
               <div class="w-7 h-7 rounded-lg bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center shrink-0 text-xs">
                 <i class="fas fa-comment-dots"></i>
               </div>
-              <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F5FA]">Secure Counselor Messaging:</strong> Asynchronous check-ins for non-emergency reflections between appointments.</p>
+              <p class="text-xs text-[#27343B] dark:text-[#7d8d96]"><strong class="text-[#294657] dark:text-[#F8F6F1]">Secure Counselor Messaging:</strong> Asynchronous check-ins for non-emergency reflections between appointments.</p>
             </div>
           </div>
 
@@ -534,7 +548,7 @@
             <a href="login.html" class="px-7 py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all">
               Sign In to Sanctuary
             </a>
-            <a href="register.html" class="px-7 py-3.5 rounded-full bg-[#F8F5FA] dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F5FA] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all">
+            <a href="register.html" class="px-7 py-3.5 rounded-full bg-[#F8F6F1] dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all">
               Register Intake
             </a>
           </div>
@@ -542,13 +556,13 @@
 
         <!-- Dashboard UI Mockup Preview -->
         <div class="lg:col-span-6">
-          <div class="p-6 rounded-3xl bg-[#F8F5FA] dark:bg-[#140F1A] border border-[#EBF1F4] dark:border-white/10 shadow-xl space-y-4">
+          <div class="p-6 rounded-3xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#EBF1F4] dark:border-white/10 shadow-xl space-y-4">
             <!-- Mock Header -->
             <div class="flex items-center justify-between pb-3 border-b border-[#EBF1F4] dark:border-white/10">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-full bg-[#D7B7A5] text-white flex items-center justify-center text-xs font-bold">AM</div>
                 <div>
-                  <div class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">Good morning, Alex</div>
+                  <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">Good morning, Alex</div>
                   <div class="text-[10px] text-[#8FAFC0]">Next Session: Thursday 2:00 PM</div>
                 </div>
               </div>
@@ -557,7 +571,7 @@
 
             <!-- Mock Mood Quick Log -->
             <div class="p-4 bg-white dark:bg-[#17232b] rounded-2xl border border-[#EBF1F4] dark:border-white/10 space-y-2">
-              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">How are you feeling right now?</div>
+              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">How are you feeling right now?</div>
               <div class="flex justify-between text-2xl pt-1 select-none">
                 <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="great" title="Feeling Great">😊</span>
                 <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="good" title="Feeling Good">🙂</span>
@@ -571,8 +585,8 @@
             <div class="p-4 bg-white dark:bg-[#17232b] rounded-2xl border border-[#EBF1F4] dark:border-white/10 flex items-center justify-between">
               <div>
                 <div class="text-[10px] uppercase font-bold text-[#D7B7A5]">Upcoming Telehealth Session</div>
-                <div class="text-xs font-bold text-[#294657] dark:text-[#F8F5FA]">With Dr. Sarah Jenkins</div>
-                <div class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">Thursday, Sept 12 &middot; 2:00 PM (50 Min)</div>
+                <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">With Dr. Sarah Jenkins</div>
+                <div class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">Thursday, Sept 12 &middot; 2:00 PM (50 Min)</div>
               </div>
               <span class="px-3 py-1.5 rounded-full bg-[#294657] text-white text-[11px] font-bold">Join Video</span>
             </div>
@@ -580,7 +594,7 @@
             <!-- Mock Shared Notes Snippet -->
             <div class="p-4 bg-white dark:bg-[#17232b] rounded-2xl border border-[#EBF1F4] dark:border-white/10 space-y-1">
               <div class="text-[10px] uppercase font-bold text-[#8FAFC0]">Therapist Shared Reflection</div>
-              <p class="text-xs text-[#2A2132] dark:text-[#7d8d96] italic">
+              <p class="text-xs text-[#27343B] dark:text-[#7d8d96] italic">
                 &ldquo;Remember: whenever you notice the chest tightness, pause for 3 box breaths before replying to stressful emails.&rdquo;
               </p>
             </div>
@@ -599,7 +613,7 @@
   <!-- Luxury Deep Teal Charcoal Footer -->
   
   <!-- Luxury Deep Teal Charcoal Footer -->
-  <footer class="bg-[#140F1A] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -622,10 +636,10 @@
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
               <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
               <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
@@ -724,10 +738,10 @@
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
         <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
-          <a href="privacy.html" class="hover:text-[#F8F5FA] transition-colors">Privacy Policy</a>
-          <a href="hipaa.html" class="hover:text-[#F8F5FA] transition-colors">HIPAA Disclosures</a>
-          <a href="terms.html" class="hover:text-[#F8F5FA] transition-colors">Terms of Care</a>
-          <a href="sitemap.html" class="hover:text-[#F8F5FA] transition-colors">Website Sitemap</a>
+          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
         </div>
       </div>
     </div>
@@ -735,7 +749,7 @@
 
   <!-- Universal Appointment Booking Modal -->
   <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative w-full max-w-lg bg-[#F8F5FA] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
+    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
       
       <!-- Modal Header -->
       <div class="px-6 py-5 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between">
@@ -810,7 +824,7 @@
 
         <div class="flex items-start gap-2 pt-1">
           <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
-          <label for="modal-hipaa" class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">
+          <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">
             I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
           </label>
         </div>
@@ -825,7 +839,7 @@
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F5FA] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
       <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <div class="flex items-center gap-2.5">
@@ -836,25 +850,25 @@
           </div>
           <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="text-[#2A2132] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
+        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <!-- Drawer Controls (Theme & RTL) -->
       <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
-        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
           <span class="theme-label">Theme</span>
         </button>
-        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-globe text-xs"></i>
           <span class="rtl-text">RTL</span>
         </button>
       </div>
 
-      <nav class="space-y-1 text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4]">
+      <nav class="space-y-1 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
         <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 (Services Landing)</a>
         <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 (The Wellness Journey)</a>
         <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>

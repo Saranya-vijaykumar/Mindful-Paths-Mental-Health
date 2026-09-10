@@ -40,53 +40,67 @@
       theme: {
         extend: {
           colors: {
-            sand: {
-              50: '#FAF6FB',
-              100: '#F4EEF7',
-              200: '#E7DCED',
-              300: '#D5C4DD',
-              400: '#B892B0', // Sunset Mauve
-              500: '#A3799A',
+            primary: {
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Mindful Paths signature terracotta
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
+            },
+            cream: {
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Signature Warm Cream
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
             },
             teal: {
-              50: '#F7F3FA',
-              100: '#EDE4F2',
-              200: '#DCCCE6',
-              300: '#BFA8CE',
-              400: '#9478A7',
-              500: '#6E4E84',
-              600: '#4A355A', // Signature Deep Velvet Plum
-              700: '#3A2648',
-              800: '#2A1A35',
-              900: '#1C1024',
-              950: '#120818',
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Signature Deep Teal
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#FAF8FC',
-              100: '#F3EEF7',
-              200: '#E4DBEC',
-              300: '#CDBFDB',
-              400: '#AF9EC0',
-              500: '#937FA3', // Signature Lavender Mist
-              600: '#7B678C',
-              700: '#635073',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Signature Sage Green
+              600: '#6f886d',
+              700: '#576c55',
             },
             brown: {
-              50: '#FBF9FC',
-              100: '#F5EFF8',
-              200: '#EBE0F0',
-              300: '#7D6D87',
-              400: '#8E7B9B',
-              500: '#534360',
-              600: '#2A2132', // Signature Deep Plum Charcoal Body Text
-              700: '#221929',
-              800: '#1B1321',
-              900: '#140D1A',
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Signature Warm Brown body text
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#140F1A', // Midnight Plum Velvet
-              800: '#1E1726', // Rich Aubergine Surface
-              700: '#281F33',
+              900: '#11191f', // Deep Teal Charcoal
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -105,13 +119,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F8F5FA] text-[#2A2132] dark:bg-[#140F1A] dark:text-[#F5EEFA] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <section class="min-h-screen flex items-center justify-center p-6 bg-[#F8F5FA] dark:bg-[#140F1A]">
+  <section class="min-h-screen flex items-center justify-center p-6 bg-[#F8F6F1] dark:bg-[#11191f]">
     <div class="w-full max-w-lg bg-white dark:bg-[#17232b] p-8 sm:p-10 rounded-3xl border border-[#EBF1F4] dark:border-white/10 shadow-2xl space-y-6">
       
       <div class="flex items-center justify-between">
-        <a href="index.html" class="text-xs font-bold text-[#2A2132] dark:text-[#7d8d96] hover:text-[#D7B7A5] flex items-center gap-1.5 transition-colors">
+        <a href="index.html" class="text-xs font-bold text-[#27343B] dark:text-[#7d8d96] hover:text-[#D7B7A5] flex items-center gap-1.5 transition-colors">
           <i class="fas fa-arrow-left"></i> Home
         </a>
         <a href="login.html" class="text-xs font-bold text-[#D7B7A5] hover:underline">Already registered? Log In</a>
@@ -119,8 +133,8 @@
 
       <div class="space-y-1">
         <span class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">New Client Intake</span>
-        <h1 class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F5FA]">Create Your Sanctuary Account</h1>
-        <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]">HIPAA-compliant client profile registration. Only registered accounts can access the client dashboard.</p>
+        <h1 class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">Create Your Sanctuary Account</h1>
+        <p class="text-xs text-[#27343B] dark:text-[#7d8d96]">HIPAA-compliant client profile registration. Only registered accounts can access the client dashboard.</p>
       </div>
 
       <!-- Inline Alert Banner -->
@@ -131,22 +145,22 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Full Legal Name *</label>
-            <input type="text" id="reg-name" required placeholder="e.g. Rachel Adams" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
+            <input type="text" id="reg-name" required placeholder="e.g. Rachel Adams" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Name</label>
-            <input type="text" id="reg-preferred-name" placeholder="e.g. Rae" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
+            <input type="text" id="reg-preferred-name" placeholder="e.g. Rae" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
-            <input type="email" id="reg-email" required placeholder="name@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
+            <input type="email" id="reg-email" required placeholder="name@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number</label>
-            <input type="tel" id="reg-phone" placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
+            <input type="tel" id="reg-phone" placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
         </div>
 
@@ -154,8 +168,8 @@
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Create Password * (min. 6 chars)</label>
             <div class="relative">
-              <input type="password" id="reg-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
-              <button type="button" id="toggle-reg-password" class="absolute right-2.5 top-2 text-[#2A2132]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle password visibility">
+              <input type="password" id="reg-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+              <button type="button" id="toggle-reg-password" class="absolute right-2.5 top-2 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle password visibility">
                 <i class="far fa-eye" id="reg-pass-eye"></i>
               </button>
             </div>
@@ -163,8 +177,8 @@
           <div>
             <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Confirm Password *</label>
             <div class="relative">
-              <input type="password" id="reg-confirm-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
-              <button type="button" id="toggle-reg-confirm-password" class="absolute right-2.5 top-2 text-[#2A2132]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle confirm password visibility">
+              <input type="password" id="reg-confirm-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+              <button type="button" id="toggle-reg-confirm-password" class="absolute right-2.5 top-2 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle confirm password visibility">
                 <i class="far fa-eye" id="reg-confirm-pass-eye"></i>
               </button>
             </div>
@@ -173,7 +187,7 @@
 
         <div>
           <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What focus area are you seeking support for?</label>
-          <select id="reg-focus" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F5FA] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F5FA] focus:outline-none focus:border-[#D7B7A5]">
+          <select id="reg-focus" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
             <option value="anxiety">Stress, Anxiety &amp; Panic</option>
             <option value="couples">Relationship &amp; Couples Counseling</option>
             <option value="trauma">Trauma Recovery &amp; EMDR</option>
@@ -184,7 +198,7 @@
 
         <div class="flex items-start gap-2 pt-1">
           <input type="checkbox" id="reg-consent" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-0">
-          <label for="reg-consent" class="text-[11px] text-[#2A2132] dark:text-[#7d8d96] cursor-pointer">
+          <label for="reg-consent" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] cursor-pointer">
             I consent to confidential electronic communication and HIPAA medical privacy terms.
           </label>
         </div>
