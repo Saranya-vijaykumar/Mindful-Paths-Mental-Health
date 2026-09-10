@@ -1710,30 +1710,45 @@ html.dark #mobile-menu-drawer nav a:hover {
 
 @media (max-width: 640px) {
   #appointment-modal {
-    padding: 0.625rem !important;
-    align-items: center !important;
+    padding: 0 !important;
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
+    overflow: hidden !important;
   }
   
   #appointment-modal > div {
-    max-height: 94vh !important;
-    border-radius: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 88dvh !important;
+    max-height: 88vh !important;
+    margin: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45) !important;
   }
   
   #appointment-booking-form {
-    padding: 1rem 1.125rem !important;
-    gap: 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
   }
-  
-  /* Prevent iOS Safari from automatic viewport zooming on focus */
+
+  /* Prevent mobile browsers from automatic viewport zooming on focus */
   #appointment-booking-form input,
   #appointment-booking-form select,
   #appointment-booking-form textarea {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   
   #appointment-modal-close {
-    width: 36px !important;
-    height: 36px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 }
 

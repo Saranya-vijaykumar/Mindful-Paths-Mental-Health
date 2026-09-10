@@ -423,90 +423,95 @@
     </div>
   </footer>
 
-  <!-- Universal Appointment Booking Modal -->
-  <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
-    <div class="relative w-full max-w-lg my-auto bg-[#F8F6F1] dark:bg-[#17232b] rounded-2xl sm:rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden flex flex-col max-h-[92vh] sm:max-h-[90vh] animate-fade-in">
+    <!-- Universal Appointment Booking Modal -->
+  <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4 overflow-hidden sm:overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
+    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-[#EBF1F4] dark:border-white/10 overflow-hidden flex flex-col max-h-[88dvh] sm:max-h-[90vh] animate-fade-in">
       
       <!-- Modal Header (Fixed / Sticky at Top) -->
-      <div class="px-4 sm:px-6 py-3.5 sm:py-4 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between shrink-0 shadow-sm">
+      <div class="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between shrink-0 shadow-sm">
         <div class="pr-2">
-          <h3 id="appointment-modal-title" class="font-heading text-lg sm:text-xl font-bold leading-tight">Book a Confidential Session</h3>
-          <p class="text-[11px] sm:text-xs text-white/90">100% HIPAA-compliant &amp; judgment-free intake</p>
+          <div class="w-10 h-1 bg-white/40 rounded-full mx-auto mb-1.5 sm:hidden"></div>
+          <h3 id="appointment-modal-title" class="font-heading text-base sm:text-xl font-bold leading-tight">Book a Confidential Session</h3>
+          <p class="text-[10px] sm:text-xs text-white/90">100% HIPAA-compliant &amp; judgment-free intake</p>
         </div>
         <button type="button" id="appointment-modal-close" class="text-white hover:text-white/80 w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all shrink-0 active:scale-90" aria-label="Close modal">
           <i class="fas fa-times text-sm sm:text-xs"></i>
         </button>
       </div>
 
-      <!-- Modal Body / Form (Scrollable on small mobile screens with smooth touch momentum) -->
-      <form id="appointment-booking-form" class="p-4 sm:p-6 space-y-3 sm:space-y-4 overflow-y-auto overscroll-contain">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Your Full Name *</label>
-            <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+      <!-- Modal Form Container -->
+      <form id="appointment-booking-form" class="flex flex-col flex-1 min-h-0 overflow-hidden">
+        <!-- Scrollable Inputs Area -->
+        <div class="p-4 sm:p-6 space-y-3 sm:space-y-4 overflow-y-auto flex-1 min-h-0 overscroll-contain">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Your Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
+              <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+            </div>
           </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Session Format *</label>
+              <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+                <option value="telehealth">Telehealth (Secure Video)</option>
+                <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
+                <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Service Desired</label>
+              <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+                <option value="">Select Service (or General Intake)</option>
+                <option value="individual">Individual Therapy</option>
+                <option value="couples">Couples Counseling</option>
+                <option value="teen">Teen Counseling</option>
+                <option value="trauma">Trauma &amp; EMDR Recovery</option>
+                <option value="cbt">CBT for Anxiety &amp; Panic</option>
+                <option value="telehealth">Online Video Therapy</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Clinician</label>
+              <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+                <option value="">First Available Specialist</option>
+                <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
+                <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
+                <option value="elena">Elena Rostova, LCSW (Trauma / EMDR)</option>
+                <option value="david">Dr. David Kim, M.D. (Child / Adolescent)</option>
+                <option value="maya">Dr. Maya Patel, Ph.D. (Neuropsychology)</option>
+                <option value="james">James Thornton, LPC (Mindfulness / CBT)</option>
+              </select>
+            </div>
+          </div>
+
           <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
-            <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What brings you to counseling? (Confidential)</label>
+            <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]"></textarea>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number *</label>
-            <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
+        <!-- Sticky Footer with HIPAA Checkbox and Submit Button -->
+        <div class="p-3.5 sm:p-5 bg-white/95 dark:bg-[#131e25]/95 backdrop-blur-md border-t border-[#EBF1F4] dark:border-white/10 shrink-0 space-y-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+          <div class="flex items-start gap-2">
+            <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
+            <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] leading-tight">
+              I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
+            </label>
           </div>
-          <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Session Format *</label>
-            <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
-              <option value="telehealth">Telehealth (Secure Video)</option>
-              <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
-              <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
-            </select>
-          </div>
-        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Service Desired</label>
-            <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
-              <option value="">Select Service (or General Intake)</option>
-              <option value="individual">Individual Therapy</option>
-              <option value="couples">Couples Counseling</option>
-              <option value="teen">Teen Counseling</option>
-              <option value="trauma">Trauma &amp; EMDR Recovery</option>
-              <option value="cbt">CBT for Anxiety &amp; Panic</option>
-              <option value="telehealth">Online Video Therapy</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Clinician</label>
-            <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
-              <option value="">First Available Specialist</option>
-              <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
-              <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
-              <option value="elena">Elena Rostova, LCSW (Trauma / EMDR)</option>
-              <option value="david">Dr. David Kim, M.D. (Child / Adolescent)</option>
-              <option value="maya">Dr. Maya Patel, Ph.D. (Neuropsychology)</option>
-              <option value="james">James Thornton, LPC (Mindfulness / CBT)</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What brings you to counseling? (Confidential)</label>
-          <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs sm:text-xs focus:outline-none focus:border-[#D7B7A5]"></textarea>
-        </div>
-
-        <div class="flex items-start gap-2 pt-0.5">
-          <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
-          <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] leading-tight">
-            I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
-          </label>
-        </div>
-
-        <div class="pt-1 pb-1">
-          <button type="submit" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
+          <button type="submit" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
             Submit Confidential Booking Request
           </button>
         </div>
