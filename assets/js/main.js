@@ -124,47 +124,76 @@
   initRTL();
 
   // ==========================================
-  // 3. Mobile Navigation Drawer
+  // 3. Mobile Navigation Drawer (Universal Delegated Engine)
   // ==========================================
-  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-  const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
-  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
-  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  function getMobileDrawerElements() {
+    return {
+      drawer: document.getElementById('mobile-menu-drawer'),
+      backdrop: document.getElementById('mobile-menu-backdrop')
+    };
+  }
 
   function openMobileMenu() {
-    if (mobileMenuDrawer && mobileMenuBackdrop) {
-      mobileMenuDrawer.classList.remove('translate-x-full', '-translate-x-full');
-      mobileMenuDrawer.classList.add('translate-x-0');
-      mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
-      mobileMenuBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+    const { drawer, backdrop } = getMobileDrawerElements();
+    if (drawer && backdrop) {
+      drawer.classList.remove('translate-x-full', '-translate-x-full');
+      drawer.classList.add('translate-x-0');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
       document.body.style.overflow = 'hidden';
     }
   }
 
   function closeMobileMenu() {
-    if (mobileMenuDrawer && mobileMenuBackdrop) {
+    const { drawer, backdrop } = getMobileDrawerElements();
+    if (drawer && backdrop) {
       const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
       if (isRTL) {
-        mobileMenuDrawer.classList.add('-translate-x-full');
+        drawer.classList.add('-translate-x-full');
       } else {
-        mobileMenuDrawer.classList.add('translate-x-full');
+        drawer.classList.add('translate-x-full');
       }
-      mobileMenuDrawer.classList.remove('translate-x-0');
-      mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
-      mobileMenuBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      drawer.classList.remove('translate-x-0');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
       document.body.style.overflow = '';
     }
   }
 
-  if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', openMobileMenu);
-  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
-  if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+  window.openMobileMenu = openMobileMenu;
+  window.closeMobileMenu = closeMobileMenu;
 
-  if (mobileMenuDrawer) {
-    mobileMenuDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-  }
+  // Global Delegated Click & Touch Handler for 100% Mobile & Desktop Reliability
+  document.addEventListener('click', (e) => {
+    // 1. Mobile Menu Open Toggle (Handles icon clicks, buttons, attributes)
+    const toggleBtn = e.target.closest('#mobile-menu-toggle, .mobile-menu-toggle, [data-mobile-menu-toggle]');
+    if (toggleBtn) {
+      e.preventDefault();
+      openMobileMenu();
+      return;
+    }
+
+    // 2. Mobile Menu Close Button
+    const closeBtn = e.target.closest('#mobile-menu-close, .mobile-menu-close, [data-mobile-menu-close]');
+    if (closeBtn) {
+      e.preventDefault();
+      closeMobileMenu();
+      return;
+    }
+
+    // 3. Mobile Backdrop Tap
+    if (e.target && e.target.id === 'mobile-menu-backdrop') {
+      e.preventDefault();
+      closeMobileMenu();
+      return;
+    }
+
+    // 4. Link clicked inside Mobile Drawer (Navigate and dismiss drawer)
+    const drawerLink = e.target.closest('#mobile-menu-drawer a');
+    if (drawerLink) {
+      closeMobileMenu();
+    }
+  });
 
   // ==========================================
   // 4. Universal Appointment Booking Modal
@@ -173,9 +202,10 @@
   const appointmentForm = document.getElementById('appointment-booking-form');
 
   function openAppointmentModal(service = '', therapist = '') {
-    if (!appointmentModal) return;
-    appointmentModal.classList.remove('hidden');
-    appointmentModal.classList.add('flex');
+    const modal = document.getElementById('appointment-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
 
     // Auto-prefill service/therapist if fields exist
@@ -204,9 +234,10 @@
   }
 
   function closeAppointmentModal() {
-    if (!appointmentModal) return;
-    appointmentModal.classList.add('hidden');
-    appointmentModal.classList.remove('flex');
+    const modal = document.getElementById('appointment-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
     document.body.style.overflow = '';
   }
 
@@ -431,15 +462,17 @@
   initFilterEngine('data-blog-filter', 'data-blog-category', 'blog-search-input');
 
   // ==========================================
-  // 9. FAQ Accordions
+  // 9. FAQ Accordions (Universal Delegated Engine)
   // ==========================================
-  document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
+  document.addEventListener('click', (e) => {
+    const header = e.target.closest('.accordion-header, [data-accordion-toggle]');
+    if (header) {
+      e.preventDefault();
+      const content = header.nextElementSibling || document.querySelector(header.getAttribute('data-target'));
       const icon = header.querySelector('.accordion-icon, .fa-chevron-down');
       const isExpanded = content && !content.classList.contains('hidden');
 
-      const parent = header.closest('.accordion-group');
+      const parent = header.closest('.accordion-group') || (header.parentElement && header.parentElement.parentElement);
       if (parent) {
         parent.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
         parent.querySelectorAll('.accordion-icon, .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
@@ -449,7 +482,7 @@
         content.classList.remove('hidden');
         if (icon) icon.classList.add('rotate-180');
       }
-    });
+    }
   });
 
   // ==========================================

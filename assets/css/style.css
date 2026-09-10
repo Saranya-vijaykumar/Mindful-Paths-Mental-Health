@@ -1498,3 +1498,30 @@ html.dark .tilt-sheen {
   opacity: 1;
 }
 
+
+
+/* ==========================================================================
+   MOBILE VIEW & TOUCH INTERACTION UNIVERSAL OPTIMIZATION
+   ========================================================================== */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+#mobile-menu-drawer {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu-toggle,
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    min-width: 42px;
+    min-height: 42px;
+  }
+}
