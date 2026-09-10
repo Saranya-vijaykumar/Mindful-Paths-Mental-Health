@@ -868,12 +868,28 @@
     // Tap/click anywhere to skip immediately
     overlay.addEventListener('click', dismissOverlay);
 
-    // Initial Website Opening: Mindful Breathing Sequence
-    // 1. Breathe in (0ms - 1350ms)
-    // 2. Breathe out (1350ms - 2700ms)
-    // 3. Welcome & seamless entry (2700ms - 3100ms)
+    // Initial Website Opening: Mindful 1s Breathe In, 1s Hold, 1s Breathe Out Rhythm
+    // 0s - 1s (0ms - 1000ms): Breathe In... (1s)
+    // 1s - 2s (1000ms - 2000ms): Hold... (1s)
+    // 2s - 3s (2000ms - 3000ms): Breathe Out... (1s)
+    // 3s - 3.4s (3000ms - 3400ms): Welcome & smooth entry
     overlay.classList.add('is-active');
 
+    // 1s: Switch to Hold...
+    setTimeout(() => {
+      if (!isDismissed && statusTitle && statusSub) {
+        statusTitle.style.opacity = '0';
+        statusSub.style.opacity = '0';
+        setTimeout(() => {
+          statusTitle.textContent = 'Hold...';
+          statusSub.textContent = 'Savor the stillness';
+          statusTitle.style.opacity = '1';
+          statusSub.style.opacity = '1';
+        }, 120);
+      }
+    }, 1000);
+
+    // 2s: Switch to Breathe out...
     setTimeout(() => {
       if (!isDismissed && statusTitle && statusSub) {
         statusTitle.style.opacity = '0';
@@ -883,10 +899,11 @@
           statusSub.textContent = 'Release tension & arrive';
           statusTitle.style.opacity = '1';
           statusSub.style.opacity = '1';
-        }, 150);
+        }, 120);
       }
-    }, 1350);
+    }, 2000);
 
+    // 3s: Welcome greeting
     setTimeout(() => {
       if (!isDismissed && statusTitle && statusSub) {
         statusTitle.style.opacity = '0';
@@ -896,13 +913,14 @@
           statusSub.textContent = 'Your psychological sanctuary';
           statusTitle.style.opacity = '1';
           statusSub.style.opacity = '1';
-        }, 150);
+        }, 120);
       }
-    }, 2700);
+    }, 3000);
 
+    // 3.4s: Gracefully dismiss overlay
     setTimeout(() => {
       dismissOverlay();
-    }, 3100);
+    }, 3400);
 
     window.addEventListener('pageshow', () => {
       setTimeout(dismissOverlay, 800);
