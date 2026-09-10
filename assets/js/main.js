@@ -361,13 +361,13 @@
                 <i class="fas fa-redo mr-1"></i> Retake
               </button>
             </div>
-            <h4 class="text-lg font-heading font-bold text-[#29483A] dark:text-white">${title}</h4>
-            <p class="text-sm text-[#26332D] dark:text-[#E8EFE9] leading-relaxed">${text}</p>
+            <h4 class="text-lg font-heading font-bold text-[#294657] dark:text-white">${title}</h4>
+            <p class="text-sm text-[#27343B] dark:text-[#EBF1F4] leading-relaxed">${text}</p>
             <div class="pt-2 flex flex-col sm:flex-row gap-3">
-              <button type="button" class="open-appointment-modal px-5 py-2.5 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-md">
+              <button type="button" class="open-appointment-modal px-5 py-2.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md">
                 <i class="fas fa-calendar-check mr-2"></i> Book Free 15-Min Consultation
               </button>
-              <a href="resources.html" class="px-5 py-2.5 rounded-full bg-[#F7F5EF] dark:bg-[#1a2b22] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs text-center border border-[#E8EFE9] dark:border-white/10">
+              <a href="resources.html" class="px-5 py-2.5 rounded-full bg-[#F8F6F1] dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs text-center border border-[#EBF1F4] dark:border-white/10">
                 Explore Free CBT Self-Help Guides
               </a>
             </div>
@@ -440,11 +440,11 @@
         currentFilter = btn.getAttribute(filterBtnAttr) || 'all';
 
         filterBtns.forEach(b => {
-          b.classList.remove('bg-[#29483A]', 'text-white', 'shadow-md');
-          b.classList.add('bg-white', 'dark:bg-[#1a2b22]', 'text-[#26332D]', 'dark:text-[#E8EFE9]');
+          b.classList.remove('bg-[#D7B7A5]', 'text-white', 'shadow-md');
+          b.classList.add('bg-white', 'dark:bg-[#17232b]', 'text-[#27343B]', 'dark:text-[#EBF1F4]');
         });
-        btn.classList.remove('bg-white', 'dark:bg-[#1a2b22]', 'text-[#26332D]', 'dark:text-[#E8EFE9]');
-        btn.classList.add('bg-[#29483A]', 'text-white', 'shadow-md');
+        btn.classList.remove('bg-white', 'dark:bg-[#17232b]', 'text-[#27343B]', 'dark:text-[#EBF1F4]');
+        btn.classList.add('bg-[#D7B7A5]', 'text-white', 'shadow-md');
 
         applyFilter();
       });
@@ -670,13 +670,13 @@
       ? 'bg-emerald-50 text-emerald-900 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-100 dark:border-emerald-800'
       : isError
       ? 'bg-rose-50 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-100 dark:border-rose-800'
-      : 'bg-[#F7F5EF] text-[#29483A] border-[#E8EFE9] dark:bg-[#1a2b22] dark:text-[#F7F5EF] dark:border-white/10';
+      : 'bg-[#F8F6F1] text-[#294657] border-[#EBF1F4] dark:bg-[#17232b] dark:text-[#F8F6F1] dark:border-white/10';
 
     const icon = isSuccess 
       ? '<i class="fas fa-check-circle text-emerald-500 text-base shrink-0"></i>'
       : isError
       ? '<i class="fas fa-exclamation-circle text-rose-500 text-base shrink-0"></i>'
-      : '<i class="fas fa-heart text-[#8FAF9A] text-base shrink-0"></i>';
+      : '<i class="fas fa-heart text-[#D7B7A5] text-base shrink-0"></i>';
 
     toast.className = `flex items-center gap-3 p-4 rounded-2xl shadow-2xl border text-xs font-bold pointer-events-auto transition-all transform duration-300 opacity-0 translate-y-3 ${bgClass}`;
     toast.innerHTML = `

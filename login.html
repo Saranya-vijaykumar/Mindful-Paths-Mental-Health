@@ -180,7 +180,7 @@
         
         <!-- Top Controls: Back and Theme -->
         <div class="flex items-center justify-between">
-          <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#26332D] dark:text-[#7d8d96] hover:text-[#8FAF9A] dark:hover:text-[#8FAF9A] transition-colors py-1.5 px-2.5 rounded-lg hover:bg-white/60 dark:hover:bg-white/5">
+          <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#26332D] dark:text-[#7d8d96] hover:text-[#D9A38F] dark:hover:text-[#D9A38F] transition-colors py-1.5 px-2.5 rounded-lg hover:bg-white/60 dark:hover:bg-white/5">
             <i class="fas fa-arrow-left"></i>
             <span>Back to Home</span>
           </a>
@@ -217,7 +217,7 @@
 
         <!-- Header Titles -->
         <div class="space-y-1.5">
-          <span id="portal-subtitle" class="text-xs font-bold uppercase tracking-wider text-[#8FAF9A]">Welcome Back</span>
+          <span id="portal-subtitle" class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">Welcome Back</span>
           <h1 id="portal-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#29483A] dark:text-[#F7F5EF]">Sign in to your sanctuary</h1>
           <p id="portal-desc" class="text-xs text-[#26332D]/80 dark:text-[#7d8d96]">Manage appointments, review clinical reflection notes, and track your wellness journey.</p>
         </div>
@@ -241,14 +241,14 @@
         <div class="p-3.5 rounded-2xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 space-y-2 shadow-sm">
           <div class="flex items-center justify-between text-[11px]">
             <span class="font-bold text-[#29483A] dark:text-[#8FAF9A] uppercase tracking-wider flex items-center gap-1.5">
-              <i class="fas fa-key text-[10px] text-[#8FAF9A]"></i>
+              <i class="fas fa-key text-[10px] text-[#D9A38F]"></i>
               Demo Accounts
             </span>
             <span class="text-[#26332D]/70 dark:text-[#7d8d96]/70">Password: <strong class="font-mono text-[#29483A] dark:text-[#F7F5EF]">demo12345</strong></span>
           </div>
           
           <div class="grid grid-cols-2 gap-2">
-            <button type="button" id="demo-client-btn" class="py-2 px-2.5 rounded-xl bg-[#29483A]/15 hover:bg-[#29483A]/25 text-[#8FAF9A] text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-[#8FAF9A]/30" title="Autofill client credentials (Alex Morgan)">
+            <button type="button" id="demo-client-btn" class="py-2 px-2.5 rounded-xl bg-[#29483A]/15 hover:bg-[#29483A]/25 text-[#D9A38F] text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-[#8FAF9A]/30" title="Autofill client credentials (Alex Morgan)">
               <i class="fas fa-user text-[11px]"></i>
               <span>Client Demo</span>
             </button>
@@ -261,7 +261,7 @@
           <!-- Instant 1-Click Login Helper -->
           <div class="pt-1 flex items-center justify-between text-[11px] text-[#26332D]/70 dark:text-[#7d8d96]">
             <span>Need fast test access?</span>
-            <button type="button" id="instant-login-btn" class="font-bold text-[#8FAF9A] hover:underline flex items-center gap-1">
+            <button type="button" id="instant-login-btn" class="font-bold text-[#D9A38F] hover:underline flex items-center gap-1">
               <span>Instant Client Sign In</span>
               <i class="fas fa-bolt text-[9px]"></i>
             </button>
@@ -274,7 +274,7 @@
           <!-- Email Input Field -->
           <div>
             <label for="login-email" class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1 flex items-center justify-between">
-              <span>Email Address <span class="text-[#8FAF9A]">*</span></span>
+              <span>Email Address <span class="text-[#D9A38F]">*</span></span>
               <span id="email-format-badge" class="hidden text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
                 <i class="fas fa-check-circle"></i> Valid format
               </span>
@@ -293,16 +293,16 @@
           <div>
             <div class="flex items-center justify-between mb-1">
               <label for="login-password" class="block font-bold text-[#29483A] dark:text-[#E8EFE9]">
-                Password <span class="text-[#8FAF9A]">*</span>
+                Password <span class="text-[#D9A38F]">*</span>
               </label>
-              <button type="button" id="forgot-pass-btn" class="text-[11px] text-[#8FAF9A] hover:underline font-semibold focus:outline-none">
+              <button type="button" id="forgot-pass-btn" class="text-[11px] text-[#D9A38F] hover:underline font-semibold focus:outline-none">
                 Forgot password?
               </button>
             </div>
             <div class="relative">
               <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A] dark:focus:border-[#8FAF9A] transition-all shadow-sm">
               <i class="fas fa-lock absolute left-3 top-3.5 text-[#26332D]/40 dark:text-[#7d8d96]/50"></i>
-              <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#26332D]/60 dark:text-[#7d8d96]/60 hover:text-[#8FAF9A] dark:hover:text-[#8FAF9A] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
+              <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#26332D]/60 dark:text-[#7d8d96]/60 hover:text-[#D9A38F] dark:hover:text-[#D9A38F] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
                 <i class="far fa-eye" id="login-pass-eye"></i>
               </button>
             </div>
@@ -317,7 +317,7 @@
           <!-- Remember Me & Security Badge -->
           <div class="flex items-center justify-between text-[11px] pt-1">
             <label class="flex items-center gap-2 text-[#26332D] dark:text-[#7d8d96] cursor-pointer select-none">
-              <input type="checkbox" id="remember-me" checked class="rounded border-gray-300 text-[#8FAF9A] focus:ring-[#8FAF9A] dark:bg-[#23382d] dark:border-white/20">
+              <input type="checkbox" id="remember-me" checked class="rounded border-gray-300 text-[#D9A38F] focus:ring-[#D7B7A5] dark:bg-[#23382d] dark:border-white/20">
               <span>Remember this browser</span>
             </label>
             <span class="text-[#26332D]/60 dark:text-[#7d8d96]/70 flex items-center gap-1">
@@ -359,7 +359,7 @@
 
         <!-- Registration Link -->
         <div class="text-center text-xs text-[#26332D] dark:text-[#7d8d96] pt-2 border-t border-[#E8EFE9] dark:border-white/10">
-          Don't have an account yet? <a href="register.html" class="font-bold text-[#8FAF9A] hover:underline">Complete Intake Registration</a>
+          Don't have an account yet? <a href="register.html" class="font-bold text-[#D9A38F] hover:underline">Complete Intake Registration</a>
         </div>
 
       </div>
@@ -376,7 +376,7 @@
       </button>
 
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-[#29483A]/20 text-[#8FAF9A] flex items-center justify-center text-lg">
+        <div class="w-10 h-10 rounded-2xl bg-[#29483A]/20 text-[#D9A38F] flex items-center justify-center text-lg">
           <i class="fas fa-key"></i>
         </div>
         <div>
