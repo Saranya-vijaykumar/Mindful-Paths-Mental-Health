@@ -815,14 +815,11 @@
   // 16. Mindful "Breathe In & Breathe Out" Website Opening & Page Transition Suite
   // ==========================================
   function initPageTransitions() {
-    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
-
     let overlay = document.getElementById('page-transition-overlay');
     if (!overlay) {
       overlay = document.createElement('div');
       overlay.id = 'page-transition-overlay';
-      overlay.className = 'page-transition-overlay is-active';
+      overlay.className = 'page-transition-overlay';
       overlay.setAttribute('aria-hidden', 'true');
       overlay.innerHTML = `
         <div class="page-transition-content text-center">
@@ -860,22 +857,18 @@
     function dismissOverlay() {
       if (isDismissed || !overlay) return;
       isDismissed = true;
-      overlay.style.transition = 'opacity 0.45s ease-out, visibility 0.45s ease-out';
-      overlay.classList.remove('is-active');
+      overlay.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease';
+      overlay.classList.add('is-hidden');
       document.body.classList.remove('page-is-leaving');
     }
 
-    // Tap/click anywhere to skip immediately
+    // Tap or click anywhere to enter immediately
     overlay.addEventListener('click', dismissOverlay);
 
-    // Initial Website Opening: Mindful 1s Breathe In, 1s Hold, 1s Breathe Out Rhythm
-    // 0s - 1s (0ms - 1000ms): Breathe In... (1s)
-    // 1s - 2s (1000ms - 2000ms): Hold... (1s)
-    // 2s - 3s (2000ms - 3000ms): Breathe Out... (1s)
-    // 3s - 3.4s (3000ms - 3400ms): Welcome & smooth entry
-    overlay.classList.add('is-active');
+    // Initial Website Opening: Mindful 1s In, 1s Hold, 1s Out Cadence
+    overlay.classList.remove('is-hidden');
 
-    // 1s: Switch to Hold...
+    // 1.0s: Switch to Hold...
     setTimeout(() => {
       if (!isDismissed && statusTitle && statusSub) {
         statusTitle.style.opacity = '0';
@@ -889,7 +882,7 @@
       }
     }, 1000);
 
-    // 2s: Switch to Breathe out...
+    // 2.0s: Switch to Breathe out...
     setTimeout(() => {
       if (!isDismissed && statusTitle && statusSub) {
         statusTitle.style.opacity = '0';
@@ -903,7 +896,7 @@
       }
     }, 2000);
 
-    // 3s: Welcome greeting
+    // 3.0s: Welcome greeting
     setTimeout(() => {
       if (!isDismissed && statusTitle && statusSub) {
         statusTitle.style.opacity = '0';
@@ -921,10 +914,6 @@
     setTimeout(() => {
       dismissOverlay();
     }, 3400);
-
-    window.addEventListener('pageshow', () => {
-      setTimeout(dismissOverlay, 800);
-    });
 
     // Intercept internal page navigations
     document.addEventListener('click', (e) => {
@@ -967,7 +956,7 @@
         statusSub.textContent = 'Preparing your sanctuary';
       }
       overlay.style.transition = 'opacity 0.22s ease-out, visibility 0.22s ease-out';
-      overlay.classList.add('is-active');
+      overlay.classList.remove('is-hidden');
       document.body.classList.add('page-is-leaving');
 
       requestAnimationFrame(() => {

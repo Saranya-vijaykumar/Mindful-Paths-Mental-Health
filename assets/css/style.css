@@ -1926,15 +1926,15 @@ textarea:focus {
 #page-transition-overlay {
   position: fixed;
   inset: 0;
-  z-index: 999999;
+  z-index: 9999999;
   background-color: #F8F6F1;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
   user-select: none;
 }
 
@@ -1942,10 +1942,10 @@ html.dark #page-transition-overlay {
   background-color: #11191f;
 }
 
-#page-transition-overlay.is-active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+#page-transition-overlay.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .page-transition-content {
@@ -1955,14 +1955,9 @@ html.dark #page-transition-overlay {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  transform: scale(0.96);
-  opacity: 0;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-}
-
-#page-transition-overlay.is-active .page-transition-content {
   transform: scale(1);
   opacity: 1;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
 /* Concentric Breathing Circles */
@@ -2091,10 +2086,9 @@ body.page-is-leaving {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #page-transition-overlay,
-  .transition-logo-glow {
-    animation: none !important;
-    transition: none !important;
-    display: none !important;
+  .breathe-circle-outer,
+  .breathe-circle-middle,
+  .breathe-circle-inner {
+    animation-duration: 0.01ms !important;
   }
 }

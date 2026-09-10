@@ -86,6 +86,34 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+  <!-- Mindful Breathe In, Hold, Breathe Out Opening Overlay -->
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true">
+    <div class="page-transition-content text-center">
+      <div class="breathe-circle-container">
+        <div class="breathe-circle-outer" aria-hidden="true"></div>
+        <div class="breathe-circle-middle" aria-hidden="true"></div>
+        <div class="breathe-circle-inner shadow-2xl">
+          <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="transition-text-wrap mt-6">
+        <div id="breathe-status-title" class="breathe-status-title font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] transition-all duration-300">
+          Breathe in...
+        </div>
+        <div id="breathe-status-sub" class="breathe-status-sub text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#8FAFC0] mt-1.5 transition-all duration-300">
+          Inhale peace &amp; clarity
+        </div>
+      </div>
+      <div class="mt-4">
+        <span class="text-[11px] font-medium text-[#27343B]/60 dark:text-[#F8F6F1]/60 tracking-wider">
+          Click anywhere to enter &middot; Mindful Paths
+        </span>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
   <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
