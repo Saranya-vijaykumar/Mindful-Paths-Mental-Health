@@ -817,13 +817,12 @@
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    // Check recent breath timestamp (10s throttle for fast navigations, but fresh on reloads)
-    const lastBreathed = sessionStorage.getItem('mindful_last_breathed');
-    const now = Date.now();
-    if (lastBreathed && (now - parseInt(lastBreathed, 10)) < 12000) {
-      return; // Skipped for rapid same-session page clicks
+    // Show ONLY on initial website link opening / first entry of the browsing session
+    // Once entered, other page transitions do not show the breathing loader
+    if (sessionStorage.getItem('mindful_entry_breathed')) {
+      return; // maththa loading thevai illa - skip subsequent page loads
     }
-    sessionStorage.setItem('mindful_last_breathed', now.toString());
+    sessionStorage.setItem('mindful_entry_breathed', 'true');
 
     // Create breathing loader overlay
     const loader = document.createElement('div');
