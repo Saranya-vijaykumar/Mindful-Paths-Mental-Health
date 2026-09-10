@@ -41,78 +41,66 @@
         extend: {
           colors: {
             primary: {
-              50: '#f4f8f5',
-              100: '#e8efe9',
-              200: '#d1dfd4',
-              300: '#b4ccbb',
-              400: '#9ebfa7',
-              500: '#8FAF9A', // Sage Green (Primary)
-              600: '#759981',
-              700: '#5c7d67',
-              800: '#435e4d',
-              900: '#29483A', // Deep Forest (Dark Primary)
-              950: '#16281f',
-            },
-            forest: {
-              50: '#f2f6f4',
-              100: '#e3ece7',
-              200: '#c5d8ce',
-              300: '#9cbcae',
-              400: '#6d9984',
-              500: '#477862',
-              600: '#29483A', // Deep Forest (Headings & Buttons)
-              700: '#1f372c',
-              800: '#172b22',
-              900: '#131f18',
-              950: '#0a120e',
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Mindful Paths signature terracotta
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
             },
             cream: {
-              50: '#fdfcfb',
-              100: '#F7F5EF', // Warm Cream (Background)
-              200: '#ede8dd',
-              300: '#ded5c2',
-              400: '#cbbfa5',
-              500: '#b5a687',
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Signature Warm Cream
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
+            },
+            teal: {
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Signature Deep Teal
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#f6f9f7',
-              100: '#E8EFE9', // Soft Sage (Section Background)
-              200: '#d4e2d6',
-              300: '#b8cebc',
-              400: '#9ebca4',
-              500: '#8FAF9A', // Sage Green
-              600: '#74967f',
-              700: '#5a7864',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Signature Sage Green
+              600: '#6f886d',
+              700: '#576c55',
             },
-            peach: {
-              50: '#fdf8f6',
-              100: '#fbeee9',
-              200: '#f6dcd4',
-              300: '#ecc2b4',
-              400: '#e1a491',
-              500: '#D9A38F', // Muted Peach (Accent & Small Highlights)
-              600: '#c48974',
-              700: '#a76f5b',
-              800: '#8b5947',
-              900: '#724738',
-            },
-            charcoal: {
-              50: '#f5f7f6',
-              100: '#e4eae7',
-              200: '#cbd6d0',
-              300: '#a5b7ad',
-              400: '#7a9284',
-              500: '#587062',
-              600: '#26332D', // Charcoal (Body Text)
-              700: '#1e2924',
-              800: '#18211d',
-              900: '#121915',
-              950: '#0a0e0c',
+            brown: {
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Signature Warm Brown body text
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#131f18', // Deep Forest Charcoal
-              800: '#1a2b22', // Forest Surface
-              700: '#23382d', // Forest Border
+              900: '#11191f', // Deep Teal Charcoal
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -131,22 +119,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F7F5EF] text-[#26332D] dark:bg-[#131f18] dark:text-[#F7F5EF] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <section class="min-h-screen flex items-center justify-center p-6 bg-[#F7F5EF] dark:bg-[#131f18]">
-    <div class="w-full max-w-lg bg-white dark:bg-[#1a2b22] p-8 sm:p-10 rounded-3xl border border-[#E8EFE9] dark:border-white/10 shadow-2xl space-y-6">
+  <section class="min-h-screen flex items-center justify-center p-6 bg-[#F8F6F1] dark:bg-[#11191f]">
+    <div class="w-full max-w-lg bg-white dark:bg-[#17232b] p-8 sm:p-10 rounded-3xl border border-[#EBF1F4] dark:border-white/10 shadow-2xl space-y-6">
       
       <div class="flex items-center justify-between">
-        <a href="index.html" class="text-xs font-bold text-[#26332D] dark:text-[#7d8d96] hover:text-[#D9A38F] flex items-center gap-1.5 transition-colors">
+        <a href="index.html" class="text-xs font-bold text-[#27343B] dark:text-[#7d8d96] hover:text-[#D7B7A5] flex items-center gap-1.5 transition-colors">
           <i class="fas fa-arrow-left"></i> Home
         </a>
-        <a href="login.html" class="text-xs font-bold text-[#D9A38F] hover:underline">Already registered? Log In</a>
+        <a href="login.html" class="text-xs font-bold text-[#D7B7A5] hover:underline">Already registered? Log In</a>
       </div>
 
       <div class="space-y-1">
-        <span class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">New Client Intake</span>
-        <h1 class="font-heading text-2xl sm:text-3xl font-bold text-[#29483A] dark:text-[#F7F5EF]">Create Your Sanctuary Account</h1>
-        <p class="text-xs text-[#26332D] dark:text-[#7d8d96]">HIPAA-compliant client profile registration. Only registered accounts can access the client dashboard.</p>
+        <span class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">New Client Intake</span>
+        <h1 class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">Create Your Sanctuary Account</h1>
+        <p class="text-xs text-[#27343B] dark:text-[#7d8d96]">HIPAA-compliant client profile registration. Only registered accounts can access the client dashboard.</p>
       </div>
 
       <!-- Inline Alert Banner -->
@@ -156,41 +144,41 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Full Legal Name *</label>
-            <input type="text" id="reg-name" required placeholder="e.g. Rachel Adams" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Full Legal Name *</label>
+            <input type="text" id="reg-name" required placeholder="e.g. Rachel Adams" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
           <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Preferred Name</label>
-            <input type="text" id="reg-preferred-name" placeholder="e.g. Rae" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Email Address *</label>
-            <input type="email" id="reg-email" required placeholder="name@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
-          </div>
-          <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Phone Number</label>
-            <input type="tel" id="reg-phone" placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Name</label>
+            <input type="text" id="reg-preferred-name" placeholder="e.g. Rae" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Create Password * (min. 6 chars)</label>
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
+            <input type="email" id="reg-email" required placeholder="name@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+          </div>
+          <div>
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number</label>
+            <input type="tel" id="reg-phone" placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Create Password * (min. 6 chars)</label>
             <div class="relative">
-              <input type="password" id="reg-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
-              <button type="button" id="toggle-reg-password" class="absolute right-2.5 top-2 text-[#26332D]/60 dark:text-[#7d8d96]/60 hover:text-[#D9A38F] p-1" title="Toggle password visibility">
+              <input type="password" id="reg-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+              <button type="button" id="toggle-reg-password" class="absolute right-2.5 top-2 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle password visibility">
                 <i class="far fa-eye" id="reg-pass-eye"></i>
               </button>
             </div>
           </div>
           <div>
-            <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Confirm Password *</label>
+            <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Confirm Password *</label>
             <div class="relative">
-              <input type="password" id="reg-confirm-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
-              <button type="button" id="toggle-reg-confirm-password" class="absolute right-2.5 top-2 text-[#26332D]/60 dark:text-[#7d8d96]/60 hover:text-[#D9A38F] p-1" title="Toggle confirm password visibility">
+              <input type="password" id="reg-confirm-password" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 pr-9 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+              <button type="button" id="toggle-reg-confirm-password" class="absolute right-2.5 top-2 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] p-1" title="Toggle confirm password visibility">
                 <i class="far fa-eye" id="reg-confirm-pass-eye"></i>
               </button>
             </div>
@@ -198,8 +186,8 @@
         </div>
 
         <div>
-          <label class="block font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">What focus area are you seeking support for?</label>
-          <select id="reg-focus" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-xs text-[#29483A] dark:text-[#F7F5EF] focus:outline-none focus:border-[#8FAF9A]">
+          <label class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What focus area are you seeking support for?</label>
+          <select id="reg-focus" class="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
             <option value="anxiety">Stress, Anxiety &amp; Panic</option>
             <option value="couples">Relationship &amp; Couples Counseling</option>
             <option value="trauma">Trauma Recovery &amp; EMDR</option>
@@ -209,13 +197,13 @@
         </div>
 
         <div class="flex items-start gap-2 pt-1">
-          <input type="checkbox" id="reg-consent" required class="mt-0.5 rounded text-[#D9A38F] focus:ring-0">
-          <label for="reg-consent" class="text-[11px] text-[#26332D] dark:text-[#7d8d96] cursor-pointer">
+          <input type="checkbox" id="reg-consent" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-0">
+          <label for="reg-consent" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] cursor-pointer">
             I consent to confidential electronic communication and HIPAA medical privacy terms.
           </label>
         </div>
 
-        <button type="submit" id="reg-submit-btn" class="w-full py-3.5 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2">
+        <button type="submit" id="reg-submit-btn" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2">
           <span>Create Account &amp; Proceed to Login</span>
           <i class="fas fa-arrow-right text-[10px]"></i>
         </button>

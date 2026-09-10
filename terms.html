@@ -41,78 +41,66 @@
         extend: {
           colors: {
             primary: {
-              50: '#f4f8f5',
-              100: '#e8efe9',
-              200: '#d1dfd4',
-              300: '#b4ccbb',
-              400: '#9ebfa7',
-              500: '#8FAF9A', // Sage Green (Primary)
-              600: '#759981',
-              700: '#5c7d67',
-              800: '#435e4d',
-              900: '#29483A', // Deep Forest (Dark Primary)
-              950: '#16281f',
-            },
-            forest: {
-              50: '#f2f6f4',
-              100: '#e3ece7',
-              200: '#c5d8ce',
-              300: '#9cbcae',
-              400: '#6d9984',
-              500: '#477862',
-              600: '#29483A', // Deep Forest (Headings & Buttons)
-              700: '#1f372c',
-              800: '#172b22',
-              900: '#131f18',
-              950: '#0a120e',
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Mindful Paths signature terracotta
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
             },
             cream: {
-              50: '#fdfcfb',
-              100: '#F7F5EF', // Warm Cream (Background)
-              200: '#ede8dd',
-              300: '#ded5c2',
-              400: '#cbbfa5',
-              500: '#b5a687',
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Signature Warm Cream
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
+            },
+            teal: {
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Signature Deep Teal
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#f6f9f7',
-              100: '#E8EFE9', // Soft Sage (Section Background)
-              200: '#d4e2d6',
-              300: '#b8cebc',
-              400: '#9ebca4',
-              500: '#8FAF9A', // Sage Green
-              600: '#74967f',
-              700: '#5a7864',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Signature Sage Green
+              600: '#6f886d',
+              700: '#576c55',
             },
-            peach: {
-              50: '#fdf8f6',
-              100: '#fbeee9',
-              200: '#f6dcd4',
-              300: '#ecc2b4',
-              400: '#e1a491',
-              500: '#D9A38F', // Muted Peach (Accent & Small Highlights)
-              600: '#c48974',
-              700: '#a76f5b',
-              800: '#8b5947',
-              900: '#724738',
-            },
-            charcoal: {
-              50: '#f5f7f6',
-              100: '#e4eae7',
-              200: '#cbd6d0',
-              300: '#a5b7ad',
-              400: '#7a9284',
-              500: '#587062',
-              600: '#26332D', // Charcoal (Body Text)
-              700: '#1e2924',
-              800: '#18211d',
-              900: '#121915',
-              950: '#0a0e0c',
+            brown: {
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Signature Warm Brown body text
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#131f18', // Deep Forest Charcoal
-              800: '#1a2b22', // Forest Surface
-              700: '#23382d', // Forest Border
+              900: '#11191f', // Deep Teal Charcoal
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -131,14 +119,14 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F7F5EF] text-[#26332D] dark:bg-[#131f18] dark:text-[#F7F5EF] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F7F5EF] text-xs font-medium py-2.5 px-4 border-b border-white/10">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="bg-[#29483A]/20 text-[#f0baa9] border border-[#8FAF9A]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#29483A] animate-pulse"></span> 24/7 Crisis Support
+        <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D7B7A5] animate-pulse"></span> 24/7 Crisis Support
         </span>
         <span class="text-white/90 text-[11px] sm:text-xs">In emotional distress? Dial <a href="tel:988" class="font-bold underline text-[#f0baa9] hover:text-white transition-colors">988 Lifeline</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span></span>
       </div>
@@ -155,7 +143,7 @@
   </div>
 
   <!-- Main Navbar Header -->
-  <header id="main-header" class="sticky top-0 z-40 bg-[#F7F5EF]/95 dark:bg-[#1a2b22]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
+  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -165,69 +153,69 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <span class="font-heading text-2xl font-bold tracking-tight text-[#29483A] dark:text-[#F7F5EF] leading-none">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-none">
           Mindful Paths
         </span>
       </a>
 
       <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#26332D] dark:text-[#E8EFE9]">
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
         <!-- Home Dropdown -->
         <div class="relative group py-2 flex items-center">
-          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] ">
+          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] ">
             Home <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <div class="bg-white dark:bg-[#1a2b22] rounded-2xl shadow-xl border border-[#E8EFE9] dark:border-white/10 p-2">
-              <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#23382d] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">
-                <i class="fas fa-compass text-[#D9A38F] w-4"></i> Home 1 &middot; Multipurpose Services
+            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2">
+              <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 &middot; Multipurpose Services
               </a>
-              <a href="home-2.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#23382d] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">
-                <i class="fas fa-heart text-[#D9A38F] w-4"></i> Home 2 &middot; The Wellness Journey
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 &middot; The Wellness Journey
               </a>
             </div>
           </div>
         </div>
 
-        <a href="about.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">About</a>
+        <a href="about.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">About</a>
 
         <!-- Services Link (Direct - No Dropdown) -->
-        <a href="services.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
+        <a href="services.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
 
         <!-- Therapists Link (Direct - No Dropdown) -->
-        <a href="therapists.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
+        <a href="therapists.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
 
-        <a href="resources.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Resources</a>
-        <a href="pricing.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Pricing</a>
+        <a href="resources.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Resources</a>
+        <a href="pricing.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Pricing</a>
 
         <!-- Blog Link (Direct - No Dropdown) -->
-        <a href="blog.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Blog</a>
+        <a href="blog.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Blog</a>
 
-        <a href="contact.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Contact</a>
+        <a href="contact.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Contact</a>
       </nav>
 
       <!-- Right Action Controls (Desktop Only) -->
       <div class="hidden lg:flex items-center gap-3 shrink-0">
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
 
         <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
           <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
 
         <!-- Terracotta Pill Client Login Button -->
-        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
+        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
           <i class="fas fa-user-circle text-sm"></i> <span class="nav-auth-text">Client Login</span>
         </a>
       </div>
 
       <!-- Mobile Navbar: STRICTLY Logo + Hamburger ONLY -->
       <div class="flex lg:hidden items-center">
-        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#23382d] text-[#29483A] dark:text-[#F7F5EF] hover:text-[#D9A38F] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
+        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -235,7 +223,7 @@
     </div>
   </header>
 
-  <main class="min-h-screen bg-[#F7F5EF] dark:bg-[#0B1E23] text-[#26332D] dark:text-[#E8EFE9] transition-colors duration-300">
+  <main class="min-h-screen bg-[#F8F6F1] dark:bg-[#0B1E23] text-[#27343B] dark:text-[#EBF1F4] transition-colors duration-300">
     
     <!-- Hero Header -->
     <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-gradient-to-b from-[#F4F8F7] to-[#E8F2F2] dark:from-[#0B1E23] dark:to-[#102B31] border-b border-[#C8DFE2] dark:border-white/10 overflow-hidden">
@@ -250,7 +238,7 @@
           Clear boundaries and mutual commitments create the emotional safety necessary for deep healing. Please review our outpatient engagement policies.
         </p>
         <div class="text-xs text-[#7d8d96] flex items-center justify-center gap-4 pt-2">
-          <span><i class="fas fa-file-contract text-[#D9A38F] mr-1"></i> Outpatient Clinical Agreement</span>
+          <span><i class="fas fa-file-contract text-[#D7B7A5] mr-1"></i> Outpatient Clinical Agreement</span>
           <span>&middot;</span>
           <span>Effective: 2026 Academic &amp; Clinical Year</span>
         </div>
@@ -265,7 +253,7 @@
           <!-- Section 1 -->
           <div class="space-y-4">
             <h2 class="font-heading text-2xl font-bold text-[#0F252B] dark:text-white flex items-center gap-3">
-              <span class="w-8 h-8 rounded-xl bg-[#29483A]/20 text-[#D9A38F] dark:text-[#D9A38F] flex items-center justify-center text-sm font-bold">1</span>
+              <span class="w-8 h-8 rounded-xl bg-[#D7B7A5]/20 text-[#B25338] dark:text-[#D7B7A5] flex items-center justify-center text-sm font-bold">1</span>
               Informed Consent &amp; Therapeutic Process
             </h2>
             <p class="text-sm leading-relaxed text-[#385258] dark:text-[#C8DFE2]">
@@ -276,7 +264,7 @@
           <!-- Section 2 -->
           <div class="space-y-4">
             <h2 class="font-heading text-2xl font-bold text-[#0F252B] dark:text-white flex items-center gap-3">
-              <span class="w-8 h-8 rounded-xl bg-[#29483A]/20 text-[#D9A38F] dark:text-[#D9A38F] flex items-center justify-center text-sm font-bold">2</span>
+              <span class="w-8 h-8 rounded-xl bg-[#D7B7A5]/20 text-[#B25338] dark:text-[#D7B7A5] flex items-center justify-center text-sm font-bold">2</span>
               24-Hour Cancellation &amp; Rescheduling Policy
             </h2>
             <p class="text-sm leading-relaxed text-[#385258] dark:text-[#C8DFE2]">
@@ -287,7 +275,7 @@
           <!-- Section 3 -->
           <div class="space-y-4">
             <h2 class="font-heading text-2xl font-bold text-[#0F252B] dark:text-white flex items-center gap-3">
-              <span class="w-8 h-8 rounded-xl bg-[#29483A]/20 text-[#D9A38F] dark:text-[#D9A38F] flex items-center justify-center text-sm font-bold">3</span>
+              <span class="w-8 h-8 rounded-xl bg-[#D7B7A5]/20 text-[#B25338] dark:text-[#D7B7A5] flex items-center justify-center text-sm font-bold">3</span>
               Emergency Crisis Disclaimer
             </h2>
             <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs leading-relaxed space-y-2">
@@ -299,7 +287,7 @@
           <!-- Section 4 -->
           <div class="space-y-4">
             <h2 class="font-heading text-2xl font-bold text-[#0F252B] dark:text-white flex items-center gap-3">
-              <span class="w-8 h-8 rounded-xl bg-[#29483A]/20 text-[#D9A38F] dark:text-[#D9A38F] flex items-center justify-center text-sm font-bold">4</span>
+              <span class="w-8 h-8 rounded-xl bg-[#D7B7A5]/20 text-[#B25338] dark:text-[#D7B7A5] flex items-center justify-center text-sm font-bold">4</span>
               Fees, Insurance &amp; Superbills
             </h2>
             <p class="text-sm leading-relaxed text-[#385258] dark:text-[#C8DFE2]">
@@ -316,7 +304,7 @@
   <!-- Luxury Deep Teal Charcoal Footer -->
   
   <!-- Luxury Deep Teal Charcoal Footer -->
-  <footer class="bg-[#131f18] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -337,22 +325,22 @@
           <!-- Trust Badges (Clickable & Informative) -->
           <div class="pt-2 flex flex-wrap gap-2.5">
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
-              <i class="fas fa-shield-alt text-[#D9A38F]"></i> HIPAA Compliant
+              <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
-              <i class="fas fa-certificate text-[#8FAF9A]"></i> APA Accredited
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+              <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
 
           <!-- Social Links -->
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Instagram" title="Instagram"><i class="fab fa-instagram text-xs"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Twitter" title="Twitter"><i class="fab fa-twitter text-xs"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Instagram" title="Instagram"><i class="fab fa-instagram text-xs"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Twitter" title="Twitter"><i class="fab fa-twitter text-xs"></i></a>
           </div>
         </div>
 
@@ -360,13 +348,13 @@
         <div class="lg:col-span-2 space-y-3">
           <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Therapy Services</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Individual Psychotherapy</a></li>
-            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Couples Counseling</a></li>
-            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Teen &amp; Adolescent Care</a></li>
-            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Trauma &amp; EMDR Recovery</a></li>
-            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Telehealth Video Sessions</a></li>
-            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Mindfulness &amp; Somatics</a></li>
-            <li><a href="services.html" class="text-[#D9A38F] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
+            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Individual Psychotherapy</a></li>
+            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Couples Counseling</a></li>
+            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Teen &amp; Adolescent Care</a></li>
+            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Trauma &amp; EMDR Recovery</a></li>
+            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Telehealth Video Sessions</a></li>
+            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Mindfulness &amp; Somatics</a></li>
+            <li><a href="services.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
           </ul>
         </div>
 
@@ -379,8 +367,8 @@
             <li><a href="messages.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-comments text-[10px] w-3.5"></i> Counselor Messages</a></li>
             <li><a href="mood-journal.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-smile text-[10px] w-3.5"></i> Mood Tracking Journal</a></li>
             <li><a href="shared-notes.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-file-alt text-[10px] w-3.5"></i> Shared Session Notes</a></li>
-            <li><a href="admin-dashboard.html" class="hover:text-[#8FAF9A] text-[#8FAF9A] transition-colors flex items-center gap-1.5"><i class="fas fa-user-md text-[10px] w-3.5"></i> Clinician Workspace</a></li>
-            <li><a href="login.html" class="text-[#D9A38F] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-sign-in-alt text-[9px] w-3.5"></i> Portal Sign In</a></li>
+            <li><a href="admin-dashboard.html" class="hover:text-[#8FAFC0] text-[#8FAFC0] transition-colors flex items-center gap-1.5"><i class="fas fa-user-md text-[10px] w-3.5"></i> Clinician Workspace</a></li>
+            <li><a href="login.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-sign-in-alt text-[9px] w-3.5"></i> Portal Sign In</a></li>
           </ul>
         </div>
 
@@ -391,7 +379,7 @@
           <!-- 24/7 Crisis Hotline Card -->
           <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
             <span class="text-[11px] uppercase font-bold text-[#f0baa9] flex items-center gap-1.5">
-              <i class="fas fa-phone-volume text-[#D9A38F]"></i> 24/7 Crisis Support Hotline
+              <i class="fas fa-phone-volume text-[#D7B7A5]"></i> 24/7 Crisis Support Hotline
             </span>
             <p class="text-xs text-[#8fa0a8] leading-relaxed">
               If you or a loved one are experiencing acute emotional distress, dial or text <a href="tel:988" class="font-bold text-[#f0baa9] underline hover:text-white">988</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span> anytime.
@@ -402,19 +390,19 @@
           <div class="text-xs space-y-2 text-[#c0cfd6]">
             <div>
               <a href="https://maps.google.com/?q=450+Lexington+Ave+New+York+NY" target="_blank" rel="noopener noreferrer" class="hover:text-[#f0baa9] transition-colors flex items-start gap-2">
-                <i class="fas fa-map-marker-alt text-[#D9A38F] mt-0.5 shrink-0"></i>
+                <i class="fas fa-map-marker-alt text-[#D7B7A5] mt-0.5 shrink-0"></i>
                 <span>450 Wellness Pavilion Blvd, Suite 300, New York, NY 10016</span>
               </a>
             </div>
             <div>
               <a href="mailto:care@mindfulpaths.com" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
-                <i class="fas fa-envelope text-[#D9A38F] shrink-0"></i>
+                <i class="fas fa-envelope text-[#D7B7A5] shrink-0"></i>
                 <span>care@mindfulpaths.com</span>
               </a>
             </div>
             <div>
               <a href="tel:+18002738255" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
-                <i class="fas fa-phone text-[#D9A38F] shrink-0"></i>
+                <i class="fas fa-phone text-[#D7B7A5] shrink-0"></i>
                 <span>+1 (800) 273-8255</span>
               </a>
             </div>
@@ -426,8 +414,8 @@
               Quiet Moments Newsletter
             </label>
             <form id="footer-newsletter-form" class="flex gap-2">
-              <input type="email" id="footer-newsletter-input" placeholder="Your confidential email..." required class="w-full h-10 px-3.5 rounded-xl bg-white/5 border border-white/15 text-xs text-white placeholder:text-[#6a7b82] focus:outline-none focus:border-[#8FAF9A] transition-colors">
-              <button type="submit" class="px-4 h-10 bg-[#29483A] hover:bg-[#1f372c] text-white rounded-xl text-xs font-bold transition-all shrink-0 flex items-center justify-center" aria-label="Subscribe to newsletter">
+              <input type="email" id="footer-newsletter-input" placeholder="Your confidential email..." required class="w-full h-10 px-3.5 rounded-xl bg-white/5 border border-white/15 text-xs text-white placeholder:text-[#6a7b82] focus:outline-none focus:border-[#D7B7A5] transition-colors">
+              <button type="submit" class="px-4 h-10 bg-[#D7B7A5] hover:bg-[#c5a390] text-white rounded-xl text-xs font-bold transition-all shrink-0 flex items-center justify-center" aria-label="Subscribe to newsletter">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </form>
@@ -441,10 +429,10 @@
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
         <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
-          <a href="privacy.html" class="hover:text-[#F7F5EF] transition-colors">Privacy Policy</a>
-          <a href="hipaa.html" class="hover:text-[#F7F5EF] transition-colors">HIPAA Disclosures</a>
-          <a href="terms.html" class="hover:text-[#F7F5EF] transition-colors">Terms of Care</a>
-          <a href="sitemap.html" class="hover:text-[#F7F5EF] transition-colors">Website Sitemap</a>
+          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
         </div>
       </div>
     </div>
@@ -452,7 +440,7 @@
 
     <!-- Universal Appointment Booking Modal -->
   <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4 overflow-hidden sm:overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
-    <div class="relative w-full max-w-lg bg-[#F7F5EF] dark:bg-[#1a2b22] rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-[#E8EFE9] dark:border-white/10 overflow-hidden flex flex-col max-h-[88dvh] sm:max-h-[90vh] animate-fade-in">
+    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-[#EBF1F4] dark:border-white/10 overflow-hidden flex flex-col max-h-[88dvh] sm:max-h-[90vh] animate-fade-in">
       
       <!-- Modal Header (Fixed / Sticky at Top) -->
       <div class="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between shrink-0 shadow-sm">
@@ -472,23 +460,23 @@
         <div class="p-4 sm:p-6 space-y-3 sm:space-y-4 overflow-y-auto flex-1 min-h-0 overscroll-contain">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Your Full Name *</label>
-              <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Your Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Email Address *</label>
-              <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
+              <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Phone Number *</label>
-              <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Session Format *</label>
-              <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Session Format *</label>
+              <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="telehealth">Telehealth (Secure Video)</option>
                 <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
                 <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
@@ -498,8 +486,8 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Service Desired</label>
-              <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Service Desired</label>
+              <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="">Select Service (or General Intake)</option>
                 <option value="individual">Individual Therapy</option>
                 <option value="couples">Couples Counseling</option>
@@ -510,8 +498,8 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Preferred Clinician</label>
-              <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Clinician</label>
+              <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="">First Available Specialist</option>
                 <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
                 <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
@@ -524,21 +512,21 @@
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">What brings you to counseling? (Confidential)</label>
-            <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]"></textarea>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What brings you to counseling? (Confidential)</label>
+            <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]"></textarea>
           </div>
         </div>
 
         <!-- Sticky Footer with HIPAA Checkbox and Submit Button -->
-        <div class="p-3.5 sm:p-5 bg-white/95 dark:bg-[#131e25]/95 backdrop-blur-md border-t border-[#E8EFE9] dark:border-white/10 shrink-0 space-y-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+        <div class="p-3.5 sm:p-5 bg-white/95 dark:bg-[#131e25]/95 backdrop-blur-md border-t border-[#EBF1F4] dark:border-white/10 shrink-0 space-y-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
           <div class="flex items-start gap-2">
-            <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D9A38F] focus:ring-[#D7B7A5]">
-            <label for="modal-hipaa" class="text-[11px] text-[#26332D] dark:text-[#7d8d96] leading-tight">
+            <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
+            <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] leading-tight">
               I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
             </label>
           </div>
 
-          <button type="submit" class="w-full py-3.5 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
+          <button type="submit" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
             Submit Confidential Booking Request
           </button>
         </div>
@@ -549,54 +537,54 @@
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F7F5EF] dark:bg-[#1a2b22] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#E8EFE9] dark:border-white/10">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-[#29483A] flex items-center justify-center text-white">
+          <div class="w-8 h-8 rounded-xl bg-[#D7B7A5] flex items-center justify-center text-white">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
           </div>
-          <span class="font-heading font-bold text-lg text-[#29483A] dark:text-white">Mindful Paths</span>
+          <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="text-[#26332D] hover:text-[#D9A38F] dark:text-[#E8EFE9] text-base w-8 h-8 rounded-full bg-white dark:bg-[#23382d] flex items-center justify-center border border-[#E8EFE9] dark:border-white/10" aria-label="Close menu">
+        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <!-- Drawer Controls (Theme & RTL) -->
-      <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#E8EFE9] dark:border-white/10">
-        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#23382d] text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9] border border-[#E8EFE9] dark:border-white/10 flex items-center justify-center gap-2">
+      <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
           <span class="theme-label">Theme</span>
         </button>
-        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#23382d] text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9] border border-[#E8EFE9] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-globe text-xs"></i>
           <span class="rtl-text">RTL</span>
         </button>
       </div>
 
-      <nav class="space-y-1.5 text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9]">
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-compass text-[#D9A38F] w-4"></i> Home</a>
-        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-heart text-[#D9A38F] w-4"></i> The Wellness Journey</a>
-        <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-shield-heart text-[#D9A38F] w-4"></i> About Us</a>
-        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-hand-holding-heart text-[#D9A38F] w-4"></i> Services</a>
-        <a href="therapists.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-user-md text-[#D9A38F] w-4"></i> Therapists</a>
-        <a href="resources.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-lungs text-[#D9A38F] w-4"></i> Resources</a>
-        <a href="pricing.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-tags text-[#D9A38F] w-4"></i> Pricing</a>
-        <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-newspaper text-[#D9A38F] w-4"></i> Blog</a>
-        <a href="contact.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-envelope text-[#D9A38F] w-4"></i> Contact</a>
+      <nav class="space-y-1.5 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home</a>
+        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> The Wellness Journey</a>
+        <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> Services</a>
+        <a href="therapists.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-user-md text-[#D7B7A5] w-4"></i> Therapists</a>
+        <a href="resources.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-lungs text-[#D7B7A5] w-4"></i> Resources</a>
+        <a href="pricing.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-tags text-[#D7B7A5] w-4"></i> Pricing</a>
+        <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-newspaper text-[#D7B7A5] w-4"></i> Blog</a>
+        <a href="contact.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-envelope text-[#D7B7A5] w-4"></i> Contact</a>
       </nav>
     </div>
 
-    <div class="pt-6 border-t border-[#E8EFE9] dark:border-white/10 space-y-3">
-      <a href="login.html" class="nav-auth-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
+    <div class="pt-6 border-t border-[#EBF1F4] dark:border-white/10 space-y-3">
+      <a href="login.html" class="nav-auth-btn w-full py-3 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
         <i class="fas fa-user-circle"></i> <span class="nav-auth-text">Client Login</span>
       </a>
       <div class="text-center">
-        <a href="tel:988" class="text-xs text-[#D9A38F] font-bold hover:underline flex items-center justify-center gap-1.5">
+        <a href="tel:988" class="text-xs text-[#D7B7A5] font-bold hover:underline flex items-center justify-center gap-1.5">
           <i class="fas fa-phone-alt"></i> 24/7 Crisis Helpline: 988
         </a>
       </div>
@@ -604,7 +592,7 @@
   </aside>
 
   <!-- Back to Top Button -->
-  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-[#29483A] text-white shadow-lg shadow-[#D7B7A5]/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#1f372c] z-30" aria-label="Scroll to top">
+  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-[#D7B7A5] text-white shadow-lg shadow-[#D7B7A5]/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#c5a390] z-30" aria-label="Scroll to top">
     <i class="fas fa-arrow-up text-xs"></i>
   </button>
 

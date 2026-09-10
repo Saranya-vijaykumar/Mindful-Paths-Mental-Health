@@ -41,78 +41,66 @@
         extend: {
           colors: {
             primary: {
-              50: '#f4f8f5',
-              100: '#e8efe9',
-              200: '#d1dfd4',
-              300: '#b4ccbb',
-              400: '#9ebfa7',
-              500: '#8FAF9A', // Sage Green (Primary)
-              600: '#759981',
-              700: '#5c7d67',
-              800: '#435e4d',
-              900: '#29483A', // Deep Forest (Dark Primary)
-              950: '#16281f',
-            },
-            forest: {
-              50: '#f2f6f4',
-              100: '#e3ece7',
-              200: '#c5d8ce',
-              300: '#9cbcae',
-              400: '#6d9984',
-              500: '#477862',
-              600: '#29483A', // Deep Forest (Headings & Buttons)
-              700: '#1f372c',
-              800: '#172b22',
-              900: '#131f18',
-              950: '#0a120e',
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Mindful Paths signature terracotta
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
             },
             cream: {
-              50: '#fdfcfb',
-              100: '#F7F5EF', // Warm Cream (Background)
-              200: '#ede8dd',
-              300: '#ded5c2',
-              400: '#cbbfa5',
-              500: '#b5a687',
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Signature Warm Cream
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
+            },
+            teal: {
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Signature Deep Teal
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
             },
             sage: {
-              50: '#f6f9f7',
-              100: '#E8EFE9', // Soft Sage (Section Background)
-              200: '#d4e2d6',
-              300: '#b8cebc',
-              400: '#9ebca4',
-              500: '#8FAF9A', // Sage Green
-              600: '#74967f',
-              700: '#5a7864',
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Signature Sage Green
+              600: '#6f886d',
+              700: '#576c55',
             },
-            peach: {
-              50: '#fdf8f6',
-              100: '#fbeee9',
-              200: '#f6dcd4',
-              300: '#ecc2b4',
-              400: '#e1a491',
-              500: '#D9A38F', // Muted Peach (Accent & Small Highlights)
-              600: '#c48974',
-              700: '#a76f5b',
-              800: '#8b5947',
-              900: '#724738',
-            },
-            charcoal: {
-              50: '#f5f7f6',
-              100: '#e4eae7',
-              200: '#cbd6d0',
-              300: '#a5b7ad',
-              400: '#7a9284',
-              500: '#587062',
-              600: '#26332D', // Charcoal (Body Text)
-              700: '#1e2924',
-              800: '#18211d',
-              900: '#121915',
-              950: '#0a0e0c',
+            brown: {
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Signature Warm Brown body text
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
             },
             darkbg: {
-              900: '#131f18', // Deep Forest Charcoal
-              800: '#1a2b22', // Forest Surface
-              700: '#23382d', // Forest Border
+              900: '#11191f', // Deep Teal Charcoal
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
@@ -131,14 +119,14 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F7F5EF] text-[#26332D] dark:bg-[#131f18] dark:text-[#F7F5EF] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F7F5EF] text-xs font-medium py-2.5 px-4 border-b border-white/10">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="bg-[#29483A]/20 text-[#f0baa9] border border-[#8FAF9A]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#29483A] animate-pulse"></span> 24/7 Crisis Support
+        <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D7B7A5] animate-pulse"></span> 24/7 Crisis Support
         </span>
         <span class="text-white/90 text-[11px] sm:text-xs">In emotional distress? Dial <a href="tel:988" class="font-bold underline text-[#f0baa9] hover:text-white transition-colors">988 Lifeline</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span></span>
       </div>
@@ -155,7 +143,7 @@
   </div>
 
   <!-- Main Navbar Header -->
-  <header id="main-header" class="sticky top-0 z-40 bg-[#F7F5EF]/95 dark:bg-[#1a2b22]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
+  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -165,69 +153,69 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <span class="font-heading text-2xl font-bold tracking-tight text-[#29483A] dark:text-[#F7F5EF] leading-none">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-none">
           Mindful Paths
         </span>
       </a>
 
       <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#26332D] dark:text-[#E8EFE9]">
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
         <!-- Home Dropdown -->
         <div class="relative group py-2 flex items-center">
-          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] ">
+          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] ">
             Home <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <div class="bg-white dark:bg-[#1a2b22] rounded-2xl shadow-xl border border-[#E8EFE9] dark:border-white/10 p-2">
-              <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#23382d] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">
-                <i class="fas fa-compass text-[#D9A38F] w-4"></i> Home 1 &middot; Multipurpose Services
+            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2">
+              <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 &middot; Multipurpose Services
               </a>
-              <a href="home-2.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#23382d] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">
-                <i class="fas fa-heart text-[#D9A38F] w-4"></i> Home 2 &middot; The Wellness Journey
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 &middot; The Wellness Journey
               </a>
             </div>
           </div>
         </div>
 
-        <a href="about.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">About</a>
+        <a href="about.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">About</a>
 
         <!-- Services Link (Direct - No Dropdown) -->
-        <a href="services.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
+        <a href="services.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
 
         <!-- Therapists Link (Direct - No Dropdown) -->
-        <a href="therapists.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
+        <a href="therapists.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
 
-        <a href="resources.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Resources</a>
-        <a href="pricing.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Pricing</a>
+        <a href="resources.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Resources</a>
+        <a href="pricing.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Pricing</a>
 
         <!-- Blog Link (Direct - No Dropdown) -->
-        <a href="blog.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Blog</a>
+        <a href="blog.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Blog</a>
 
-        <a href="contact.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors ">Contact</a>
+        <a href="contact.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Contact</a>
       </nav>
 
       <!-- Right Action Controls (Desktop Only) -->
       <div class="hidden lg:flex items-center gap-3 shrink-0">
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
 
         <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
           <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
 
         <!-- Terracotta Pill Client Login Button -->
-        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
+        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
           <i class="fas fa-user-circle text-sm"></i> <span class="nav-auth-text">Client Login</span>
         </a>
       </div>
 
       <!-- Mobile Navbar: STRICTLY Logo + Hamburger ONLY -->
       <div class="flex lg:hidden items-center">
-        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#23382d] text-[#29483A] dark:text-[#F7F5EF] hover:text-[#D9A38F] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
+        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -236,48 +224,48 @@
   </header>
 
   <!-- Breadcrumb -->
-  <div class="py-4 bg-[#E8EFE9]/40 dark:bg-[#1a2b22] border-b border-[#D8E3DA] dark:border-white/10 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#26332D] dark:text-[#7d8d96]">
-      <a href="index.html" class="hover:text-[#D9A38F]">Home</a>
+  <div class="py-4 bg-[#EBF1F4]/40 dark:bg-[#17232b] border-b border-[#D1DEE5] dark:border-white/10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96]">
+      <a href="index.html" class="hover:text-[#B25338]">Home</a>
       <span>/</span>
-      <span class="text-[#29483A] dark:text-[#F7F5EF] font-bold">Therapy Services Directory</span>
+      <span class="text-[#294657] dark:text-[#F8F6F1] font-bold">Therapy Services Directory</span>
     </div>
   </div>
 
   <!-- Hero Section (Dedicated to Services & Clinical Care) -->
-  <section class="py-16 md:py-24 bg-gradient-to-b from-[#F7F5EF] via-white to-[#F7F5EF] dark:from-[#131f18] dark:via-[#1a2b22] dark:to-[#131f18] border-b border-[#D8E3DA] dark:border-white/10">
+  <section class="py-16 md:py-24 bg-gradient-to-b from-[#F8F6F1] via-white to-[#F8F6F1] dark:from-[#11191f] dark:via-[#17232b] dark:to-[#11191f] border-b border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#29483A]/15 text-[#D9A38F] text-xs font-bold uppercase tracking-wider">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B25338]/15 text-[#B25338] text-xs font-bold uppercase tracking-wider">
         <i class="fas fa-heart-pulse"></i> Comprehensive Psychological Modalities
       </div>
 
-      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-tight max-w-4xl mx-auto">
-        Compassionate, Evidence-Based<br><span class="italic text-[#D9A38F]">Therapy Services.</span>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-tight max-w-4xl mx-auto">
+        Compassionate, Evidence-Based<br><span class="italic text-[#B25338]">Therapy Services.</span>
       </h1>
 
-      <p class="text-base sm:text-lg text-[#26332D]/80 dark:text-[#E8EFE9] max-w-2xl mx-auto leading-relaxed">
+      <p class="text-base sm:text-lg text-[#27343B]/80 dark:text-[#EBF1F4] max-w-2xl mx-auto leading-relaxed">
         Every individual and relationship possesses a unique story and rhythm. Our board-certified clinicians provide personalized psychotherapy, somatic regulation, and trauma reprocessing in a calm, welcoming space.
       </p>
 
       <!-- Transparent Pricing Callout Pill (Pointing Cleanly to Pricing Page) -->
       <div class="pt-2">
-        <a href="pricing.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-[#1a2b22] border border-[#D8E3DA] dark:border-white/10 text-xs font-semibold text-[#29483A] dark:text-[#8FAF9A] shadow-sm hover:border-[#D9A38F] hover:text-[#D9A38F] transition-all">
-          <i class="fas fa-tag text-[#D9A38F]"></i>
+        <a href="pricing.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 text-xs font-semibold text-[#294657] dark:text-[#8FAFC0] shadow-sm hover:border-[#B25338] hover:text-[#B25338] transition-all">
+          <i class="fas fa-tag text-[#B25338]"></i>
           <span>Looking for session rates, care packages &amp; insurance details?</span>
-          <span class="font-bold underline text-[#D9A38F]">View Pricing Page &rarr;</span>
+          <span class="font-bold underline text-[#B25338]">View Pricing Page &rarr;</span>
         </a>
       </div>
 
       <!-- Trust Badges -->
       <div class="pt-4 flex flex-wrap items-center justify-center gap-4 text-xs">
-        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#23382d] border border-[#D8E3DA] dark:border-white/10 text-[#29483A] dark:text-[#8FAF9A] font-semibold flex items-center gap-1.5 shadow-sm">
+        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#D1DEE5] dark:border-white/10 text-[#294657] dark:text-[#8FAFC0] font-semibold flex items-center gap-1.5 shadow-sm">
           <i class="fas fa-shield-alt text-emerald-600"></i> 100% HIPAA Confidential
         </span>
-        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#23382d] border border-[#D8E3DA] dark:border-white/10 text-[#29483A] dark:text-[#8FAF9A] font-semibold flex items-center gap-1.5 shadow-sm">
+        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#D1DEE5] dark:border-white/10 text-[#294657] dark:text-[#8FAFC0] font-semibold flex items-center gap-1.5 shadow-sm">
           <i class="fas fa-certificate text-blue-600"></i> APA Accredited Clinicians
         </span>
-        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#23382d] border border-[#D8E3DA] dark:border-white/10 text-[#29483A] dark:text-[#8FAF9A] font-semibold flex items-center gap-1.5 shadow-sm">
+        <span class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#D1DEE5] dark:border-white/10 text-[#294657] dark:text-[#8FAFC0] font-semibold flex items-center gap-1.5 shadow-sm">
           <i class="fas fa-star text-amber-500"></i> 4.9/5 Client Experience Rating
         </span>
       </div>
@@ -286,17 +274,17 @@
   </section>
 
   <!-- Section 2: All 8 Clinical Services Directory (Only Services, Perfectly Aligned) -->
-  <section class="py-16 md:py-24 bg-white dark:bg-[#1a2b22]">
+  <section class="py-16 md:py-24 bg-white dark:bg-[#17232b]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#D8E3DA] dark:border-white/10 pb-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#D1DEE5] dark:border-white/10 pb-6">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">Specialized Modality Directory</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF] mt-1">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Specialized Modality Directory</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1] mt-1">
             Our 8 Core Psychological Services
           </h2>
         </div>
-        <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] max-w-sm">
+        <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] max-w-sm">
           All therapies are offered in-person at our Manhattan &amp; Brooklyn sanctuaries or via encrypted telehealth video.
         </p>
       </div>
@@ -304,16 +292,16 @@
       <!-- 8 Services Grid (Strictly Aligned & Focused Exclusively on Care) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch">
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-individual-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-individual-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?auto=format&fit=crop&w=800&q=80" alt="Individual Adult Psychotherapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Core Modality
                   </span>
                 </div>
@@ -321,46 +309,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Individual Care</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">50-Minute Clinical Hour</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">50-Minute Clinical Hour</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-individual-therapy.html" class="hover:text-[#D9A38F] transition-colors">Individual Adult Psychotherapy</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-individual-therapy.html" class="hover:text-[#B25338] transition-colors">Individual Adult Psychotherapy</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. Sarah Jenkins, Psy.D.</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 One-on-one compassionate CBT, ACT, and somatic regulation tailored for adults navigating anxiety, perfectionistic burnout, depression, and major life transitions.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Adults experiencing persistent worry, racing thoughts, grief, high-achiever exhaustion, or feeling emotionally overwhelmed.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Adults experiencing persistent worry, racing thoughts, grief, high-achiever exhaustion, or feeling emotionally overwhelmed.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Cognitive Behavioral Therapy (CBT)
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Acceptance & Commitment (ACT)
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Polyvagal Somatic Resets
                     </span>
                   
@@ -369,32 +357,32 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-individual-therapy.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-individual-therapy.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border-2 border-[#D9A38F] shadow-xl flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-2 border-[#B25338] shadow-xl flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
-              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#29483A] text-white text-[10px] uppercase font-bold tracking-wider shadow-md z-10 flex items-center gap-1.5">
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#B25338] text-white text-[10px] uppercase font-bold tracking-wider shadow-md z-10 flex items-center gap-1.5">
                 <i class="fas fa-star text-[9px]"></i> Most Popular Modality
               </div>
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-couples-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-couples-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1522543558187-768b6df7c25c?auto=format&fit=crop&w=800&q=80" alt="Couples & Marriage Counseling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Most Popular
                   </span>
                 </div>
@@ -402,46 +390,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Relationship Care</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">75-Minute Extended Dialogue</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">75-Minute Extended Dialogue</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-couples-therapy.html" class="hover:text-[#D9A38F] transition-colors">Couples & Marriage Counseling</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-couples-therapy.html" class="hover:text-[#B25338] transition-colors">Couples & Marriage Counseling</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. Marcus Vance, LMFT</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Gottman-informed and Emotionally Focused Therapy (EFT) designed to de-escalate recurring arguments, repair attachment injuries, and restore romantic warmth.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Partners feeling disconnected, stuck in cyclical defensiveness, navigating infidelity recovery, or wanting deeper emotional intimacy.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Partners feeling disconnected, stuck in cyclical defensiveness, navigating infidelity recovery, or wanting deeper emotional intimacy.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Gottman Method (Level 3)
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Emotionally Focused Therapy (EFT)
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Relational De-escalation
                     </span>
                   
@@ -450,28 +438,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#B25338] hover:bg-[#923F28] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-couples-therapy.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-couples-therapy.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-trauma-emdr.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-trauma-emdr.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=800&q=80" alt="EMDR & Somatic Trauma Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Specialized Care
                   </span>
                 </div>
@@ -479,46 +467,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Trauma Recovery</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">60-Minute Reprocessing Session</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">60-Minute Reprocessing Session</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-trauma-emdr.html" class="hover:text-[#D9A38F] transition-colors">EMDR & Somatic Trauma Healing</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-trauma-emdr.html" class="hover:text-[#B25338] transition-colors">EMDR & Somatic Trauma Healing</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Elena Rostova, LCSW, CCTP</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Certified bilateral stimulation and body-first somatic protocols to help your brain reprocess past trauma, PTSD, and visceral emotional triggers without endless verbal re-telling.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Individuals carrying past trauma, panic attacks, developmental wounds, or visceral bodily hyper-vigilance.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Individuals carrying past trauma, panic attacks, developmental wounds, or visceral bodily hyper-vigilance.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Bilateral Eye Movement (EMDR)
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Somatic Experiencing
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Nervous System Stabilization
                     </span>
                   
@@ -527,28 +515,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-trauma-emdr.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-trauma-emdr.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-teen-counseling.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-teen-counseling.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Teen & Adolescent Counseling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Ages 12–19
                   </span>
                 </div>
@@ -556,46 +544,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Youth Sanctuary</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">50-Minute Youth Session</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">50-Minute Youth Session</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-teen-counseling.html" class="hover:text-[#D9A38F] transition-colors">Teen & Adolescent Counseling</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-teen-counseling.html" class="hover:text-[#B25338] transition-colors">Teen & Adolescent Counseling</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. David Kim, M.D. & Youth Specialists</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 A warm, pressure-free sanctuary for adolescents (ages 12-19) navigating academic burnout, peer dynamics, social anxiety, family communication, and self-identity.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Teens feeling overwhelmed by academic pressure, school transitions, low self-worth, or difficulty communicating with parents.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Teens feeling overwhelmed by academic pressure, school transitions, low self-worth, or difficulty communicating with parents.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Adolescent CBT & DBT Skills
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Expressive Arts Integration
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Collaborative Parent Alignment
                     </span>
                   
@@ -604,28 +592,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-teen-counseling.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-teen-counseling.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-telehealth.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-telehealth.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Encrypted Telehealth Video Sanctuary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Zero Commute
                   </span>
                 </div>
@@ -633,46 +621,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Virtual Care</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">50-Minute Virtual Session</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">50-Minute Virtual Session</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-telehealth.html" class="hover:text-[#D9A38F] transition-colors">Encrypted Telehealth Video Sanctuary</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-telehealth.html" class="hover:text-[#B25338] transition-colors">Encrypted Telehealth Video Sanctuary</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. Maya Patel, Ph.D.</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Secure, high-definition online psychotherapy from the sanctuary of your home. Complete privacy, interactive digital whiteboards, and seamless continuity of care statewide.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Busy professionals, parents, frequent travelers, or anyone seeking high-caliber clinical care with zero commute stress.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Busy professionals, parents, frequent travelers, or anyone seeking high-caliber clinical care with zero commute stress.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       HIPAA Encrypted HD Video Link
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Real-Time Somatic Guidance
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Statewide Licensed Care
                     </span>
                   
@@ -681,28 +669,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-telehealth.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-telehealth.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-mindfulness.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-mindfulness.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Mindfulness & Somatic Group Cohorts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Community Haven
                   </span>
                 </div>
@@ -710,46 +698,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Group Therapy</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">90-Minute Cohort Circle</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">90-Minute Cohort Circle</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-mindfulness.html" class="hover:text-[#D9A38F] transition-colors">Mindfulness & Somatic Group Cohorts</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-mindfulness.html" class="hover:text-[#B25338] transition-colors">Mindfulness & Somatic Group Cohorts</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: James Thornton, LCSW</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Intimate, therapist-facilitated cohorts (6-8 members) exploring polyvagal nervous system grounding, somatic breathwork, self-compassion, and shared human empathy.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Individuals seeking communal connection, learning to regulate nervous systems alongside peers, and breaking emotional isolation.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Individuals seeking communal connection, learning to regulate nervous systems alongside peers, and breaking emotional isolation.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       8-Week Structured Cohorts
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Polyvagal Somatic Journal
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Peer Support Circles
                     </span>
                   
@@ -758,28 +746,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-mindfulness.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-mindfulness.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-psychiatry.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-psychiatry.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Psychiatric Evaluation & Medication" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Board-Certified M.D.
                   </span>
                 </div>
@@ -787,46 +775,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Integrative Medicine</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">60-Min Intake / 30-Min Follow-up</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">60-Min Intake / 30-Min Follow-up</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-psychiatry.html" class="hover:text-[#D9A38F] transition-colors">Psychiatric Evaluation & Medication</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-psychiatry.html" class="hover:text-[#B25338] transition-colors">Psychiatric Evaluation & Medication</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. David Kim, M.D.</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Holistic psychiatric diagnostic consultations, mindful medication evaluations, and bio-psycho-social health management closely coordinated with your ongoing talk therapy.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Clients whose emotional distress significantly impairs daily functioning, sleep, or concentration, seeking conservative medication advice.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Clients whose emotional distress significantly impairs daily functioning, sleep, or concentration, seeking conservative medication advice.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Bio-Psycho-Social Evaluation
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Conservative Psychopharmacology
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Collaborative Therapist Sync
                     </span>
                   
@@ -835,28 +823,28 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-psychiatry.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-psychiatry.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
 
           </div>
         
-          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border border-[#D8E3DA] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
+          <div class="card-wellness p-6 rounded-3xl bg-white dark:bg-[#17232b] border border border-[#D1DEE5] dark:border-white/10 shadow-md flex flex-col justify-between h-full relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group">
             
             
 
             <div class="flex flex-col flex-1">
               <!-- Service Image Container (Uniform Aspect & Height) -->
-              <a href="service-family-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#E8EFE9]/40 dark:bg-[#23382d]">
+              <a href="service-family-therapy.html" class="block overflow-hidden rounded-2xl mb-4 relative aspect-[16/10] w-full bg-[#EBF1F4]/40 dark:bg-[#1e2d37]">
                 <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Family Systems & Parenting Guidance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute top-3 left-3">
-                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#1a2b22]/95 backdrop-blur-md text-[10px] font-bold text-[#29483A] dark:text-[#8FAF9A] shadow-sm">
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md text-[10px] font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm">
                     Whole-Family Care
                   </span>
                 </div>
@@ -864,46 +852,46 @@
 
               <!-- Category & Title -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#D9A38F]">
+                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#B25338]">
                   <span>Family Counseling</span>
-                  <span class="text-[#24586E] dark:text-[#8FAF9A] text-[10px] font-semibold">60-Minute Family Session</span>
+                  <span class="text-[#24586E] dark:text-[#8FAFC0] text-[10px] font-semibold">60-Minute Family Session</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold text-[#29483A] dark:text-[#F7F5EF] leading-snug">
-                  <a href="service-family-therapy.html" class="hover:text-[#D9A38F] transition-colors">Family Systems & Parenting Guidance</a>
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                  <a href="service-family-therapy.html" class="hover:text-[#B25338] transition-colors">Family Systems & Parenting Guidance</a>
                 </h3>
               </div>
 
               <!-- Clinician Lead -->
-              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAF9A] pt-1 flex items-center gap-1.5">
+              <div class="text-[11px] font-semibold text-[#24586E] dark:text-[#8FAFC0] pt-1 flex items-center gap-1.5">
                 <i class="fas fa-user-md text-[10px]"></i>
                 <span>Lead: Dr. Marcus Vance, LMFT</span>
               </div>
 
               <!-- Core Description -->
-              <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
+              <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed my-3 line-clamp-3">
                 Restoring healthy intergenerational boundaries, breaking cycles of conflict, and building emotional safety across parents, children, and adult siblings.
               </p>
 
               <!-- Who It's For Box -->
-              <div class="p-3 rounded-xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
-                <strong class="text-[#29483A] dark:text-[#F7F5EF] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
-                <p class="text-[#26332D]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Families experiencing persistent household tension, parent-teen communication breakdowns, blended family transitions, or boundary confusion.</p>
+              <div class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5]/60 dark:border-white/10 text-[11px] space-y-1 mb-4">
+                <strong class="text-[#294657] dark:text-[#F8F6F1] block text-[10px] uppercase tracking-wider font-bold">Best For:</strong>
+                <p class="text-[#27343B]/80 dark:text-[#7d8d96] leading-tight line-clamp-2">Families experiencing persistent household tension, parent-teen communication breakdowns, blended family transitions, or boundary confusion.</p>
               </div>
 
               <!-- Modalities Tags -->
               <div class="space-y-1.5 mb-6 flex-1">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#26332D]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#27343B]/60 dark:text-[#7d8d96] block">Techniques Used:</span>
                 <div class="flex flex-wrap gap-1.5">
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Structural Family Therapy
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       Parent Guidance Alignment
                     </span>
                   
-                    <span class="px-2 py-0.5 rounded-md bg-[#E8EFE9]/70 dark:bg-white/10 text-[10px] text-[#29483A] dark:text-[#E8EFE9] font-medium">
+                    <span class="px-2 py-0.5 rounded-md bg-[#EBF1F4]/70 dark:bg-white/10 text-[10px] text-[#294657] dark:text-[#EBF1F4] font-medium">
                       De-escalation Protocols
                     </span>
                   
@@ -912,12 +900,12 @@
             </div>
 
             <!-- Bottom CTA Buttons (Strictly Aligned) -->
-            <div class="mt-auto space-y-2 pt-3 border-t border-[#D8E3DA]/60 dark:border-white/10">
-              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
+            <div class="mt-auto space-y-2 pt-3 border-t border-[#D1DEE5]/60 dark:border-white/10">
+              <button type="button" class="open-appointment-btn w-full py-3 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1.5">
                 <span>Book Consultation</span>
                 <i class="fas fa-arrow-right text-[10px]"></i>
               </button>
-              <a href="service-family-therapy.html" class="block text-center text-[11px] font-bold text-[#D9A38F] hover:underline py-0.5">
+              <a href="service-family-therapy.html" class="block text-center text-[11px] font-bold text-[#B25338] hover:underline py-0.5">
                 Explore Full Modality Details &rarr;
               </a>
             </div>
@@ -930,57 +918,57 @@
   </section>
 
   <!-- Section 3: What to Expect in Your First Session -->
-  <section class="py-16 md:py-20 bg-[#F7F5EF] dark:bg-[#131f18] border-t border-[#D8E3DA] dark:border-white/10">
+  <section class="py-16 md:py-20 bg-[#F8F6F1] dark:bg-[#11191f] border-t border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center max-w-2xl mx-auto space-y-3">
-        <span class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">Your Clinical Journey</span>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Your Clinical Journey</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
           What to Expect in Your Therapy Process
         </h2>
-        <p class="text-xs sm:text-sm text-[#26332D]/80 dark:text-[#7d8d96]">
+        <p class="text-xs sm:text-sm text-[#27343B]/80 dark:text-[#7d8d96]">
           Therapy is not an interrogation. It is an unhurried, confidential partnership focused entirely on your safety and growth.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#D8E3DA] dark:border-white/10 space-y-3 shadow-sm">
-          <div class="w-10 h-10 rounded-2xl bg-[#24586E]/15 text-[#24586E] dark:text-[#8FAF9A] flex items-center justify-center font-bold text-sm">
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-2xl bg-[#24586E]/15 text-[#24586E] dark:text-[#8FAFC0] flex items-center justify-center font-bold text-sm">
             01
           </div>
-          <h4 class="font-heading text-lg font-bold text-[#29483A] dark:text-[#F7F5EF]">Safe Intake Dialogue</h4>
-          <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed">
+          <h4 class="font-heading text-lg font-bold text-[#294657] dark:text-[#F8F6F1]">Safe Intake Dialogue</h4>
+          <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed">
             In your first session, we listen without judgment to what brought you to therapy and what safety feels like for you.
           </p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#D8E3DA] dark:border-white/10 space-y-3 shadow-sm">
-          <div class="w-10 h-10 rounded-2xl bg-[#29483A]/15 text-[#D9A38F] flex items-center justify-center font-bold text-sm">
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-2xl bg-[#B25338]/15 text-[#B25338] flex items-center justify-center font-bold text-sm">
             02
           </div>
-          <h4 class="font-heading text-lg font-bold text-[#29483A] dark:text-[#F7F5EF]">Root Trigger Mapping</h4>
-          <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed">
+          <h4 class="font-heading text-lg font-bold text-[#294657] dark:text-[#F8F6F1]">Root Trigger Mapping</h4>
+          <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed">
             We map recurring triggers, emotional cycles, and somatic tension to understand how your body adapted to past stress.
           </p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#D8E3DA] dark:border-white/10 space-y-3 shadow-sm">
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-3 shadow-sm">
           <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 flex items-center justify-center font-bold text-sm">
             03
           </div>
-          <h4 class="font-heading text-lg font-bold text-[#29483A] dark:text-[#F7F5EF]">Somatic &amp; CBT Tools</h4>
-          <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed">
+          <h4 class="font-heading text-lg font-bold text-[#294657] dark:text-[#F8F6F1]">Somatic &amp; CBT Tools</h4>
+          <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed">
             Learn active grounding practices, bilateral stimulation, and cognitive flexibility tools you can use in daily life.
           </p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#D8E3DA] dark:border-white/10 space-y-3 shadow-sm">
+        <div class="p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-3 shadow-sm">
           <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 flex items-center justify-center font-bold text-sm">
             04
           </div>
-          <h4 class="font-heading text-lg font-bold text-[#29483A] dark:text-[#F7F5EF]">Lasting Resilience</h4>
-          <p class="text-xs text-[#26332D]/75 dark:text-[#7d8d96] leading-relaxed">
+          <h4 class="font-heading text-lg font-bold text-[#294657] dark:text-[#F8F6F1]">Lasting Resilience</h4>
+          <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed">
             Build unshakeable boundaries, deeper relational connection, and enduring trust in your capacity to handle life.
           </p>
         </div>
@@ -991,60 +979,60 @@
   </section>
 
   <!-- Section 4: Clinical Therapy FAQs (Therapy-Focused, No Billing Jargon) -->
-  <section class="py-16 md:py-20 bg-white dark:bg-[#1a2b22] border-t border-[#D8E3DA] dark:border-white/10">
+  <section class="py-16 md:py-20 bg-white dark:bg-[#17232b] border-t border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="text-center space-y-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">Frequently Asked Questions</span>
-        <h2 class="font-heading text-3xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Frequently Asked Questions</span>
+        <h2 class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">
           Common Questions About Starting Therapy
         </h2>
       </div>
 
       <div class="space-y-3">
-        <details class="group p-5 rounded-2xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA] dark:border-white/10 cursor-pointer" open>
-          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">
+        <details class="group p-5 rounded-2xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5] dark:border-white/10 cursor-pointer" open>
+          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">
             <span>How do I know which therapy modality is right for me?</span>
             <span class="w-7 h-7 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xs transition-transform group-open:rotate-180">
               <i class="fas fa-chevron-down"></i>
             </span>
           </summary>
-          <p class="mt-3 text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="mt-3 text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
             You do not need to diagnose yourself before reaching out. During your initial intake consultation, our clinical director will discuss what you are experiencing, your goals, and recommend the therapist and therapeutic modality (CBT, EMDR, Gottman, etc.) best aligned with your needs.
           </p>
         </details>
 
-        <details class="group p-5 rounded-2xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA] dark:border-white/10 cursor-pointer">
-          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">
+        <details class="group p-5 rounded-2xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5] dark:border-white/10 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">
             <span>What is the difference between CBT and Somatic EMDR therapy?</span>
             <span class="w-7 h-7 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xs transition-transform group-open:rotate-180">
               <i class="fas fa-chevron-down"></i>
             </span>
           </summary>
-          <p class="mt-3 text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="mt-3 text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
             Cognitive Behavioral Therapy (CBT) focuses on recognizing and reframing unhelpful thought cycles and behavioral patterns. Somatic and EMDR therapy work through the physical nervous system and bilateral sensory processing to release traumatic memories and visceral triggers stored in the body. Many clients benefit from an integrative combination of both.
           </p>
         </details>
 
-        <details class="group p-5 rounded-2xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA] dark:border-white/10 cursor-pointer">
-          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">
+        <details class="group p-5 rounded-2xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5] dark:border-white/10 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">
             <span>Do you offer in-person sessions, virtual telehealth, or both?</span>
             <span class="w-7 h-7 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xs transition-transform group-open:rotate-180">
               <i class="fas fa-chevron-down"></i>
             </span>
           </summary>
-          <p class="mt-3 text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="mt-3 text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
             Both! We welcome clients to our quiet, acoustic consultation suites in Manhattan and Brooklyn, and we also provide secure, HIPAA-compliant telehealth video sessions accessible from anywhere statewide. Many clients choose a hybrid schedule that fits their lifestyle.
           </p>
         </details>
 
-        <details class="group p-5 rounded-2xl bg-[#F7F5EF] dark:bg-[#131f18] border border-[#D8E3DA] dark:border-white/10 cursor-pointer">
-          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">
+        <details class="group p-5 rounded-2xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#D1DEE5] dark:border-white/10 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">
             <span>How long does a typical course of psychotherapy last?</span>
             <span class="w-7 h-7 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xs transition-transform group-open:rotate-180">
               <i class="fas fa-chevron-down"></i>
             </span>
           </summary>
-          <p class="mt-3 text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="mt-3 text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
             Therapy duration varies based on your individual goals. Short-term, focused CBT or EMDR protocols for acute phobias or single incidents typically range from 8 to 16 sessions. Deeper relational, attachment, or chronic anxiety healing often continues over 6 to 12 months. Your therapist will collaboratively review your progress regularly.
           </p>
         </details>
@@ -1054,16 +1042,16 @@
   </section>
 
   <!-- Section 5: Dedicated Pricing Banner (Clean Invitation to Pricing Page) -->
-  <section class="py-12 bg-[#F7F5EF] dark:bg-[#131f18] border-t border-[#D8E3DA] dark:border-white/10 text-center">
+  <section class="py-12 bg-[#F8F6F1] dark:bg-[#11191f] border-t border-[#D1DEE5] dark:border-white/10 text-center">
     <div class="max-w-3xl mx-auto px-4 space-y-3">
-      <h3 class="font-heading text-2xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
+      <h3 class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">
         Looking for Fee Information &amp; Insurance Options?
       </h3>
-      <p class="text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
+      <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
         We believe in zero financial surprises. Visit our dedicated Pricing &amp; Insurance page to view per-session fees, monthly packages, insurance superbill reimbursement guides, and sliding-scale availability.
       </p>
       <div class="pt-2">
-        <a href="pricing.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white text-xs font-bold shadow-md transition-all hover:scale-105">
+        <a href="pricing.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#B25338] hover:bg-[#923F28] text-white text-xs font-bold shadow-md transition-all hover:scale-105">
           <span>Explore Pricing, Packages &amp; Insurance</span>
           <i class="fas fa-arrow-right text-[10px]"></i>
         </a>
@@ -1072,19 +1060,19 @@
   </section>
 
   <!-- Section 6: Sanctuary Booking CTA Banner -->
-  <section class="py-16 bg-[#29483A] text-white">
+  <section class="py-16 bg-[#294657] text-white">
     <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
-      <div class="w-12 h-12 rounded-2xl bg-[#29483A] text-white flex items-center justify-center mx-auto text-xl shadow-lg">
+      <div class="w-12 h-12 rounded-2xl bg-[#B25338] text-white flex items-center justify-center mx-auto text-xl shadow-lg">
         <i class="fas fa-heart"></i>
       </div>
       <h2 class="font-heading text-3xl sm:text-4xl font-bold leading-tight">
         Ready to take the first step toward sustained emotional healing?
       </h2>
-      <p class="text-xs sm:text-sm text-[#E8EFE9]/85 max-w-xl mx-auto leading-relaxed">
+      <p class="text-xs sm:text-sm text-[#EBF1F4]/85 max-w-xl mx-auto leading-relaxed">
         Schedule your initial confidential intake consultation today. Our clinical intake team will match you with the specialist best aligned with your needs.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <button type="button" class="open-appointment-btn px-8 py-4 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-lg transition-all hover:scale-105 active:scale-95">
+        <button type="button" class="open-appointment-btn px-8 py-4 rounded-full bg-[#B25338] hover:bg-[#923F28] text-white font-bold text-xs shadow-lg transition-all hover:scale-105 active:scale-95">
           Book Confidential Intake
         </button>
         <a href="therapists.html" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-bold text-xs border border-white/20 transition-all hover:scale-105">
@@ -1097,7 +1085,7 @@
   <!-- Luxury Deep Teal Charcoal Footer -->
   
   <!-- Luxury Deep Teal Charcoal Footer -->
-  <footer class="bg-[#131f18] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -1118,22 +1106,22 @@
           <!-- Trust Badges (Clickable & Informative) -->
           <div class="pt-2 flex flex-wrap gap-2.5">
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
-              <i class="fas fa-shield-alt text-[#D9A38F]"></i> HIPAA Compliant
+              <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
-              <i class="fas fa-certificate text-[#8FAF9A]"></i> APA Accredited
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+              <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
 
           <!-- Social Links -->
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Instagram" title="Instagram"><i class="fab fa-instagram text-xs"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#29483A] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Twitter" title="Twitter"><i class="fab fa-twitter text-xs"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Instagram" title="Instagram"><i class="fab fa-instagram text-xs"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Twitter" title="Twitter"><i class="fab fa-twitter text-xs"></i></a>
           </div>
         </div>
 
@@ -1141,13 +1129,13 @@
         <div class="lg:col-span-2 space-y-3">
           <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Therapy Services</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Individual Psychotherapy</a></li>
-            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Couples Counseling</a></li>
-            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Teen &amp; Adolescent Care</a></li>
-            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Trauma &amp; EMDR Recovery</a></li>
-            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Telehealth Video Sessions</a></li>
-            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Mindfulness &amp; Somatics</a></li>
-            <li><a href="services.html" class="text-[#D9A38F] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
+            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Individual Psychotherapy</a></li>
+            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Couples Counseling</a></li>
+            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Teen &amp; Adolescent Care</a></li>
+            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Trauma &amp; EMDR Recovery</a></li>
+            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Telehealth Video Sessions</a></li>
+            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Mindfulness &amp; Somatics</a></li>
+            <li><a href="services.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
           </ul>
         </div>
 
@@ -1160,8 +1148,8 @@
             <li><a href="messages.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-comments text-[10px] w-3.5"></i> Counselor Messages</a></li>
             <li><a href="mood-journal.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-smile text-[10px] w-3.5"></i> Mood Tracking Journal</a></li>
             <li><a href="shared-notes.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-file-alt text-[10px] w-3.5"></i> Shared Session Notes</a></li>
-            <li><a href="admin-dashboard.html" class="hover:text-[#8FAF9A] text-[#8FAF9A] transition-colors flex items-center gap-1.5"><i class="fas fa-user-md text-[10px] w-3.5"></i> Clinician Workspace</a></li>
-            <li><a href="login.html" class="text-[#D9A38F] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-sign-in-alt text-[9px] w-3.5"></i> Portal Sign In</a></li>
+            <li><a href="admin-dashboard.html" class="hover:text-[#8FAFC0] text-[#8FAFC0] transition-colors flex items-center gap-1.5"><i class="fas fa-user-md text-[10px] w-3.5"></i> Clinician Workspace</a></li>
+            <li><a href="login.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-sign-in-alt text-[9px] w-3.5"></i> Portal Sign In</a></li>
           </ul>
         </div>
 
@@ -1172,7 +1160,7 @@
           <!-- 24/7 Crisis Hotline Card -->
           <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
             <span class="text-[11px] uppercase font-bold text-[#f0baa9] flex items-center gap-1.5">
-              <i class="fas fa-phone-volume text-[#D9A38F]"></i> 24/7 Crisis Support Hotline
+              <i class="fas fa-phone-volume text-[#D7B7A5]"></i> 24/7 Crisis Support Hotline
             </span>
             <p class="text-xs text-[#8fa0a8] leading-relaxed">
               If you or a loved one are experiencing acute emotional distress, dial or text <a href="tel:988" class="font-bold text-[#f0baa9] underline hover:text-white">988</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span> anytime.
@@ -1183,19 +1171,19 @@
           <div class="text-xs space-y-2 text-[#c0cfd6]">
             <div>
               <a href="https://maps.google.com/?q=450+Lexington+Ave+New+York+NY" target="_blank" rel="noopener noreferrer" class="hover:text-[#f0baa9] transition-colors flex items-start gap-2">
-                <i class="fas fa-map-marker-alt text-[#D9A38F] mt-0.5 shrink-0"></i>
+                <i class="fas fa-map-marker-alt text-[#D7B7A5] mt-0.5 shrink-0"></i>
                 <span>450 Wellness Pavilion Blvd, Suite 300, New York, NY 10016</span>
               </a>
             </div>
             <div>
               <a href="mailto:care@mindfulpaths.com" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
-                <i class="fas fa-envelope text-[#D9A38F] shrink-0"></i>
+                <i class="fas fa-envelope text-[#D7B7A5] shrink-0"></i>
                 <span>care@mindfulpaths.com</span>
               </a>
             </div>
             <div>
               <a href="tel:+18002738255" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
-                <i class="fas fa-phone text-[#D9A38F] shrink-0"></i>
+                <i class="fas fa-phone text-[#D7B7A5] shrink-0"></i>
                 <span>+1 (800) 273-8255</span>
               </a>
             </div>
@@ -1207,8 +1195,8 @@
               Quiet Moments Newsletter
             </label>
             <form id="footer-newsletter-form" class="flex gap-2">
-              <input type="email" id="footer-newsletter-input" placeholder="Your confidential email..." required class="w-full h-10 px-3.5 rounded-xl bg-white/5 border border-white/15 text-xs text-white placeholder:text-[#6a7b82] focus:outline-none focus:border-[#8FAF9A] transition-colors">
-              <button type="submit" class="px-4 h-10 bg-[#29483A] hover:bg-[#1f372c] text-white rounded-xl text-xs font-bold transition-all shrink-0 flex items-center justify-center" aria-label="Subscribe to newsletter">
+              <input type="email" id="footer-newsletter-input" placeholder="Your confidential email..." required class="w-full h-10 px-3.5 rounded-xl bg-white/5 border border-white/15 text-xs text-white placeholder:text-[#6a7b82] focus:outline-none focus:border-[#D7B7A5] transition-colors">
+              <button type="submit" class="px-4 h-10 bg-[#D7B7A5] hover:bg-[#c5a390] text-white rounded-xl text-xs font-bold transition-all shrink-0 flex items-center justify-center" aria-label="Subscribe to newsletter">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </form>
@@ -1222,10 +1210,10 @@
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
         <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
-          <a href="privacy.html" class="hover:text-[#F7F5EF] transition-colors">Privacy Policy</a>
-          <a href="hipaa.html" class="hover:text-[#F7F5EF] transition-colors">HIPAA Disclosures</a>
-          <a href="terms.html" class="hover:text-[#F7F5EF] transition-colors">Terms of Care</a>
-          <a href="sitemap.html" class="hover:text-[#F7F5EF] transition-colors">Website Sitemap</a>
+          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
         </div>
       </div>
     </div>
@@ -1233,7 +1221,7 @@
 
     <!-- Universal Appointment Booking Modal -->
   <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4 overflow-hidden sm:overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
-    <div class="relative w-full max-w-lg bg-[#F7F5EF] dark:bg-[#1a2b22] rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-[#E8EFE9] dark:border-white/10 overflow-hidden flex flex-col max-h-[88dvh] sm:max-h-[90vh] animate-fade-in">
+    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-[#EBF1F4] dark:border-white/10 overflow-hidden flex flex-col max-h-[88dvh] sm:max-h-[90vh] animate-fade-in">
       
       <!-- Modal Header (Fixed / Sticky at Top) -->
       <div class="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between shrink-0 shadow-sm">
@@ -1253,23 +1241,23 @@
         <div class="p-4 sm:p-6 space-y-3 sm:space-y-4 overflow-y-auto flex-1 min-h-0 overscroll-contain">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Your Full Name *</label>
-              <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Your Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Email Address *</label>
-              <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
+              <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Phone Number *</label>
-              <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Session Format *</label>
-              <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Session Format *</label>
+              <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="telehealth">Telehealth (Secure Video)</option>
                 <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
                 <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
@@ -1279,8 +1267,8 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Service Desired</label>
-              <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Service Desired</label>
+              <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="">Select Service (or General Intake)</option>
                 <option value="individual">Individual Therapy</option>
                 <option value="couples">Couples Counseling</option>
@@ -1291,8 +1279,8 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">Preferred Clinician</label>
-              <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]">
+              <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Clinician</label>
+              <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]">
                 <option value="">First Available Specialist</option>
                 <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
                 <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
@@ -1305,21 +1293,21 @@
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-[#29483A] dark:text-[#E8EFE9] mb-1">What brings you to counseling? (Confidential)</label>
-            <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#8FAF9A]"></textarea>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What brings you to counseling? (Confidential)</label>
+            <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#D7B7A5]"></textarea>
           </div>
         </div>
 
         <!-- Sticky Footer with HIPAA Checkbox and Submit Button -->
-        <div class="p-3.5 sm:p-5 bg-white/95 dark:bg-[#131e25]/95 backdrop-blur-md border-t border-[#E8EFE9] dark:border-white/10 shrink-0 space-y-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+        <div class="p-3.5 sm:p-5 bg-white/95 dark:bg-[#131e25]/95 backdrop-blur-md border-t border-[#EBF1F4] dark:border-white/10 shrink-0 space-y-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
           <div class="flex items-start gap-2">
-            <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D9A38F] focus:ring-[#D7B7A5]">
-            <label for="modal-hipaa" class="text-[11px] text-[#26332D] dark:text-[#7d8d96] leading-tight">
+            <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
+            <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96] leading-tight">
               I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
             </label>
           </div>
 
-          <button type="submit" class="w-full py-3.5 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
+          <button type="submit" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.01] active:scale-95">
             Submit Confidential Booking Request
           </button>
         </div>
@@ -1330,54 +1318,54 @@
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F7F5EF] dark:bg-[#1a2b22] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#E8EFE9] dark:border-white/10">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-[#29483A] flex items-center justify-center text-white">
+          <div class="w-8 h-8 rounded-xl bg-[#D7B7A5] flex items-center justify-center text-white">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
           </div>
-          <span class="font-heading font-bold text-lg text-[#29483A] dark:text-white">Mindful Paths</span>
+          <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="text-[#26332D] hover:text-[#D9A38F] dark:text-[#E8EFE9] text-base w-8 h-8 rounded-full bg-white dark:bg-[#23382d] flex items-center justify-center border border-[#E8EFE9] dark:border-white/10" aria-label="Close menu">
+        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <!-- Drawer Controls (Theme & RTL) -->
-      <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#E8EFE9] dark:border-white/10">
-        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#23382d] text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9] border border-[#E8EFE9] dark:border-white/10 flex items-center justify-center gap-2">
+      <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
           <span class="theme-label">Theme</span>
         </button>
-        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#23382d] text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9] border border-[#E8EFE9] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-globe text-xs"></i>
           <span class="rtl-text">RTL</span>
         </button>
       </div>
 
-      <nav class="space-y-1.5 text-xs font-semibold text-[#26332D] dark:text-[#E8EFE9]">
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-compass text-[#D9A38F] w-4"></i> Home</a>
-        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-heart text-[#D9A38F] w-4"></i> The Wellness Journey</a>
-        <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-shield-heart text-[#D9A38F] w-4"></i> About Us</a>
-        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-hand-holding-heart text-[#D9A38F] w-4"></i> Services</a>
-        <a href="therapists.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-user-md text-[#D9A38F] w-4"></i> Therapists</a>
-        <a href="resources.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-lungs text-[#D9A38F] w-4"></i> Resources</a>
-        <a href="pricing.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-tags text-[#D9A38F] w-4"></i> Pricing</a>
-        <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-newspaper text-[#D9A38F] w-4"></i> Blog</a>
-        <a href="contact.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#23382d] hover:text-[#D9A38F] transition-colors"><i class="fas fa-envelope text-[#D9A38F] w-4"></i> Contact</a>
+      <nav class="space-y-1.5 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home</a>
+        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> The Wellness Journey</a>
+        <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> Services</a>
+        <a href="therapists.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-user-md text-[#D7B7A5] w-4"></i> Therapists</a>
+        <a href="resources.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-lungs text-[#D7B7A5] w-4"></i> Resources</a>
+        <a href="pricing.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-tags text-[#D7B7A5] w-4"></i> Pricing</a>
+        <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-newspaper text-[#D7B7A5] w-4"></i> Blog</a>
+        <a href="contact.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-envelope text-[#D7B7A5] w-4"></i> Contact</a>
       </nav>
     </div>
 
-    <div class="pt-6 border-t border-[#E8EFE9] dark:border-white/10 space-y-3">
-      <a href="login.html" class="nav-auth-btn w-full py-3 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
+    <div class="pt-6 border-t border-[#EBF1F4] dark:border-white/10 space-y-3">
+      <a href="login.html" class="nav-auth-btn w-full py-3 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
         <i class="fas fa-user-circle"></i> <span class="nav-auth-text">Client Login</span>
       </a>
       <div class="text-center">
-        <a href="tel:988" class="text-xs text-[#D9A38F] font-bold hover:underline flex items-center justify-center gap-1.5">
+        <a href="tel:988" class="text-xs text-[#D7B7A5] font-bold hover:underline flex items-center justify-center gap-1.5">
           <i class="fas fa-phone-alt"></i> 24/7 Crisis Helpline: 988
         </a>
       </div>
@@ -1385,7 +1373,7 @@
   </aside>
 
   <!-- Back to Top Button -->
-  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-[#29483A] text-white shadow-lg shadow-[#D7B7A5]/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#1f372c] z-30" aria-label="Scroll to top">
+  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-[#D7B7A5] text-white shadow-lg shadow-[#D7B7A5]/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#c5a390] z-30" aria-label="Scroll to top">
     <i class="fas fa-arrow-up text-xs"></i>
   </button>
 
