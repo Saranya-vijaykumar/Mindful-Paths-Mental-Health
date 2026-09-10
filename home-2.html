@@ -695,15 +695,74 @@
               <span class="px-2.5 py-1 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] text-[10px] font-bold">Active Client</span>
             </div>
 
-            <!-- Mock Mood Quick Log -->
-            <div class="p-4 bg-white dark:bg-[#17232b] rounded-2xl border border-[#EBF1F4] dark:border-white/10 space-y-2">
-              <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">How are you feeling right now?</div>
-              <div class="flex justify-between text-2xl pt-1 select-none">
-                <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="great" title="Feeling Great">😊</span>
-                <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="good" title="Feeling Good">🙂</span>
-                <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform p-1 rounded-lg bg-[#D7B7A5]/20" data-home-mood="okay" title="Feeling Okay">😐</span>
-                <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="low" title="Feeling Low">😔</span>
-                <span class="mock-mood-emoji cursor-pointer hover:scale-125 transition-transform" data-home-mood="difficult" title="Feeling Difficult">😣</span>
+            <!-- Interactive Mood & Feeling Quick Logger -->
+            <div id="home-mood-widget" class="p-4 sm:p-5 bg-white dark:bg-[#17232b] rounded-2xl border border-[#EBF1F4] dark:border-white/10 shadow-sm space-y-3 transition-all">
+              <div class="flex items-center justify-between">
+                <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1] flex items-center gap-1.5">
+                  <i class="far fa-face-smile text-[#D7B7A5]"></i>
+                  <span>How are you feeling right now?</span>
+                </div>
+                <span id="home-mood-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 transition-colors">
+                  😐 Feeling Okay
+                </span>
+              </div>
+
+              <!-- 5 Interactive Mood Emoji Selector -->
+              <div class="grid grid-cols-5 gap-1.5 sm:gap-2 pt-1">
+                <button type="button" class="home-mood-btn p-2 sm:p-2.5 rounded-xl border border-transparent hover:border-[#D7B7A5]/40 hover:bg-[#F8F6F1] dark:hover:bg-[#11191f] transition-all flex flex-col items-center gap-1 group" data-home-mood="great" title="Feeling Great">
+                  <span class="text-2xl sm:text-3xl transform group-hover:scale-125 transition-transform">😊</span>
+                  <span class="text-[10px] font-semibold text-[#27343B] dark:text-[#7d8d96]">Great</span>
+                </button>
+                <button type="button" class="home-mood-btn p-2 sm:p-2.5 rounded-xl border border-transparent hover:border-[#D7B7A5]/40 hover:bg-[#F8F6F1] dark:hover:bg-[#11191f] transition-all flex flex-col items-center gap-1 group" data-home-mood="good" title="Feeling Good">
+                  <span class="text-2xl sm:text-3xl transform group-hover:scale-125 transition-transform">🙂</span>
+                  <span class="text-[10px] font-semibold text-[#27343B] dark:text-[#7d8d96]">Good</span>
+                </button>
+                <button type="button" class="home-mood-btn p-2 sm:p-2.5 rounded-xl border border-[#D7B7A5] bg-[#D7B7A5]/15 dark:bg-[#D7B7A5]/20 shadow-sm transition-all flex flex-col items-center gap-1 group ring-2 ring-[#D7B7A5]/30" data-home-mood="okay" title="Feeling Okay">
+                  <span class="text-2xl sm:text-3xl transform group-hover:scale-125 transition-transform">😐</span>
+                  <span class="text-[10px] font-bold text-[#294657] dark:text-[#F8F6F1]">Okay</span>
+                </button>
+                <button type="button" class="home-mood-btn p-2 sm:p-2.5 rounded-xl border border-transparent hover:border-[#D7B7A5]/40 hover:bg-[#F8F6F1] dark:hover:bg-[#11191f] transition-all flex flex-col items-center gap-1 group" data-home-mood="low" title="Feeling Low">
+                  <span class="text-2xl sm:text-3xl transform group-hover:scale-125 transition-transform">😔</span>
+                  <span class="text-[10px] font-semibold text-[#27343B] dark:text-[#7d8d96]">Low</span>
+                </button>
+                <button type="button" class="home-mood-btn p-2 sm:p-2.5 rounded-xl border border-transparent hover:border-[#D7B7A5]/40 hover:bg-[#F8F6F1] dark:hover:bg-[#11191f] transition-all flex flex-col items-center gap-1 group" data-home-mood="difficult" title="Feeling Difficult">
+                  <span class="text-2xl sm:text-3xl transform group-hover:scale-125 transition-transform">😣</span>
+                  <span class="text-[10px] font-semibold text-[#27343B] dark:text-[#7d8d96]">Difficult</span>
+                </button>
+              </div>
+
+              <!-- Real-time Somatic Reflection & Guidance Box -->
+              <div id="home-mood-insight" class="p-3 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#EBF1F4] dark:border-white/5 space-y-1 transition-all">
+                <div class="flex items-center gap-1.5 text-[11px] font-bold text-[#294657] dark:text-[#F8F6F1]">
+                  <i class="fas fa-sparkles text-amber-500 text-[10px]"></i>
+                  <span id="home-mood-insight-title">Balanced &amp; Neutral</span>
+                </div>
+                <p id="home-mood-insight-text" class="text-[11px] text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
+                  Emotional neutrality is restorative. Check in with your body—soften your forehead, drop your shoulders, and exhale gently.
+                </p>
+              </div>
+
+              <!-- Quick Note & Log Action -->
+              <div class="space-y-2 pt-1">
+                <div class="flex gap-2">
+                  <input type="text" id="home-mood-note" placeholder="Add an optional thought or trigger note..." class="flex-1 text-xs px-3 py-2 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#EBF1F4] dark:border-white/10 focus:outline-none focus:border-[#D7B7A5] text-[#294657] dark:text-[#F8F6F1] placeholder:text-[#27343B]/40 dark:placeholder:text-[#7d8d96]/60">
+                  <button type="button" id="home-mood-log-btn" class="px-4 py-2 rounded-xl bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-sm transition-all hover:scale-105 active:scale-95 shrink-0 flex items-center gap-1.5">
+                    <i class="fas fa-heart text-[10px]"></i>
+                    <span>Log</span>
+                  </button>
+                </div>
+                <div class="flex items-center justify-between text-[10px] text-[#27343B]/60 dark:text-[#7d8d96] px-1">
+                  <span id="home-mood-status-msg"><i class="fas fa-shield-alt text-[#8FAFC0] mr-1"></i> Saved to your private sanctuary storage</span>
+                  <a href="mood-journal.html" class="font-bold text-[#D7B7A5] hover:underline flex items-center gap-1">Full Journal &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Recent Mood Entries Snippet -->
+              <div id="home-mood-recent-container" class="pt-2 border-t border-[#EBF1F4] dark:border-white/10 space-y-1.5">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-[#8FAFC0]">Recent Sanctuary Reflections</div>
+                <div id="home-mood-recent-list" class="space-y-1.5 text-xs">
+                  <!-- Dynamically populated by JavaScript -->
+                </div>
               </div>
             </div>
 

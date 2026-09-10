@@ -413,16 +413,167 @@
       });
     }
 
-    // 9. Home-2 preview mood emojis
-    document.querySelectorAll('.mock-mood-emoji, [data-home-mood]').forEach(emojiEl => {
-      emojiEl.addEventListener('click', () => {
-        const mood = (emojiEl.getAttribute('data-home-mood') || 'good').toLowerCase();
-        saveLog(mood, 'Quick check-in from The Wellness Journey', 5, ['Home Check-in']);
-        if (window.showToast) {
-          window.showToast('Mood logged! You can review past trends in your Client Sanctuary.', 'info');
+    // 9. Home-2 Interactive Mood & Feeling Logger Engine
+    (function initHomeMoodEngine() {
+      const widget = document.getElementById('home-mood-widget');
+      if (!widget) return;
+
+      let activeHomeMood = 'okay';
+      const moodBtns = widget.querySelectorAll('.home-mood-btn, [data-home-mood]');
+      const badge = document.getElementById('home-mood-badge');
+      const insightTitle = document.getElementById('home-mood-insight-title');
+      const insightText = document.getElementById('home-mood-insight-text');
+      const noteInput = document.getElementById('home-mood-note');
+      const logBtn = document.getElementById('home-mood-log-btn');
+      const statusMsg = document.getElementById('home-mood-status-msg');
+      const recentList = document.getElementById('home-mood-recent-list');
+
+      const HOME_MOOD_GUIDES = {
+        great: {
+          badge: '😊 Feeling Great',
+          badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
+          title: 'Resilient & Energized',
+          text: 'Your nervous system is vibrant and expansive. Practice cognitive savoring—anchor this feeling by noting one key win or gratitude today.'
+        },
+        good: {
+          badge: '🙂 Feeling Good',
+          badgeClass: 'bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300',
+          title: 'Calm & Grounded',
+          text: 'You are in a centered, parasympathetic baseline. An ideal state for mindful work, deep connection, or joyful creative expression.'
+        },
+        okay: {
+          badge: '😐 Feeling Okay',
+          badgeClass: 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300',
+          title: 'Balanced & Neutral',
+          text: 'Emotional neutrality is restorative. Check in with your body—soften your forehead, drop your shoulders, and exhale gently.'
+        },
+        low: {
+          badge: '😔 Feeling Low',
+          badgeClass: 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300',
+          title: 'Vulnerable & Fatigued',
+          text: 'Energy naturally recedes to allow emotional processing. Be kind to yourself today; rest and quiet hydration are true productivity.'
+        },
+        difficult: {
+          badge: '😣 Feeling Difficult',
+          badgeClass: 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300',
+          title: 'Acute Tension / Overwhelm',
+          text: 'Your sympathetic stress response is active. Try our <a href="#grounding-tool-section" class="underline font-bold text-[#D7B7A5] hover:text-[#c5a390]">5-4-3-2-1 Sensory Grounding Lab</a> right now to gently re-anchor your body.'
         }
+      };
+
+      function renderRecentLogs() {
+        if (!recentList) return;
+        const logs = getLogs();
+        if (!logs || logs.length === 0) {
+          recentList.innerHTML = '<div class="text-[11px] text-[#27343B]/60 dark:text-[#7d8d96] italic">No reflections logged yet today. Choose an emoji above to begin.</div>';
+          return;
+        }
+
+        const recent = logs.slice(0, 2);
+        recentList.innerHTML = recent.map(entry => {
+          const info = entry.moodInfo || MOOD_DATA[entry.mood] || MOOD_DATA.okay;
+          const displayReflection = entry.reflection || 'Quick Sanctuary check-in';
+          return `
+            <div class="flex items-center justify-between p-2 rounded-xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#EBF1F4] dark:border-white/5 transition-all">
+              <div class="flex items-center gap-2 min-w-0 pr-2">
+                <span class="text-base shrink-0">${info.emoji}</span>
+                <div class="min-w-0">
+                  <div class="text-[11px] font-bold text-[#294657] dark:text-[#F8F6F1] truncate">${info.label} &middot; <span class="font-normal text-[10px] text-[#27343B]/70 dark:text-[#7d8d96]">${displayReflection}</span></div>
+                </div>
+              </div>
+              <span class="text-[10px] font-semibold text-[#8FAFC0] shrink-0">${entry.time || 'Today'}</span>
+            </div>
+          `;
+        }).join('');
+      }
+
+      function selectHomeMood(moodKey, triggerToast = false) {
+        activeHomeMood = (moodKey || 'okay').toLowerCase();
+        const guide = HOME_MOOD_GUIDES[activeHomeMood] || HOME_MOOD_GUIDES.okay;
+
+        // Update button states
+        moodBtns.forEach(btn => {
+          const btnMood = (btn.getAttribute('data-home-mood') || '').toLowerCase();
+          const labelSpan = btn.querySelector('span:last-child');
+          if (btnMood === activeHomeMood) {
+            btn.className = 'home-mood-btn p-2 sm:p-2.5 rounded-xl border border-[#D7B7A5] bg-[#D7B7A5]/15 dark:bg-[#D7B7A5]/20 shadow-sm transition-all flex flex-col items-center gap-1 group ring-2 ring-[#D7B7A5]/30';
+            if (labelSpan) {
+              labelSpan.className = 'text-[10px] font-bold text-[#294657] dark:text-[#F8F6F1]';
+            }
+          } else {
+            btn.className = 'home-mood-btn p-2 sm:p-2.5 rounded-xl border border-transparent hover:border-[#D7B7A5]/40 hover:bg-[#F8F6F1] dark:hover:bg-[#11191f] transition-all flex flex-col items-center gap-1 group';
+            if (labelSpan) {
+              labelSpan.className = 'text-[10px] font-semibold text-[#27343B] dark:text-[#7d8d96]';
+            }
+          }
+        });
+
+        // Update Badge
+        if (badge) {
+          badge.textContent = guide.badge;
+          badge.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-colors ' + guide.badgeClass;
+        }
+
+        // Update Guidance
+        if (insightTitle) insightTitle.textContent = guide.title;
+        if (insightText) insightText.innerHTML = guide.text;
+
+        if (triggerToast && window.showToast) {
+          window.showToast(`${guide.badge} selected. Add an optional note or click Log to save.`, 'info', 3000);
+        }
+      }
+
+      // Wire emoji click handlers
+      moodBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const m = (btn.getAttribute('data-home-mood') || 'okay').toLowerCase();
+          selectHomeMood(m, false);
+        });
       });
-    });
+
+      // Wire Log button handler
+      if (logBtn) {
+        logBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const note = noteInput ? noteInput.value.trim() : '';
+          const info = MOOD_DATA[activeHomeMood] || MOOD_DATA.okay;
+          
+          // Save using universal mood-journal engine
+          saveLog(activeHomeMood, note || 'Check-in from The Wellness Journey', 5, ['Home Check-in']);
+
+          // Visual feedback
+          const origHtml = logBtn.innerHTML;
+          logBtn.innerHTML = '<i class="fas fa-check text-[10px]"></i> <span>Logged!</span>';
+          logBtn.classList.remove('bg-[#D7B7A5]', 'hover:bg-[#c5a390]');
+          logBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+
+          setTimeout(() => {
+            logBtn.innerHTML = origHtml;
+            logBtn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700');
+            logBtn.classList.add('bg-[#D7B7A5]', 'hover:bg-[#c5a390]');
+          }, 1800);
+
+          if (noteInput) noteInput.value = '';
+
+          const now = new Date();
+          const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+          if (statusMsg) {
+            statusMsg.innerHTML = `<span class="text-emerald-600 font-bold"><i class="fas fa-check-circle mr-1"></i> Saved to timeline at ${timeStr}</span>`;
+          }
+
+          renderRecentLogs();
+
+          if (window.showToast) {
+            window.showToast(`${info.emoji} ${info.label} reflection saved to your Sanctuary timeline!`, 'success', 3500);
+          }
+        });
+      }
+
+      // Initialize default state & recent logs
+      selectHomeMood('okay', false);
+      renderRecentLogs();
+    })();
 
     // Initialize with "Okay" or default selection
     updateSelectedMoodUI('okay');
