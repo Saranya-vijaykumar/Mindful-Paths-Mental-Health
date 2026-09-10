@@ -1695,3 +1695,46 @@ html.dark #mobile-menu-drawer nav a:hover {
   padding-left: 18px !important;
 }
 
+/* ==========================================================================
+   Universal Appointment Booking Modal Mobile Optimization
+   ========================================================================== */
+#appointment-modal {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+#appointment-modal .overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 640px) {
+  #appointment-modal {
+    padding: 0.625rem !important;
+    align-items: center !important;
+  }
+  
+  #appointment-modal > div {
+    max-height: 94vh !important;
+    border-radius: 1.25rem !important;
+  }
+  
+  #appointment-booking-form {
+    padding: 1rem 1.125rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  /* Prevent iOS Safari from automatic viewport zooming on focus */
+  #appointment-booking-form input,
+  #appointment-booking-form select,
+  #appointment-booking-form textarea {
+    font-size: 15px !important;
+  }
+  
+  #appointment-modal-close {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+

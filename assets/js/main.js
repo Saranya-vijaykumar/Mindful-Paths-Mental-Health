@@ -256,7 +256,8 @@
       closeAppointmentModal();
     }
 
-    if (e.target === appointmentModal) {
+    const currentModal = document.getElementById('appointment-modal');
+    if (e.target === currentModal || (currentModal && e.target.id === 'appointment-modal')) {
       closeAppointmentModal();
     }
   });
