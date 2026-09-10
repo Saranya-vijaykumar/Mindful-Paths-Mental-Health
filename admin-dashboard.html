@@ -40,67 +40,53 @@
       theme: {
         extend: {
           colors: {
-            primary: {
-              50: '#fdf7f5',
-              100: '#fbeee9',
-              200: '#f7d8ce',
-              300: '#f0baa9',
-              400: '#e6c8b9',
-              500: '#debdb0',
-              600: '#D7B7A5', // Mindful Paths signature terracotta
-              700: '#c5a390',
-              800: '#8d4b39',
-              900: '#743f32',
-              950: '#3e1e17',
-            },
-            cream: {
-              50: '#fcfbfa',
-              100: '#F8F6F1', // Signature Warm Cream
-              200: '#EBF1F4',
-              300: '#d6e1e8',
-              400: '#d5bda0',
-              500: '#c2a483',
+            sand: {
+              50: '#FAF6FB',
+              100: '#F4EEF7',
+              200: '#E7DCED',
+              300: '#D5C4DD',
+              400: '#B892B0', // Sunset Mauve
+              500: '#A3799A',
             },
             teal: {
-              50: '#f2f7f7',
-              100: '#e0edec',
-              200: '#c3dbd9',
-              300: '#98c1be',
-              400: '#6d95a8',
-              500: '#476f82',
-              600: '#294657', // Signature Deep Teal
-              700: '#1e3543',
-              800: '#162731',
-              900: '#1d3340',
-              950: '#0e1f1e',
+              50: '#F7F3FA',
+              100: '#EDE4F2',
+              200: '#DCCCE6',
+              300: '#BFA8CE',
+              400: '#9478A7',
+              500: '#6E4E84',
+              600: '#4A355A', // Signature Deep Velvet Plum
+              700: '#3A2648',
+              800: '#2A1A35',
+              900: '#1C1024',
+              950: '#120818',
             },
             sage: {
-              50: '#f6f8f6',
-              100: '#ecf2eb',
-              200: '#d8e4d6',
-              300: '#b9ceb7',
-              400: '#9ebc9b',
-              500: '#8FAFC0', // Signature Sage Green
-              600: '#6f886d',
-              700: '#576c55',
+              50: '#FAF8FC',
+              100: '#F3EEF7',
+              200: '#E4DBEC',
+              300: '#CDBFDB',
+              400: '#AF9EC0',
+              500: '#937FA3', // Signature Lavender Mist
+              600: '#7B678C',
+              700: '#635073',
             },
             brown: {
-              50: '#f8f6f5',
-              100: '#ede8e5',
-              200: '#ddd3cd',
-              300: '#7d8d96',
-              400: '#ab9284',
-              500: '#937666',
-              600: '#27343B', // Signature Warm Brown body text
-              700: '#5c4338',
-              800: '#4d3930',
-              900: '#41312a',
-              950: '#241914',
+              50: '#FBF9FC',
+              100: '#F5EFF8',
+              200: '#EBE0F0',
+              300: '#7D6D87',
+              400: '#8E7B9B',
+              500: '#534360',
+              600: '#2A2132', // Signature Deep Plum Charcoal Body Text
+              700: '#221929',
+              800: '#1B1321',
+              900: '#140D1A',
             },
             darkbg: {
-              900: '#11191f', // Deep Teal Charcoal
-              800: '#17232b',
-              700: '#1e2d37',
+              900: '#140F1A', // Midnight Plum Velvet
+              800: '#1E1726', // Rich Aubergine Surface
+              700: '#281F33',
             }
           },
           fontFamily: {
@@ -133,7 +119,7 @@
     })();
   </script>
   </head>
-<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F5FA] text-[#2A2132] dark:bg-[#140F1A] dark:text-[#F5EEFA] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Clinician Workspace Top Bar -->
   <header class="sticky top-0 z-40 bg-[#1d3340] text-white shadow-md">
@@ -158,51 +144,51 @@
 
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     <div>
-      <h1 class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">Practice &amp; Caseload Overview</h1>
-      <p class="text-xs text-[#27343B] dark:text-[#7d8d96]">Confidential clinician management view for Dr. Sarah Jenkins, Psy.D.</p>
+      <h1 class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA]">Practice &amp; Caseload Overview</h1>
+      <p class="text-xs text-[#2A2132] dark:text-[#7d8d96]">Confidential clinician management view for Dr. Sarah Jenkins, Psy.D.</p>
     </div>
 
     <!-- Practice Metrics -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
       <div class="p-5 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-1">
-        <span class="text-[#27343B] dark:text-[#7d8d96]">Active Caseload</span>
-        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">28 Clients</div>
+        <span class="text-[#2A2132] dark:text-[#7d8d96]">Active Caseload</span>
+        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F5FA]">28 Clients</div>
         <div class="text-[11px] text-[#8FAFC0] font-bold">Capacity: 92%</div>
       </div>
       <div class="p-5 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-1">
-        <span class="text-[#27343B] dark:text-[#7d8d96]">Today's Consultations</span>
-        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">5 Sessions</div>
+        <span class="text-[#2A2132] dark:text-[#7d8d96]">Today's Consultations</span>
+        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F5FA]">5 Sessions</div>
         <div class="text-[11px] text-[#D7B7A5] font-bold">Next at 2:00 PM</div>
       </div>
       <div class="p-5 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-1">
-        <span class="text-[#27343B] dark:text-[#7d8d96]">Pending Intakes</span>
-        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">3 Requests</div>
+        <span class="text-[#2A2132] dark:text-[#7d8d96]">Pending Intakes</span>
+        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F5FA]">3 Requests</div>
         <div class="text-[11px] text-[#8FAFC0] font-bold">Review Required</div>
       </div>
       <div class="p-5 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-1">
-        <span class="text-[#27343B] dark:text-[#7d8d96]">Draft Progress Notes</span>
-        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">2 Pending</div>
+        <span class="text-[#2A2132] dark:text-[#7d8d96]">Draft Progress Notes</span>
+        <div class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F5FA]">2 Pending</div>
         <div class="text-[11px] text-[#D7B7A5] font-bold">Due Today</div>
       </div>
     </div>
 
     <!-- Today's Schedule -->
     <div class="p-6 rounded-3xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-4">
-      <h2 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Today's Client Schedule</h2>
+      <h2 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA]">Today's Client Schedule</h2>
       <div class="space-y-3 text-xs">
-        <div class="p-4 rounded-2xl bg-[#F8F6F1] dark:bg-[#1e2d37] flex justify-between items-center">
+        <div class="p-4 rounded-2xl bg-[#F8F5FA] dark:bg-[#1e2d37] flex justify-between items-center">
           <div>
-            <strong class="text-[#294657] dark:text-[#F8F6F1] block">Alex Morgan &middot; Individual CBT (Session #15)</strong>
-            <span class="text-[#27343B] dark:text-[#7d8d96]">2:00 PM - 2:50 PM &middot; Telehealth Room #MP-4821</span>
+            <strong class="text-[#294657] dark:text-[#F8F5FA] block">Alex Morgan &middot; Individual CBT (Session #15)</strong>
+            <span class="text-[#2A2132] dark:text-[#7d8d96]">2:00 PM - 2:50 PM &middot; Telehealth Room #MP-4821</span>
           </div>
           <span class="px-3 py-1 rounded-full bg-[#294657] text-white font-bold">Start Session</span>
         </div>
-        <div class="p-4 rounded-2xl bg-[#F8F6F1] dark:bg-[#1e2d37] flex justify-between items-center">
+        <div class="p-4 rounded-2xl bg-[#F8F5FA] dark:bg-[#1e2d37] flex justify-between items-center">
           <div>
-            <strong class="text-[#294657] dark:text-[#F8F6F1] block">Jordan Lee &middot; Anxiety Intake Consultation</strong>
-            <span class="text-[#27343B] dark:text-[#7d8d96]">3:30 PM - 4:15 PM &middot; In-Person Suite A</span>
+            <strong class="text-[#294657] dark:text-[#F8F5FA] block">Jordan Lee &middot; Anxiety Intake Consultation</strong>
+            <span class="text-[#2A2132] dark:text-[#7d8d96]">3:30 PM - 4:15 PM &middot; In-Person Suite A</span>
           </div>
-          <span class="px-3 py-1 rounded-full bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F6F1] border border-[#EBF1F4] dark:border-white/10 font-bold">Client Arrived</span>
+          <span class="px-3 py-1 rounded-full bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F5FA] border border-[#EBF1F4] dark:border-white/10 font-bold">Client Arrived</span>
         </div>
       </div>
     </div>
@@ -212,7 +198,7 @@
   <!-- Luxury Deep Teal Charcoal Footer -->
   
   <!-- Luxury Deep Teal Charcoal Footer -->
-  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#140F1A] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -235,10 +221,10 @@
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
               <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
               <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
@@ -337,10 +323,10 @@
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
         <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
-          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
-          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
-          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
-          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
+          <a href="privacy.html" class="hover:text-[#F8F5FA] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F5FA] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F5FA] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F5FA] transition-colors">Website Sitemap</a>
         </div>
       </div>
     </div>
@@ -348,7 +334,7 @@
 
   <!-- Universal Appointment Booking Modal -->
   <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
+    <div class="relative w-full max-w-lg bg-[#F8F5FA] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
       
       <!-- Modal Header -->
       <div class="px-6 py-5 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between">
@@ -423,7 +409,7 @@
 
         <div class="flex items-start gap-2 pt-1">
           <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
-          <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">
+          <label for="modal-hipaa" class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">
             I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
           </label>
         </div>
@@ -438,7 +424,7 @@
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F5FA] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
       <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <div class="flex items-center gap-2.5">
@@ -449,25 +435,25 @@
           </div>
           <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
+        <button type="button" id="mobile-menu-close" class="text-[#2A2132] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <!-- Drawer Controls (Theme & RTL) -->
       <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
-        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
           <span class="theme-label">Theme</span>
         </button>
-        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-globe text-xs"></i>
           <span class="rtl-text">RTL</span>
         </button>
       </div>
 
-      <nav class="space-y-1 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+      <nav class="space-y-1 text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4]">
         <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 (Services Landing)</a>
         <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 (The Wellness Journey)</a>
         <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>

@@ -40,67 +40,53 @@
       theme: {
         extend: {
           colors: {
-            primary: {
-              50: '#fdf7f5',
-              100: '#fbeee9',
-              200: '#f7d8ce',
-              300: '#f0baa9',
-              400: '#e6c8b9',
-              500: '#debdb0',
-              600: '#D7B7A5', // Mindful Paths signature terracotta
-              700: '#c5a390',
-              800: '#8d4b39',
-              900: '#743f32',
-              950: '#3e1e17',
-            },
-            cream: {
-              50: '#fcfbfa',
-              100: '#F8F6F1', // Signature Warm Cream
-              200: '#EBF1F4',
-              300: '#d6e1e8',
-              400: '#d5bda0',
-              500: '#c2a483',
+            sand: {
+              50: '#FAF6FB',
+              100: '#F4EEF7',
+              200: '#E7DCED',
+              300: '#D5C4DD',
+              400: '#B892B0', // Sunset Mauve
+              500: '#A3799A',
             },
             teal: {
-              50: '#f2f7f7',
-              100: '#e0edec',
-              200: '#c3dbd9',
-              300: '#98c1be',
-              400: '#6d95a8',
-              500: '#476f82',
-              600: '#294657', // Signature Deep Teal
-              700: '#1e3543',
-              800: '#162731',
-              900: '#1d3340',
-              950: '#0e1f1e',
+              50: '#F7F3FA',
+              100: '#EDE4F2',
+              200: '#DCCCE6',
+              300: '#BFA8CE',
+              400: '#9478A7',
+              500: '#6E4E84',
+              600: '#4A355A', // Signature Deep Velvet Plum
+              700: '#3A2648',
+              800: '#2A1A35',
+              900: '#1C1024',
+              950: '#120818',
             },
             sage: {
-              50: '#f6f8f6',
-              100: '#ecf2eb',
-              200: '#d8e4d6',
-              300: '#b9ceb7',
-              400: '#9ebc9b',
-              500: '#8FAFC0', // Signature Sage Green
-              600: '#6f886d',
-              700: '#576c55',
+              50: '#FAF8FC',
+              100: '#F3EEF7',
+              200: '#E4DBEC',
+              300: '#CDBFDB',
+              400: '#AF9EC0',
+              500: '#937FA3', // Signature Lavender Mist
+              600: '#7B678C',
+              700: '#635073',
             },
             brown: {
-              50: '#f8f6f5',
-              100: '#ede8e5',
-              200: '#ddd3cd',
-              300: '#7d8d96',
-              400: '#ab9284',
-              500: '#937666',
-              600: '#27343B', // Signature Warm Brown body text
-              700: '#5c4338',
-              800: '#4d3930',
-              900: '#41312a',
-              950: '#241914',
+              50: '#FBF9FC',
+              100: '#F5EFF8',
+              200: '#EBE0F0',
+              300: '#7D6D87',
+              400: '#8E7B9B',
+              500: '#534360',
+              600: '#2A2132', // Signature Deep Plum Charcoal Body Text
+              700: '#221929',
+              800: '#1B1321',
+              900: '#140D1A',
             },
             darkbg: {
-              900: '#11191f', // Deep Teal Charcoal
-              800: '#17232b',
-              700: '#1e2d37',
+              900: '#140F1A', // Midnight Plum Velvet
+              800: '#1E1726', // Rich Aubergine Surface
+              700: '#281F33',
             }
           },
           fontFamily: {
@@ -119,10 +105,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F5FA] text-[#2A2132] dark:bg-[#140F1A] dark:text-[#F5EEFA] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F5FA] text-xs font-medium py-2.5 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
@@ -143,7 +129,7 @@
   </div>
 
   <!-- Main Navbar Header -->
-  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
+  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F5FA]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -153,13 +139,13 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-none">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F5FA] leading-none">
           Mindful Paths
         </span>
       </a>
 
       <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#2A2132] dark:text-[#EBF1F4]">
         <!-- Home Dropdown -->
         <div class="relative group py-2 flex items-center">
           <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] ">
@@ -254,13 +240,13 @@
       <!-- Right Action Controls (Desktop Only) -->
       <div class="hidden lg:flex items-center gap-3 shrink-0">
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#2A2132] dark:text-[#F8F5FA] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
 
         <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#2A2132] dark:text-[#F8F5FA] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
           <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
 
@@ -272,7 +258,7 @@
 
       <!-- Mobile Navbar: STRICTLY Logo + Hamburger ONLY -->
       <div class="flex lg:hidden items-center">
-        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
+        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F5FA] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -282,25 +268,25 @@
 
   <!-- Breadcrumb -->
   <div class="py-4 bg-[#EBF1F4]/40 dark:bg-[#17232b] border-b border-[#D1DEE5] dark:border-white/10 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#2A2132] dark:text-[#7d8d96]">
       <a href="index.html" class="hover:text-[#B25338]">Home</a>
       <span>/</span>
-      <span class="text-[#294657] dark:text-[#F8F6F1] font-bold">Pricing &amp; Insurance</span>
+      <span class="text-[#294657] dark:text-[#F8F5FA] font-bold">Pricing &amp; Insurance</span>
     </div>
   </div>
 
   <!-- Header Banner -->
-  <section class="py-16 md:py-20 bg-gradient-to-b from-[#F8F6F1] via-white to-[#F8F6F1] dark:from-[#11191f] dark:via-[#17232b] dark:to-[#11191f] border-b border-[#D1DEE5] dark:border-white/10">
+  <section class="py-16 md:py-20 bg-gradient-to-b from-[#F8F5FA] via-white to-[#F8F5FA] dark:from-[#140F1A] dark:via-[#17232b] dark:to-[#140F1A] border-b border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B25338]/15 text-[#B25338] text-xs font-bold uppercase tracking-wider">
           <i class="fas fa-shield-alt"></i> Complete Fee Transparency
         </div>
-        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-tight">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-tight">
           Simple, Honest Pricing.<br><span class="italic text-[#B25338]">Zero Surprise Bills.</span>
         </h1>
-        <p class="text-base text-[#27343B]/80 dark:text-[#EBF1F4] leading-relaxed">
+        <p class="text-base text-[#2A2132]/80 dark:text-[#EBF1F4] leading-relaxed">
           Investing in therapy is an investment in your life, peace of mind, and relationships. We provide straightforward per-session rates, discounted monthly care pathways, and automated itemized Superbills for PPO insurance reimbursement across all 8 specialized modalities.
         </p>
 
@@ -324,7 +310,7 @@
           <button type="button" id="billing-per-session-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm" onclick="togglePricingBilling('session')">
             Pay Per Session
           </button>
-          <button type="button" id="billing-monthly-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5" onclick="togglePricingBilling('monthly')">
+          <button type="button" id="billing-monthly-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#2A2132]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5" onclick="togglePricingBilling('monthly')">
             <span>Monthly Packages</span>
             <span class="px-2 py-0.5 rounded-full bg-[#B25338] text-white text-[10px] uppercase font-bold tracking-wider">Save 15%</span>
           </button>
@@ -341,11 +327,11 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#D1DEE5] dark:border-white/10 pb-6">
         <div>
           <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Transparent Rates</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1] mt-1">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA] mt-1">
             Care Packages for Every Therapy Modality
           </h2>
         </div>
-        <div class="text-xs text-[#27343B]/70 dark:text-[#7d8d96]">
+        <div class="text-xs text-[#2A2132]/70 dark:text-[#7d8d96]">
           All packages include confidential Client Sanctuary portal access &amp; monthly itemized Superbills.
         </div>
       </div>
@@ -368,26 +354,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Individual Care</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-individual-therapy.html" class="hover:text-[#B25338] transition-colors">Individual Psychotherapy</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Evidence-based CBT, ACT, and somatic regulation for anxiety, chronic stress, and life transitions.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$175" data-monthly="$620">$175</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $80/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -444,26 +430,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Relationship Care</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-couples-therapy.html" class="hover:text-[#B25338] transition-colors">Couples & Marriage Counseling</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Gottman-informed frameworks to bridge communication impasses and restore romantic warmth.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$225" data-monthly="$790">$225</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 75-min session" data-monthly="/ month (4 extended sessions)">/ 75-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 75-min session" data-monthly="/ month (4 extended sessions)">/ 75-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $110/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -516,26 +502,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Trauma Recovery</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-trauma-emdr.html" class="hover:text-[#B25338] transition-colors">EMDR & Somatic Trauma Healing</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Certified bilateral stimulation to reprocess trauma, PTSD, and somatic triggers safely.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$195" data-monthly="$690">$195</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min session" data-monthly="/ month (4 sessions)">/ 60-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min session" data-monthly="/ month (4 sessions)">/ 60-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $90/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -588,26 +574,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Youth Sanctuary</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-teen-counseling.html" class="hover:text-[#B25338] transition-colors">Teen & Adolescent Counseling</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Safe, empathetic space for adolescents (ages 12-19) navigating academic anxiety and peer pressure.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$165" data-monthly="$580">$165</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $80/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -660,26 +646,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Virtual Care</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-telehealth.html" class="hover:text-[#B25338] transition-colors">Encrypted Telehealth Video Sanctuary</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Secure, high-definition online therapy from your private home with zero commute stress.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$175" data-monthly="$620">$175</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 50-min session" data-monthly="/ month (4 sessions)">/ 50-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $80/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -732,26 +718,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Group Therapy</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-mindfulness.html" class="hover:text-[#B25338] transition-colors">Mindfulness & Somatic Group Cohorts</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Intimate cohorts (6-8 members) exploring polyvagal resets, somatic breathing, and shared empathy.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$75" data-monthly="$480">$75</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 90-min cohort session" data-monthly="/ full 8-week cohort">/ 90-min cohort session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 90-min cohort session" data-monthly="/ full 8-week cohort">/ 90-min cohort session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $120 total
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -804,26 +790,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Integrative Medicine</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-individual-therapy.html#psychiatry" class="hover:text-[#B25338] transition-colors">Psychiatric Evaluation & Medication</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Holistic psychiatric diagnostic evaluations and mindful psychopharmacological guidance.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$275" data-monthly="$140">$275</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min initial evaluation" data-monthly="/ 30-min follow-up check">/ 60-min initial evaluation</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min initial evaluation" data-monthly="/ 30-min follow-up check">/ 60-min initial evaluation</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Board-Certified M.D.
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -876,26 +862,26 @@
 
               <div class="min-h-[105px] space-y-1.5 flex flex-col justify-start">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-[#B25338]">Family Counseling</span>
-                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1] leading-snug">
+                <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA] leading-snug">
                   <a href="service-couples-therapy.html#family" class="hover:text-[#B25338] transition-colors">Family Systems & Parent Guidance</a>
                 </h3>
-                <p class="text-xs text-[#27343B]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
+                <p class="text-xs text-[#2A2132]/75 dark:text-[#7d8d96] leading-relaxed line-clamp-2">
                   Restoring healthy boundaries, intergenerational empathy, and communication within families.
                 </p>
               </div>
 
               <!-- Price Box with Dynamic Session vs Monthly Switch -->
-              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
+              <div class="font-heading text-3xl font-bold text-[#294657] dark:text-[#F8F5FA] py-3.5 border-y border-[#D1DEE5] dark:border-white/10 my-4">
                 <div class="flex items-baseline justify-between">
                   <span class="pricing-card-val" data-session="$210" data-monthly="$740">$210</span>
-                  <span class="text-xs font-sans font-normal text-[#27343B]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min session" data-monthly="/ month (4 sessions)">/ 60-min session</span>
+                  <span class="text-xs font-sans font-normal text-[#2A2132]/70 dark:text-[#7d8d96] pricing-card-unit" data-session="/ 60-min session" data-monthly="/ month (4 sessions)">/ 60-min session</span>
                 </div>
                 <div class="pt-1.5 text-[10px] font-sans font-bold text-emerald-700 dark:text-emerald-400 savings-tag hidden">
                   <i class="fas fa-tag mr-1"></i> Save $100/mo
                 </div>
               </div>
 
-              <ul class="text-xs space-y-2 text-[#27343B]/80 dark:text-[#7d8d96] mb-6 flex-1">
+              <ul class="text-xs space-y-2 text-[#2A2132]/80 dark:text-[#7d8d96] mb-6 flex-1">
                 
                   <li class="flex items-start gap-2">
                     <i class="fas fa-check text-[#B25338] mt-0.5 text-[10px] shrink-0"></i>
@@ -938,11 +924,11 @@
   </section>
 
   <!-- Complete Fee Table & Out-of-Pocket Calculator (Reused) -->
-  <section class="py-16 md:py-20 bg-[#F8F6F1] dark:bg-[#11191f] border-t border-[#D1DEE5] dark:border-white/10">
+  <section class="py-16 md:py-20 bg-[#F8F5FA] dark:bg-[#140F1A] border-t border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       <div class="text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Master Fee Table</span>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA]">
           Side-by-Side Modality Breakdown
         </h2>
       </div>
@@ -950,7 +936,7 @@
     <div class="overflow-x-auto rounded-3xl border border-[#D1DEE5] dark:border-white/10 shadow-md">
       <table class="w-full text-left text-xs border-collapse">
         <thead>
-          <tr class="bg-[#EDF3F6] dark:bg-[#11191f] text-[#294657] dark:text-[#F8F6F1] font-bold border-b-2 border-[#CBD8E0] dark:border-white/10">
+          <tr class="bg-[#EDF3F6] dark:bg-[#140F1A] text-[#294657] dark:text-[#F8F5FA] font-bold border-b-2 border-[#CBD8E0] dark:border-white/10">
             <th class="py-4 px-6">Clinical Modality / Service</th>
             <th class="py-4 px-6">Duration</th>
             <th class="py-4 px-6">Per-Session Rate</th>
@@ -960,20 +946,20 @@
             <th class="py-4 px-6 text-right">Action</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-[#D8E3E9] dark:divide-white/10 text-[#27343B] dark:text-[#EBF1F4]">
+        <tbody class="divide-y divide-[#D8E3E9] dark:divide-white/10 text-[#2A2132] dark:text-[#EBF1F4]">
           
             <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors ">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-individual-therapy.html" class="hover:text-[#B25338]">Individual Psychotherapy</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">50-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$175</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$175</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$620</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90834</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -984,18 +970,18 @@
               </td>
             </tr>
           
-            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F6F1]/40 dark:bg-white/[0.02]">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F5FA]/40 dark:bg-white/[0.02]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-couples-therapy.html" class="hover:text-[#B25338]">Couples & Marriage Counseling</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">75-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$225</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$225</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$790</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $110/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $110/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90847</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1007,17 +993,17 @@
             </tr>
           
             <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors ">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-trauma-emdr.html" class="hover:text-[#B25338]">EMDR & Somatic Trauma Healing</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">60-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$195</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$195</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$690</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $90/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $90/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90837</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1028,18 +1014,18 @@
               </td>
             </tr>
           
-            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F6F1]/40 dark:bg-white/[0.02]">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F5FA]/40 dark:bg-white/[0.02]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-teen-counseling.html" class="hover:text-[#B25338]">Teen & Adolescent Counseling</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">50-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$165</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$165</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$580</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90834</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1051,17 +1037,17 @@
             </tr>
           
             <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors ">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-telehealth.html" class="hover:text-[#B25338]">Encrypted Telehealth Video Sanctuary</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">50-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$175</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$175</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$620</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $80/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90834</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1072,18 +1058,18 @@
               </td>
             </tr>
           
-            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F6F1]/40 dark:bg-white/[0.02]">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F5FA]/40 dark:bg-white/[0.02]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-mindfulness.html" class="hover:text-[#B25338]">Mindfulness & Somatic Group Cohorts</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">90-min cohort session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$75</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$75</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$480</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $120 total)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $120 total)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90853</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1095,17 +1081,17 @@
             </tr>
           
             <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors ">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-individual-therapy.html#psychiatry" class="hover:text-[#B25338]">Psychiatric Evaluation & Medication</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">60-min initial evaluation</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$275</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$275</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$140</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Board-Certified M.D.)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Board-Certified M.D.)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 99204 / 99213</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1116,18 +1102,18 @@
               </td>
             </tr>
           
-            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F6F1]/40 dark:bg-white/[0.02]">
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">
+            <tr class="hover:bg-[#F3F7FA] dark:hover:bg-white/5 transition-colors bg-[#F8F5FA]/40 dark:bg-white/[0.02]">
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">
                 <div class="flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-[#B25338]"></span>
                   <a href="service-couples-therapy.html#family" class="hover:text-[#B25338]">Family Systems & Parent Guidance</a>
                 </div>
               </td>
               <td class="py-4 px-6 font-medium">60-min session</td>
-              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F6F1]">$210</td>
+              <td class="py-4 px-6 font-bold text-[#294657] dark:text-[#F8F5FA]">$210</td>
               <td class="py-4 px-6">
                 <span class="font-semibold text-emerald-700 dark:text-emerald-400">$740</span>
-                <span class="text-[10px] text-[#27343B]/60 dark:text-[#7d8d96]">(Save $100/mo)</span>
+                <span class="text-[10px] text-[#2A2132]/60 dark:text-[#7d8d96]">(Save $100/mo)</span>
               </td>
               <td class="py-4 px-6 font-mono text-[11px] text-[#24586E] dark:text-[#8FAFC0]">CPT 90846</td>
               <td class="py-4 px-6"><span class="text-emerald-700 dark:text-emerald-400 font-semibold"><i class="fas fa-check-circle mr-1"></i> In-Person / Video</span></td>
@@ -1150,38 +1136,38 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div class="text-center max-w-2xl mx-auto space-y-3">
         <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Reimbursement Roadmap</span>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F5FA]">
           Simple Insurance Reimbursement in 3 Steps
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="card-wellness p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-[#24586E]/15 text-[#24586E] dark:text-[#8FAFC0] flex items-center justify-center font-bold text-lg">01</div>
-          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Attend Your Session</h3>
-          <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">Pay with credit card, debit, HSA, or FSA cards stored in your encrypted portal.</p>
+          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA]">Attend Your Session</h3>
+          <p class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96] leading-relaxed">Pay with credit card, debit, HSA, or FSA cards stored in your encrypted portal.</p>
         </div>
         <div class="card-wellness p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-[#B25338]/15 text-[#B25338] flex items-center justify-center font-bold text-lg">02</div>
-          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Monthly Superbill Ready</h3>
-          <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">Download your automated, itemized CPT-coded superbill PDF from your private portal on the 1st of each month.</p>
+          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA]">Monthly Superbill Ready</h3>
+          <p class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96] leading-relaxed">Download your automated, itemized CPT-coded superbill PDF from your private portal on the 1st of each month.</p>
         </div>
         <div class="card-wellness p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#D1DEE5] dark:border-white/10 space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 flex items-center justify-center font-bold text-lg">03</div>
-          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Receive Direct Check</h3>
-          <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">Upload to your insurance company or reimbursement app for direct deposit refund (typically 60%-80%).</p>
+          <h3 class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F5FA]">Receive Direct Check</h3>
+          <p class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96] leading-relaxed">Upload to your insurance company or reimbursement app for direct deposit refund (typically 60%-80%).</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Sliding Scale Box -->
-  <section class="py-16 bg-[#F8F6F1] dark:bg-[#11191f] border-t border-[#D1DEE5] dark:border-white/10">
+  <section class="py-16 bg-[#F8F5FA] dark:bg-[#140F1A] border-t border-[#D1DEE5] dark:border-white/10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="p-8 sm:p-10 rounded-3xl bg-[#B25338]/10 border border-[#B25338]/30 flex flex-col md:flex-row items-center gap-6 justify-between">
         <div class="space-y-2 text-center md:text-left">
           <span class="text-xs font-bold uppercase tracking-wider text-[#B25338]">Ethical Care Commitment</span>
-          <h3 class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">Sliding-Scale Scholarship Program</h3>
-          <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] max-w-xl leading-relaxed">
+          <h3 class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F5FA]">Sliding-Scale Scholarship Program</h3>
+          <p class="text-xs text-[#2A2132]/80 dark:text-[#7d8d96] max-w-xl leading-relaxed">
             We believe mental health care is a fundamental human right. 15% of our weekly practice appointments are reserved for reduced-fee therapy.
           </p>
         </div>
@@ -1217,13 +1203,13 @@
 
       if (mode === 'monthly') {
         mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm flex items-center gap-1.5';
-        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white';
+        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#2A2132]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white';
         vals.forEach(function(v) { v.innerText = v.dataset.monthly; });
         units.forEach(function(u) { u.innerText = u.dataset.monthly; });
         tags.forEach(function(t) { t.classList.remove('hidden'); });
       } else {
         sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm';
-        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5';
+        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#2A2132]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5';
         vals.forEach(function(v) { v.innerText = v.dataset.session; });
         units.forEach(function(u) { u.innerText = u.dataset.session; });
         tags.forEach(function(t) { t.classList.add('hidden'); });
@@ -1234,7 +1220,7 @@
   <!-- Luxury Deep Teal Charcoal Footer -->
   
   <!-- Luxury Deep Teal Charcoal Footer -->
-  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#140F1A] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -1257,10 +1243,10 @@
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
               <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
               <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F5FA] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
@@ -1359,10 +1345,10 @@
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
         <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
-          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
-          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
-          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
-          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
+          <a href="privacy.html" class="hover:text-[#F8F5FA] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F5FA] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F5FA] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F5FA] transition-colors">Website Sitemap</a>
         </div>
       </div>
     </div>
@@ -1370,7 +1356,7 @@
 
   <!-- Universal Appointment Booking Modal -->
   <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
+    <div class="relative w-full max-w-lg bg-[#F8F5FA] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
       
       <!-- Modal Header -->
       <div class="px-6 py-5 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between">
@@ -1445,7 +1431,7 @@
 
         <div class="flex items-start gap-2 pt-1">
           <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
-          <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">
+          <label for="modal-hipaa" class="text-[11px] text-[#2A2132] dark:text-[#7d8d96]">
             I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
           </label>
         </div>
@@ -1460,7 +1446,7 @@
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F5FA] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
       <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <div class="flex items-center gap-2.5">
@@ -1471,25 +1457,25 @@
           </div>
           <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
+        <button type="button" id="mobile-menu-close" class="text-[#2A2132] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <!-- Drawer Controls (Theme & RTL) -->
       <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
-        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
           <span class="theme-label">Theme</span>
         </button>
-        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-globe text-xs"></i>
           <span class="rtl-text">RTL</span>
         </button>
       </div>
 
-      <nav class="space-y-1 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+      <nav class="space-y-1 text-xs font-semibold text-[#2A2132] dark:text-[#EBF1F4]">
         <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 (Services Landing)</a>
         <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 (The Wellness Journey)</a>
         <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>

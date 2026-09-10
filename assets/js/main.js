@@ -833,17 +833,17 @@
         let color;
         if (dark) {
           switch (p.palette) {
-            case 0: color = `rgba(215, 183, 165, ${currentAlpha * 0.8})`; break; // warm terracotta
-            case 1: color = `rgba(157, 195, 200, ${currentAlpha * 0.85})`; break; // cyan/teal
-            case 2: color = `rgba(165, 196, 189, ${currentAlpha * 0.75})`; break; // sage
-            default: color = `rgba(235, 211, 196, ${currentAlpha * 0.7})`; break; // ambient gold
+            case 0: color = `rgba(229, 178, 147, ${currentAlpha * 0.85})`; break; // sunset peach
+            case 1: color = `rgba(184, 146, 176, ${currentAlpha * 0.85})`; break; // lilac mist
+            case 2: color = `rgba(147, 127, 163, ${currentAlpha * 0.8})`; break;  // dusky lavender
+            default: color = `rgba(240, 225, 245, ${currentAlpha * 0.75})`; break; // ethereal starlight
           }
         } else {
           switch (p.palette) {
-            case 0: color = `rgba(178, 83, 56, ${currentAlpha * 0.38})`; break;  // terracotta
-            case 1: color = `rgba(36, 88, 110, ${currentAlpha * 0.4})`; break;   // deep teal
-            case 2: color = `rgba(102, 142, 134, ${currentAlpha * 0.35})`; break; // sage
-            default: color = `rgba(196, 151, 126, ${currentAlpha * 0.35})`; break; // warm blush
+            case 0: color = `rgba(184, 146, 176, ${currentAlpha * 0.45})`; break; // sunset mauve
+            case 1: color = `rgba(74, 53, 90, ${currentAlpha * 0.42})`; break;    // deep velvet plum
+            case 2: color = `rgba(147, 127, 163, ${currentAlpha * 0.4})`; break;  // lavender mist
+            default: color = `rgba(229, 178, 147, ${currentAlpha * 0.4})`; break; // golden hour glow
           }
         }
 
