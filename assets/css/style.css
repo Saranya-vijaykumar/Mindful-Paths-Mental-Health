@@ -155,12 +155,28 @@ a, button, [role="button"], input[type="submit"], select, .clickable-card {
   border-color: rgba(200, 117, 93, 0.3);
 }
 
-.dark .card-wellness {
-  background-color: var(--color-dark-surface);
-  border-color: var(--color-dark-border);
+.dark .card-wellness,
+html.dark .card-wellness,
+html.dark .clinician-card,
+html.dark article.card-wellness,
+html.dark .service-card,
+html.dark .card-gradient {
+  background: var(--color-dark-surface) !important;
+  background-color: var(--color-dark-surface) !important;
+  border-color: var(--color-dark-border) !important;
 }
 
-.dark .card-wellness:hover {
+html.dark .card-wellness::before,
+html.dark .clinician-card::before,
+html.dark article.card-wellness::before,
+html.dark .service-card::before {
+  display: none !important;
+}
+
+.dark .card-wellness:hover,
+html.dark .card-wellness:hover,
+html.dark .clinician-card:hover,
+html.dark article.card-wellness:hover {
   box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.4), 0 4px 12px -2px rgba(200, 117, 93, 0.2);
   border-color: rgba(200, 117, 93, 0.4);
 }

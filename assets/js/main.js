@@ -8,6 +8,12 @@
 (function () {
   'use strict';
 
+  // Prevent duplicate execution if script is loaded multiple times
+  if (window.__MINDFUL_PATHS_INITIALIZED__) {
+    return;
+  }
+  window.__MINDFUL_PATHS_INITIALIZED__ = true;
+
   // ==========================================
   // 1. Theme Manager (Dark / Light Mode)
   // ==========================================
@@ -24,16 +30,24 @@
     }
   }
 
+  let isTogglingTheme = false;
   function toggleTheme() {
+    if (isTogglingTheme) return;
+    isTogglingTheme = true;
+    setTimeout(() => { isTogglingTheme = false; }, 200);
+
     const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('mindfulpaths_theme', isDark ? 'dark' : 'light');
     localStorage.setItem('calmind_theme', isDark ? 'dark' : 'light');
     localStorage.setItem('serenemind_theme', isDark ? 'dark' : 'light');
     updateThemeIcons(isDark);
     if (window.showToast) {
-      window.showToast(`Switched to ${isDark ? 'Dark' : 'Light'} Mode`, 'info', 2500);
+      window.showToast(`Switched to ${isDark ? 'Dark' : 'Light'} Mode`, 'info', 2000);
     }
   }
+
+  window.toggleTheme = toggleTheme;
+  window.initTheme = initTheme;
 
   function updateThemeIcons(isDark) {
     document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -58,6 +72,7 @@
     const themeBtn = e.target.closest('.theme-toggle-btn');
     if (themeBtn) {
       e.preventDefault();
+      e.stopPropagation();
       toggleTheme();
     }
   });
