@@ -812,139 +812,105 @@
 
   
   // ==========================================
-  // Mindful Somatic "Breathe In... Breathe Out" Load Experience
+  // 16. Premium Page-Transition Loading Animation (Peaceful Mind / Mindful Paths)
   // ==========================================
-  function initMindfulBreathingLoader() {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function initPageTransitions() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    // Show ONLY on initial website link opening / first entry of the browsing session
-    // Once entered, other page transitions do not show the breathing loader
-    if (sessionStorage.getItem('mindful_entry_breathed')) {
-      return; // maththa loading thevai illa - skip subsequent page loads
-    }
-    sessionStorage.setItem('mindful_entry_breathed', 'true');
-
-    // Create breathing loader overlay
-    const loader = document.createElement('div');
-    loader.id = 'mindful-breathing-loader';
-    loader.className = 'fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-[#F8F6F1]/95 dark:bg-[#11191f]/95 text-[#294657] dark:text-[#F8F6F1] transition-opacity duration-700 select-none';
-    
-    loader.innerHTML = `
-      <div class="relative flex flex-col items-center justify-center p-6 text-center max-w-sm mx-auto">
-        <!-- Brand Monogram -->
-        <div class="mb-6 flex items-center gap-2.5">
-          <span class="w-8 h-8 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center text-sm font-heading font-bold shadow-sm">M</span>
-          <span class="font-heading text-lg font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1]">Mindful Paths</span>
-        </div>
-
-        <!-- Somatic Breath Ring Visualization -->
-        <div class="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center my-3">
-          <!-- Outer Pulsing Glow -->
-          <div id="breath-glow-ring" class="breath-glow-pulse absolute inset-0 rounded-full bg-[#8FAFC0]/20 dark:bg-[#8FAFC0]/15 blur-xl pointer-events-none"></div>
-          
-          <!-- Outer Reference Boundary Ring -->
-          <div class="absolute inset-1 rounded-full border-2 border-dashed border-[#8FAFC0]/30 dark:border-white/15 animate-spin" style="animation-duration: 40s;"></div>
-          
-          <!-- Animated Expanding/Contracting Breathing Circle -->
-          <div id="breath-circle" class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#8FAFC0] via-[#A2BCCE] to-[#D7B7A5] shadow-2xl flex items-center justify-center text-white text-xl">
-            <i class="fas fa-wind opacity-90 transition-transform duration-500" id="breath-icon"></i>
+    let overlay = document.getElementById('page-transition-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'page-transition-overlay';
+      overlay.className = 'page-transition-overlay';
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.innerHTML = `
+        <div class="page-transition-content">
+          <div class="transition-logo-glow" aria-hidden="true"></div>
+          <div class="transition-logo-box">
+            <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <div class="transition-text-wrap text-center">
+            <div class="transition-brand-title font-heading">Mindful Paths</div>
+            <div class="transition-brand-tagline">Psychological Sanctuary</div>
           </div>
         </div>
-
-        <!-- Dynamic Breathing Status -->
-        <div class="mt-5 space-y-1.5 min-h-[64px]">
-          <div id="breath-phase-text" class="font-heading text-2xl sm:text-3xl font-bold tracking-wide text-[#294657] dark:text-[#F8F6F1]">
-            Breathe in...
-          </div>
-          <p id="breath-sub-text" class="text-xs sm:text-sm text-[#27343B]/70 dark:text-[#7d8d96]">
-            Inhale deeply and gently open space.
-          </p>
-        </div>
-
-        <!-- Skip / Enter Sanctuary Button -->
-        <button type="button" id="skip-breath-btn" class="mt-7 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-xs font-bold text-[#294657] dark:text-[#8FAFC0] shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
-          <span>Enter Sanctuary</span>
-          <i class="fas fa-arrow-right text-[10px]"></i>
-        </button>
-      </div>
-    `;
-
-    document.body.appendChild(loader);
-
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    const circle = document.getElementById('breath-circle');
-    const phaseText = document.getElementById('breath-phase-text');
-    const subText = document.getElementById('breath-sub-text');
-    const skipBtn = document.getElementById('skip-breath-btn');
-    let cycleTimeout = null;
-    let isDismissed = false;
-
-    function dismissLoader() {
-      if (isDismissed) return;
-      isDismissed = true;
-      if (cycleTimeout) clearTimeout(cycleTimeout);
-      loader.style.opacity = '0';
-      loader.style.pointerEvents = 'none';
-      setTimeout(() => {
-        document.body.style.overflow = prevOverflow;
-        if (loader.parentNode) {
-          loader.parentNode.removeChild(loader);
-        }
-      }, 700);
+      `;
+      document.body.prepend(overlay);
     }
 
-    skipBtn.addEventListener('click', dismissLoader);
-
-    // Breathing rhythm lifecycle:
-    // Phase 1: Inhale (Expand circle over 3.2s)
-    // Phase 2: Hold gently (1.2s)
-    // Phase 3: Exhale (Contract circle over 3.0s)
-    // Phase 4: Gentle fade into page
-    function runBreathAnimation() {
-      if (!circle || !phaseText || !subText) return;
-
-      // Inhale
-      circle.style.transition = 'transform 3.2s cubic-bezier(0.4, 0, 0.2, 1)';
-      circle.style.transform = 'scale(1.85)';
-      phaseText.textContent = 'Breathe in...';
-      subText.textContent = 'Inhale deeply and gently open space.';
-
-      cycleTimeout = setTimeout(() => {
-        if (isDismissed) return;
-        // Hold
-        phaseText.textContent = 'Hold gently...';
-        subText.textContent = 'Notice the calm stillness within.';
-
-        cycleTimeout = setTimeout(() => {
-          if (isDismissed) return;
-          // Exhale
-          circle.style.transition = 'transform 3.0s cubic-bezier(0.4, 0, 0.2, 1)';
-          circle.style.transform = 'scale(1.0)';
-          phaseText.textContent = 'Breathe out...';
-          subText.textContent = 'Release tension and arrive.';
-
-          cycleTimeout = setTimeout(() => {
-            if (isDismissed) return;
-            dismissLoader();
-          }, 3100);
-        }, 1200);
-      }, 3200);
+    // Dismiss overlay immediately as soon as current/destination page is ready
+    function dismissOverlay() {
+      if (!overlay) return;
+      overlay.classList.remove('is-active');
+      document.body.classList.remove('page-is-leaving');
     }
 
-    setTimeout(runBreathAnimation, 120);
+    // On page readiness, smoothly fade out immediately (no artificial wait)
+    dismissOverlay();
+    window.addEventListener('pageshow', dismissOverlay);
+
+    // Intercept internal page navigations
+    document.addEventListener('click', (e) => {
+      // Don't intercept modified clicks (Ctrl, Cmd, Shift, Alt, middle-click)
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+        return;
+      }
+
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      // Skip in-page anchors, external protocols, downloads, target="_blank"
+      if (
+        href.startsWith('#') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        link.target === '_blank' ||
+        link.hasAttribute('download')
+      ) {
+        return;
+      }
+
+      // Check if target is an internal page
+      let targetUrl;
+      try {
+        targetUrl = new URL(href, window.location.href);
+      } catch (err) {
+        return;
+      }
+
+      // If different origin, allow standard browser navigation
+      if (targetUrl.origin !== window.location.origin) {
+        return;
+      }
+
+      // If same page URL (only hash differs or same URL), allow standard jump
+      if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search) {
+        return;
+      }
+
+      // Internal page navigation -> trigger smooth transition
+      e.preventDefault();
+
+      // Show logo with gentle breathing bloom
+      overlay.classList.add('is-active');
+      document.body.classList.add('page-is-leaving');
+
+      // Navigate immediately without artificial delay
+      requestAnimationFrame(() => {
+        window.location.href = targetUrl.href;
+      });
+    });
   }
 
-  window.triggerBreatheModal = function() {
-    sessionStorage.removeItem('mindful_last_breathed');
-    initMindfulBreathingLoader();
-  };
-
-
-function initApp() {
-    initMindfulBreathingLoader();
+  function initApp() {
+    initPageTransitions();
     initAwardWinningSuite();
     initCounters();
     initScrollReveals();

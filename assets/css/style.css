@@ -1753,3 +1753,309 @@ html.dark #mobile-menu-drawer nav a:hover {
 }
 
 
+
+
+/* ===================================================================
+   Universal Soft Ambient Light-Coloured Floating Box-Shadow Suite ✨
+   Diffused, low-opacity glow rather than dark or harsh shadows.
+   Creates an elegant floating effect like soft light surrounding elements.
+   =================================================================== */
+
+:root {
+  /* Soft Ambient Light-Coloured Glow Tokens (Terracotta-Peach & Mist Tones) */
+  --glow-ambient-card: 0 10px 30px -4px rgba(215, 183, 165, 0.22), 0 4px 14px -2px rgba(143, 175, 192, 0.16);
+  --glow-ambient-card-hover: 0 18px 40px -6px rgba(215, 183, 165, 0.32), 0 8px 20px -3px rgba(143, 175, 192, 0.22);
+  --glow-ambient-btn: 0 8px 24px -2px rgba(215, 183, 165, 0.36), 0 3px 10px -1px rgba(215, 183, 165, 0.22);
+  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(215, 183, 165, 0.5), 0 4px 14px -1px rgba(215, 183, 165, 0.3);
+  --glow-ambient-icon: 0 6px 18px -2px rgba(215, 183, 165, 0.26), 0 2px 8px -1px rgba(143, 175, 192, 0.18);
+  --glow-ambient-image: 0 14px 34px -6px rgba(215, 183, 165, 0.24), 0 6px 16px -2px rgba(143, 175, 192, 0.18);
+  --glow-ambient-nav: 0 4px 22px -2px rgba(215, 183, 165, 0.18), 0 2px 8px -1px rgba(143, 175, 192, 0.12);
+  --glow-ambient-modal: 0 20px 48px -8px rgba(215, 183, 165, 0.32), 0 8px 22px -3px rgba(143, 175, 192, 0.22);
+  --glow-ambient-interactive: 0 4px 14px -2px rgba(215, 183, 165, 0.24);
+}
+
+html.dark {
+  /* Soft Ambient Luminescence in Dark Mode (Warm Terracotta / Twilight Aura) */
+  --glow-ambient-card: 0 10px 30px -4px rgba(0, 0, 0, 0.32), 0 0 24px 2px rgba(215, 183, 165, 0.1), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  --glow-ambient-card-hover: 0 16px 40px -6px rgba(0, 0, 0, 0.42), 0 0 32px 4px rgba(215, 183, 165, 0.2);
+  --glow-ambient-btn: 0 8px 24px -2px rgba(215, 183, 165, 0.3), 0 0 16px 2px rgba(215, 183, 165, 0.2);
+  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(215, 183, 165, 0.44), 0 0 22px 3px rgba(215, 183, 165, 0.3);
+  --glow-ambient-icon: 0 6px 18px -2px rgba(0, 0, 0, 0.25), 0 0 14px 2px rgba(215, 183, 165, 0.16);
+  --glow-ambient-image: 0 14px 34px -6px rgba(0, 0, 0, 0.35), 0 0 24px 2px rgba(143, 175, 192, 0.16);
+  --glow-ambient-nav: 0 4px 22px -2px rgba(0, 0, 0, 0.3), 0 0 18px 2px rgba(215, 183, 165, 0.1);
+  --glow-ambient-modal: 0 20px 48px -8px rgba(0, 0, 0, 0.5), 0 0 32px 3px rgba(215, 183, 165, 0.22);
+  --glow-ambient-interactive: 0 4px 14px -2px rgba(0, 0, 0, 0.25), 0 0 12px 1px rgba(215, 183, 165, 0.18);
+}
+
+/* 1. All Cards: Soft ambient floating shadow */
+.card-wellness,
+.clinician-card,
+.price-card,
+.editorial-card,
+.service-card,
+article.card-wellness,
+article,
+div.rounded-3xl.bg-white,
+div.rounded-2xl.bg-white,
+div.rounded-3xl.bg-\[\#F8F6F1\],
+div.rounded-2xl.bg-\[\#F8F6F1\],
+div.rounded-3xl.bg-\[\#F4F8F7\],
+.card-gradient {
+  box-shadow: var(--glow-ambient-card) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+}
+
+.card-wellness:hover,
+.clinician-card:hover,
+.price-card:hover,
+.editorial-card:hover,
+.service-card:hover,
+article.card-wellness:hover,
+article:hover,
+div.rounded-3xl.bg-white:hover,
+div.rounded-2xl.bg-white:hover,
+div.rounded-3xl.bg-\[\#F8F6F1\]:hover,
+div.rounded-2xl.bg-\[\#F8F6F1\]:hover,
+div.rounded-3xl.bg-\[\#F4F8F7\]:hover,
+.card-gradient:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--glow-ambient-card-hover) !important;
+}
+
+/* 2. All Buttons: Diffused floating ambient glow */
+.btn-terracotta,
+.btn-wellness,
+button.rounded-full:not(#mobile-menu-close):not(#appointment-modal-close),
+a.rounded-full:not(#mobile-menu-close):not(#appointment-modal-close),
+.nav-auth-btn,
+.theme-toggle-btn,
+.rtl-toggle-btn,
+#mobile-menu-toggle,
+button[type="submit"],
+.open-appointment-modal,
+.open-appointment-btn,
+.filter-tab {
+  box-shadow: var(--glow-ambient-btn) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.btn-terracotta:hover,
+.btn-wellness:hover,
+button.rounded-full:not(#mobile-menu-close):not(#appointment-modal-close):hover,
+a.rounded-full:not(#mobile-menu-close):not(#appointment-modal-close):hover,
+.nav-auth-btn:hover,
+.theme-toggle-btn:hover,
+.rtl-toggle-btn:hover,
+#mobile-menu-toggle:hover,
+button[type="submit"]:hover,
+.open-appointment-modal:hover,
+.open-appointment-btn:hover,
+.filter-tab:hover {
+  box-shadow: var(--glow-ambient-btn-hover) !important;
+}
+
+/* 3. Icon Containers: Gentle soft glow */
+[class*="w-8"][class*="h-8"][class*="rounded-"],
+[class*="w-9"][class*="h-9"][class*="rounded-"],
+[class*="w-10"][class*="h-10"][class*="rounded-"],
+[class*="w-12"][class*="h-12"][class*="rounded-"],
+[class*="w-14"][class*="h-14"][class*="rounded-"],
+[class*="w-16"][class*="h-16"][class*="rounded-"],
+.icon-pod,
+.icon-circle {
+  box-shadow: var(--glow-ambient-icon) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 4. Image Containers: Soft floating frame */
+.mask-arch,
+.mask-arch-tall,
+.mask-oval-portrait,
+.mask-asymmetric-leaf,
+.img-zoom-wrapper,
+.aspect-square[class*="rounded-"],
+.aspect-\[4\/5\][class*="rounded-"],
+.aspect-\[3\/4\][class*="rounded-"] {
+  box-shadow: var(--glow-ambient-image) !important;
+}
+
+/* 5. Navbar Elements & Sticky Header */
+#main-header,
+#main-header.shadow-md {
+  box-shadow: var(--glow-ambient-nav) !important;
+}
+
+.absolute.top-full > div[class*="rounded-"] {
+  box-shadow: var(--glow-ambient-modal) !important;
+}
+
+/* 6. Interactive Components & Modals */
+#back-to-top {
+  box-shadow: var(--glow-ambient-btn) !important;
+}
+#back-to-top:hover {
+  box-shadow: var(--glow-ambient-btn-hover) !important;
+}
+
+#appointment-modal > div {
+  box-shadow: var(--glow-ambient-modal) !important;
+}
+
+#home-mood-widget {
+  box-shadow: var(--glow-ambient-card) !important;
+}
+
+.home-mood-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+.home-mood-btn:hover {
+  box-shadow: var(--glow-ambient-interactive) !important;
+}
+
+/* Smooth Input Focus Soft Light Glow */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(215, 183, 165, 0.3), 0 4px 14px -2px rgba(215, 183, 165, 0.2) !important;
+}
+
+/* ===================================================================
+   Premium Page-Transition Loading Animation (Peaceful Mind / Mindful Paths)
+   =================================================================== */
+
+#page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: #F8F6F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease;
+  user-select: none;
+}
+
+html.dark #page-transition-overlay {
+  background-color: #11191f;
+}
+
+#page-transition-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.page-transition-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+#page-transition-overlay.is-active .page-transition-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Ambient Breathing Bloom Around Logo */
+.transition-logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  margin-top: -62px;
+  margin-left: -48px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(215, 183, 165, 0.55) 0%, rgba(230, 200, 185, 0.25) 50%, rgba(215, 183, 165, 0) 75%);
+  pointer-events: none;
+  animation: breatheBloom 3.6s ease-in-out infinite;
+}
+
+html.dark .transition-logo-glow {
+  background: radial-gradient(circle, rgba(215, 183, 165, 0.45) 0%, rgba(143, 175, 192, 0.22) 50%, rgba(215, 183, 165, 0) 75%);
+}
+
+@keyframes breatheBloom {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.4;
+    filter: blur(14px);
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.85;
+    filter: blur(22px);
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0.4;
+    filter: blur(14px);
+  }
+}
+
+.transition-logo-box {
+  position: relative;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #D7B7A5 0%, #e6c8b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px -4px rgba(215, 183, 165, 0.4), 0 0 20px 2px rgba(215, 183, 165, 0.25);
+}
+
+html.dark .transition-logo-box {
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), 0 0 25px 3px rgba(215, 183, 165, 0.3);
+}
+
+.transition-brand-title {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #294657;
+  transition: color 0.3s ease;
+}
+
+html.dark .transition-brand-title {
+  color: #F8F6F1;
+}
+
+.transition-brand-tagline {
+  position: relative;
+  z-index: 2;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #B25338;
+  margin-top: -0.25rem;
+}
+
+/* Page fade out when leaving */
+body.page-is-leaving {
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.88;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #page-transition-overlay,
+  .transition-logo-glow {
+    animation: none !important;
+    transition: none !important;
+    display: none !important;
+  }
+}
