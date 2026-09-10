@@ -1976,8 +1976,11 @@ html.dark #page-transition-overlay {
   inset: -16px;
   border-radius: 9999px;
   background: radial-gradient(circle, rgba(215, 183, 165, 0.45) 0%, rgba(143, 175, 192, 0.25) 50%, transparent 75%);
-  animation: breatheCycleOuter 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   pointer-events: none;
+  transform: scale(0.8);
+  opacity: 0.35;
+  filter: blur(10px);
+  transition: transform 1s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 1s ease, filter 1s ease;
 }
 
 .breathe-circle-middle {
@@ -1985,8 +1988,10 @@ html.dark #page-transition-overlay {
   inset: 6px;
   border-radius: 9999px;
   border: 2px solid rgba(143, 175, 192, 0.35);
-  animation: breatheCycleMiddle 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   pointer-events: none;
+  transform: scale(0.86);
+  opacity: 0.35;
+  transition: transform 1s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 1s ease, border-color 1s ease;
 }
 
 .breathe-circle-inner {
@@ -2001,7 +2006,8 @@ html.dark #page-transition-overlay {
   justify-content: center;
   color: #FFFFFF;
   box-shadow: 0 10px 30px -4px rgba(41, 70, 87, 0.45), 0 0 20px 2px rgba(215, 183, 165, 0.3);
-  animation: breatheCycleInner 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform: scale(0.92);
+  transition: transform 1s cubic-bezier(0.2, 0.9, 0.3, 1);
 }
 
 html.dark .breathe-circle-inner {
@@ -2009,65 +2015,49 @@ html.dark .breathe-circle-inner {
   box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.6), 0 0 25px 3px rgba(143, 175, 192, 0.3);
 }
 
-@keyframes breatheCycleOuter {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.35;
-    filter: blur(10px);
-  }
-  33.33% {
-    transform: scale(1.42);
-    opacity: 0.95;
-    filter: blur(18px);
-  }
-  66.66% {
-    transform: scale(1.42);
-    opacity: 0.95;
-    filter: blur(18px);
-  }
-  100% {
-    transform: scale(0.8);
-    opacity: 0.35;
-    filter: blur(10px);
-  }
+/* State 1: Inhale (Expand to 1.42x over 1s) */
+.breathe-state-inhale .breathe-circle-outer {
+  transform: scale(1.42);
+  opacity: 0.95;
+  filter: blur(18px);
+}
+.breathe-state-inhale .breathe-circle-middle {
+  transform: scale(1.24);
+  opacity: 1;
+  border-color: rgba(215, 183, 165, 0.8);
+}
+.breathe-state-inhale .breathe-circle-inner {
+  transform: scale(1.08);
 }
 
-@keyframes breatheCycleMiddle {
-  0% {
-    transform: scale(0.86);
-    opacity: 0.35;
-    border-color: rgba(143, 175, 192, 0.3);
-  }
-  33.33% {
-    transform: scale(1.24);
-    opacity: 1;
-    border-color: rgba(215, 183, 165, 0.6);
-  }
-  66.66% {
-    transform: scale(1.24);
-    opacity: 1;
-    border-color: rgba(215, 183, 165, 0.6);
-  }
-  100% {
-    transform: scale(0.86);
-    opacity: 0.35;
-    border-color: rgba(143, 175, 192, 0.3);
-  }
+/* State 2: Hold (Stay expanded at 1.42x for 1s) */
+.breathe-state-hold .breathe-circle-outer {
+  transform: scale(1.42);
+  opacity: 0.95;
+  filter: blur(18px);
+}
+.breathe-state-hold .breathe-circle-middle {
+  transform: scale(1.24);
+  opacity: 1;
+  border-color: rgba(215, 183, 165, 0.8);
+}
+.breathe-state-hold .breathe-circle-inner {
+  transform: scale(1.08);
 }
 
-@keyframes breatheCycleInner {
-  0% {
-    transform: scale(0.92);
-  }
-  33.33% {
-    transform: scale(1.08);
-  }
-  66.66% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(0.92);
-  }
+/* State 3: Exhale (Contract back to 0.8x over 1s) */
+.breathe-state-exhale .breathe-circle-outer {
+  transform: scale(0.8);
+  opacity: 0.35;
+  filter: blur(10px);
+}
+.breathe-state-exhale .breathe-circle-middle {
+  transform: scale(0.86);
+  opacity: 0.35;
+  border-color: rgba(143, 175, 192, 0.35);
+}
+.breathe-state-exhale .breathe-circle-inner {
+  transform: scale(0.92);
 }
 
 .breathe-status-title {

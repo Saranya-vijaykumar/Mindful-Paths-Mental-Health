@@ -816,104 +816,87 @@
   // ==========================================
   function initPageTransitions() {
     let overlay = document.getElementById('page-transition-overlay');
-    if (!overlay) {
-      overlay = document.createElement('div');
-      overlay.id = 'page-transition-overlay';
-      overlay.className = 'page-transition-overlay';
-      overlay.setAttribute('aria-hidden', 'true');
-      overlay.innerHTML = `
-        <div class="page-transition-content text-center">
-          <div class="breathe-circle-container">
-            <div class="breathe-circle-outer" aria-hidden="true"></div>
-            <div class="breathe-circle-middle" aria-hidden="true"></div>
-            <div class="breathe-circle-inner shadow-2xl">
-              <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="transition-text-wrap mt-6">
-            <div id="breathe-status-title" class="breathe-status-title font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] transition-all duration-300">
-              Breathe in...
-            </div>
-            <div id="breathe-status-sub" class="breathe-status-sub text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#8FAFC0] mt-1.5 transition-all duration-300">
-              Inhale peace &amp; clarity
-            </div>
-          </div>
-          <div class="mt-4">
-            <span class="text-[11px] font-medium text-[#27343B]/60 dark:text-[#F8F6F1]/60 tracking-wider">
-              Click anywhere to enter &middot; Mindful Paths
-            </span>
-          </div>
-        </div>
-      `;
-      document.body.prepend(overlay);
-    }
+    if (!overlay) return;
 
     const statusTitle = overlay.querySelector('#breathe-status-title');
     const statusSub = overlay.querySelector('#breathe-status-sub');
+    const pill1 = overlay.querySelector('#step-pill-1');
+    const pill2 = overlay.querySelector('#step-pill-2');
+    const pill3 = overlay.querySelector('#step-pill-3');
+    const skipBtn = overlay.querySelector('#breathe-skip-btn');
 
     let isDismissed = false;
     function dismissOverlay() {
       if (isDismissed || !overlay) return;
       isDismissed = true;
-      overlay.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease';
+      overlay.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease';
       overlay.classList.add('is-hidden');
       document.body.classList.remove('page-is-leaving');
     }
 
-    // Tap or click anywhere to enter immediately
-    overlay.addEventListener('click', dismissOverlay);
+    // Only skip when user explicitly clicks the skip button (prevents accidental touch cancellation)
+    if (skipBtn) {
+      skipBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dismissOverlay();
+      });
+    }
 
-    // Initial Website Opening: Mindful 1s In, 1s Hold, 1s Out Cadence
+    // =======================================================
+    // Mindful 3-Stage Opening Sequence (1s In, 1s Hold, 1s Out)
+    // =======================================================
     overlay.classList.remove('is-hidden');
+    
+    // Step 1: INHALE (0.0s – 1.0s)
+    overlay.classList.remove('breathe-state-hold', 'breathe-state-exhale');
+    overlay.classList.add('breathe-state-inhale');
+    if (pill1 && pill2 && pill3) {
+      pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#294657] text-white shadow-md scale-105';
+      pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
+      pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
+    }
+    if (statusTitle) statusTitle.textContent = 'Breathe in...';
+    if (statusSub) statusSub.textContent = 'Inhale peace & clarity (1s)';
 
-    // 1.0s: Switch to Hold...
+    // Step 2: HOLD (1.0s – 2.0s)
     setTimeout(() => {
-      if (!isDismissed && statusTitle && statusSub) {
-        statusTitle.style.opacity = '0';
-        statusSub.style.opacity = '0';
-        setTimeout(() => {
-          statusTitle.textContent = 'Hold...';
-          statusSub.textContent = 'Savor the stillness';
-          statusTitle.style.opacity = '1';
-          statusSub.style.opacity = '1';
-        }, 120);
+      if (isDismissed) return;
+      overlay.classList.remove('breathe-state-inhale');
+      overlay.classList.add('breathe-state-hold');
+      if (pill1 && pill2 && pill3) {
+        pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
+        pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#D7B7A5] text-white shadow-md scale-105';
+        pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
       }
+      if (statusTitle) statusTitle.textContent = 'Hold...';
+      if (statusSub) statusSub.textContent = 'Savor the stillness (1s)';
     }, 1000);
 
-    // 2.0s: Switch to Breathe out...
+    // Step 3: EXHALE (2.0s – 3.0s)
     setTimeout(() => {
-      if (!isDismissed && statusTitle && statusSub) {
-        statusTitle.style.opacity = '0';
-        statusSub.style.opacity = '0';
-        setTimeout(() => {
-          statusTitle.textContent = 'Breathe out...';
-          statusSub.textContent = 'Release tension & arrive';
-          statusTitle.style.opacity = '1';
-          statusSub.style.opacity = '1';
-        }, 120);
+      if (isDismissed) return;
+      overlay.classList.remove('breathe-state-hold');
+      overlay.classList.add('breathe-state-exhale');
+      if (pill1 && pill2 && pill3) {
+        pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
+        pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
+        pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#8FAFC0] text-white shadow-md scale-105';
       }
+      if (statusTitle) statusTitle.textContent = 'Breathe out...';
+      if (statusSub) statusSub.textContent = 'Release tension & arrive (1s)';
     }, 2000);
 
-    // 3.0s: Welcome greeting
+    // Step 4: Welcome Message (3.0s – 3.8s)
     setTimeout(() => {
-      if (!isDismissed && statusTitle && statusSub) {
-        statusTitle.style.opacity = '0';
-        statusSub.style.opacity = '0';
-        setTimeout(() => {
-          statusTitle.textContent = 'Welcome to Mindful Paths';
-          statusSub.textContent = 'Your psychological sanctuary';
-          statusTitle.style.opacity = '1';
-          statusSub.style.opacity = '1';
-        }, 120);
-      }
+      if (isDismissed) return;
+      if (statusTitle) statusTitle.textContent = 'Welcome to Mindful Paths';
+      if (statusSub) statusSub.textContent = 'Your psychological sanctuary';
     }, 3000);
 
-    // 3.4s: Gracefully dismiss overlay
+    // Step 5: Graceful Dissolve (3.8s)
     setTimeout(() => {
       dismissOverlay();
-    }, 3400);
+    }, 3800);
 
     // Intercept internal page navigations
     document.addEventListener('click', (e) => {
