@@ -994,46 +994,8 @@
         card.style.transform = '';
       });
     });
-
-    // D. Fluid Desktop Magnetic Aura Cursor (non-touch)
-    if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      if (!document.querySelector('.magnetic-cursor-dot')) {
-        const dot = document.createElement('div');
-        dot.className = 'magnetic-cursor-dot';
-        const aura = document.createElement('div');
-        aura.className = 'magnetic-cursor-aura';
-        document.body.appendChild(dot);
-        document.body.appendChild(aura);
-
-        let mouseX = -100, mouseY = -100;
-        let auraX = -100, auraY = -100;
-
-        document.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-          dot.style.left = mouseX + 'px';
-          dot.style.top = mouseY + 'px';
-        }, { passive: true });
-
-        // Smooth follower loop
-        function followMouse() {
-          auraX += (mouseX - auraX) * 0.18;
-          auraY += (mouseY - auraY) * 0.18;
-          aura.style.left = auraX + 'px';
-          aura.style.top = auraY + 'px';
-          requestAnimationFrame(followMouse);
-        }
-        requestAnimationFrame(followMouse);
-
-        // Hover expand triggers
-        const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .theme-toggle-btn, .rtl-toggle-btn, .tilt-card-active');
-        interactiveElements.forEach(el => {
-          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-expanded'));
-          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-expanded'));
-        });
-      }
-    }
   }
+
 
   function initApp() {
     initAwardWinningSuite();
