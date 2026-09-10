@@ -812,7 +812,7 @@
 
   
   // ==========================================
-  // 16. Premium Page-Transition Loading Animation (Peaceful Mind / Mindful Paths)
+  // 16. Mindful "Breathe In & Breathe Out" Website Opening & Page Transition Suite
   // ==========================================
   function initPageTransitions() {
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -822,39 +822,94 @@
     if (!overlay) {
       overlay = document.createElement('div');
       overlay.id = 'page-transition-overlay';
-      overlay.className = 'page-transition-overlay';
+      overlay.className = 'page-transition-overlay is-active';
       overlay.setAttribute('aria-hidden', 'true');
       overlay.innerHTML = `
-        <div class="page-transition-content">
-          <div class="transition-logo-glow" aria-hidden="true"></div>
-          <div class="transition-logo-box">
-            <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
+        <div class="page-transition-content text-center">
+          <div class="breathe-circle-container">
+            <div class="breathe-circle-outer" aria-hidden="true"></div>
+            <div class="breathe-circle-middle" aria-hidden="true"></div>
+            <div class="breathe-circle-inner shadow-2xl">
+              <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
           </div>
-          <div class="transition-text-wrap text-center">
-            <div class="transition-brand-title font-heading">Mindful Paths</div>
-            <div class="transition-brand-tagline">Psychological Sanctuary</div>
+          <div class="transition-text-wrap mt-6">
+            <div id="breathe-status-title" class="breathe-status-title font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1] transition-all duration-300">
+              Breathe in...
+            </div>
+            <div id="breathe-status-sub" class="breathe-status-sub text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#8FAFC0] mt-1.5 transition-all duration-300">
+              Inhale peace &amp; clarity
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="text-[11px] font-medium text-[#27343B]/60 dark:text-[#F8F6F1]/60 tracking-wider">
+              Click anywhere to enter &middot; Mindful Paths
+            </span>
           </div>
         </div>
       `;
       document.body.prepend(overlay);
     }
 
-    // Dismiss overlay immediately as soon as current/destination page is ready
+    const statusTitle = overlay.querySelector('#breathe-status-title');
+    const statusSub = overlay.querySelector('#breathe-status-sub');
+
+    let isDismissed = false;
     function dismissOverlay() {
-      if (!overlay) return;
+      if (isDismissed || !overlay) return;
+      isDismissed = true;
+      overlay.style.transition = 'opacity 0.45s ease-out, visibility 0.45s ease-out';
       overlay.classList.remove('is-active');
       document.body.classList.remove('page-is-leaving');
     }
 
-    // On page readiness, smoothly fade out immediately (no artificial wait)
-    dismissOverlay();
-    window.addEventListener('pageshow', dismissOverlay);
+    // Tap/click anywhere to skip immediately
+    overlay.addEventListener('click', dismissOverlay);
+
+    // Initial Website Opening: Mindful Breathing Sequence
+    // 1. Breathe in (0ms - 1350ms)
+    // 2. Breathe out (1350ms - 2700ms)
+    // 3. Welcome & seamless entry (2700ms - 3100ms)
+    overlay.classList.add('is-active');
+
+    setTimeout(() => {
+      if (!isDismissed && statusTitle && statusSub) {
+        statusTitle.style.opacity = '0';
+        statusSub.style.opacity = '0';
+        setTimeout(() => {
+          statusTitle.textContent = 'Breathe out...';
+          statusSub.textContent = 'Release tension & arrive';
+          statusTitle.style.opacity = '1';
+          statusSub.style.opacity = '1';
+        }, 150);
+      }
+    }, 1350);
+
+    setTimeout(() => {
+      if (!isDismissed && statusTitle && statusSub) {
+        statusTitle.style.opacity = '0';
+        statusSub.style.opacity = '0';
+        setTimeout(() => {
+          statusTitle.textContent = 'Welcome to Mindful Paths';
+          statusSub.textContent = 'Your psychological sanctuary';
+          statusTitle.style.opacity = '1';
+          statusSub.style.opacity = '1';
+        }, 150);
+      }
+    }, 2700);
+
+    setTimeout(() => {
+      dismissOverlay();
+    }, 3100);
+
+    window.addEventListener('pageshow', () => {
+      setTimeout(dismissOverlay, 800);
+    });
 
     // Intercept internal page navigations
     document.addEventListener('click', (e) => {
-      // Don't intercept modified clicks (Ctrl, Cmd, Shift, Alt, middle-click)
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
         return;
       }
@@ -865,7 +920,7 @@
       const href = link.getAttribute('href');
       if (!href) return;
 
-      // Skip in-page anchors, external protocols, downloads, target="_blank"
+      // Skip non-page links
       if (
         href.startsWith('#') ||
         href.startsWith('javascript:') ||
@@ -877,7 +932,6 @@
         return;
       }
 
-      // Check if target is an internal page
       let targetUrl;
       try {
         targetUrl = new URL(href, window.location.href);
@@ -885,24 +939,19 @@
         return;
       }
 
-      // If different origin, allow standard browser navigation
-      if (targetUrl.origin !== window.location.origin) {
-        return;
-      }
+      if (targetUrl.origin !== window.location.origin) return;
+      if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search) return;
 
-      // If same page URL (only hash differs or same URL), allow standard jump
-      if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search) {
-        return;
-      }
-
-      // Internal page navigation -> trigger smooth transition
       e.preventDefault();
-
-      // Show logo with gentle breathing bloom
+      isDismissed = false;
+      if (statusTitle && statusSub) {
+        statusTitle.textContent = 'Breathe in...';
+        statusSub.textContent = 'Preparing your sanctuary';
+      }
+      overlay.style.transition = 'opacity 0.22s ease-out, visibility 0.22s ease-out';
       overlay.classList.add('is-active');
       document.body.classList.add('page-is-leaving');
 
-      // Navigate immediately without artificial delay
       requestAnimationFrame(() => {
         window.location.href = targetUrl.href;
       });
