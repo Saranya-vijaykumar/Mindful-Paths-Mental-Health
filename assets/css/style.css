@@ -1362,3 +1362,214 @@ html:not(.dark) #main-header {
   border-bottom: 1px solid #CBD8E0 !important;
   box-shadow: 0 2px 10px rgba(29, 51, 64, 0.05) !important;
 }
+
+
+/* ==========================================================================
+   AWWWARDS & EDITORIAL PRESTIGE DESIGN SYSTEM (Version 5.5.0)
+   Analog Film Grain, Hairline Progress, 3D Tilt Physics, Aura Cursor, Marquee
+   ========================================================================== */
+
+/* 1. Subtle Analog Film Grain Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.024;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+html.dark .grain-overlay {
+  opacity: 0.04;
+}
+
+/* 2. Precision Top Reading Progress Bar */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #1D4C56 0%, #2E7280 40%, #D4A373 75%, #B25338 100%);
+  z-index: 99999;
+  transition: width 0.08s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 1px 6px rgba(46, 114, 128, 0.4);
+}
+html.dark .reading-progress-bar {
+  background: linear-gradient(90deg, #5BA897 0%, #9DC3C8 40%, #E6B599 75%, #D7B7A5 100%);
+  box-shadow: 0 1px 8px rgba(91, 168, 151, 0.5);
+}
+
+/* 3. Awwwards Prestige Floating Badge */
+.award-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1D4C56;
+  box-shadow: 0 4px 18px rgba(29, 76, 86, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.dark .award-badge-pill {
+  background: rgba(18, 30, 39, 0.85);
+  border-color: rgba(212, 163, 115, 0.3);
+  color: #CBD8E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+.award-badge-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 76, 86, 0.14);
+}
+.award-badge-pill::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 35%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: rotate(28deg);
+  animation: awardShine 4.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes awardShine {
+  0%, 65% { left: -60%; }
+  100% { left: 140%; }
+}
+
+/* 4. Kinetic Typography Editorial Infinite Marquee */
+.kinetic-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.15rem 0;
+  background: linear-gradient(90deg, rgba(29, 76, 86, 0.04) 0%, rgba(178, 83, 56, 0.06) 50%, rgba(29, 76, 86, 0.04) 100%);
+  border-top: 1px solid rgba(29, 76, 86, 0.12);
+  border-bottom: 1px solid rgba(29, 76, 86, 0.12);
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+}
+html.dark .kinetic-marquee-wrapper {
+  background: linear-gradient(90deg, rgba(17, 25, 31, 0.95) 0%, rgba(29, 76, 86, 0.25) 50%, rgba(17, 25, 31, 0.95) 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.kinetic-marquee-track {
+  display: inline-flex;
+  gap: 3.5rem;
+  animation: marqueeRoll 36s linear infinite;
+  will-change: transform;
+}
+.kinetic-marquee-wrapper:hover .kinetic-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marqueeRoll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1D4C56;
+}
+html.dark .marquee-item {
+  color: #CBD8E0;
+}
+.marquee-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #B25338;
+}
+html.dark .marquee-dot {
+  background: #E6B599;
+}
+
+/* 5. 3D Card Tilt Physics & Specular Sheen */
+.tilt-card-active {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+.tilt-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.28) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: overlay;
+  border-radius: inherit;
+  z-index: 20;
+}
+html.dark .tilt-sheen {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+}
+.tilt-card-active:hover .tilt-sheen {
+  opacity: 1;
+}
+
+/* 6. Fluid Desktop Magnetic Aura Cursor */
+@media (pointer: fine) {
+  .magnetic-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: #1D4C56;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.06s ease-out, background-color 0.3s ease;
+  }
+  html.dark .magnetic-cursor-dot {
+    background-color: #5BA897;
+  }
+  .magnetic-cursor-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(29, 76, 86, 0.35);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), width 0.25s ease, height 0.25s ease, border-color 0.3s ease, background 0.25s ease;
+  }
+  html.dark .magnetic-cursor-aura {
+    border-color: rgba(91, 168, 151, 0.4);
+  }
+  body.cursor-expanded .magnetic-cursor-aura {
+    width: 54px;
+    height: 54px;
+    border-color: rgba(178, 83, 56, 0.6);
+    background: rgba(178, 83, 56, 0.08);
+    backdrop-filter: blur(1px);
+  }
+}

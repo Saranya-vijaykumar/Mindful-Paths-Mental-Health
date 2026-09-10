@@ -923,7 +923,120 @@
   }
 
   // Run on DOM Ready
+  
+  // ==========================================
+  // 15. Award-Winning Interactive Experience Suite 🏆✨
+  // ==========================================
+  function initAwardWinningSuite() {
+    // A. Inject Global Analog Film Grain Overlay
+    if (!document.querySelector('.grain-overlay')) {
+      const grain = document.createElement('div');
+      grain.className = 'grain-overlay';
+      grain.setAttribute('aria-hidden', 'true');
+      document.body.prepend(grain);
+    }
+
+    // B. Inject & Drive Reading Progress Bar
+    let progressBar = document.querySelector('.reading-progress-bar');
+    if (!progressBar) {
+      progressBar = document.createElement('div');
+      progressBar.className = 'reading-progress-bar';
+      progressBar.setAttribute('aria-hidden', 'true');
+      document.body.prepend(progressBar);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalHeight > 0) {
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // C. 3D Card Tilt Physics with Specular Sheen
+    const tiltSelectors = '.card-wellness, .clinician-card, .price-card, .tilt-interactive, .service-card, .editorial-card';
+    const tiltCards = document.querySelectorAll(tiltSelectors);
+
+    tiltCards.forEach(card => {
+      card.classList.add('tilt-card-active');
+      
+      let sheen = card.querySelector('.tilt-sheen');
+      if (!sheen) {
+        sheen = document.createElement('div');
+        sheen.className = 'tilt-sheen';
+        card.appendChild(sheen);
+      }
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -5.5; // subtle tilt angle
+        const rotateY = ((x - centerX) / centerX) * 5.5;
+
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
+        card.style.setProperty('--mouse-x', ((x / rect.width) * 100) + '%');
+        card.style.setProperty('--mouse-y', ((y / rect.height) * 100) + '%');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // D. Fluid Desktop Magnetic Aura Cursor (non-touch)
+    if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!document.querySelector('.magnetic-cursor-dot')) {
+        const dot = document.createElement('div');
+        dot.className = 'magnetic-cursor-dot';
+        const aura = document.createElement('div');
+        aura.className = 'magnetic-cursor-aura';
+        document.body.appendChild(dot);
+        document.body.appendChild(aura);
+
+        let mouseX = -100, mouseY = -100;
+        let auraX = -100, auraY = -100;
+
+        document.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          dot.style.left = mouseX + 'px';
+          dot.style.top = mouseY + 'px';
+        }, { passive: true });
+
+        // Smooth follower loop
+        function followMouse() {
+          auraX += (mouseX - auraX) * 0.18;
+          auraY += (mouseY - auraY) * 0.18;
+          aura.style.left = auraX + 'px';
+          aura.style.top = auraY + 'px';
+          requestAnimationFrame(followMouse);
+        }
+        requestAnimationFrame(followMouse);
+
+        // Hover expand triggers
+        const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .theme-toggle-btn, .rtl-toggle-btn, .tilt-card-active');
+        interactiveElements.forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-expanded'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-expanded'));
+        });
+      }
+    }
+  }
+
   function initApp() {
+    initAwardWinningSuite();
     initCounters();
     initScrollReveals();
     initAmbientBackground();
