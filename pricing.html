@@ -264,10 +264,10 @@
       <!-- Interactive Billing Toggle -->
       <div class="flex items-center justify-center pt-4">
         <div class="p-1.5 rounded-full bg-[#EBF1F4] dark:bg-[#1e2d37] border border-[#CBD8E0] dark:border-white/10 flex items-center shadow-inner">
-          <button type="button" id="billing-per-session-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm" onclick="togglePricingBilling('session')">
+          <button type="button" id="billing-per-session-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#172D3A] dark:text-white shadow-sm" onclick="togglePricingBilling('session')">
             Pay Per Session
           </button>
-          <button type="button" id="billing-monthly-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5" onclick="togglePricingBilling('monthly')">
+          <button type="button" id="billing-monthly-btn" class="px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B] dark:text-[#8FAFC0] hover:text-[#172D3A] dark:hover:text-white flex items-center gap-1.5" onclick="togglePricingBilling('monthly')">
             <span>Monthly Packages</span>
             <span class="px-2 py-0.5 rounded-full bg-[#B25338] text-white text-[10px] uppercase font-bold tracking-wider">Save 15%</span>
           </button>
@@ -1159,14 +1159,14 @@
       var tags = document.querySelectorAll('.savings-tag');
 
       if (mode === 'monthly') {
-        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm flex items-center gap-1.5';
-        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white';
+        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#172D3A] dark:text-white shadow-sm flex items-center gap-1.5';
+        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B] dark:text-[#8FAFC0] hover:text-[#172D3A] dark:hover:text-white';
         vals.forEach(function(v) { v.innerText = v.dataset.monthly; });
         units.forEach(function(u) { u.innerText = u.dataset.monthly; });
         tags.forEach(function(t) { t.classList.remove('hidden'); });
       } else {
-        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#294657] dark:text-white shadow-sm';
-        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B]/70 dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white flex items-center gap-1.5';
+        sBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all bg-white dark:bg-[#294657] text-[#172D3A] dark:text-white shadow-sm';
+        mBtn.className = 'px-6 py-2.5 rounded-full text-xs font-bold transition-all text-[#27343B] dark:text-[#8FAFC0] hover:text-[#172D3A] dark:hover:text-white flex items-center gap-1.5';
         vals.forEach(function(v) { v.innerText = v.dataset.session; });
         units.forEach(function(u) { u.innerText = u.dataset.session; });
         tags.forEach(function(t) { t.classList.add('hidden'); });

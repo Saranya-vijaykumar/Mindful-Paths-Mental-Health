@@ -705,16 +705,52 @@ html:not(.dark) .font-heading:not([class*="text-white"]):not([class*="text-[#F"]
   color: #172D3A; /* Deep teal obsidian on light surfaces */
 }
 
-/* Explicit White Text Enforcement in Light Mode */
-html:not(.dark) .text-white,
-html:not(.dark) .text-white\/95,
-html:not(.dark) .text-white\/90,
-html:not(.dark) .text-white\/80,
-html:not(.dark) .text-white\/70,
-html:not(.dark) [class*="text-white"],
-html:not(.dark) .text-\[\#F4F8F7\],
-html:not(.dark) .text-\[\#F8F6F1\] {
+/* Explicit White Text Enforcement in Light Mode (Scoped only to intentional white text, never dark:text-white) */
+html:not(.dark) .text-white:not([class*="dark:text-"]):not([class*="text-[#"]):not(#billing-per-session-btn):not(#billing-monthly-btn),
+html:not(.dark) .text-white\/95:not([class*="dark:text-"]),
+html:not(.dark) .text-white\/90:not([class*="dark:text-"]),
+html:not(.dark) .text-white\/80:not([class*="dark:text-"]),
+html:not(.dark) .text-white\/70:not([class*="dark:text-"]) {
   color: #FFFFFF !important;
+}
+
+/* Pricing Interactive Billing Toggle - Crystal Clear Visibility */
+#billing-per-session-btn,
+#billing-monthly-btn {
+  color: #172D3A !important;
+}
+
+html:not(.dark) #billing-per-session-btn.bg-white,
+html:not(.dark) #billing-monthly-btn.bg-white {
+  background-color: #FFFFFF !important;
+  color: #172D3A !important;
+  box-shadow: 0 4px 12px rgba(23, 45, 58, 0.12) !important;
+}
+
+html:not(.dark) #billing-per-session-btn:not(.bg-white),
+html:not(.dark) #billing-monthly-btn:not(.bg-white) {
+  background-color: transparent !important;
+  color: #27343B !important;
+}
+
+html.dark #billing-per-session-btn,
+html.dark #billing-monthly-btn {
+  color: #EBF1F4 !important;
+}
+
+html.dark #billing-per-session-btn.dark\:bg-\[\#294657\],
+html.dark #billing-per-session-btn.bg-white,
+html.dark #billing-monthly-btn.dark\:bg-\[\#294657\],
+html.dark #billing-monthly-btn.bg-white {
+  background-color: #294657 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark #billing-per-session-btn:not(.dark\:bg-\[\#294657\]):not(.bg-white),
+html.dark #billing-monthly-btn:not(.dark\:bg-\[\#294657\]):not(.bg-white) {
+  background-color: transparent !important;
+  color: #8FAFC0 !important;
 }
 
 /* Dark Section Containers in Light Mode (Testimonial, Philosophy, Footer, Dark Banners) */
