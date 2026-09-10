@@ -41,40 +41,85 @@
         extend: {
           colors: {
             primary: {
-              DEFAULT: '#8FAFC0',
-              50: '#F8F6F1',
-              100: '#EBF1F4',
-              200: '#BACDE5',
-              500: '#8FAFC0',
-              600: '#7A9CB0',
+              50: '#f4f8f5',
+              100: '#e8efe9',
+              200: '#d1dfd4',
+              300: '#b4ccbb',
+              400: '#9ebfa7',
+              500: '#8FAF9A', // Sage Green (Primary)
+              600: '#759981',
+              700: '#5c7d67',
+              800: '#435e4d',
+              900: '#29483A', // Deep Forest (Dark Primary)
+              950: '#16281f',
             },
-            darkPrimary: {
-              DEFAULT: '#294657',
-              hover: '#1d3340',
+            forest: {
+              50: '#f2f6f4',
+              100: '#e3ece7',
+              200: '#c5d8ce',
+              300: '#9cbcae',
+              400: '#6d9984',
+              500: '#477862',
+              600: '#29483A', // Deep Forest (Headings & Buttons)
+              700: '#1f372c',
+              800: '#172b22',
+              900: '#131f18',
+              950: '#0a120e',
             },
             cream: {
-              DEFAULT: '#F8F6F1',
-              card: '#FFFFFF',
-              tint: '#EBF1F4',
+              50: '#fdfcfb',
+              100: '#F7F5EF', // Warm Cream (Background)
+              200: '#ede8dd',
+              300: '#ded5c2',
+              400: '#cbbfa5',
+              500: '#b5a687',
             },
-            accent: {
-              DEFAULT: '#D7B7A5',
-              hover: '#c5a390',
+            sage: {
+              50: '#f6f9f7',
+              100: '#E8EFE9', // Soft Sage (Section Background)
+              200: '#d4e2d6',
+              300: '#b8cebc',
+              400: '#9ebca4',
+              500: '#8FAF9A', // Sage Green
+              600: '#74967f',
+              700: '#5a7864',
+            },
+            peach: {
+              50: '#fdf8f6',
+              100: '#fbeee9',
+              200: '#f6dcd4',
+              300: '#ecc2b4',
+              400: '#e1a491',
+              500: '#D9A38F', // Muted Peach (Accent & Small Highlights)
+              600: '#c48974',
+              700: '#a76f5b',
+              800: '#8b5947',
+              900: '#724738',
             },
             charcoal: {
-              DEFAULT: '#27343B',
-              light: '#5b6c75',
+              50: '#f5f7f6',
+              100: '#e4eae7',
+              200: '#cbd6d0',
+              300: '#a5b7ad',
+              400: '#7a9284',
+              500: '#587062',
+              600: '#26332D', // Charcoal (Body Text)
+              700: '#1e2924',
+              800: '#18211d',
+              900: '#121915',
+              950: '#0a0e0c',
             },
             darkbg: {
-              900: '#11191f',
-              800: '#17232b',
-              700: '#1e2d37',
+              900: '#131f18', // Deep Forest Charcoal
+              800: '#1a2b22', // Forest Surface
+              700: '#23382d', // Forest Border
             }
           },
           fontFamily: {
             sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Fraunces"', '"Cormorant Garamond"', 'serif'],
-            serif: ['"Cormorant Garamond"', 'serif'],
+            heading: ['"Fraunces"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Fraunces"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             rtl: ['"Cairo"', '"Outfit"', 'sans-serif']
           }
         }
@@ -85,14 +130,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F7F5EF] text-[#26332D] dark:bg-[#131f18] dark:text-[#F7F5EF] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F7F5EF] text-xs font-medium py-2.5 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#D7B7A5] animate-pulse"></span> 24/7 Crisis Support
+        <span class="bg-[#29483A]/20 text-[#f0baa9] border border-[#8FAF9A]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#29483A] animate-pulse"></span> 24/7 Crisis Support
         </span>
         <span class="text-white/90 text-[11px] sm:text-xs">In acute distress? Call <a href="tel:988" class="font-bold underline text-[#f0baa9] hover:text-white transition-colors">988 Lifeline</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span></span>
       </div>
@@ -109,7 +154,7 @@
   </div>
 
   <!-- Main Navbar Header (Direct Links - No Dropdowns) -->
-  <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
+  <header id="main-header" class="sticky top-0 z-40 bg-[#F7F5EF]/95 dark:bg-[#1a2b22]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
@@ -119,42 +164,42 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <span class="font-heading text-2xl font-bold tracking-tight text-[#294657] dark:text-[#F8F6F1] leading-none">
+        <span class="font-heading text-2xl font-bold tracking-tight text-[#29483A] dark:text-[#F7F5EF] leading-none">
           Mindful Paths
         </span>
       </a>
 
       <!-- Desktop Nav Menu: Direct Links Without Scroll Down Dropdowns -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
-        <a href="index.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Home</a>
-        <a href="about.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">About</a>
-        <a href="services.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
-        <a href="therapists.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
-        <a href="resources.html" class="inline-flex items-center text-[#D7B7A5] dark:text-[#e6c8b9] font-bold">Resources</a>
-        <a href="pricing.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Pricing</a>
-        <a href="blog.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Blog</a>
-        <a href="contact.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Contact</a>
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#26332D] dark:text-[#E8EFE9]">
+        <a href="index.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Home</a>
+        <a href="about.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">About</a>
+        <a href="services.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
+        <a href="therapists.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
+        <a href="resources.html" class="inline-flex items-center text-[#D9A38F] dark:text-[#e6c8b9] font-bold">Resources</a>
+        <a href="pricing.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Pricing</a>
+        <a href="blog.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Blog</a>
+        <a href="contact.html" class="inline-flex items-center hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] transition-colors">Contact</a>
       </nav>
 
       <!-- Utility Controls -->
       <div class="hidden lg:flex items-center gap-3">
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fas fa-moon moon-icon text-xs"></i>
           <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
 
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#23382d] text-[#26332D] dark:text-[#F7F5EF] hover:text-[#D9A38F] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
           <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
 
-        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
+        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
           <i class="fas fa-user-circle text-sm"></i> <span>Client Portal</span>
         </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
       <div class="flex lg:hidden items-center">
-        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#1e2d37] text-[#294657] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
+        <button type="button" id="mobile-menu-toggle" class="w-11 h-11 rounded-2xl bg-white dark:bg-[#23382d] text-[#29483A] dark:text-[#F7F5EF] hover:text-[#D9A38F] flex items-center justify-center transition-colors border border-[#E8EFE9] dark:border-white/10 shadow-sm" aria-label="Open Mobile Menu">
           <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
@@ -163,11 +208,11 @@
   </header>
 
   <!-- Breadcrumb -->
-  <div class="py-4 bg-[#EBF1F4]/50 dark:bg-[#17232b] border-b border-[#EBF1F4] dark:border-white/10 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96]">
-      <a href="index.html" class="hover:text-[#D7B7A5] transition-colors">Home</a>
+  <div class="py-4 bg-[#E8EFE9]/50 dark:bg-[#1a2b22] border-b border-[#E8EFE9] dark:border-white/10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#26332D] dark:text-[#7d8d96]">
+      <a href="index.html" class="hover:text-[#D9A38F] transition-colors">Home</a>
       <span>/</span>
-      <span class="text-[#294657] dark:text-[#F8F6F1] font-bold">Resources &amp; Self-Regulation</span>
+      <span class="text-[#29483A] dark:text-[#F7F5EF] font-bold">Resources &amp; Self-Regulation</span>
     </div>
   </div>
 
@@ -176,30 +221,30 @@
     <!-- =========================================================================
          HERO SECTION: Evidence-Based Psychological Tools & Sanctuary
          ========================================================================= -->
-    <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-gradient-to-b from-[#EBF1F4]/70 via-[#F8F6F1] to-white dark:from-[#17232b] dark:via-[#11191f] dark:to-[#17232b] border-b border-[#EBF1F4] dark:border-white/10 text-center">
+    <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-gradient-to-b from-[#E8EFE9]/70 via-[#F7F5EF] to-white dark:from-[#1a2b22] dark:via-[#131f18] dark:to-[#1a2b22] border-b border-[#E8EFE9] dark:border-white/10 text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] text-xs font-bold uppercase tracking-widest">
-          <i class="fas fa-compass text-xs text-[#8FAFC0]"></i> Evidence-Based Clinical Sanctuary
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8FAF9A]/20 text-[#29483A] dark:text-[#8FAF9A] text-xs font-bold uppercase tracking-widest">
+          <i class="fas fa-compass text-xs text-[#8FAF9A]"></i> Evidence-Based Clinical Sanctuary
         </span>
-        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#294657] dark:text-[#F8F6F1] tracking-tight leading-[1.12]">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#29483A] dark:text-[#F7F5EF] tracking-tight leading-[1.12]">
           Empowering tools for emotional self-regulation.
         </h1>
-        <p class="text-base sm:text-lg text-[#27343B]/80 dark:text-[#d0e0ed] max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-lg text-[#26332D]/80 dark:text-[#d0e0ed] max-w-2xl mx-auto leading-relaxed">
           Access free clinician-developed somatic pacers, confidential psychological assessments, printable CBT worksheets, and 24/7 crisis guidance.
         </p>
 
         <!-- Quick Jump Navigation Pills -->
         <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
-          <a href="#breathing-suite" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-xs font-bold text-[#294657] dark:text-[#F8F6F1] shadow-sm hover:shadow transition-all flex items-center gap-2">
-            <i class="fas fa-wind text-[#8FAFC0]"></i> Box Breathing
+          <a href="#breathing-suite" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] text-xs font-bold text-[#29483A] dark:text-[#F7F5EF] shadow-sm hover:shadow transition-all flex items-center gap-2">
+            <i class="fas fa-wind text-[#8FAF9A]"></i> Box Breathing
           </a>
-          <a href="#clinical-screeners" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#D7B7A5] text-xs font-bold text-[#294657] dark:text-[#F8F6F1] shadow-sm hover:shadow transition-all flex items-center gap-2">
-            <i class="fas fa-clipboard-check text-[#D7B7A5]"></i> Self-Screeners
+          <a href="#clinical-screeners" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] text-xs font-bold text-[#29483A] dark:text-[#F7F5EF] shadow-sm hover:shadow transition-all flex items-center gap-2">
+            <i class="fas fa-clipboard-check text-[#D9A38F]"></i> Self-Screeners
           </a>
-          <a href="#cbt-worksheets" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-xs font-bold text-[#294657] dark:text-[#F8F6F1] shadow-sm hover:shadow transition-all flex items-center gap-2">
-            <i class="fas fa-file-lines text-[#8FAFC0]"></i> CBT Worksheets
+          <a href="#cbt-worksheets" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] text-xs font-bold text-[#29483A] dark:text-[#F7F5EF] shadow-sm hover:shadow transition-all flex items-center gap-2">
+            <i class="fas fa-file-lines text-[#8FAF9A]"></i> CBT Worksheets
           </a>
-          <a href="#crisis-support" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-rose-400 text-xs font-bold text-[#294657] dark:text-[#F8F6F1] shadow-sm hover:shadow transition-all flex items-center gap-2">
+          <a href="#crisis-support" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 hover:border-rose-400 text-xs font-bold text-[#29483A] dark:text-[#F7F5EF] shadow-sm hover:shadow transition-all flex items-center gap-2">
             <i class="fas fa-phone-volume text-rose-500"></i> 24/7 Crisis Help
           </a>
         </div>
@@ -209,68 +254,68 @@
     <!-- =========================================================================
          SECTION 1: Interactive 4-4-4-4 Box Breathing Meditation Visualizer
          ========================================================================= -->
-    <section id="breathing-suite" class="py-20 bg-white dark:bg-[#17232b] scroll-mt-20">
+    <section id="breathing-suite" class="py-20 bg-white dark:bg-[#1a2b22] scroll-mt-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <div class="space-y-3">
-          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAFC0]">Somatic Polyvagal Pacing</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAF9A]">Somatic Polyvagal Pacing</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
             4-4-4-4 Clinical Box Breathing Visualizer
           </h2>
-          <p class="text-sm sm:text-base text-[#27343B]/80 dark:text-[#7d8d96] max-w-xl mx-auto leading-relaxed">
+          <p class="text-sm sm:text-base text-[#26332D]/80 dark:text-[#7d8d96] max-w-xl mx-auto leading-relaxed">
             Used by clinicians, trauma therapists, and high-performance teams to regulate heart-rate variability and rapidly down-regulate the sympathetic nervous system.
           </p>
         </div>
 
         <!-- The Interactive Breathing Circle Component -->
-        <div class="p-8 sm:p-12 rounded-3xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 shadow-xl max-w-2xl mx-auto relative overflow-hidden">
+        <div class="p-8 sm:p-12 rounded-3xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 shadow-xl max-w-2xl mx-auto relative overflow-hidden">
           
           <div class="relative w-64 h-64 sm:w-72 sm:h-72 mx-auto flex items-center justify-center py-6">
             <!-- Pulsing Aura Ring -->
-            <div id="breathing-aura" class="absolute inset-0 rounded-full blur-2xl bg-[#8FAFC0]/20 transition-all duration-1000"></div>
+            <div id="breathing-aura" class="absolute inset-0 rounded-full blur-2xl bg-[#8FAF9A]/20 transition-all duration-1000"></div>
 
             <!-- Outer Reference Ring -->
-            <div class="absolute inset-2 rounded-full border-2 border-dashed border-[#8FAFC0]/30 dark:border-white/10 animate-spin" style="animation-duration: 60s;"></div>
+            <div class="absolute inset-2 rounded-full border-2 border-dashed border-[#8FAF9A]/30 dark:border-white/10 animate-spin" style="animation-duration: 60s;"></div>
 
             <!-- Animated Scalable Circle with Phase Text & Timer -->
-            <div id="breathing-circle" class="relative z-10 w-48 h-48 rounded-full bg-gradient-to-tr from-[#294657] via-[#3a5d73] to-[#8FAFC0] text-white flex flex-col items-center justify-center p-6 shadow-2xl transition-all duration-1000 ease-in-out transform scale-95 select-none">
+            <div id="breathing-circle" class="relative z-10 w-48 h-48 rounded-full bg-gradient-to-tr from-[#29483A] via-[#3a5d73] to-[#8FAF9A] text-white flex flex-col items-center justify-center p-6 shadow-2xl transition-all duration-1000 ease-in-out transform scale-95 select-none">
               <span id="breathing-stage" class="font-heading text-xl sm:text-2xl font-bold tracking-wide">Ready</span>
-              <span id="breathing-timer" class="font-mono text-3xl sm:text-4xl font-extrabold text-[#D7B7A5] my-1">4s</span>
+              <span id="breathing-timer" class="font-mono text-3xl sm:text-4xl font-extrabold text-[#D9A38F] my-1">4s</span>
               <span id="breathing-sub-prompt" class="text-[11px] text-white/80">Press Begin Below</span>
             </div>
           </div>
 
           <!-- Controls & Cycle Counter -->
           <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button type="button" id="breathing-start-btn" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-lg shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
+            <button type="button" id="breathing-start-btn" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#29483A] hover:bg-[#1f372c] text-white font-bold text-xs shadow-lg shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
               <i class="fas fa-play text-xs"></i> <span>Begin 4-4-4 Breathing</span>
             </button>
-            <button type="button" id="breathing-reset-btn" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <button type="button" id="breathing-reset-btn" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white dark:bg-[#1a2b22] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
               <i class="fas fa-rotate-left text-xs"></i> <span>Reset Pacer</span>
             </button>
           </div>
 
-          <div class="mt-4 text-xs text-[#27343B]/60 dark:text-[#7d8d96] flex items-center justify-center gap-2">
-            <i class="fas fa-circle-check text-[#8FAFC0]"></i>
+          <div class="mt-4 text-xs text-[#26332D]/60 dark:text-[#7d8d96] flex items-center justify-center gap-2">
+            <i class="fas fa-circle-check text-[#8FAF9A]"></i>
             <span id="breathing-cycles">Completed: 0 of 4 Mindful Cycles</span>
           </div>
 
           <!-- Quick Rhythm Info Pill -->
-          <div class="mt-8 pt-6 border-t border-[#EBF1F4] dark:border-white/10 grid grid-cols-4 gap-2 text-center text-xs">
-            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#17232b]/60">
-              <div class="font-bold text-[#294657] dark:text-[#F8F6F1]">Inhale</div>
-              <div class="text-[11px] text-[#8FAFC0]">4 Seconds</div>
+          <div class="mt-8 pt-6 border-t border-[#E8EFE9] dark:border-white/10 grid grid-cols-4 gap-2 text-center text-xs">
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#1a2b22]/60">
+              <div class="font-bold text-[#29483A] dark:text-[#F7F5EF]">Inhale</div>
+              <div class="text-[11px] text-[#8FAF9A]">4 Seconds</div>
             </div>
-            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#17232b]/60">
-              <div class="font-bold text-[#294657] dark:text-[#F8F6F1]">Hold</div>
-              <div class="text-[11px] text-[#8FAFC0]">4 Seconds</div>
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#1a2b22]/60">
+              <div class="font-bold text-[#29483A] dark:text-[#F7F5EF]">Hold</div>
+              <div class="text-[11px] text-[#8FAF9A]">4 Seconds</div>
             </div>
-            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#17232b]/60">
-              <div class="font-bold text-[#294657] dark:text-[#F8F6F1]">Exhale</div>
-              <div class="text-[11px] text-[#8FAFC0]">4 Seconds</div>
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#1a2b22]/60">
+              <div class="font-bold text-[#29483A] dark:text-[#F7F5EF]">Exhale</div>
+              <div class="text-[11px] text-[#8FAF9A]">4 Seconds</div>
             </div>
-            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#17232b]/60">
-              <div class="font-bold text-[#294657] dark:text-[#F8F6F1]">Rest</div>
-              <div class="text-[11px] text-[#8FAFC0]">4 Seconds</div>
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-[#1a2b22]/60">
+              <div class="font-bold text-[#29483A] dark:text-[#F7F5EF]">Rest</div>
+              <div class="text-[11px] text-[#8FAF9A]">4 Seconds</div>
             </div>
           </div>
         </div>
@@ -281,47 +326,47 @@
     <!-- =========================================================================
          SECTION 2: Confidential Interactive Clinical Screeners (PHQ-9, GAD-7, Burnout)
          ========================================================================= -->
-    <section id="clinical-screeners" class="py-20 bg-[#F8F6F1] dark:bg-[#11191f] scroll-mt-20">
+    <section id="clinical-screeners" class="py-20 bg-[#F7F5EF] dark:bg-[#131f18] scroll-mt-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         <div class="text-center space-y-3">
-          <span class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">Confidential Self-Check</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#D9A38F]">Confidential Self-Check</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
             Interactive Mental Health Screeners
           </h2>
-          <p class="text-xs sm:text-sm text-[#27343B]/80 dark:text-[#7d8d96] max-w-xl mx-auto leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#26332D]/80 dark:text-[#7d8d96] max-w-xl mx-auto leading-relaxed">
             Validated clinical questionnaires computed 100% locally in your browser. No data is stored, tracked, or submitted.
           </p>
         </div>
 
         <!-- Screener Switcher Tabs -->
         <div class="flex justify-center gap-2.5" id="screener-tabs">
-          <button type="button" data-screener="gad7" class="screener-tab-btn active px-6 py-3 rounded-full text-xs font-bold bg-[#294657] text-white shadow-sm transition-all cursor-pointer">
+          <button type="button" data-screener="gad7" class="screener-tab-btn active px-6 py-3 rounded-full text-xs font-bold bg-[#29483A] text-white shadow-sm transition-all cursor-pointer">
             <i class="fas fa-wind mr-1.5"></i> GAD-7 Anxiety Check
           </button>
-          <button type="button" data-screener="phq9" class="screener-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F6F1] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] transition-all cursor-pointer">
+          <button type="button" data-screener="phq9" class="screener-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-white dark:bg-[#1a2b22] text-[#29483A] dark:text-[#F7F5EF] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] transition-all cursor-pointer">
             <i class="fas fa-heart-pulse mr-1.5"></i> PHQ-9 Mood Check
           </button>
-          <button type="button" data-screener="burnout" class="screener-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F6F1] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] transition-all cursor-pointer">
+          <button type="button" data-screener="burnout" class="screener-tab-btn px-6 py-3 rounded-full text-xs font-bold bg-white dark:bg-[#1a2b22] text-[#29483A] dark:text-[#F7F5EF] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] transition-all cursor-pointer">
             <i class="fas fa-fire-extinguisher mr-1.5"></i> Burnout Index
           </button>
         </div>
 
         <!-- Screener Card Container -->
-        <div class="rounded-3xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 p-6 sm:p-10 shadow-xl space-y-8">
+        <div class="rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 p-6 sm:p-10 shadow-xl space-y-8">
           
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#EBF1F4] dark:border-white/10">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E8EFE9] dark:border-white/10">
             <div>
-              <h3 id="screener-title" class="font-heading text-xl sm:text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+              <h3 id="screener-title" class="font-heading text-xl sm:text-2xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
                 Generalized Anxiety Assessment (GAD-7 Fast Screener)
               </h3>
-              <p id="screener-desc" class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] mt-1">
+              <p id="screener-desc" class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] mt-1">
                 Over the last 2 weeks, how often have you been bothered by the following problems?
               </p>
             </div>
-            <div class="shrink-0 px-4 py-2 rounded-2xl bg-[#EBF1F4] dark:bg-[#1e2d37] text-center">
-              <span class="text-[10px] font-bold uppercase text-[#8FAFC0] block">Current Score</span>
-              <span id="screener-score-display" class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">0 / 12</span>
+            <div class="shrink-0 px-4 py-2 rounded-2xl bg-[#E8EFE9] dark:bg-[#23382d] text-center">
+              <span class="text-[10px] font-bold uppercase text-[#8FAF9A] block">Current Score</span>
+              <span id="screener-score-display" class="font-heading text-2xl font-bold text-[#29483A] dark:text-[#F7F5EF]">0 / 12</span>
             </div>
           </div>
 
@@ -331,19 +376,19 @@
           </form>
 
           <!-- Result & Interpretation Box -->
-          <div id="screener-result-box" class="p-6 rounded-2xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 space-y-3">
+          <div id="screener-result-box" class="p-6 rounded-2xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 space-y-3">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500" id="result-status-dot"></span>
-              <span id="result-severity-label" class="font-bold text-sm text-[#294657] dark:text-[#F8F6F1]">Minimal Anxiety Symptoms (Score: 0)</span>
+              <span id="result-severity-label" class="font-bold text-sm text-[#29483A] dark:text-[#F7F5EF]">Minimal Anxiety Symptoms (Score: 0)</span>
             </div>
-            <p id="result-explanation" class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
+            <p id="result-explanation" class="text-xs text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
               Your responses suggest low acute distress. Continuing mindfulness practices, adequate rest, and hydration will sustain your nervous system baseline.
             </p>
             <div class="pt-2 flex flex-wrap gap-3">
-              <button type="button" class="open-appointment-btn px-6 py-2.5 rounded-full bg-[#294657] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all">
+              <button type="button" class="open-appointment-btn px-6 py-2.5 rounded-full bg-[#29483A] hover:bg-[#1d3340] text-white font-bold text-xs shadow-md transition-all">
                 Discuss with a Licensed Therapist
               </button>
-              <button type="button" id="screener-reset-btn" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#17232b] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] transition-all">
+              <button type="button" id="screener-reset-btn" class="px-5 py-2.5 rounded-full bg-white dark:bg-[#1a2b22] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] transition-all">
                 Reset Screener
               </button>
             </div>
@@ -357,15 +402,15 @@
     <!-- =========================================================================
          SECTION 3: Downloadable Clinical CBT Worksheets & Toolkits
          ========================================================================= -->
-    <section id="cbt-worksheets" class="py-20 bg-white dark:bg-[#17232b] scroll-mt-20">
+    <section id="cbt-worksheets" class="py-20 bg-white dark:bg-[#1a2b22] scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div class="text-center max-w-2xl mx-auto space-y-3">
-          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAFC0]">Self-Help Toolkits</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAF9A]">Self-Help Toolkits</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
             Printable Clinical CBT Worksheets
           </h2>
-          <p class="text-xs sm:text-sm text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
             Clinician-approved exercises to practice at home between sessions, ground nervous system reactivity, and clarify relational dynamics.
           </p>
         </div>
@@ -373,77 +418,77 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Toolkit 1: CBT Thought Record -->
-          <div class="p-6 rounded-3xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="p-6 rounded-3xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div class="space-y-3">
-              <div class="w-12 h-12 rounded-2xl bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-[#8FAF9A]/20 text-[#29483A] dark:text-[#8FAF9A] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 <i class="fas fa-file-pdf"></i>
               </div>
-              <h3 class="font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">CBT Thought Record</h3>
-              <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+              <h3 class="font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">CBT Thought Record</h3>
+              <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
                 A 5-column exercise to identify cognitive distortions, challenge black-and-white thinking, and construct rational alternatives.
               </p>
-              <div class="text-[11px] text-[#8FAFC0] font-semibold flex items-center gap-1.5">
+              <div class="text-[11px] text-[#8FAF9A] font-semibold flex items-center gap-1.5">
                 <i class="fas fa-check-circle text-[10px]"></i> Cognitive Reframing
               </div>
             </div>
-            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#17232b] hover:bg-[#D7B7A5] hover:text-white dark:hover:bg-[#D7B7A5] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('CBT Thought Record')">
+            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#1a2b22] hover:bg-[#29483A] hover:text-white dark:hover:bg-[#29483A] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('CBT Thought Record')">
               <i class="fas fa-download mr-1.5"></i> Download PDF
             </button>
           </div>
 
           <!-- Toolkit 2: 5-4-3-2-1 Somatic Grounding -->
-          <div class="p-6 rounded-3xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="p-6 rounded-3xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div class="space-y-3">
-              <div class="w-12 h-12 rounded-2xl bg-[#D7B7A5]/25 text-[#D7B7A5] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-[#29483A]/25 text-[#D9A38F] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 <i class="fas fa-hand-holding-heart"></i>
               </div>
-              <h3 class="font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">5-4-3-2-1 Sensory Grounding</h3>
-              <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+              <h3 class="font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">5-4-3-2-1 Sensory Grounding</h3>
+              <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
                 Emergency sensory reference sheet to de-escalate acute panic attacks, sensory overwhelm, and emotional dissociation in real time.
               </p>
-              <div class="text-[11px] text-[#D7B7A5] font-semibold flex items-center gap-1.5">
+              <div class="text-[11px] text-[#D9A38F] font-semibold flex items-center gap-1.5">
                 <i class="fas fa-check-circle text-[10px]"></i> Panic De-Escalation
               </div>
             </div>
-            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#17232b] hover:bg-[#D7B7A5] hover:text-white dark:hover:bg-[#D7B7A5] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('5-4-3-2-1 Sensory Grounding Guide')">
+            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#1a2b22] hover:bg-[#29483A] hover:text-white dark:hover:bg-[#29483A] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('5-4-3-2-1 Sensory Grounding Guide')">
               <i class="fas fa-download mr-1.5"></i> Download PDF
             </button>
           </div>
 
           <!-- Toolkit 3: Circadian Sleep Protocol -->
-          <div class="p-6 rounded-3xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="p-6 rounded-3xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div class="space-y-3">
-              <div class="w-12 h-12 rounded-2xl bg-[#BACDE5]/40 text-[#294657] dark:text-[#BACDE5] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-[#BACDE5]/40 text-[#29483A] dark:text-[#BACDE5] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 <i class="fas fa-moon"></i>
               </div>
-              <h3 class="font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">CBT-I Sleep Hygiene Protocol</h3>
-              <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+              <h3 class="font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">CBT-I Sleep Hygiene Protocol</h3>
+              <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
                 Stimulus control rules, bedtime worry dump rituals, and caffeine cutoff windows to rebuild natural restorative circadian pressure.
               </p>
-              <div class="text-[11px] text-[#8FAFC0] font-semibold flex items-center gap-1.5">
+              <div class="text-[11px] text-[#8FAF9A] font-semibold flex items-center gap-1.5">
                 <i class="fas fa-check-circle text-[10px]"></i> Insomnia Relief
               </div>
             </div>
-            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#17232b] hover:bg-[#D7B7A5] hover:text-white dark:hover:bg-[#D7B7A5] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('CBT-I Sleep Hygiene Protocol')">
+            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#1a2b22] hover:bg-[#29483A] hover:text-white dark:hover:bg-[#29483A] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('CBT-I Sleep Hygiene Protocol')">
               <i class="fas fa-download mr-1.5"></i> Download PDF
             </button>
           </div>
 
           <!-- Toolkit 4: Non-Violent Communication -->
-          <div class="p-6 rounded-3xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="p-6 rounded-3xl bg-[#F7F5EF] dark:bg-[#23382d] border border-[#E8EFE9] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div class="space-y-3">
-              <div class="w-12 h-12 rounded-2xl bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-[#8FAF9A]/20 text-[#29483A] dark:text-[#8FAF9A] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 <i class="fas fa-comments"></i>
               </div>
-              <h3 class="font-heading font-bold text-base text-[#294657] dark:text-[#F8F6F1]">Non-Violent Dialogue Sheet</h3>
-              <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+              <h3 class="font-heading font-bold text-base text-[#29483A] dark:text-[#F7F5EF]">Non-Violent Dialogue Sheet</h3>
+              <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
                 A 4-step relational script (Observation, Core Feeling, Unmet Need, Specific Request) to navigate high-stakes marital conflicts calmly.
               </p>
-              <div class="text-[11px] text-[#D7B7A5] font-semibold flex items-center gap-1.5">
+              <div class="text-[11px] text-[#D9A38F] font-semibold flex items-center gap-1.5">
                 <i class="fas fa-check-circle text-[10px]"></i> Couples Harmony
               </div>
             </div>
-            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#17232b] hover:bg-[#D7B7A5] hover:text-white dark:hover:bg-[#D7B7A5] text-[#294657] dark:text-[#F8F6F1] font-bold text-xs border border-[#EBF1F4] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('Non-Violent Dialogue Framework')">
+            <button type="button" class="mt-6 w-full py-3 rounded-xl bg-white dark:bg-[#1a2b22] hover:bg-[#29483A] hover:text-white dark:hover:bg-[#29483A] text-[#29483A] dark:text-[#F7F5EF] font-bold text-xs border border-[#E8EFE9] dark:border-white/10 transition-all shadow-sm cursor-pointer" onclick="downloadWorksheet('Non-Violent Dialogue Framework')">
               <i class="fas fa-download mr-1.5"></i> Download PDF
             </button>
           </div>
@@ -456,14 +501,14 @@
     <!-- =========================================================================
          SECTION 4: Polyvagal Somatic Regulation Techniques
          ========================================================================= -->
-    <section class="py-20 bg-[#F8F6F1] dark:bg-[#11191f]">
+    <section class="py-20 bg-[#F7F5EF] dark:bg-[#131f18]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div class="text-center max-w-2xl mx-auto space-y-3">
-          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAFC0]">Nervous System Architecture</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#294657] dark:text-[#F8F6F1]">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#8FAF9A]">Nervous System Architecture</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#29483A] dark:text-[#F7F5EF]">
             Polyvagal Somatic Grounding Exercises
           </h2>
-          <p class="text-xs sm:text-sm text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
+          <p class="text-xs sm:text-sm text-[#26332D]/80 dark:text-[#7d8d96] leading-relaxed">
             Physical practices to communicate safety directly to the brainstem via the vagal nerve complex.
           </p>
         </div>
@@ -471,37 +516,37 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Exercise 1 -->
-          <div class="p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 shadow-sm space-y-4">
-            <span class="w-8 h-8 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center text-xs font-bold">1</span>
-            <h3 class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F6F1]">Physiological Double Sigh</h3>
-            <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 shadow-sm space-y-4">
+            <span class="w-8 h-8 rounded-full bg-[#8FAF9A]/20 text-[#29483A] dark:text-[#8FAF9A] flex items-center justify-center text-xs font-bold">1</span>
+            <h3 class="font-heading font-bold text-lg text-[#29483A] dark:text-[#F7F5EF]">Physiological Double Sigh</h3>
+            <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
               Take two consecutive nasal inhales (one deep, followed immediately by a quick second top-up sip), then release a slow, audible mouth exhale for 6-8 seconds.
             </p>
-            <div class="pt-2 text-[11px] font-bold text-[#8FAFC0]">
+            <div class="pt-2 text-[11px] font-bold text-[#8FAF9A]">
               <i class="fas fa-bolt mr-1"></i> Rapid Carbon Dioxide Offloading
             </div>
           </div>
 
           <!-- Exercise 2 -->
-          <div class="p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 shadow-sm space-y-4">
-            <span class="w-8 h-8 rounded-full bg-[#D7B7A5]/25 text-[#D7B7A5] flex items-center justify-center text-xs font-bold">2</span>
-            <h3 class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F6F1]">Bilateral Butterfly Tapping</h3>
-            <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 shadow-sm space-y-4">
+            <span class="w-8 h-8 rounded-full bg-[#29483A]/25 text-[#D9A38F] flex items-center justify-center text-xs font-bold">2</span>
+            <h3 class="font-heading font-bold text-lg text-[#29483A] dark:text-[#F7F5EF]">Bilateral Butterfly Tapping</h3>
+            <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
               Cross your hands over your chest, interlocking thumbs at the sternum. Gently alternate tapping your collarbones rhythmically like butterfly wings for 2 minutes.
             </p>
-            <div class="pt-2 text-[11px] font-bold text-[#D7B7A5]">
+            <div class="pt-2 text-[11px] font-bold text-[#D9A38F]">
               <i class="fas fa-brain mr-1"></i> EMDR Interhemispheric Calming
             </div>
           </div>
 
           <!-- Exercise 3 -->
-          <div class="p-8 rounded-3xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 shadow-sm space-y-4">
-            <span class="w-8 h-8 rounded-full bg-[#BACDE5]/40 text-[#294657] dark:text-[#BACDE5] flex items-center justify-center text-xs font-bold">3</span>
-            <h3 class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F6F1]">Cold Water Vagal Activation</h3>
-            <p class="text-xs text-[#27343B]/70 dark:text-[#7d8d96] leading-relaxed">
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 shadow-sm space-y-4">
+            <span class="w-8 h-8 rounded-full bg-[#BACDE5]/40 text-[#29483A] dark:text-[#BACDE5] flex items-center justify-center text-xs font-bold">3</span>
+            <h3 class="font-heading font-bold text-lg text-[#29483A] dark:text-[#F7F5EF]">Cold Water Vagal Activation</h3>
+            <p class="text-xs text-[#26332D]/70 dark:text-[#7d8d96] leading-relaxed">
               Apply a cold compress or splash cool water across the temples and upper cheeks for 30 seconds to stimulate the mammalian dive reflex and slow acute tachycardiac heart rate.
             </p>
-            <div class="pt-2 text-[11px] font-bold text-[#8FAFC0]">
+            <div class="pt-2 text-[11px] font-bold text-[#8FAF9A]">
               <i class="fas fa-droplet mr-1"></i> Parasympathetic Brake
             </div>
           </div>
@@ -513,7 +558,7 @@
     <!-- =========================================================================
          SECTION 5: 24/7 Immediate Crisis Support Lifelines
          ========================================================================= -->
-    <section id="crisis-support" class="py-20 bg-white dark:bg-[#17232b] scroll-mt-20 border-t border-[#EBF1F4] dark:border-white/10">
+    <section id="crisis-support" class="py-20 bg-white dark:bg-[#1a2b22] scroll-mt-20 border-t border-[#E8EFE9] dark:border-white/10">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div class="p-8 sm:p-12 rounded-3xl bg-rose-50/80 dark:bg-rose-950/30 border-2 border-rose-200 dark:border-rose-900/60 space-y-6">
@@ -534,33 +579,33 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#17232b] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
-              <div class="font-bold text-sm text-[#294657] dark:text-[#F8F6F1]">988 Suicide &amp; Crisis Lifeline</div>
-              <p class="text-[#27343B]/70 dark:text-[#7d8d96] text-[11px]">Free, confidential 24/7 support across the US and Canada.</p>
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#1a2b22] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
+              <div class="font-bold text-sm text-[#29483A] dark:text-[#F7F5EF]">988 Suicide &amp; Crisis Lifeline</div>
+              <p class="text-[#26332D]/70 dark:text-[#7d8d96] text-[11px]">Free, confidential 24/7 support across the US and Canada.</p>
               <a href="tel:988" class="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 font-bold hover:underline">
                 <i class="fas fa-phone text-[10px]"></i> Dial 988
               </a>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#17232b] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
-              <div class="font-bold text-sm text-[#294657] dark:text-[#F8F6F1]">Crisis Text Line</div>
-              <p class="text-[#27343B]/70 dark:text-[#7d8d96] text-[11px]">Text with a compassionate volunteer crisis counselor 24/7.</p>
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#1a2b22] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
+              <div class="font-bold text-sm text-[#29483A] dark:text-[#F7F5EF]">Crisis Text Line</div>
+              <p class="text-[#26332D]/70 dark:text-[#7d8d96] text-[11px]">Text with a compassionate volunteer crisis counselor 24/7.</p>
               <a href="sms:741741" class="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 font-bold hover:underline">
                 <i class="fas fa-comment-sms text-[10px]"></i> Text HOME to 741741
               </a>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#17232b] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
-              <div class="font-bold text-sm text-[#294657] dark:text-[#F8F6F1]">The Trevor Project</div>
-              <p class="text-[#27343B]/70 dark:text-[#7d8d96] text-[11px]">Confidential suicide prevention & crisis counseling for LGBTQ youth.</p>
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#1a2b22] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
+              <div class="font-bold text-sm text-[#29483A] dark:text-[#F7F5EF]">The Trevor Project</div>
+              <p class="text-[#26332D]/70 dark:text-[#7d8d96] text-[11px]">Confidential suicide prevention & crisis counseling for LGBTQ youth.</p>
               <a href="tel:18664887386" class="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 font-bold hover:underline">
                 <i class="fas fa-phone text-[10px]"></i> 1-866-488-7386
               </a>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#17232b] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
-              <div class="font-bold text-sm text-[#294657] dark:text-[#F8F6F1]">Veterans Crisis Line</div>
-              <p class="text-[#27343B]/70 dark:text-[#7d8d96] text-[11px]">Specialized support for veterans, service members, and families.</p>
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#1a2b22] border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-2">
+              <div class="font-bold text-sm text-[#29483A] dark:text-[#F7F5EF]">Veterans Crisis Line</div>
+              <p class="text-[#26332D]/70 dark:text-[#7d8d96] text-[11px]">Specialized support for veterans, service members, and families.</p>
               <a href="tel:988" class="inline-flex items-center gap-1.5 text-rose-600 dark:text-rose-400 font-bold hover:underline">
                 <i class="fas fa-phone text-[10px]"></i> Dial 988 (Press 1)
               </a>
@@ -575,7 +620,7 @@
   </main>
 
   <!-- Luxury Deep Oceanic Slate Footer -->
-  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+  <footer class="bg-[#131f18] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
@@ -596,12 +641,12 @@
           <!-- Trust Badges -->
           <div class="pt-2 flex flex-wrap gap-2.5">
             <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
-              <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
+              <i class="fas fa-shield-alt text-[#D9A38F]"></i> HIPAA Compliant
             </a>
-            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
-              <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+              <i class="fas fa-certificate text-[#8FAF9A]"></i> APA Accredited
             </a>
-            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F7F5EF] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
               <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
             </a>
           </div>
@@ -611,13 +656,13 @@
         <div class="lg:col-span-2 space-y-3">
           <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Therapy Services</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Individual Psychotherapy</a></li>
-            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Couples Counseling</a></li>
-            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Teen &amp; Adolescent Care</a></li>
-            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Trauma &amp; EMDR Recovery</a></li>
-            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Telehealth Video Sessions</a></li>
-            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Mindfulness &amp; Somatics</a></li>
-            <li><a href="services.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
+            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Individual Psychotherapy</a></li>
+            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Couples Counseling</a></li>
+            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Teen &amp; Adolescent Care</a></li>
+            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Trauma &amp; EMDR Recovery</a></li>
+            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Telehealth Video Sessions</a></li>
+            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Mindfulness &amp; Somatics</a></li>
+            <li><a href="services.html" class="text-[#D9A38F] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
           </ul>
         </div>
 
@@ -625,12 +670,12 @@
         <div class="lg:col-span-2 space-y-3">
           <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Client Sanctuary</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="dashboard.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Patient Wellness Portal</a></li>
-            <li><a href="appointments.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Book Confidential Session</a></li>
-            <li><a href="mood-journal.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Daily Somatic Journal</a></li>
-            <li><a href="shared-notes.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Collaborative Notes</a></li>
-            <li><a href="resources.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Self-Care &amp; Breathwork</a></li>
-            <li><a href="pricing.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Insurance &amp; Superbills</a></li>
+            <li><a href="dashboard.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Patient Wellness Portal</a></li>
+            <li><a href="appointments.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Book Confidential Session</a></li>
+            <li><a href="mood-journal.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Daily Somatic Journal</a></li>
+            <li><a href="shared-notes.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Collaborative Notes</a></li>
+            <li><a href="resources.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Self-Care &amp; Breathwork</a></li>
+            <li><a href="pricing.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D9A38F]"></i> Insurance &amp; Superbills</a></li>
           </ul>
         </div>
 
@@ -648,12 +693,12 @@
               <i class="fas fa-comment-dots"></i> Crisis Text Line: Text HOME to 741741
             </div>
             <div class="flex items-center gap-2 text-xs text-[#8fa0a8]">
-              <i class="fas fa-shield-alt text-[#8FAFC0]"></i> Free, confidential, available 24 hours every day
+              <i class="fas fa-shield-alt text-[#8FAF9A]"></i> Free, confidential, available 24 hours every day
             </div>
           </div>
           <div class="pt-1 text-xs text-[#8fa0a8] space-y-1">
-            <div><i class="fas fa-map-marker-alt text-[#D7B7A5] mr-1.5"></i> 452 Fifth Avenue, 14th Floor, New York, NY 10018</div>
-            <div><i class="fas fa-envelope text-[#D7B7A5] mr-1.5"></i> care@mindfulpathsclinic.com</div>
+            <div><i class="fas fa-map-marker-alt text-[#D9A38F] mr-1.5"></i> 452 Fifth Avenue, 14th Floor, New York, NY 10018</div>
+            <div><i class="fas fa-envelope text-[#D9A38F] mr-1.5"></i> care@mindfulpathsclinic.com</div>
           </div>
         </div>
 
@@ -813,27 +858,27 @@
 
       screener.questions.forEach((q, idx) => {
         const qWrap = document.createElement('div');
-        qWrap.className = 'space-y-2 p-4 rounded-2xl bg-[#F8F6F1]/60 dark:bg-[#11191f]/60 border border-[#EBF1F4] dark:border-white/10';
+        qWrap.className = 'space-y-2 p-4 rounded-2xl bg-[#F7F5EF]/60 dark:bg-[#131f18]/60 border border-[#E8EFE9] dark:border-white/10';
         qWrap.innerHTML = `
-          <div class="font-semibold text-xs text-[#294657] dark:text-[#F8F6F1]">
-            <span class="text-[#8FAFC0] font-bold mr-1.5">${idx + 1}.</span> ${q}
+          <div class="font-semibold text-xs text-[#29483A] dark:text-[#F7F5EF]">
+            <span class="text-[#8FAF9A] font-bold mr-1.5">${idx + 1}.</span> ${q}
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
-            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] cursor-pointer transition-colors">
-              <input type="radio" name="q_${idx}" value="0" checked class="text-[#8FAFC0] focus:ring-[#8FAFC0]">
-              <span class="text-[11px] text-[#27343B] dark:text-[#EBF1F4]">Not at all (0)</span>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] cursor-pointer transition-colors">
+              <input type="radio" name="q_${idx}" value="0" checked class="text-[#8FAF9A] focus:ring-[#8FAF9A]">
+              <span class="text-[11px] text-[#26332D] dark:text-[#E8EFE9]">Not at all (0)</span>
             </label>
-            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] cursor-pointer transition-colors">
-              <input type="radio" name="q_${idx}" value="1" class="text-[#8FAFC0] focus:ring-[#8FAFC0]">
-              <span class="text-[11px] text-[#27343B] dark:text-[#EBF1F4]">Several days (1)</span>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] cursor-pointer transition-colors">
+              <input type="radio" name="q_${idx}" value="1" class="text-[#8FAF9A] focus:ring-[#8FAF9A]">
+              <span class="text-[11px] text-[#26332D] dark:text-[#E8EFE9]">Several days (1)</span>
             </label>
-            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] cursor-pointer transition-colors">
-              <input type="radio" name="q_${idx}" value="2" class="text-[#8FAFC0] focus:ring-[#8FAFC0]">
-              <span class="text-[11px] text-[#27343B] dark:text-[#EBF1F4]">More than half (2)</span>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] cursor-pointer transition-colors">
+              <input type="radio" name="q_${idx}" value="2" class="text-[#8FAF9A] focus:ring-[#8FAF9A]">
+              <span class="text-[11px] text-[#26332D] dark:text-[#E8EFE9]">More than half (2)</span>
             </label>
-            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] cursor-pointer transition-colors">
-              <input type="radio" name="q_${idx}" value="3" class="text-[#8FAFC0] focus:ring-[#8FAFC0]">
-              <span class="text-[11px] text-[#27343B] dark:text-[#EBF1F4]">Nearly every day (3)</span>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white dark:bg-[#1a2b22] border border-[#E8EFE9] dark:border-white/10 hover:border-[#8FAF9A] cursor-pointer transition-colors">
+              <input type="radio" name="q_${idx}" value="3" class="text-[#8FAF9A] focus:ring-[#8FAF9A]">
+              <span class="text-[11px] text-[#26332D] dark:text-[#E8EFE9]">Nearly every day (3)</span>
             </label>
           </div>
         `;
@@ -869,11 +914,11 @@
     document.querySelectorAll('.screener-tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.screener-tab-btn').forEach(b => {
-          b.classList.remove('bg-[#294657]', 'text-white');
-          b.classList.add('bg-white', 'dark:bg-[#17232b]', 'text-[#294657]', 'dark:text-[#F8F6F1]');
+          b.classList.remove('bg-[#29483A]', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-[#1a2b22]', 'text-[#29483A]', 'dark:text-[#F7F5EF]');
         });
-        btn.classList.remove('bg-white', 'dark:bg-[#17232b]', 'text-[#294657]', 'dark:text-[#F8F6F1]');
-        btn.classList.add('bg-[#294657]', 'text-white');
+        btn.classList.remove('bg-white', 'dark:bg-[#1a2b22]', 'text-[#29483A]', 'dark:text-[#F7F5EF]');
+        btn.classList.add('bg-[#29483A]', 'text-white');
         
         renderScreener(btn.getAttribute('data-screener'));
       });
@@ -904,13 +949,13 @@
           <head>
             <title>${name} — Mindful Paths Clinical Worksheet</title>
             <style>
-              body { font-family: sans-serif; padding: 40px; color: #27343B; line-height: 1.6; }
-              h1 { color: #294657; border-bottom: 2px solid #8FAFC0; padding-bottom: 8px; }
-              .badge { background: #EBF1F4; color: #294657; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 16px; }
+              body { font-family: sans-serif; padding: 40px; color: #26332D; line-height: 1.6; }
+              h1 { color: #29483A; border-bottom: 2px solid #8FAF9A; padding-bottom: 8px; }
+              .badge { background: #E8EFE9; color: #29483A; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 16px; }
               .box { border: 1px solid #BACDE5; border-radius: 12px; padding: 16px; margin: 16px 0; background: #FAF9F6; }
               table { width: 100%; border-collapse: collapse; margin-top: 20px; }
               th, td { border: 1px solid #BACDE5; padding: 12px; text-align: left; font-size: 13px; }
-              th { background: #EBF1F4; color: #294657; }
+              th { background: #E8EFE9; color: #29483A; }
               @media print { button { display: none; } }
             </style>
           </head>
@@ -941,7 +986,7 @@
               </tbody>
             </table>
             <br>
-            <button onclick="window.print()" style="padding: 10px 20px; background: #294657; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Print or Save as PDF</button>
+            <button onclick="window.print()" style="padding: 10px 20px; background: #29483A; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Print or Save as PDF</button>
           </body>
           </html>
         `);
