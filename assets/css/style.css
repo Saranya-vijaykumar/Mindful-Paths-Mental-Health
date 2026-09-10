@@ -1,84 +1,125 @@
 /* ===================================================================
-   AquaPro - Swimming Academy & Aquatic Sports Center HTML5 Template
-   Author: ThemeCraft Studio
-   Version: 2.0.0
-   Theme: High-Performance Aquatic Elegance with Water-Wave, Bubbles, Counters & Micro-Animations
-=================================================================== */
+   Mindful Paths — Premium Multipurpose & Psychological Wellness Template
+   Palette: Terracotta (#D7B7A5), Warm Cream (#F8F6F1), Sage (#8FAFC0), 
+            Deep Teal (#294657), Warm Brown (#27343B), Pure White (#FFFFFF)
+   Typography: Fraunces (Warm Bespoke Display Serif), Outfit (Modern Clean Sans),
+               Cormorant Garamond (Editorial Luxury Serif), Cairo (RTL)
+   =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  --font-heading: 'Outfit', sans-serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-rtl: 'Cairo', 'Plus Jakarta Sans', sans-serif;
-  --aqua-primary: #0284c7;
-  --aqua-cyan: #06b6d4;
-  --aqua-deep: #0369a1;
+  --font-heading: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif-luxury: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-rtl: 'Cairo', 'Outfit', sans-serif;
+
+  /* Calm Oceanic Palette Specifications 🌊 */
+  /* Primary: Ocean / Glacier Mist — #8FAFC0 */
+  --color-primary: #8FAFC0;
+  --color-primary-hover: #7b9eb0;
+  --color-sage: #8FAFC0;
+  --color-sage-light: #EBF1F4;
+
+  /* Dark: Deep Oceanic Slate — #294657 */
+  --color-dark-primary: #294657;
+  --color-dark-primary-hover: #1d3340;
+  --color-teal: #294657;
+  --color-teal-dark: #1d3340;
+  --color-teal-light: #e6eef2;
+
+  /* Background: Warm Alabaster — #F8F6F1 */
+  --color-bg: #F8F6F1;
+  --color-cream: #F8F6F1;
+
+  /* Card: Pure White — #FFFFFF */
+  --color-card: #FFFFFF;
+  --color-cream-card: #FFFFFF;
+
+  /* Section Background: Soft Oceanic Mist — #EBF1F4 */
+  --color-section-bg: #EBF1F4;
+
+  /* Accent: Warm Sand / Coastal Blush — #D7B7A5 */
+  --color-accent: #D7B7A5;
+  --color-accent-hover: #c5a390;
+  --color-accent-light: #f7efe9;
+  --color-terracotta: #D7B7A5;
+  --color-terracotta-hover: #c5a390;
+  --color-terracotta-light: #f7efe9;
+
+  /* Text: Deep Oceanic Charcoal — #27343B */
+  --color-text: #27343B;
+  --color-text-light: #5b6c75;
+  --color-brown: #27343B;
+  --color-brown-light: #5b6c75;
+  
+  /* Dark Mode Tokens (Deep Oceanic Charcoal) */
+  --color-dark-bg: #11191f;
+  --color-dark-surface: #17232b;
+  --color-dark-border: rgba(248, 246, 241, 0.12);
+  --color-dark-text: #F8F6F1;
 }
 
-/* Standard Modern Ergonomic Cursor */
-html, body {
-  cursor: default;
-}
-
-a, button, [role="button"], input[type="submit"], input[type="button"], select, .card-lift {
-  cursor: pointer;
-}
-
-/* 🌊 Click Ripple Splash Trail */
-.water-droplet-trail {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.5) 0%, rgba(2, 132, 199, 0) 70%);
-  transform: translate(-50%, -50%) scale(1);
-  animation: dropletSplashFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-@keyframes dropletSplashFade {
-  0% {
-    transform: translate(-50%, -50%) scale(0.6);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2.2);
-    opacity: 0;
-  }
-}
-
+/* Base Document Setup */
 html {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 🌊 Global Luxury Aquatic Background Mesh & Water Lines */
 body {
-  background-color: #f0f9ff;
-  background-image: 
-    radial-gradient(at 10% 10%, rgba(14, 165, 233, 0.16) 0px, transparent 45%),
-    radial-gradient(at 90% 25%, rgba(6, 182, 212, 0.16) 0px, transparent 45%),
-    radial-gradient(at 25% 65%, rgba(2, 132, 199, 0.13) 0px, transparent 50%),
-    radial-gradient(at 85% 85%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='80' height='28' viewBox='0 0 80 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 14 Q 20 2, 40 14 T 80 14' fill='none' stroke='%230284c7' stroke-width='1.5' stroke-opacity='0.09'/%3E%3C/svg%3E");
-  background-attachment: fixed;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-brown);
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.012em;
 }
 
-.dark body,
-html.dark body {
-  background-color: #020817;
-  background-image: 
-    radial-gradient(at 10% 10%, rgba(14, 165, 233, 0.22) 0px, transparent 45%),
-    radial-gradient(at 90% 25%, rgba(6, 182, 212, 0.18) 0px, transparent 45%),
-    radial-gradient(at 25% 65%, rgba(3, 105, 161, 0.20) 0px, transparent 50%),
-    radial-gradient(at 85% 85%, rgba(14, 165, 233, 0.18) 0px, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='80' height='28' viewBox='0 0 80 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 14 Q 20 2, 40 14 T 80 14' fill='none' stroke='%2338bdf8' stroke-width='1.5' stroke-opacity='0.12'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-}
-
-h1, h2, h3, h4, h5, h6 {
+/* Stylish Headings with bespoke editorial elegance */
+h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+  font-feature-settings: "kern" 1, "liga" 1;
+  color: var(--color-teal);
+  line-height: 1.22;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings with Italic Accent flourish */
+.font-heading em, .font-heading i, .stylish-italic {
+  font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: -0.015em;
+}
+
+/* Luxury Editorial Quotes */
+blockquote, .quote-editorial {
+  font-family: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark .font-heading {
+  color: #F8F6F1;
+}
+
+.dark .font-heading em, .dark .font-heading i, .dark .stylish-italic {
+  color: #f0baa9;
+}
+
+/* Dark Mode Styles */
+html.dark body {
+  background-color: var(--color-dark-bg);
+  color: #e5ddd5;
 }
 
 /* RTL Support */
@@ -87,10 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
-[dir="rtl"] h1, 
-[dir="rtl"] h2, 
-[dir="rtl"] h3, 
-[dir="rtl"] h4 {
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] .font-heading {
   font-family: var(--font-rtl);
 }
 
@@ -98,281 +136,341 @@ h1, h2, h3, h4, h5, h6 {
   transform: scaleX(-1);
 }
 
-/* Glassmorphism Navigation */
-.glass-nav {
-  background: rgba(255, 255, 255, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dark .glass-nav {
-  background: rgba(11, 23, 39, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-/* Aquatic Water Texture Gradient */
-.water-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.18) 0%, rgba(2, 132, 199, 0.08) 50%, transparent 80%);
-}
-
-.dark .water-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.22) 0%, rgba(2, 132, 199, 0.12) 50%, transparent 80%);
-}
-
-/* 1. Floating Water Bubbles Container & Particles (Layered & Ultra Visible) */
-.bubble-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9990;
-  overflow: hidden;
-}
-
-.bubble {
-  position: absolute;
-  bottom: -60px;
-  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.65) 40%, rgba(14, 165, 233, 0.35) 75%, rgba(2, 132, 199, 0.15) 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.35), inset 0 2px 6px rgba(255, 255, 255, 0.9);
-  animation: floatUpward linear infinite;
-  will-change: transform, opacity;
-  pointer-events: none;
-}
-
-.dark .bubble {
-  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.90) 0%, rgba(56, 189, 248, 0.55) 40%, rgba(6, 182, 212, 0.25) 75%, transparent 100%);
-  border: 1.5px solid rgba(56, 189, 248, 0.8);
-  box-shadow: 0 4px 18px rgba(6, 182, 212, 0.45), inset 0 2px 5px rgba(255, 255, 255, 0.85);
-}
-
-@keyframes floatUpward {
-  0% {
-    transform: translateY(0) translateX(0) scale(0.8);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.85;
-  }
-  50% {
-    transform: translateY(-55vh) translateX(22px) scale(1.05);
-    opacity: 0.85;
-  }
-  90% {
-    opacity: 0.85;
-  }
-  100% {
-    transform: translateY(-115vh) translateX(-18px) scale(1.2);
-    opacity: 0;
-  }
-}
-  12% {
-    opacity: 0.65;
-  }
-  50% {
-    transform: translateY(-55vh) translateX(18px) scale(1);
-    opacity: 0.65;
-  }
-  88% {
-    opacity: 0.65;
-  }
-  100% {
-    transform: translateY(-112vh) translateX(-15px) scale(1.15);
-    opacity: 0;
-  }
-}
-  15% {
-    opacity: 0.55;
-  }
-  85% {
-    opacity: 0.55;
-  }
-  100% {
-    transform: translateY(-110vh) translateX(30px) scale(1.15);
-    opacity: 0;
-  }
-}
-
-/* 2. 🌊 Hero Water Ripple Effect */
-.hero-ripple-container {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: -5;
-}
-
-.hero-ripple-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  border: 2px solid rgba(56, 189, 248, 0.45);
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3), inset 0 0 15px rgba(56, 189, 248, 0.2);
-  pointer-events: none;
-  animation: expandRipple 4.5s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
-  will-change: transform, opacity;
-}
-
-.hero-ripple-ring:nth-child(2) {
-  animation-delay: 1.5s;
-}
-
-.hero-ripple-ring:nth-child(3) {
-  animation-delay: 3s;
-}
-
-@keyframes expandRipple {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 0.85;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    width: 650px;
-    height: 650px;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.6);
-  }
-}
-
-@keyframes floatingHero {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.animate-floating {
-  animation: floatingHero 6s ease-in-out infinite;
-}
-
-/* 3. 🏊 Swimmer Images Slow Hover + Zoom */
-.zoom-on-hover {
-  overflow: hidden;
-}
-
-.zoom-on-hover img,
-.card-zoom-img {
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
-  will-change: transform;
-}
-
-.zoom-on-hover:hover img,
-.group:hover .card-zoom-img,
-.group:hover img {
-  transform: scale(1.05);
-}
-
-/* 4. 💦 Programs Splash Hover Effect */
-.splash-hover-card {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
-}
-
-.splash-hover-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(6, 182, 212, 0.12) 30%, transparent 65%);
-  opacity: 0;
-  transform: scale(0.4);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.splash-hover-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* 5. 🏁 Competitive Race-Line Animation */
-.race-line-track {
-  position: relative;
-  overflow: hidden;
-}
-
-.race-line-track::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #38bdf8, #0ea5e9, #f59e0b, transparent);
-  animation: raceLineStreak 2.5s infinite linear;
-  z-index: 10;
-}
-
-@keyframes raceLineStreak {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 200%;
-  }
-}
-
-/* 6. 🖼️ Gallery Water Ripple Hover */
-.gallery-ripple-hover {
-  position: relative;
-  overflow: hidden;
+/* Cursors */
+a, button, [role="button"], input[type="submit"], select, .clickable-card {
   cursor: pointer;
 }
 
-.gallery-ripple-hover::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(14, 165, 233, 0.25) 45%, transparent 75%);
-  opacity: 0;
-  transform: scale(0.2);
-  transition: transform 0.55s ease-out, opacity 0.45s ease-out;
-  pointer-events: none;
+/* Luxury Elevation Cards */
+.card-wellness {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(107, 81, 69, 0.1);
+  border-radius: 1.25rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
-.gallery-ripple-hover:hover::after {
-  opacity: 1;
-  transform: scale(1.3);
+.card-wellness:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(40, 90, 88, 0.12), 0 4px 12px -2px rgba(200, 117, 93, 0.08);
+  border-color: rgba(200, 117, 93, 0.3);
 }
 
-/* 7. 🌊 CTA Water Ripple Button */
-.btn-water-ripple {
-  position: relative;
+.dark .card-wellness {
+  background-color: var(--color-dark-surface);
+  border-color: var(--color-dark-border);
+}
+
+.dark .card-wellness:hover {
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.4), 0 4px 12px -2px rgba(200, 117, 93, 0.2);
+  border-color: rgba(200, 117, 93, 0.4);
+}
+
+/* Image Zoom Wrapper */
+.img-zoom-wrapper {
   overflow: hidden;
-  z-index: 1;
-}
-
-.btn-water-ripple::before,
-.btn-water-ripple::after {
-  content: '';
-  position: absolute;
-  inset: -6px;
+  position: relative;
   border-radius: inherit;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.5) 10%, rgba(56, 189, 248, 0.2) 40%, transparent 70%);
-  opacity: 0;
-  z-index: -1;
-  animation: buttonRipplePulse 3s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.btn-water-ripple::after {
-  animation-delay: 1.5s;
+.img-zoom-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes buttonRipplePulse {
+.card-wellness:hover .img-zoom-wrapper img,
+.img-zoom-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Primary Button with Terracotta Highlight */
+.btn-terracotta {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 20px -2px rgba(200, 117, 93, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-hover);
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px -2px rgba(200, 117, 93, 0.45);
+}
+
+.btn-terracotta:active {
+  transform: scale(0.97);
+}
+
+/* Secondary Button Teal/Outline */
+.btn-outline-teal {
+  background-color: transparent;
+  color: var(--color-teal);
+  border: 1.5px solid var(--color-teal);
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-teal:hover {
+  background-color: var(--color-teal);
+  color: #FFFFFF;
+  transform: scale(1.03);
+}
+
+.dark .btn-outline-teal {
+  color: #F8F6F1;
+  border-color: rgba(247, 241, 232, 0.4);
+}
+
+.dark .btn-outline-teal:hover {
+  background-color: var(--color-teal);
+  border-color: var(--color-teal);
+  color: #FFFFFF;
+}
+
+/* Wellness Journey Connecting Line */
+.journey-path-container {
+  position: relative;
+}
+
+.journey-path-line {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(to right, #8FAFC0, #D7B7A5, #294657);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+@media (max-width: 1023px) {
+  .journey-path-line {
+    top: 5%;
+    bottom: 5%;
+    left: 2rem;
+    width: 2px;
+    height: auto;
+    right: auto;
+  }
+}
+
+/* Take a Breath Interactive Circle */
+.breathing-visual-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid rgba(40, 90, 88, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 4s ease-in-out, box-shadow 4s ease-in-out, background-color 4s ease-in-out, border-color 4s ease-in-out;
+  box-shadow: 0 0 0 0 rgba(143, 165, 141, 0.4);
+}
+
+.breathing-visual-circle.inhale {
+  transform: scale(1.22);
+  background-color: rgba(143, 165, 141, 0.18);
+  border-color: rgba(143, 165, 141, 0.8);
+  box-shadow: 0 0 45px 15px rgba(143, 165, 141, 0.3);
+}
+
+.breathing-visual-circle.hold {
+  transform: scale(1.22);
+  background-color: rgba(40, 90, 88, 0.18);
+  border-color: rgba(40, 90, 88, 0.8);
+  box-shadow: 0 0 50px 20px rgba(40, 90, 88, 0.3);
+}
+
+.breathing-visual-circle.exhale {
+  transform: scale(0.92);
+  background-color: rgba(200, 117, 93, 0.12);
+  border-color: rgba(200, 117, 93, 0.6);
+  box-shadow: 0 0 15px 5px rgba(200, 117, 93, 0.2);
+}
+
+/* ===================================================================
+   Kraft-Inspired Organic Shapes & Emotion Animations
+   =================================================================== */
+
+/* Arch & Organic Masks for Editorial Layouts */
+.mask-arch {
+  border-radius: 180px 180px 28px 28px;
+  overflow: hidden;
+}
+.mask-arch-tall {
+  border-radius: 220px 220px 32px 32px;
+  overflow: hidden;
+}
+.mask-arch-reverse {
+  border-radius: 28px 28px 180px 180px;
+  overflow: hidden;
+}
+.mask-capsule {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.mask-arch-full {
+  border-radius: 160px 160px 160px 160px;
+  overflow: hidden;
+}
+.mask-organic-blob-1 {
+  border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+  overflow: hidden;
+}
+.mask-organic-blob-2 {
+  border-radius: 40% 60% 50% 50% / 60% 30% 70% 40%;
+  overflow: hidden;
+}
+.mask-asymmetric-leaf {
+  border-radius: 140px 28px 140px 28px;
+  overflow: hidden;
+}
+.mask-scallop {
+  border-radius: 36px 140px 36px 140px;
+  overflow: hidden;
+}
+.mask-oval-portrait {
+  border-radius: 140px 140px 36px 36px;
+  overflow: hidden;
+}
+
+/* Editorial Monochromatic Teal Utilities */
+.bg-teal-alabaster {
+  background-color: #F4F8F7;
+}
+.bg-teal-wash {
+  background-color: #E8F2F2;
+}
+.bg-teal-sanctuary {
+  background-color: #13333A;
+}
+.border-teal-subtle {
+  border-color: #C8DFE2;
+}
+
+.btn-editorial-teal {
+  background-color: #173C44;
+  color: #FFFFFF !important;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.875rem 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  box-shadow: 0 8px 24px -3px rgba(23, 60, 68, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-editorial-teal:hover {
+  background-color: #0F282E;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(23, 60, 68, 0.45);
+}
+.btn-editorial-teal:active {
+  transform: translateY(0);
+}
+
+.btn-editorial-outline {
+  background-color: transparent;
+  color: #173C44;
+  border: 1.5px solid #173C44;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-editorial-outline:hover {
+  background-color: #173C44;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+.dark .btn-editorial-outline {
+  color: #F4F8F7;
+  border-color: rgba(244, 248, 247, 0.4);
+}
+.dark .btn-editorial-outline:hover {
+  background-color: #F4F8F7;
+  color: #102B31;
+}
+
+/* Organic 3-Lobe Scalloped Cloud / Blob Shape */
+.organic-scallop-cloud {
+  border-radius: 60% 40% 55% 45% / 55% 45% 60% 40%;
+  animation: blobMorph 9s ease-in-out infinite alternate, blobFloat 6s ease-in-out infinite;
+  box-shadow: 0 20px 40px -15px rgba(41, 70, 87, 0.2);
+}
+
+@keyframes blobMorph {
   0% {
-    transform: scale(0.95);
+    border-radius: 60% 40% 55% 45% / 55% 45% 60% 40%;
+  }
+  33% {
+    border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%;
+  }
+  66% {
+    border-radius: 55% 45% 65% 35% / 40% 60% 45% 55%;
+  }
+  100% {
+    border-radius: 60% 40% 55% 45% / 55% 45% 60% 40%;
+  }
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+/* Emotion Somatic Glow & Ripple Animations */
+@keyframes emotionPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(143, 175, 192, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px 8px rgba(143, 175, 192, 0.3);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(143, 175, 192, 0);
+    transform: scale(1);
+  }
+}
+
+.animate-emotion-pulse {
+  animation: emotionPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes rippleWave {
+  0% {
+    transform: scale(0.9);
     opacity: 0.8;
   }
   100% {
@@ -381,373 +479,870 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* 5. ✨ Logo Standalone Sticker Styling (No Box, No Border, Clean Floating Sticker) */
-.logo-brand-img,
-header img[src*="logo"],
-footer img[src*="logo"],
-aside img[src*="logo"],
-.site-logo-sticker {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0.75rem !important;
-  filter: drop-shadow(0 2px 6px rgba(2, 132, 199, 0.22));
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
-}
-
-/* 5b. 🚀 Navbar Header Logo - Refined, Clean & Top-Left Anchored */
-header .logo-brand-img,
-header a img[src*="logo"] {
-  height: 2.6rem !important; /* ~42px on mobile */
-  width: auto !important;
-  max-width: 195px !important;
-  object-fit: contain !important;
-  display: block;
-}
-
-@media (min-width: 640px) {
-  header .logo-brand-img,
-  header a img[src*="logo"] {
-    height: 2.9rem !important; /* ~46px on tablet & desktop */
-    max-width: 225px !important;
-  }
-}
-
-.logo-brand-img:hover,
-a:hover .logo-brand-img,
-a:hover header img[src*="logo"],
-a:hover footer img[src*="logo"] {
-  transform: translateY(-2px) scale(1.04);
-  filter: drop-shadow(0 4px 14px rgba(6, 182, 212, 0.45));
-}
-
-/* 6. 📜 Scroll Fade-Up Reveal Animation */
-.reveal-fade-up {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-fade-up.js-reveal-ready:not(.is-visible) {
-  opacity: 0;
-  transform: translateY(24px);
-}
-
-.reveal-fade-up.is-visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* 7. 🎯 Program & Facility Cards Hover Lift */
-.card-lift {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-  will-change: transform;
-}
-
-.card-lift:hover {
-  transform: translateY(-6px);
-}
-
-/* 8. 🏆 Competitive Parallax Swimmer Glow */
-.swimmer-parallax-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.swimmer-parallax-card::before {
-  content: '';
+.emotion-ripple-ring {
   position: absolute;
-  inset: -50%;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 65%);
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  inset: -10px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  animation: rippleWave 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   pointer-events: none;
 }
 
-.swimmer-parallax-card:hover::before {
+/* Wave Divider Smooth Fill */
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+@media (min-width: 768px) {
+  .wave-divider svg {
+    height: 75px;
+  }
+}
+
+/* ===================================================================
+   Scroll-Triggered Reveal & Animation Suite
+   Award-Winning Smooth Editorial Transitions on Scroll
+   =================================================================== */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
   opacity: 1;
-  transform: scale(1.1);
+  transform: translateY(0);
 }
 
-/* 9. Animated Counter Badge Style */
-.counter-num {
-  display: inline-block;
-  font-variant-numeric: tabular-nums;
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92) translateY(24px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-/* Custom Scrollbar */
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fluid Hover Elevate for Cards during Scroll */
+.card-wellness {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.card-wellness:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -12px rgba(23, 60, 68, 0.16), 0 10px 18px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Dynamic Reading Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  z-index: 99999;
+  background: linear-gradient(90deg, #B25338 0%, #D7B7A5 35%, #8FAFC0 70%, #1D4C56 100%);
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(178, 83, 56, 0.5);
+  transition: width 0.08s ease-out;
+}
+
+/* Subtle Floating Breathing Animations for Decorative Badges */
+@keyframes ambientBreathe {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.animate-breathe {
+  animation: ambientBreathe 6s ease-in-out infinite;
+}
+
+/* ===================================================================
+   Ambient Zen Scroll-Reactive Background Suite 🌊✨
+   =================================================================== */
+
+.ambient-scroll-canvas-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#ambient-zen-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Ambient Floating Glow Orbs in the background */
+.ambient-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+  pointer-events: none;
+  opacity: 0.38;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+html.dark .ambient-bg-orb {
+  opacity: 0.25;
+}
+
+.orb-top-right {
+  width: 560px;
+  height: 560px;
+  top: -8%;
+  right: -6%;
+  background: radial-gradient(circle, rgba(143, 175, 192, 0.6) 0%, rgba(29, 76, 86, 0.22) 65%, transparent 80%);
+}
+
+.orb-mid-left {
+  width: 520px;
+  height: 520px;
+  top: 38%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(215, 183, 165, 0.65) 0%, rgba(178, 83, 56, 0.22) 65%, transparent 80%);
+}
+
+.orb-lower-right {
+  width: 600px;
+  height: 600px;
+  top: 78%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(165, 196, 189, 0.55) 0%, rgba(143, 175, 192, 0.2) 65%, transparent 80%);
+}
+
+/* Section-level Parallax Background Elements */
+.section-bg-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth organic idle wave motion */
+@keyframes waveShift {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-15%) translateZ(0) scaleY(1.05);
+  }
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+}
+
+.animate-wave-slow {
+  animation: waveShift 20s ease-in-out infinite;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-scale,
+  .reveal-slide-left,
+  .reveal-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-breathe,
+  .animate-wave-slow {
+    animation: none !important;
+  }
+  .ambient-scroll-canvas-wrap,
+  #ambient-zen-canvas,
+  .ambient-bg-orb,
+  .section-bg-deco {
+    display: none !important;
+  }
+}
+
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 24rem;
+  pointer-events: none;
+}
+
+[dir="rtl"] #toast-container {
+  right: auto;
+  left: 1.5rem;
+}
+
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f9ff;
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: #0b1727;
+  background: rgba(107, 81, 69, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7dd3fc;
-  border-radius: 4px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #0369a1;
+  background: rgba(40, 90, 88, 0.25);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0284c7;
+  background: rgba(40, 90, 88, 0.45);
 }
 
-/* Form focus ring */
-.input-focus {
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(247, 241, 232, 0.25);
 }
 
-.input-focus:focus {
-  border-color: var(--aqua-primary);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
-}
-
-/* Toast Container */
-#toast-container {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 420px;
-}
-
-[dir="rtl"] #toast-container {
-  right: auto;
-  left: 24px;
-}
-
-/* Responsive & Reduced Motion */
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+  * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .bubble-container {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .bubble-container .bubble:nth-child(n+5) {
-    display: none;
-  }
 }
 
 /* ===================================================================
-   🌊 Interactive Sliding Fluid Waves Animation Suite
+   Light Mode High-Contrast Visibility Engine (WCAG AA/AAA Compliant)
+   Ensures text, borders, inputs, buttons, and cards are crystal clear
    =================================================================== */
 
-.ocean-waves-container {
+html:not(.dark) body {
+  background-color: #F8F6F1;
+  color: #162229; /* Crisp deep oceanic obsidian */
+}
+
+/* Commanding High-Contrast Headings for Light Surfaces */
+html:not(.dark) h1:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light), 
+html:not(.dark) h2:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light), 
+html:not(.dark) h3:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light), 
+html:not(.dark) h4:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light), 
+html:not(.dark) h5:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light), 
+html:not(.dark) h6:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not(.text-light),
+html:not(.dark) .font-heading:not([class*="text-white"]):not([class*="text-[#F"]):not([class*="text-[#9D"]):not([class*="text-[#C8"]):not(.text-light) {
+  color: #172D3A; /* Deep teal obsidian on light surfaces */
+}
+
+/* Explicit White Text Enforcement in Light Mode */
+html:not(.dark) .text-white,
+html:not(.dark) .text-white\/95,
+html:not(.dark) .text-white\/90,
+html:not(.dark) .text-white\/80,
+html:not(.dark) .text-white\/70,
+html:not(.dark) [class*="text-white"],
+html:not(.dark) .text-\[\#F4F8F7\],
+html:not(.dark) .text-\[\#F8F6F1\] {
+  color: #FFFFFF !important;
+}
+
+/* Dark Section Containers in Light Mode (Testimonial, Philosophy, Footer, Dark Banners) */
+html:not(.dark) .bg-\[\#102B31\],
+html:not(.dark) .bg-\[\#1D4C56\],
+html:not(.dark) .bg-\[\#294657\],
+html:not(.dark) .bg-\[\#0B1E23\],
+html:not(.dark) .bg-\[\#11191f\],
+html:not(.dark) .bg-dark,
+html:not(.dark) footer {
+  color: #F4F8F7;
+}
+
+html:not(.dark) .bg-\[\#102B31\] h1,
+html:not(.dark) .bg-\[\#102B31\] h2,
+html:not(.dark) .bg-\[\#102B31\] h3,
+html:not(.dark) .bg-\[\#102B31\] h4,
+html:not(.dark) .bg-\[\#102B31\] .font-heading,
+html:not(.dark) .bg-\[\#102B31\] blockquote,
+html:not(.dark) .bg-\[\#1D4C56\] h1,
+html:not(.dark) .bg-\[\#1D4C56\] h2,
+html:not(.dark) .bg-\[\#1D4C56\] h3,
+html:not(.dark) .bg-\[\#1D4C56\] h4,
+html:not(.dark) .bg-\[\#1D4C56\] .font-heading,
+html:not(.dark) .bg-\[\#1D4C56\] blockquote,
+html:not(.dark) .bg-\[\#294657\] h1,
+html:not(.dark) .bg-\[\#294657\] h2,
+html:not(.dark) .bg-\[\#294657\] h3,
+html:not(.dark) .bg-\[\#294657\] h4,
+html:not(.dark) .bg-\[\#294657\] .font-heading,
+html:not(.dark) .bg-\[\#294657\] blockquote,
+html:not(.dark) .bg-\[\#0B1E23\] h1,
+html:not(.dark) .bg-\[\#0B1E23\] h2,
+html:not(.dark) .bg-\[\#0B1E23\] h3,
+html:not(.dark) .bg-\[\#0B1E23\] h4,
+html:not(.dark) .bg-\[\#0B1E23\] .font-heading,
+html:not(.dark) .bg-\[\#0B1E23\] blockquote,
+html:not(.dark) .bg-\[\#11191f\] h1,
+html:not(.dark) .bg-\[\#11191f\] h2,
+html:not(.dark) .bg-\[\#11191f\] h3,
+html:not(.dark) .bg-\[\#11191f\] h4,
+html:not(.dark) .bg-\[\#11191f\] .font-heading,
+html:not(.dark) footer h1,
+html:not(.dark) footer h2,
+html:not(.dark) footer h3,
+html:not(.dark) footer h4,
+html:not(.dark) footer .font-heading {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .bg-\[\#102B31\] .text-\[\#9DC3C8\],
+html:not(.dark) .bg-\[\#1D4C56\] .text-\[\#9DC3C8\],
+html:not(.dark) .bg-\[\#0B1E23\] .text-\[\#9DC3C8\],
+html:not(.dark) footer .text-\[\#8FAFC0\],
+html:not(.dark) footer .text-\[\#f0baa9\] {
+  color: #9DC3C8 !important;
+}
+html:not(.dark) footer .text-\[\#f0baa9\] {
+  color: #f0baa9 !important;
+}
+html:not(.dark) footer .text-\[\#8FAFC0\] {
+  color: #8FAFC0 !important;
+}
+html:not(.dark) .bg-\[\#102B31\] .text-\[\#C8DFE2\],
+html:not(.dark) .bg-\[\#102B31\] .text-\[\#C8DFE2\]\/70,
+html:not(.dark) .bg-\[\#102B31\] .text-\[\#C8DFE2\]\/80 {
+  color: #C8DFE2 !important;
+}
+
+/* Light Mode Text Opacities - Eliminates faint washed-out grays */
+html:not(.dark) .text-\[\#27343B\]\/40,
+html:not(.dark) .text-\[\#27343B\]\/50,
+html:not(.dark) .text-\[\#27343B\]\/60,
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-gray-400 {
+  color: #425460 !important; /* WCAG AA 6.0:1 contrast on white, 5.7:1 on cream */
+}
+
+html:not(.dark) .text-\[\#27343B\]\/70,
+html:not(.dark) .text-\[\#27343B\]\/80,
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-gray-500 {
+  color: #243540 !important; /* WCAG AAA 9.8:1 contrast on white */
+}
+
+html:not(.dark) .text-\[\#294657\]\/70,
+html:not(.dark) .text-\[\#294657\]\/80 {
+  color: #162E3B !important;
+}
+
+html:not(.dark) .text-\[\#385258\],
+html:not(.dark) .text-\[\#27343B\]\/85,
+html:not(.dark) .text-\[\#27343B\]\/80,
+html:not(.dark) .text-\[\#27343B\]\/75,
+html:not(.dark) .text-\[\#27343B\]\/70 {
+  color: #1a2c33 !important; /* Deep commanding obsidian charcoal for 100% light mode readability */
+}
+
+html:not(.dark) .text-\[\#0F252B\] {
+  color: #0b1a1f !important; /* Ultra-crisp obsidian for headings in light mode */
+}
+
+html:not(.dark) .text-\[\#1D4C56\] {
+  color: #123840 !important; /* Deep sea teal for prominent badges & titles in light mode */
+}
+
+/* Accent & Terracotta in Light Mode (High Contrast #B25338, 5.3:1 contrast) */
+html:not(.dark) .text-\[\#D7B7A5\] {
+  color: #B25338 !important;
+}
+
+html:not(.dark) .hover\:text-\[\#D7B7A5\]:hover {
+  color: #8E3A24 !important;
+}
+
+html:not(.dark) .font-heading em:not([class*="text-white"]):not([class*="text-[#9D"]), 
+html:not(.dark) .font-heading i:not([class*="text-white"]):not([class*="text-[#9D"]), 
+html:not(.dark) .stylish-italic:not([class*="text-white"]):not([class*="text-[#9D"]) {
+  color: #B25338 !important;
+}
+
+/* Sage & Ocean in Light Mode (Rich Teal #24586E, 6.7:1 contrast) */
+html:not(.dark) .text-\[\#8FAFC0\] {
+  color: #24586E !important;
+}
+
+html:not(.dark) .hover\:text-\[\#8FAFC0\]:hover {
+  color: #183F50 !important;
+}
+
+/* Primary CTA Buttons in Light Mode */
+html:not(.dark) .btn-terracotta,
+html:not(.dark) .bg-\[\#D7B7A5\].text-white,
+html:not(.dark) button.bg-\[\#D7B7A5\],
+html:not(.dark) a.bg-\[\#D7B7A5\] {
+  background-color: #B5583E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px -2px rgba(181, 88, 62, 0.38);
+}
+
+html:not(.dark) .btn-terracotta:hover,
+html:not(.dark) .bg-\[\#D7B7A5\].text-white:hover,
+html:not(.dark) button.bg-\[\#D7B7A5\]:hover,
+html:not(.dark) a.bg-\[\#D7B7A5\]:hover {
+  background-color: #9C452D !important;
+  box-shadow: 0 10px 25px -2px rgba(181, 88, 62, 0.5);
+}
+
+/* Secondary Button Teal/Outline in Light Mode */
+html:not(.dark) .btn-outline-teal {
+  color: #1E3747 !important;
+  border-color: #1E3747 !important;
+}
+
+html:not(.dark) .btn-outline-teal:hover {
+  background-color: #1E3747 !important;
+  color: #FFFFFF !important;
+}
+
+/* Card Framing & Clean Boundaries in Light Mode */
+/* ===================================================================
+   LIGHT MODE: PREMIUM CARD GRADIENTS & VIBRANT COLOR SYSTEM 🌈🎨
+   Transforming boxes into multi-dimensional, vibrant wellness surfaces
+   =================================================================== */
+
+/* Universal Base Gradient for Light Mode Cards & Boxes */
+html:not(.dark) .card-wellness,
+html:not(.dark) .clinician-card,
+html:not(.dark) article.card-wellness,
+html:not(.dark) .service-card,
+html:not(.dark) .card-gradient,
+html:not(.dark) .grid > div[class*="rounded-3xl"]:not(#appointment-modal):not(#crisis-modal):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient),
+html:not(.dark) div.rounded-3xl.bg-white:not(#appointment-modal *):not(#crisis-modal *):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient),
+html:not(.dark) div.rounded-3xl.bg-\[\#F4F8F7\]:not(#appointment-modal *):not(#crisis-modal *):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient),
+html:not(.dark) div.rounded-3xl.bg-\[\#F8F6F1\]:not(#appointment-modal *):not(#crisis-modal *):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient),
+html:not(.dark) div.rounded-2xl.bg-white:not(#appointment-modal *):not(#crisis-modal *):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient):not(.mock-mood-emoji):not(input):not(select):not(textarea) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F5F9FB 52%, #FAF4EE 100%) !important;
+  border: 1.5px solid #D2E1EA !important;
+  box-shadow: 0 8px 24px -4px rgba(29, 70, 87, 0.08), 0 3px 10px -2px rgba(215, 183, 165, 0.12) !important;
   position: relative;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease !important;
 }
 
-.waves-svg {
-  position: relative;
-  width: 100%;
-  height: 80px;
-  min-height: 60px;
-  max-height: 110px;
-  display: block;
+/* Universal Card Hover Glow in Light Mode */
+html:not(.dark) .card-wellness:hover,
+html:not(.dark) .clinician-card:hover,
+html:not(.dark) article.card-wellness:hover,
+html:not(.dark) .service-card:hover,
+html:not(.dark) .card-gradient:hover,
+html:not(.dark) div.rounded-3xl.bg-white:hover,
+html:not(.dark) div.rounded-3xl.bg-\[\#F4F8F7\]:hover,
+html:not(.dark) div.rounded-3xl.bg-\[\#F8F6F1\]:hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #EFF6F9 42%, #F9EFE6 100%) !important;
+  border-color: #B5583E !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 38px -8px rgba(29, 70, 87, 0.14), 0 8px 18px -2px rgba(181, 88, 62, 0.18) !important;
 }
 
-@media (max-width: 768px) {
-  .waves-svg {
-    height: 50px;
-    min-height: 40px;
-  }
-}
-
-/* Wave parallax sliding motion */
-.parallax-waves > use {
-  animation: moveWavesForever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-}
-
-.parallax-waves > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-
-.parallax-waves > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-
-.parallax-waves > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-
-.parallax-waves > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-
-@keyframes moveWavesForever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
-/* Light / Dark dynamic wave fill colors */
-.wave-layer-1 {
-  fill: rgba(56, 189, 248, 0.25);
-}
-.wave-layer-2 {
-  fill: rgba(14, 165, 233, 0.45);
-}
-.wave-layer-3 {
-  fill: rgba(2, 132, 199, 0.65);
-}
-.wave-layer-4 {
-  fill: #f8fafc;
-}
-
-.dark .wave-layer-1 {
-  fill: rgba(14, 165, 233, 0.15);
-}
-.dark .wave-layer-2 {
-  fill: rgba(2, 132, 199, 0.28);
-}
-.dark .wave-layer-3 {
-  fill: rgba(3, 105, 161, 0.45);
-}
-.dark .wave-layer-4 {
-  fill: #020617;
-}
-
-/* Sliding Wave Shimmer for Hero Badges & Cards */
-@keyframes slideWaveShimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.wave-slide-shimmer {
-  background: linear-gradient(90deg, #0284c7, #06b6d4, #38bdf8, #0284c7);
-  background-size: 300% 300%;
-  animation: slideWaveShimmer 8s ease infinite;
-}
-
-/* 10. 🌊 Floating Wave Gentle Animation */
-@keyframes floatGentle {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-.animate-float {
-  animation: floatGentle 4s ease-in-out infinite;
-}
-
-/* 11. ✨ Glass Reflex Shimmer Animation */
-@keyframes glassShimmerSweep {
-  0% {
-    transform: translateX(-150%) skewX(-20deg);
-  }
-  100% {
-    transform: translateX(250%) skewX(-20deg);
-  }
-}
-
-.glass-shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-shimmer::after {
-  content: '';
+/* Top Gradient Accent Ribbon on Elevated Cards */
+html:not(.dark) .card-wellness::before,
+html:not(.dark) .clinician-card::before,
+html:not(.dark) article.card-wellness::before,
+html:not(.dark) .service-card::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: translateX(-150%) skewX(-20deg);
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #1D4C56 0%, #368494 28%, #8FAFC0 52%, #D7B7A5 76%, #B25338 100%);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  z-index: 10;
   pointer-events: none;
+  transition: height 0.3s ease, opacity 0.3s ease;
 }
 
-.glass-shimmer:hover::after {
-  animation: glassShimmerSweep 1.2s ease-out;
+html:not(.dark) .card-wellness:hover::before,
+html:not(.dark) .clinician-card:hover::before,
+html:not(.dark) article.card-wellness:hover::before,
+html:not(.dark) .service-card:hover::before {
+  height: 5px;
 }
 
-/* 12. 💧 Interactive Click Wave Ripple */
-.interactive-ripple {
-  position: relative;
-  overflow: hidden;
+/* --- Palette 1: Oceanic Azure Mist (Cool Serenity & Mental Clarity) --- */
+html:not(.dark) .card-gradient-ocean,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+1),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+1),
+html:not(.dark) .grid > article:nth-child(6n+1),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+1) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #EDF6FA 48%, #DFEEF5 100%) !important;
+  border: 1.5px solid #BDD8E5 !important;
+  box-shadow: 0 10px 26px -6px rgba(29, 76, 86, 0.1), 0 3px 10px -2px rgba(143, 175, 192, 0.16) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+1):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+1):hover,
+html:not(.dark) .grid > article:nth-child(6n+1):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #E3F2F8 45%, #D4E8F2 100%) !important;
+  border-color: #1D4C56 !important;
+  box-shadow: 0 20px 40px -8px rgba(29, 76, 86, 0.18), 0 6px 18px -2px rgba(143, 175, 192, 0.25) !important;
 }
 
-.interactive-ripple-wave {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(0);
-  animation: clickRippleAnim 0.6s linear;
-  pointer-events: none;
+/* --- Palette 2: Warm Terracotta & Sunset Glow (Empathy, Safety & Couples) --- */
+html:not(.dark) .card-gradient-terracotta,
+html:not(.dark) .card-gradient-warm,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+2),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+2),
+html:not(.dark) .grid > article:nth-child(6n+2),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+2) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FDF7F2 48%, #F9ECE0 100%) !important;
+  border: 1.5px solid #ECCDC0 !important;
+  box-shadow: 0 10px 26px -6px rgba(178, 83, 56, 0.1), 0 3px 10px -2px rgba(215, 183, 165, 0.22) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+2):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+2):hover,
+html:not(.dark) .grid > article:nth-child(6n+2):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FBECE0 45%, #F4DEC6 100%) !important;
+  border-color: #B25338 !important;
+  box-shadow: 0 20px 40px -8px rgba(178, 83, 56, 0.18), 0 6px 18px -2px rgba(215, 183, 165, 0.3) !important;
 }
 
-@keyframes clickRippleAnim {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
+/* --- Palette 3: Botanical Sage & Eucalyptus Calm (Grounding, Mindfulness, Zen) --- */
+html:not(.dark) .card-gradient-sage,
+html:not(.dark) .card-gradient-mint,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+3),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+3),
+html:not(.dark) .grid > article:nth-child(6n+3),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+3) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F1F9F5 48%, #E0F2EA 100%) !important;
+  border: 1.5px solid #C0E2D4 !important;
+  box-shadow: 0 10px 26px -6px rgba(46, 125, 99, 0.09), 0 3px 10px -2px rgba(167, 212, 192, 0.18) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+3):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+3):hover,
+html:not(.dark) .grid > article:nth-child(6n+3):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #E5F5ED 45%, #D4EFE2 100%) !important;
+  border-color: #2E7D63 !important;
+  box-shadow: 0 20px 40px -8px rgba(46, 125, 99, 0.18), 0 6px 18px -2px rgba(167, 212, 192, 0.3) !important;
 }
 
-
-/* 🌊 Ambient Aquatic Glow & Caustic Water Reflections */
-.aquatic-section-glow {
-  position: relative;
-  background-image: 
-    radial-gradient(circle at 92% 12%, rgba(14, 165, 233, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 8% 88%, rgba(6, 182, 212, 0.09) 0%, transparent 45%),
-    url("data:image/svg+xml,%3Csvg width='100' height='26' viewBox='0 0 100 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 13 Q 25 2, 50 13 T 100 13' fill='none' stroke='%230284c7' stroke-width='1.2' stroke-opacity='0.065'/%3E%3C/svg%3E") !important;
+/* --- Palette 4: Lavender Twilight & Somatic Stillness (EMDR, Trauma, Night Sleep) --- */
+html:not(.dark) .card-gradient-lavender,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+4),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+4),
+html:not(.dark) .grid > article:nth-child(6n+4),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+4) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F7F5FC 48%, #ECE5F8 100%) !important;
+  border: 1.5px solid #D6CEF0 !important;
+  box-shadow: 0 10px 26px -6px rgba(90, 78, 140, 0.09), 0 3px 10px -2px rgba(188, 178, 224, 0.18) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+4):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+4):hover,
+html:not(.dark) .grid > article:nth-child(6n+4):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #EFEBF8 45%, #E2D7F4 100%) !important;
+  border-color: #5A4E8C !important;
+  box-shadow: 0 20px 40px -8px rgba(90, 78, 140, 0.18), 0 6px 18px -2px rgba(188, 178, 224, 0.3) !important;
 }
 
-.dark .aquatic-section-glow {
-  background-image: 
-    radial-gradient(circle at 92% 12%, rgba(14, 165, 233, 0.16) 0%, transparent 45%),
-    radial-gradient(circle at 8% 88%, rgba(6, 182, 212, 0.14) 0%, transparent 45%),
-    url("data:image/svg+xml,%3Csvg width='100' height='26' viewBox='0 0 100 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 13 Q 25 2, 50 13 T 100 13' fill='none' stroke='%2338bdf8' stroke-width='1.2' stroke-opacity='0.09'/%3E%3C/svg%3E") !important;
+/* --- Palette 5: Honey Amber & Sunlit Vitality (Adolescent, Growth, Workshops) --- */
+html:not(.dark) .card-gradient-amber,
+html:not(.dark) .card-gradient-gold,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+5),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+5),
+html:not(.dark) .grid > article:nth-child(6n+5),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+5) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FDFBF0 48%, #FAF0D2 100%) !important;
+  border: 1.5px solid #EBDDAA !important;
+  box-shadow: 0 10px 26px -6px rgba(184, 134, 11, 0.09), 0 3px 10px -2px rgba(230, 204, 130, 0.18) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+5):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+5):hover,
+html:not(.dark) .grid > article:nth-child(6n+5):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8F3DC 45%, #F4E7BF 100%) !important;
+  border-color: #B8860B !important;
+  box-shadow: 0 20px 40px -8px rgba(184, 134, 11, 0.18), 0 6px 18px -2px rgba(230, 204, 130, 0.3) !important;
 }
 
-/* Semi-translucent sections allowing background ripples to breathe */
-.bg-translucent-white {
-  background-color: rgba(255, 255, 255, 0.90);
-  backdrop-filter: blur(8px);
+/* --- Palette 6: Rose Quartz & Compassion Bloom (Family & Relational Harmony) --- */
+html:not(.dark) .card-gradient-rose,
+html:not(.dark) .grid > .card-wellness:nth-child(6n+6),
+html:not(.dark) .grid > .clinician-card:nth-child(6n+6),
+html:not(.dark) .grid > article:nth-child(6n+6),
+html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+6) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FDF5F6 48%, #FBE1E6 100%) !important;
+  border: 1.5px solid #F0CDD4 !important;
+  box-shadow: 0 10px 26px -6px rgba(190, 68, 98, 0.09), 0 3px 10px -2px rgba(235, 174, 188, 0.18) !important;
+}
+html:not(.dark) .grid > .card-wellness:nth-child(6n+6):hover,
+html:not(.dark) .grid > .clinician-card:nth-child(6n+6):hover,
+html:not(.dark) .grid > article:nth-child(6n+6):hover {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FCE8EC 45%, #F8D3DC 100%) !important;
+  border-color: #BE4462 !important;
+  box-shadow: 0 20px 40px -8px rgba(190, 68, 98, 0.18), 0 6px 18px -2px rgba(235, 174, 188, 0.3) !important;
 }
 
-.dark .bg-translucent-white,
-.dark .dark\:bg-translucent-dark {
-  background-color: rgba(15, 23, 42, 0.90);
-  backdrop-filter: blur(8px);
+/* Border Enhancements in Light Mode */
+html:not(.dark) .border-\[\#EBF1F4\],
+html:not(.dark) .border-slate-100,
+html:not(.dark) .border-gray-100,
+html:not(.dark) .border-gray-200 {
+  border-color: #D1DEE5 !important;
+}
+
+/* Form Inputs & Interactive Controls */
+html:not(.dark) input:not([type="checkbox"]):not([type="radio"]),
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #C4D4DE !important;
+  color: #162229 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #576B78 !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus {
+  border-color: #B5583E !important;
+  box-shadow: 0 0 0 3px rgba(181, 88, 62, 0.18) !important;
+  outline: none !important;
+}
+
+/* Colorful Category Pills & Badges in Light Mode 🏷️ */
+html:not(.dark) .badge-anxiety,
+html:not(.dark) .tag-ocean,
+html:not(.dark) .badge-ocean,
+html:not(.dark) [data-category="anxiety"] .badge-category {
+  background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%) !important;
+  color: #0369A1 !important;
+  border: 1px solid #7DD3FC !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .badge-couples,
+html:not(.dark) .tag-terracotta,
+html:not(.dark) .badge-terracotta,
+html:not(.dark) [data-category="couples"] .badge-category {
+  background: linear-gradient(135deg, #FFEDD5 0%, #FED7AA 100%) !important;
+  color: #C2410C !important;
+  border: 1px solid #FDBA74 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .badge-trauma,
+html:not(.dark) .tag-lavender,
+html:not(.dark) .badge-lavender,
+html:not(.dark) [data-category="trauma"] .badge-category {
+  background: linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%) !important;
+  color: #7E22CE !important;
+  border: 1px solid #D8B4FE !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .badge-mindfulness,
+html:not(.dark) .tag-sage,
+html:not(.dark) .badge-sage,
+html:not(.dark) [data-category="mindfulness"] .badge-category {
+  background: linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%) !important;
+  color: #15803D !important;
+  border: 1px solid #86EFAC !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .badge-teen,
+html:not(.dark) .tag-amber,
+html:not(.dark) .badge-amber,
+html:not(.dark) [data-category="teen"] .badge-category {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%) !important;
+  color: #B45309 !important;
+  border: 1px solid #FCD34D !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .badge-psychiatry,
+html:not(.dark) [data-category="psychiatry"] .badge-category {
+  background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%) !important;
+  color: #4338CA !important;
+  border: 1px solid #A5B4FC !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .bg-\[\#D7B7A5\]\/10,
+html:not(.dark) .bg-\[\#D7B7A5\]\/15,
+html:not(.dark) .bg-\[\#D7B7A5\]\/20 {
+  background: linear-gradient(135deg, #FFF0E6 0%, #FFE0D0 100%) !important;
+  color: #A94328 !important;
+  border: 1px solid #F7C6B3 !important;
+}
+
+html:not(.dark) .bg-\[\#8FAFC0\]\/10,
+html:not(.dark) .bg-\[\#8FAFC0\]\/15,
+html:not(.dark) .bg-\[\#8FAFC0\]\/20 {
+  background: linear-gradient(135deg, #E8F4F8 0%, #D4E9F2 100%) !important;
+  color: #185265 !important;
+  border: 1px solid #B8DCED !important;
+}
+
+/* Vibrant Icon Pods in Light Mode 🎨 */
+html:not(.dark) .grid > div:nth-child(6n+1) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+1) .w-10.h-10 {
+  background: linear-gradient(135deg, #1D4C56 0%, #327F90 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(29, 76, 86, 0.25) !important;
+}
+
+html:not(.dark) .grid > div:nth-child(6n+2) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+2) .w-10.h-10 {
+  background: linear-gradient(135deg, #B25338 0%, #D77054 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(178, 83, 56, 0.28) !important;
+}
+
+html:not(.dark) .grid > div:nth-child(6n+3) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+3) .w-10.h-10 {
+  background: linear-gradient(135deg, #256A54 0%, #3EA887 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 106, 84, 0.25) !important;
+}
+
+html:not(.dark) .grid > div:nth-child(6n+4) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+4) .w-10.h-10 {
+  background: linear-gradient(135deg, #4E407E 0%, #7564B5 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(78, 64, 126, 0.25) !important;
+}
+
+html:not(.dark) .grid > div:nth-child(6n+5) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+5) .w-10.h-10 {
+  background: linear-gradient(135deg, #9C7200 0%, #E3AC1A 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(156, 114, 0, 0.28) !important;
+}
+
+html:not(.dark) .grid > div:nth-child(6n+6) .w-12.h-12,
+html:not(.dark) .grid > div:nth-child(6n+6) .w-10.h-10 {
+  background: linear-gradient(135deg, #A8334E 0%, #E05676 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(168, 51, 78, 0.25) !important;
+}
+
+/* High-End Action Buttons in Light Mode 🚀 */
+html:not(.dark) .btn-editorial-teal {
+  background: linear-gradient(135deg, #0F282E 0%, #1D4C56 55%, #2D6C7A 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px -2px rgba(29, 76, 86, 0.35) !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) .btn-editorial-teal:hover {
+  background: linear-gradient(135deg, #1D4C56 0%, #2A6C7A 55%, #3B8C9C 100%) !important;
+  box-shadow: 0 10px 25px -2px rgba(29, 76, 86, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+html:not(.dark) .btn-editorial-terracotta,
+html:not(.dark) .btn-terracotta {
+  background: linear-gradient(135deg, #B25338 0%, #C9664B 50%, #DC7C63 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px -2px rgba(178, 83, 56, 0.38) !important;
+  transition: all 0.3s ease !important;
+}
+
+html:not(.dark) .btn-editorial-terracotta:hover,
+html:not(.dark) .btn-terracotta:hover {
+  background: linear-gradient(135deg, #9C432A 0%, #B25338 50%, #CA684D 100%) !important;
+  box-shadow: 0 10px 26px -2px rgba(178, 83, 56, 0.48) !important;
+  transform: translateY(-2px);
+}
+
+html:not(.dark) .btn-editorial-outline {
+  border: 1.5px solid #1D4C56 !important;
+  color: #1D4C56 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(29, 76, 86, 0.08) !important;
+}
+
+html:not(.dark) .btn-editorial-outline:hover {
+  background: linear-gradient(135deg, #1D4C56 0%, #2E7280 100%) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: 0 6px 18px rgba(29, 76, 86, 0.25) !important;
+}
+
+/* Ambient Background Floating Glow Orbs in Light Mode 🌊✨ */
+html:not(.dark) .orb-top-right {
+  background: radial-gradient(circle, rgba(143, 175, 192, 0.65) 0%, rgba(54, 132, 148, 0.28) 55%, transparent 75%) !important;
+}
+
+html:not(.dark) .orb-mid-left {
+  background: radial-gradient(circle, rgba(240, 185, 160, 0.65) 0%, rgba(190, 95, 70, 0.25) 55%, transparent 75%) !important;
+}
+
+html:not(.dark) .orb-lower-right {
+  background: radial-gradient(circle, rgba(160, 215, 195, 0.6) 0%, rgba(46, 125, 99, 0.25) 55%, transparent 75%) !important;
+}
+
+/* Table Enhancements in Light Mode */
+html:not(.dark) table thead tr {
+  background-color: #EDF3F6 !important;
+  border-bottom: 2px solid #CBD8E0 !important;
+}
+
+html:not(.dark) table tbody tr {
+  border-bottom: 1px solid #D8E3E9 !important;
+}
+
+html:not(.dark) table tbody tr:hover {
+  background-color: #F3F7FA !important;
+}
+
+/* Header Navbar in Light Mode */
+html:not(.dark) #main-header {
+  background-color: rgba(248, 246, 241, 0.98) !important;
+  border-bottom: 1px solid #CBD8E0 !important;
+  box-shadow: 0 2px 10px rgba(29, 51, 64, 0.05) !important;
 }

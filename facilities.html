@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facilities & Pool Specifications &mdash; Aquarium Pro Swimming Academy</title>
-  <meta name="description" content="Explore our Olympic 50m competition pool, 25m heated learner pools, UV Ozone filtration technology, and dryland training amenities.">
-  
-  <link rel="icon" type="image/png" href="assets/img/aquariumpro-logo.jpg">
+  <title>Resources & Self-Help Suite | Calmind — Psychology, Therapy & Counseling</title>
+  <meta name="description" content="Free mental health tools, 4-4-4-4 box breathing visualizer, CBT worksheets, and 24/7 crisis contacts.">
+  <meta property="og:title" content="Resources & Self-Help Suite | Calmind">
+  <meta property="og:description" content="Free mental health tools, 4-4-4-4 box breathing visualizer, CBT worksheets, and 24/7 crisis contacts.">
+  <meta property="og:type" content="website">
 
   <!-- Early Theme & Direction Persistence Handler -->
   <script>
     (function() {
-      var t = localStorage.getItem('aquapro_theme');
+      var t = localStorage.getItem('calmind_theme') || localStorage.getItem('serenemind_theme');
       if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-      var d = localStorage.getItem('aquapro_direction');
+      var d = localStorage.getItem('calmind_direction') || localStorage.getItem('serenemind_direction');
       if (d === 'rtl') {
         document.documentElement.setAttribute('dir', 'rtl');
       } else {
@@ -26,7 +27,12 @@
     })();
   </script>
 
-  <!-- Tailwind CSS CDN + Config -->
+  <!-- Google Fonts: Playfair Display (Serif Luxury Headings), Plus Jakarta Sans (Clean Modern Sans), and Cairo (RTL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN + Calmind Palette Extension -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,27 +41,43 @@
         extend: {
           colors: {
             primary: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
+              50: '#fdf8f5',
+              100: '#faece5',
+              200: '#f4d7ca',
+              300: '#ecbaa6',
+              400: '#e29578',
+              500: '#d48166',
+              600: '#c36b50', // Calmind signature warm terracotta
+              700: '#a6533b',
+              800: '#874330',
+              900: '#6e3728',
+              950: '#3b1a12',
+            },
+            sand: {
+              50: '#fdfcfb',
+              100: '#faf5f0',
+              200: '#f4ebe1',
+              300: '#ebded0',
+              400: '#d8c7b5',
+              500: '#c5b09c',
+            },
+            espresso: {
+              800: '#262220',
+              900: '#1c1917', // Calmind deep espresso dark background
+              950: '#141110',
             },
             accent: {
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
+              400: '#94b49f',
+              500: '#7b9e87',
+              600: '#5c7c66',
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Outfit"', 'sans-serif'],
-            rtl: ['"Cairo"', '"Plus Jakarta Sans"', 'sans-serif']
+            sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Fraunces"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Fraunces"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            rtl: ['"Cairo"', '"Outfit"', 'sans-serif']
           }
         }
       }
@@ -65,50 +87,162 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-[#FAF5F0] text-slate-800 dark:bg-[#141110] dark:text-[#F5ECE5] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <!-- Header -->
-    <!-- Header / Navigation -->
-  <header id="main-header" class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 py-4 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+  <!-- Top Announcement / 24/7 Crisis Helpline Bar -->
+  <div class="bg-espresso-900 text-sand-100 text-xs font-medium py-2.5 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+        <span class="bg-primary-500/20 text-primary-300 border border-primary-400/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-400 animate-pulse"></span> 24/7 Crisis Support
+        </span>
+        <span class="text-sand-200 text-[11px] sm:text-xs">In emotional distress? Dial <a href="tel:988" class="font-bold underline text-primary-300 hover:text-white transition-colors">988 Lifeline</a> or text <span class="font-bold text-primary-300">HOME to 741741</span></span>
+      </div>
+      <div class="flex items-center space-x-5 rtl:space-x-reverse text-sand-300 text-xs">
+        <a href="tel:18002738255" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone-alt text-[11px] text-primary-400"></i> +1 (800) 273-8255
+        </a>
+        <span class="text-white/20 hidden md:inline">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-sand-300">
+          <i class="far fa-clock text-primary-400"></i> Mon-Sat 8AM - 8PM EST
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calmind Navbar Header with Precision Horizontal & Vertical Alignment -->
+  <header id="main-header" class="sticky top-0 z-40 bg-[#FAF5F0]/95 dark:bg-[#1C1917]/95 backdrop-blur-md border-b border-sand-300/60 dark:border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center group" title="Aquarium Pro Home">
-        <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro Swimming Academy" class="logo-brand-img h-12 sm:h-14 w-auto max-w-[210px] object-contain">
+      <!-- Left: Calmind Brand Logo (Matching Reference Image) -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0" title="Calmind — Psychology and Counseling">
+        <!-- Calmind Dual Hands Heart SVG -->
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary-600 to-primary-400 flex items-center justify-center text-white shadow-md shadow-primary-600/25 group-hover:scale-105 transition-transform duration-300">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <span class="font-heading text-2xl font-bold tracking-tight text-espresso-900 dark:text-white leading-none">
+          Calmind
+        </span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="hidden lg:flex items-center space-x-7 rtl:space-x-reverse text-sm font-bold text-slate-700 dark:text-slate-200">
-        <div class="relative group">
-          <button class="flex items-center gap-1 py-4 hover:text-sky-600 dark:hover:text-sky-400">Home <i class="fas fa-chevron-down text-[9px]"></i></button>
-          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 w-52 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-            <a href="index.html" class="block rounded-xl px-3 py-2.5 hover:bg-sky-50 dark:hover:bg-slate-800">Home 1 &middot; Academy</a>
-            <a href="home-agency.html" class="block rounded-xl px-3 py-2.5 hover:bg-sky-50 dark:hover:bg-slate-800">Home 2 &middot; Wellness</a>
+      <!-- Center: Clean, Centered Desktop Nav Menu (Matching Reference Image) -->
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-slate-700 dark:text-sand-200">
+        <!-- Home Dropdown -->
+        <div class="relative group py-2 flex items-center">
+          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 ">
+            Home <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-espresso-900 rounded-2xl shadow-xl border border-sand-200 dark:border-white/10 p-2">
+              <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-heart text-primary-500 w-4"></i> Home 1 &middot; Balance & Care
+              </a>
+              <a href="home-agency.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-brain text-primary-500 w-4"></i> Home 2 &middot; Specialized Care
+              </a>
+            </div>
           </div>
         </div>
-        <a href="about.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">About Us</a>
-        <a href="programs.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Programs</a>
-        <a href="coaches.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Coaches</a>
-        <a href="batch-timings.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Batch Timings</a>
-        <a href="facilities.html" class="text-sky-600 dark:text-sky-400 font-extrabold transition-colors">Facilities &amp; Pools</a>
-        <a href="pricing.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Pricing</a>
-        <a href="blog.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Blog</a>
-        <a href="contact.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Contact</a>
+
+        <a href="about.html" class="inline-flex items-center hover:text-primary-600 dark:hover:text-primary-400 transition-colors ">About</a>
+
+        <!-- Services Dropdown -->
+        <div class="relative group py-2 flex items-center">
+          <a href="services.html" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 ">
+            Services <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-espresso-900 rounded-2xl shadow-xl border border-sand-200 dark:border-white/10 p-2">
+              <a href="services.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-hand-holding-heart text-primary-500 w-4"></i> All Therapy Services
+              </a>
+              <a href="service-details.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-file-medical-alt text-primary-500 w-4"></i> CBT & Anxiety Details
+              </a>
+              <a href="batch-timings.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-users text-primary-500 w-4"></i> Group Cohorts Schedule
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pages Dropdown (Matching Reference Theme) -->
+        <div class="relative group py-2 flex items-center">
+          <a href="#" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 text-primary-600 dark:text-primary-400 font-bold">
+            Pages <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-espresso-900 rounded-2xl shadow-xl border border-sand-200 dark:border-white/10 p-2">
+              <a href="therapists.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-user-md text-primary-500 w-4"></i> Therapists Directory
+              </a>
+              <a href="resources.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-lungs text-primary-500 w-4"></i> Self-Help & Breathing
+              </a>
+              <a href="pricing.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-tags text-primary-500 w-4"></i> Pricing & Insurance
+              </a>
+              <a href="client-dashboard.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-user-circle text-primary-500 w-4"></i> Patient Portal
+              </a>
+              <a href="admin-dashboard.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-chart-line text-primary-500 w-4"></i> Clinician Workspace
+              </a>
+              <a href="login.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-sign-in-alt text-primary-500 w-4"></i> Client Login / Register
+              </a>
+              <a href="404.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-compass text-primary-500 w-4"></i> 404 Mindful Page
+              </a>
+              <a href="maintenance.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-tools text-primary-500 w-4"></i> Maintenance Mode
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Dropdown -->
+        <div class="relative group py-2 flex items-center">
+          <a href="blog.html" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 ">
+            Blog <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-espresso-900 rounded-2xl shadow-xl border border-sand-200 dark:border-white/10 p-2">
+              <a href="blog.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-newspaper text-primary-500 w-4"></i> Wellness Journal
+              </a>
+              <a href="blog-details.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fas fa-book-reader text-primary-500 w-4"></i> Clinical Deep Dive
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="inline-flex items-center hover:text-primary-600 dark:hover:text-primary-400 transition-colors ">Contact</a>
       </nav>
 
-      <!-- Right Controls: RTL + Dark Mode + CTA -->
-      <div class="flex items-center gap-1.5 sm:gap-2.5 rtl:space-x-reverse shrink-0">
-        <button class="rtl-toggle-btn w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition-colors" title="Toggle RTL">
-          <span class="rtl-text text-[11px] sm:text-xs">RTL</span>
+      <!-- Right: Action Controls & Pill Button (Balanced & Vertically Centered) -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-espresso-800 text-slate-600 dark:text-sand-200 hover:text-primary-600 dark:hover:text-primary-400 flex items-center justify-center transition-colors border border-sand-200 dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon moon-icon text-xs"></i>
+          <i class="fas fa-sun sun-icon text-xs hidden"></i>
         </button>
-        <button class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
-          <i class="fas fa-moon moon-icon text-xs sm:text-sm"></i>
-          <i class="fas fa-sun sun-icon hidden text-amber-400 text-xs sm:text-sm"></i>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-espresso-800 text-slate-600 dark:text-sand-200 hover:text-primary-600 dark:hover:text-primary-400 text-xs font-bold transition-colors border border-sand-200 dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
+          <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
         </button>
-        <button data-open-trial class="hidden sm:inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold shadow-lg shadow-sky-500/25 transition-all transform hover:-translate-y-0.5">
-          Book Free Trial
-        </button>
-        <button id="mobile-menu-toggle" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+
+        <!-- Calmind Terracotta Pill Login Button -->
+        <a href="login.html" class="inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-primary-600 hover:bg-primary-700 text-white text-xs font-bold shadow-md shadow-primary-600/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
+          <i class="fas fa-user-circle text-sm"></i> Login
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden w-10 h-10 rounded-full bg-white dark:bg-espresso-800 text-slate-700 dark:text-sand-200 hover:text-primary-600 flex items-center justify-center transition-colors border border-sand-200 dark:border-white/10 shadow-sm" aria-label="Open Menu">
           <i class="fas fa-bars text-sm"></i>
         </button>
       </div>
@@ -116,445 +250,620 @@
     </div>
   </header>
 
-  <!-- Mobile Menu Drawer -->
-    <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-white dark:bg-slate-900 z-50 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full rtl:-translate-x-full transition-transform duration-300 overflow-y-auto">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
-        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse" title="Back to Home">
-          <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro" class="logo-brand-img h-10 w-auto rounded-lg">
-        </a>
-        <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-slate-600">
-          <i class="fas fa-times text-lg"></i>
-        </button>
-      </div>
-      <div class="py-6 space-y-4 font-bold text-slate-700 dark:text-slate-200 text-sm">
-        <div class="py-2">
-          <span class="block text-sky-600 text-xs uppercase font-black tracking-wider">Home</span>
-          <a href="index.html" class="block py-1 pl-4 text-xs hover:text-sky-600">Home 1 &middot; Academy</a>
-          <a href="home-agency.html" class="block py-1 pl-4 text-xs hover:text-sky-600">Home 2 &middot; Wellness</a>
+<main class="flex-grow">
+  <!-- Header -->
+  <section class="py-16 bg-gradient-to-b from-teal-50/50 to-transparent dark:from-teal-950/20 dark:to-transparent text-center space-y-4">
+    <span class="text-xs uppercase font-bold tracking-widest text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 px-3 py-1 rounded-full border border-teal-200 dark:border-teal-800">
+      Self-Help & Clinical Sanctuary
+    </span>
+    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+      Empowering Tools for Emotional Wellbeing
+    </h1>
+    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+      Free evidence-based somatic tools, clinical screening assessments, and downloadable CBT worksheets to support your journey.
+    </p>
+  </section>
+
+  <!-- Interactive Box Breathing Suite -->
+  <section class="py-12 bg-white dark:bg-slate-900 border-y border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="p-8 sm:p-12 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 shadow-xl space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 text-xs font-bold">
+          <i class="fas fa-lungs"></i> Clinical Vagus Nerve Pacing
         </div>
-        <a href="about.html" class="block py-2 hover:text-sky-600">About Us</a>
-        <a href="programs.html" class="block py-2 hover:text-sky-600">Programs &amp; Curriculums</a>
-        <a href="coaches.html" class="block py-2 hover:text-sky-600">Certified Coaches</a>
-        <a href="batch-timings.html" class="block py-2 hover:text-sky-600">Batch Timings</a>
-        <a href="facilities.html" class="block py-2 text-sky-600">Facilities &amp; Pool Specs</a>
-        <a href="pricing.html" class="block py-2 hover:text-sky-600">Pricing &amp; Memberships</a>
-        <a href="blog.html" class="block py-2 hover:text-sky-600">News &amp; Guides</a>
-        <a href="contact.html" class="block py-2 hover:text-sky-600">Enrollment &amp; Contact</a>
-        <a href="login.html" class="block py-2 text-sky-500 font-extrabold"><i class="fas fa-user mr-1.5"></i> Member Login</a>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+          4-4-4-4 Box Breathing Visualizer
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+          Follow the expanding circle: Inhale for 4 seconds, hold gently for 4, exhale slowly for 4, and hold empty for 4. Four complete cycles signal safe physiological calm to the brain.
+        </p>
+
+        <!-- Dynamic Animated Circle -->
+        <div class="py-8 flex justify-center items-center">
+          <div id="breathing-circle" class="w-52 h-52 sm:w-64 sm:h-64 rounded-full border-4 border-teal-500/60 shadow-2xl flex flex-col items-center justify-center transition-all duration-[4000ms] ease-in-out scale-100 bg-teal-500/20">
+            <span id="breathing-phase-text" class="font-heading font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white text-center px-4">Ready to Begin</span>
+            <span id="breathing-timer-text" class="font-mono text-3xl sm:text-4xl font-black text-teal-600 dark:text-teal-400 mt-1">4s</span>
+            <span id="breathing-sub-prompt" class="text-xs text-slate-500 dark:text-slate-400 text-center px-4 mt-1">Click Start Below</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button type="button" id="breathing-toggle-btn" class="px-8 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs shadow-lg shadow-teal-600/30 transition-all flex items-center gap-2">
+            <i class="fas fa-play text-xs"></i> Start Breathing Session
+          </button>
+          <span class="text-xs text-slate-500 dark:text-slate-400">Completed: <strong id="breathing-cycle-count" class="text-teal-600 dark:text-teal-400 font-bold">0</strong> cycles</span>
+        </div>
       </div>
-    </div>
-    <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
-      <button data-open-trial class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md">Book Free Assessment</button>
-    </div>
-  </aside>
-
-  <!-- Page Banner -->
-  <section class="pt-14 pb-0 bg-gradient-to-b from-sky-100/60 to-transparent dark:from-slate-900 dark:to-transparent relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 pb-8">
-      <span class="px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 text-xs font-bold uppercase tracking-wider">World-Class Aquatic Campus</span>
-      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white font-heading">Pool Specs & Aquatic Facilities</h1>
-      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-        Engineered to international FINA Olympic competition benchmarks with medical-grade UV + Ozone water purification, climate-controlled comfort, and biomechanical telemetry.
-      </p>
-    </div>
-
-    <!-- ?? Animated Sliding Ocean Wave Transition -->
-    <div class="ocean-waves-container">
-      <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax-waves">
-          <use xlink:href="#gentle-wave" x="48" y="0" class="wave-layer-1" />
-          <use xlink:href="#gentle-wave" x="48" y="3" class="wave-layer-2" />
-          <use xlink:href="#gentle-wave" x="48" y="5" class="wave-layer-3" />
-          <use xlink:href="#gentle-wave" x="48" y="7" class="wave-layer-4" />
-        </g>
-      </svg>
     </div>
   </section>
 
-  <!-- Main 2 Pools Deep-Dive Section -->
-  <section class="py-16 bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 reveal-fade-up">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
-      <!-- Pool 1: 50m Olympic Racing Arena -->
-      <div class="bg-slate-50 dark:bg-slate-800/80 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700 gallery-ripple-hover grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl card-lift">
-        <div class="lg:col-span-6 p-8 sm:p-10 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 text-xs font-black uppercase">Main Competition Arena</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-heading">50-Meter Olympic 10-Lane Racing Pool</h2>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Constructed to strict FINA standards, featuring anti-turbulent racing lane dividers that eliminate surface wash, adjustable starting blocks with track start wedges, and high-precision Omega electronic touchpads with digital scoreboard feeds.
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-sky-600 dark:text-sky-400 font-heading">50.0m</div>
-              <div class="text-[10px] text-slate-500">Length</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-sky-600 dark:text-sky-400 font-heading">2.2m</div>
-              <div class="text-[10px] text-slate-500">Uniform Depth</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-sky-600 dark:text-sky-400 font-heading">27.5&mdash;C</div>
-              <div class="text-[10px] text-slate-500">Competition Temp</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-sky-600 dark:text-sky-400 font-heading">10 Lanes</div>
-              <div class="text-[10px] text-slate-500">2.5m Width Each</div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6 h-full min-h-[340px] aspect-[16/10] overflow-hidden zoom-on-hover">
-          <img src="assets/img/facility-olympic-50m.jpg" alt="Olympic 50m Competition Arena" class="w-full h-full object-cover card-zoom-img">
-        </div>
+  <!-- Downloadable Clinical CBT Worksheets -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs uppercase font-bold tracking-widest text-teal-600 dark:text-teal-400">Self-Help Downloads</span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 dark:text-white">Clinical Worksheets & Toolkits</h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Printable, therapist-approved guides to practice at home between appointments.</p>
       </div>
 
-      <!-- Pool 2: 25m Heated Learner & Stroke Pool -->
-      <div class="bg-slate-50 dark:bg-slate-800/80 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700 gallery-ripple-hover grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl card-lift">
-        <div class="lg:col-span-6 h-full min-h-[340px] aspect-[16/10] overflow-hidden order-2 lg:order-1 zoom-on-hover">
-          <img src="assets/img/facility-learner-pool.jpg" alt="Heated Indoor Learner Swimming Pool" class="w-full h-full object-cover card-zoom-img">
-        </div>
-        <div class="lg:col-span-6 p-8 sm:p-10 space-y-4 order-1 lg:order-2">
-          <span class="px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 text-xs font-black uppercase">Beginner & Junior Training</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-heading">25-Meter Heated Learner Pool</h2>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Maintained at a soothing 32&mdash;C year-round with gradual incline steps, shallow safety teaching ledges for toddler comfort, and calm water conditions ideal for fearless water acclimation.
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-cyan-600 dark:text-cyan-400 font-heading">25.0m</div>
-              <div class="text-[10px] text-slate-500">Length</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-cyan-600 dark:text-cyan-400 font-heading">0.8m - 1.4m</div>
-              <div class="text-[10px] text-slate-500">Gradual Slope</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-cyan-600 dark:text-cyan-400 font-heading">32.0&mdash;C</div>
-              <div class="text-[10px] text-slate-500">Thermal Heated</div>
-            </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center shadow-sm">
-              <div class="text-lg font-black text-cyan-600 dark:text-cyan-400 font-heading">6 Lanes</div>
-              <div class="text-[10px] text-slate-500">Junior Sized</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 8 Premium Facilities & Amenities Showcase Grid -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 text-xs font-bold uppercase tracking-wider">Campus Infrastructure</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">8 Premium World-Class Facilities</h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400">Everything our swimmers need for comfort, safety, athletic power, and parent convenience.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Feature 1: Olympic 50m Arena -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-olympic-50m.jpg" alt="50m Olympic Racing Arena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-950 text-teal-600 dark:text-teal-400 flex items-center justify-center text-lg">
+              <i class="fas fa-file-pdf"></i>
             </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-sky-600 bg-sky-50 dark:bg-sky-950 px-2.5 py-0.5 rounded-full">Arena 1</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">50m Olympic Competition Pool</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                10-lane FINA competition pool with anti-wave dividers, 2.2m uniform depth, and electronic split timing sensors.
-              </p>
-            </div>
+            <h3 class="font-heading font-bold text-sm text-slate-900 dark:text-white">CBT Thought Record</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              A 5-column exercise to identify cognitive distortions, question automatic thoughts, and write rational alternatives.
+            </p>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-sky-600 flex items-center justify-between">
-            <span>FINA Certified</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
+          <button type="button" class="w-full py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-teal-600 hover:text-white text-xs font-bold transition-colors" onclick="window.showToast('Downloaded CBT Thought Record (PDF)', 'success')">
+            <i class="fas fa-download mr-1.5"></i> Download PDF
+          </button>
         </div>
 
-        <!-- Feature 2: 25m Heated Learner Pool -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-learner-pool.jpg" alt="25m Heated Learner Pool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+              <i class="fas fa-file-pdf"></i>
             </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-cyan-600 bg-cyan-50 dark:bg-cyan-950 px-2.5 py-0.5 rounded-full">Arena 2</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">25m Heated Learner Pool</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Constant 32&mdash;C water temperature with shallow teaching ledges designed for toddler safety and beginner stroke progression.
-              </p>
-            </div>
+            <h3 class="font-heading font-bold text-sm text-slate-900 dark:text-white">5-4-3-2-1 Sensory Grounding</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Quick reference somatic sensory protocol to de-escalate panic attacks and physical dissociation.
+            </p>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-cyan-600 flex items-center justify-between">
-            <span>32&mdash;C Thermal Regulated</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
+          <button type="button" class="w-full py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white text-xs font-bold transition-colors" onclick="window.showToast('Downloaded 5-4-3-2-1 Grounding Sheet (PDF)', 'success')">
+            <i class="fas fa-download mr-1.5"></i> Download PDF
+          </button>
         </div>
 
-        <!-- Feature 3: Electronic Omega Dive Blocks -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-dive-blocks.jpg" alt="Electronic Starting Blocks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fas fa-file-pdf"></i>
             </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-amber-600 bg-amber-50 dark:bg-amber-950 px-2.5 py-0.5 rounded-full">Technology</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Omega Starting Dive Blocks</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Adjustable track start wedges with integrated false-start reaction sensors and live scoreboard telemetry.
-              </p>
-            </div>
+            <h3 class="font-heading font-bold text-sm text-slate-900 dark:text-white">CBT-I Sleep Hygiene Protocol</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Stimulus control checklist and sleep-restriction guidelines to rebuild natural circadian pressure.
+            </p>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-amber-600 flex items-center justify-between">
-            <span>Omega Touchpad Telemetry</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
+          <button type="button" class="w-full py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white text-xs font-bold transition-colors" onclick="window.showToast('Downloaded Sleep Hygiene Protocol (PDF)', 'success')">
+            <i class="fas fa-download mr-1.5"></i> Download PDF
+          </button>
         </div>
 
-        <!-- Feature 4: Dryland Athlete Strength Gym -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-dryland-gym.jpg" alt="Athlete Dryland Strength Gym" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg">
+              <i class="fas fa-file-pdf"></i>
             </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 dark:bg-blue-950 px-2.5 py-0.5 rounded-full">Conditioning</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Athlete Dryland Strength Gym</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Swim-specific resistance cords, medicine ball stations, Olympic barbells, and core strengthening machines.
-              </p>
-            </div>
+            <h3 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Non-Violent Dialogue Sheet</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              4-step relational script: Observation, Feeling, Core Need, and Actionable Request for couples.
+            </p>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-blue-600 flex items-center justify-between">
-            <span>Swim-Specific Equipment</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
-        </div>
-
-        <!-- Feature 5: Biometric Telemetry Studio -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-telemetry.jpg" alt="Video Stroke Telemetry Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-purple-600 bg-purple-50 dark:bg-purple-950 px-2.5 py-0.5 rounded-full">Analytics</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Video Stroke Telemetry Studio</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Multi-angle 4K underwater cameras analyzing stroke cadence, hand pitch, drag resistance, and flip-turn velocity.
-              </p>
-            </div>
-          </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-purple-600 flex items-center justify-between">
-            <span>4K Underwater Capture</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
-        </div>
-
-        <!-- Feature 6: Hydrotherapy Recovery Spa -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-recovery-spa.jpg" alt="Hydrotherapy Recovery Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-emerald-600 bg-emerald-50 dark:bg-emerald-950 px-2.5 py-0.5 rounded-full">Recovery</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Hydrotherapy & Contrast Spa</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Post-race lactic acid flush with temperature contrast pools, hydro-jets, and athlete recovery relaxation lounges.
-              </p>
-            </div>
-          </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-emerald-600 flex items-center justify-between">
-            <span>Contrast Therapy</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
-        </div>
-
-        <!-- Feature 7: Luxury Changing Suites -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-locker-room.jpg" alt="Luxury Changing Suites & Lockers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-slate-600 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Amenities</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Luxury Heated Locker Suites</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Underfloor heating, rainfall warm showers, private family cabins, electronic lockers, and instant swimsuit spin-dryers.
-              </p>
-            </div>
-          </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-slate-600 dark:text-slate-300 flex items-center justify-between">
-            <span>Heated Floors & Private Cabins</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
-        </div>
-
-        <!-- Feature 8: Spectator Viewing Lounge -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
-              <img src="assets/img/facility-spectator-lounge.jpg" alt="Spectator Grandstand & Parent Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-6 space-y-2">
-              <span class="text-[10px] font-black uppercase text-indigo-600 bg-indigo-50 dark:bg-indigo-950 px-2.5 py-0.5 rounded-full">Parent Comfort</span>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Parent Lounge & Grandstand</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Elevated air-conditioned viewing deck with high-speed WiFi, artisanal caf&mdash;, and live digital race split displays.
-              </p>
-            </div>
-          </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-indigo-600 flex items-center justify-between">
-            <span>Climate-Controlled Mezzanine</span>
-            <i class="fas fa-check-circle text-emerald-500"></i>
-          </div>
+          <button type="button" class="w-full py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-amber-600 hover:text-white text-xs font-bold transition-colors" onclick="window.showToast('Downloaded Non-Violent Dialogue Sheet (PDF)', 'success')">
+            <i class="fas fa-download mr-1.5"></i> Download PDF
+          </button>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- Water Purification Tech Section -->
-  <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-        <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">Health & Water Purity</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">UV + Ozone Multi-Stage Purification</h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400">Pure, soft, crystal-clear water with zero eye irritation, no harsh chlorine odor, and gentle skin safety.</p>
+  <!-- 24/7 Crisis Helplines Emergency List -->
+  <section class="py-12 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 rounded-3xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900 space-y-4">
+        <div class="flex items-center gap-3">
+          <i class="fas fa-phone-volume text-rose-600 text-xl"></i>
+          <div>
+            <h3 class="font-heading font-bold text-base text-rose-900 dark:text-rose-200">24/7 Emergency & Crisis Lifelines</h3>
+            <p class="text-xs text-rose-700 dark:text-rose-300">If you or a loved one is in immediate physical danger, call 911 or visit the nearest emergency room.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-800">
+            <p class="font-bold text-slate-900 dark:text-white">988 Lifeline</p>
+            <p class="text-[11px] text-slate-500">Free, confidential call or text 24/7</p>
+            <a href="tel:988" class="text-rose-600 font-bold hover:underline mt-1 inline-block">Dial 988</a>
+          </div>
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-800">
+            <p class="font-bold text-slate-900 dark:text-white">Crisis Text Line</p>
+            <p class="text-[11px] text-slate-500">Text HOME to 741741</p>
+            <a href="sms:741741" class="text-rose-600 font-bold hover:underline mt-1 inline-block">Text Now</a>
+          </div>
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-800">
+            <p class="font-bold text-slate-900 dark:text-white">The Trevor Project</p>
+            <p class="text-[11px] text-slate-500">LGBTQ Youth Crisis Line</p>
+            <a href="tel:18664887386" class="text-rose-600 font-bold hover:underline mt-1 inline-block">1-866-488-7386</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+</main>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- Calmind Footer in Deep Espresso Charcoal -->
+  
+  <!-- Luxury Deep Teal Charcoal Footer -->
+  <footer class="bg-[#11191f] text-[#e5ddd5] pt-16 pb-12 border-t border-white/10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
-        <div class="bg-slate-50 dark:bg-slate-800/80 rounded-3xl p-6 border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-3">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-xl">
-            <i class="fas fa-shield-virus"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">99.9% Pathogen Neutralization</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            High-intensity ultraviolet sterilization lamps destroy all waterborne bacteria and microbes on contact in real time.
-          </p>
-        </div>
-
-        <div class="bg-slate-50 dark:bg-slate-800/80 rounded-3xl p-6 border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-3">
-          <div class="w-12 h-12 rounded-2xl bg-cyan-100 dark:bg-cyan-950 text-cyan-600 flex items-center justify-center text-xl">
-            <i class="fas fa-lungs"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Zero Chloramine Odor</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Ozone gas oxidation breaks down chloramines, creating clean, breathable air above water level for optimal respiratory health.
-          </p>
-        </div>
-
-        <div class="bg-slate-50 dark:bg-slate-800/80 rounded-3xl p-6 border border-slate-200/80 dark:border-slate-700 shadow-sm space-y-3">
-          <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 flex items-center justify-center text-xl">
-            <i class="fas fa-microchip"></i>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">24/7 Digital Chemical Sensors</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Automated sensor probes continuously monitor and adjust pH, water hardness, and temperature with minute-by-minute cloud logs.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA Book Campus Tour -->
-  <section class="py-16 bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-700 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-      <div class="space-y-2 text-center md:text-left rtl:md:text-right">
-        <h2 class="text-2xl sm:text-3xl font-black font-heading">Want to Experience Our Aquatic Campus in Person?</h2>
-        <p class="text-xs sm:text-sm text-cyan-100 max-w-xl">Book a free guided walk-through with our facility director and check out our heated pools and training zones.</p>
-      </div>
-      <button data-open-trial class="px-8 py-4 rounded-2xl bg-white text-sky-700 font-extrabold text-sm shadow-xl hover:bg-cyan-50 transition-all flex-shrink-0">
-        Book Guided Campus Tour
-      </button>
-    </div>
-  </section>
-
-  <!-- Global Footer -->
-  <footer class="site-footer bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-slate-800">
-        <div>
-          <a href="index.html" title="Aquarium Pro Home">
-            <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro Swimming Academy" class="logo-brand-img h-14 w-auto object-contain">
+        <!-- Col 1: Brand & Overview (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 group" title="Mindful Paths">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#D7B7A5] to-[#e6c8b9] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+            <span class="font-heading text-2xl font-bold text-white tracking-tight">Mindful Paths</span>
           </a>
-          <p class="text-xs leading-6 mt-4 max-w-xs">World-class aquatic coaching, learn-to-swim curriculum, and competitive athlete training in a safe and supportive environment.</p>
-          <div class="flex items-center gap-3 mt-5 text-base">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-sky-400"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-sky-400"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="hover:text-sky-400"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.me/18005550298" target="_blank" rel="noopener" aria-label="WhatsApp" class="hover:text-emerald-400"><i class="fab fa-whatsapp"></i></a>
+          <p class="text-xs leading-relaxed text-[#8fa0a8] max-w-sm">
+            A private sanctuary for psychological wellness, evidence-based integrative psychotherapy, and compassionate trauma recovery. Helping individuals, couples, and teens find lasting emotional resilience.
+          </p>
+          
+          <!-- Trust Badges (Clickable & Informative) -->
+          <div class="pt-2 flex flex-wrap gap-2.5">
+            <a href="hipaa.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#f0baa9] text-xs font-semibold border border-white/10 transition-colors" title="Read HIPAA Compliance Standards">
+              <i class="fas fa-shield-alt text-[#D7B7A5]"></i> HIPAA Compliant
+            </a>
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="APA Accredited Clinical Team">
+              <i class="fas fa-certificate text-[#8FAFC0]"></i> APA Accredited
+            </a>
+            <a href="index.html#testimonials" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-[#F8F6F1] text-xs font-semibold border border-white/10 transition-colors" title="Verified Client Rating">
+              <i class="fas fa-star text-amber-400"></i> 4.9/5 Rating
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in text-xs"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Facebook" title="Facebook"><i class="fab fa-facebook-f text-xs"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Instagram" title="Instagram"><i class="fab fa-instagram text-xs"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D7B7A5] hover:text-white flex items-center justify-center text-[#8fa0a8] transition-colors" aria-label="Mindful Paths on Twitter" title="Twitter"><i class="fab fa-twitter text-xs"></i></a>
           </div>
         </div>
-        <div><h4 class="text-xs font-black uppercase tracking-widest text-white mb-4">Academy Directory</h4><div class="space-y-2 text-xs"><a class="block hover:text-sky-400" href="programs.html">Programs by Skill & Age</a><a class="block hover:text-sky-400" href="coaches.html">Certified Faculty</a><a class="block hover:text-sky-400" href="batch-timings.html">Batch Timings Schedule</a><a class="block hover:text-sky-400" href="facilities.html">Pool Specs & Facilities</a><a class="block hover:text-sky-400" href="pricing.html">Pricing Plans</a></div></div>
-        <div><h4 class="text-xs font-black uppercase tracking-widest text-white mb-4">Arena Timings</h4><div class="space-y-2 text-xs leading-relaxed"><p>Mon&ndash;Fri: 05:00 AM &ndash; 09:30 PM</p><p>Saturday: 06:00 AM &ndash; 08:00 PM</p><p>Sunday: 07:00 AM &ndash; 06:00 PM</p><a href="batch-timings.html" class="inline-block mt-2 text-sky-400 hover:text-sky-300">View full schedule &rarr;</a></div></div>
-        <div><h4 class="text-xs font-black uppercase tracking-widest text-white mb-4">Facility Location</h4><div class="space-y-3 text-xs"><a href="https://www.google.com/maps/search/?api=1&query=742+Marina+Aquatic+Way+CA+90210" target="_blank" rel="noopener" class="flex gap-2 hover:text-sky-400"><i class="fas fa-location-dot text-sky-400 mt-0.5"></i><span>742 Marina Aquatic Way, CA 90210</span></a><a href="tel:+18005550299" class="flex gap-2 hover:text-sky-400"><i class="fas fa-phone text-sky-400 mt-0.5"></i><span>+1 (800) 555-0299</span></a><a href="mailto:admissions@aquapro-academy.com" class="flex gap-2 hover:text-sky-400"><i class="fas fa-envelope text-sky-400 mt-0.5"></i><span>Email the academy</span></a></div></div>
+
+        <!-- Col 2: Services (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Therapy Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-individual-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Individual Psychotherapy</a></li>
+            <li><a href="service-couples-therapy.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Couples Counseling</a></li>
+            <li><a href="service-teen-counseling.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Teen &amp; Adolescent Care</a></li>
+            <li><a href="service-trauma-emdr.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Trauma &amp; EMDR Recovery</a></li>
+            <li><a href="service-telehealth.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Telehealth Video Sessions</a></li>
+            <li><a href="service-mindfulness.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="fas fa-chevron-right text-[8px] text-[#D7B7A5]"></i> Mindfulness &amp; Somatics</a></li>
+            <li><a href="services.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-arrow-right text-[9px]"></i> View All 8 Practices</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Sanctuary & Portals (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Client Sanctuary</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="dashboard.html" class="hover:text-[#f0baa9] font-semibold text-[#f0baa9] transition-colors flex items-center gap-1.5"><i class="fas fa-th-large text-[10px] w-3.5"></i> Client Dashboard</a></li>
+            <li><a href="appointments.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-calendar-alt text-[10px] w-3.5"></i> Book Appointments</a></li>
+            <li><a href="messages.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-comments text-[10px] w-3.5"></i> Counselor Messages</a></li>
+            <li><a href="mood-journal.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-smile text-[10px] w-3.5"></i> Mood Tracking Journal</a></li>
+            <li><a href="shared-notes.html" class="hover:text-[#f0baa9] text-[#c0cfd6] transition-colors flex items-center gap-1.5"><i class="far fa-file-alt text-[10px] w-3.5"></i> Shared Session Notes</a></li>
+            <li><a href="admin-dashboard.html" class="hover:text-[#8FAFC0] text-[#8FAFC0] transition-colors flex items-center gap-1.5"><i class="fas fa-user-md text-[10px] w-3.5"></i> Clinician Workspace</a></li>
+            <li><a href="login.html" class="text-[#D7B7A5] font-semibold hover:underline flex items-center gap-1.5 pt-1"><i class="fas fa-sign-in-alt text-[9px] w-3.5"></i> Portal Sign In</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Crisis Support & Immediate Contact (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white">Immediate Care &amp; Contact</h4>
+          
+          <!-- 24/7 Crisis Hotline Card -->
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+            <span class="text-[11px] uppercase font-bold text-[#f0baa9] flex items-center gap-1.5">
+              <i class="fas fa-phone-volume text-[#D7B7A5]"></i> 24/7 Crisis Support Hotline
+            </span>
+            <p class="text-xs text-[#8fa0a8] leading-relaxed">
+              If you or a loved one are experiencing acute emotional distress, dial or text <a href="tel:988" class="font-bold text-[#f0baa9] underline hover:text-white">988</a> or text <span class="font-bold text-[#f0baa9]">HOME to 741741</span> anytime.
+            </p>
+          </div>
+
+          <!-- Direct Contact Links -->
+          <div class="text-xs space-y-2 text-[#c0cfd6]">
+            <div>
+              <a href="https://maps.google.com/?q=450+Lexington+Ave+New+York+NY" target="_blank" rel="noopener noreferrer" class="hover:text-[#f0baa9] transition-colors flex items-start gap-2">
+                <i class="fas fa-map-marker-alt text-[#D7B7A5] mt-0.5 shrink-0"></i>
+                <span>450 Wellness Pavilion Blvd, Suite 300, New York, NY 10016</span>
+              </a>
+            </div>
+            <div>
+              <a href="mailto:care@mindfulpaths.com" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
+                <i class="fas fa-envelope text-[#D7B7A5] shrink-0"></i>
+                <span>care@mindfulpaths.com</span>
+              </a>
+            </div>
+            <div>
+              <a href="tel:+18002738255" class="hover:text-[#f0baa9] transition-colors inline-flex items-center gap-2">
+                <i class="fas fa-phone text-[#D7B7A5] shrink-0"></i>
+                <span>+1 (800) 273-8255</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Working Newsletter Subscribe Form -->
+          <div class="pt-2">
+            <label for="footer-newsletter-input" class="block text-[11px] font-bold text-white uppercase tracking-wider mb-1.5">
+              Quiet Moments Newsletter
+            </label>
+            <form id="footer-newsletter-form" class="flex gap-2">
+              <input type="email" id="footer-newsletter-input" placeholder="Your confidential email..." required class="w-full h-10 px-3.5 rounded-xl bg-white/5 border border-white/15 text-xs text-white placeholder:text-[#6a7b82] focus:outline-none focus:border-[#D7B7A5] transition-colors">
+              <button type="submit" class="px-4 h-10 bg-[#D7B7A5] hover:bg-[#c5a390] text-white rounded-xl text-xs font-bold transition-all shrink-0 flex items-center justify-center" aria-label="Subscribe to newsletter">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+            <span class="text-[10px] text-[#7d8d96] block mt-1">Weekly clinical reflections. Unsubscribe anytime.</span>
+          </div>
+        </div>
+
       </div>
-      <div class="pt-6 flex flex-col sm:flex-row gap-3 justify-between text-[11px] text-slate-500"><span>&copy; 2026 Aquarium Pro Swimming Academy. All rights reserved.</span><span>Safe water &middot; Better coaching &middot; Stronger swimmers</span></div>
+
+      <!-- Bottom Legal & Sitemap Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#7d8d96]">
+        <p>&copy; 2026 Mindful Paths Wellness Group. All rights reserved.</p>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 rtl:space-x-reverse">
+          <a href="privacy.html" class="hover:text-[#F8F6F1] transition-colors">Privacy Policy</a>
+          <a href="hipaa.html" class="hover:text-[#F8F6F1] transition-colors">HIPAA Disclosures</a>
+          <a href="terms.html" class="hover:text-[#F8F6F1] transition-colors">Terms of Care</a>
+          <a href="sitemap.html" class="hover:text-[#F8F6F1] transition-colors">Website Sitemap</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Free Trial Modal (100% Functional) -->
-  <div id="trial-modal" class="modal-container fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
-    <div id="trial-backdrop" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm"></div>
-    <div class="relative bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-slate-200 dark:border-slate-800 z-10">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+  <!-- Universal Appointment Booking Modal -->
+  <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-[#F8F6F1] dark:bg-[#17232b] rounded-3xl shadow-2xl border border-[#EBF1F4] dark:border-white/10 overflow-hidden animate-fade-in">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-5 bg-gradient-to-r from-[#D7B7A5] to-[#e6c8b9] text-white flex items-center justify-between">
         <div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Book Free Swimmer Assessment / Tour</h3>
-          <p class="text-xs text-slate-500">1-on-1 assessment with certified coach in heated pool.</p>
+          <h3 class="font-heading text-xl font-bold">Book a Confidential Session</h3>
+          <p class="text-xs text-white/90">100% HIPAA-compliant & judgment-free intake</p>
         </div>
-        <button id="trial-close" class="p-2 text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+        <button type="button" id="appointment-modal-close" class="text-white/80 hover:text-white w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-colors" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
 
-      <form data-aquapro-form class="mt-4 space-y-3">
-        <input name="coach_note" type="hidden" id="modal-coach-note" value="">
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
-          <input name="full_name" type="text" required placeholder="Rachel Adams" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
-        </div>
-        <div class="grid grid-cols-2 gap-3">
+      <!-- Modal Body / Form -->
+      <form id="appointment-booking-form" class="p-6 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
-            <input name="phone" type="tel" required placeholder="+1 (800) 555-0199" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Your Full Name *</label>
+            <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Tour / Assessment Type</label>
-            <select name="age_group" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
-              <option>Toddlers (Ages 2-4)</option>
-              <option>Kids Junior (Ages 5-11)</option>
-              <option>Teens (Ages 12-17)</option>
-              <option>Adults (18+)</option>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Email Address *</label>
+            <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Session Format *</label>
+            <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
+              <option value="telehealth">Telehealth (Secure Video)</option>
+              <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
+              <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md transition-colors mt-2">
-          Confirm Tour Booking
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Service Desired</label>
+            <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
+              <option value="">Select Service (or General Intake)</option>
+              <option value="individual">Individual Therapy</option>
+              <option value="couples">Couples Counseling</option>
+              <option value="teen">Teen Counseling</option>
+              <option value="trauma">Trauma & EMDR Recovery</option>
+              <option value="cbt">CBT for Anxiety & Panic</option>
+              <option value="telehealth">Online Video Therapy</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Preferred Clinician</label>
+            <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]">
+              <option value="">First Available Specialist</option>
+              <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
+              <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
+              <option value="elena">Elena Rostova, LCSW (Trauma / EMDR)</option>
+              <option value="david">Dr. David Kim, M.D. (Child / Adolescent)</option>
+              <option value="maya">Dr. Maya Patel, Ph.D. (Neuropsychology)</option>
+              <option value="james">James Thornton, LPC (Mindfulness / CBT)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">What brings you to counseling? (Confidential)</label>
+          <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-[#D7B7A5]"></textarea>
+        </div>
+
+        <div class="flex items-start gap-2 pt-1">
+          <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-[#D7B7A5] focus:ring-[#D7B7A5]">
+          <label for="modal-hipaa" class="text-[11px] text-[#27343B] dark:text-[#7d8d96]">
+            I understand that Mindful Paths protects all records under federal HIPAA privacy regulations.
+          </label>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-lg shadow-[#D7B7A5]/30 transition-all duration-200 hover:scale-[1.02] active:scale-95">
+          Submit Confidential Booking Request
         </button>
       </form>
+
     </div>
   </div>
 
+  <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+    <div>
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-[#D7B7A5] flex items-center justify-center text-white">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <span class="font-heading font-bold text-lg text-[#294657] dark:text-white">Mindful Paths</span>
+        </div>
+        <button type="button" id="mobile-menu-close" class="text-[#27343B] hover:text-[#D7B7A5] dark:text-[#EBF1F4] text-base w-8 h-8 rounded-full bg-white dark:bg-[#1e2d37] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Drawer Controls (Theme & RTL) -->
+      <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
+        <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+          <i class="fas fa-moon moon-icon text-xs"></i>
+          <i class="fas fa-sun sun-icon text-xs hidden"></i>
+          <span class="theme-label">Theme</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
+          <i class="fas fa-globe text-xs"></i>
+          <span class="rtl-text">RTL</span>
+        </button>
+      </div>
+
+      <nav class="space-y-1 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 (Services Landing)</a>
+        <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 (The Wellness Journey)</a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> All Services</a>
+        <div class="space-y-0.5 pl-6 rtl:pl-2 rtl:pr-6">
+          <a href="service-individual-therapy.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Individual Therapy & CBT</a>
+          <a href="service-couples-therapy.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Couples & Marriage</a>
+          <a href="service-trauma-emdr.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Trauma Recovery & EMDR</a>
+          <a href="service-teen-counseling.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Teen & Adolescent</a>
+          <a href="service-telehealth.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Telehealth Video Sessions</a>
+          <a href="service-mindfulness.html" class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] text-[11px] opacity-85"><i class="fas fa-angle-right text-[9px] text-[#D7B7A5]"></i> Mindfulness & Somatic</a>
+        </div>
+        <a href="therapists.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-user-md text-[#D7B7A5] w-4"></i> Therapists Directory</a>
+        <a href="therapist-details.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] pl-8 rtl:pl-3 rtl:pr-8 text-xs opacity-80"><i class="fas fa-angle-right text-[10px] w-3"></i> Dr. Sarah Jenkins Profile</a>
+        <a href="resources.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-lungs text-[#D7B7A5] w-4"></i> Resources & Box Breathing</a>
+        <a href="pricing.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-tags text-[#D7B7A5] w-4"></i> Pricing & Insurance</a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-newspaper text-[#D7B7A5] w-4"></i> Wellness Blog</a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5]"><i class="fas fa-envelope text-[#D7B7A5] w-4"></i> Contact & Crisis</a>
+        
+        <div class="pt-3 border-t border-[#EBF1F4] dark:border-white/10 space-y-1">
+          <div class="text-[10px] uppercase font-bold tracking-wider text-[#294657] dark:text-[#8FAFC0] px-3.5 py-1">Client Sanctuary</div>
+          <a href="dashboard.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl bg-white dark:bg-[#1e2d37] text-[#D7B7A5] font-bold shadow-sm"><i class="fas fa-th-large w-4"></i> Client Dashboard</a>
+          <a href="appointments.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37]"><i class="far fa-calendar-alt w-4"></i> Appointments</a>
+          <a href="messages.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37]"><i class="far fa-comments w-4"></i> Messages</a>
+          <a href="mood-journal.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37]"><i class="far fa-smile w-4"></i> Mood Journal</a>
+          <a href="shared-notes.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37]"><i class="far fa-file-alt w-4"></i> Shared Notes</a>
+          <a href="admin-dashboard.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] text-[#8FAFC0]"><i class="fas fa-user-md w-4"></i> Clinician Workspace</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-[#EBF1F4] dark:border-white/10 space-y-3">
+      <a href="login.html" class="nav-auth-btn w-full py-3 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
+        <i class="fas fa-user-circle"></i> <span class="nav-auth-text">Client Login</span>
+      </a>
+      <div class="text-center">
+        <a href="tel:988" class="text-xs text-[#D7B7A5] font-bold hover:underline flex items-center justify-center gap-1.5">
+          <i class="fas fa-phone-alt"></i> 24/7 Crisis Helpline: 988
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-[#D7B7A5] text-white shadow-lg shadow-[#D7B7A5]/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#c5a390] z-30" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up text-xs"></i>
+  </button>
+
+  <!-- Core JavaScript Engines -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/forms.js"></script>
-  <script src="assets/js/nav-active.js"></script>
+  <script src="assets/js/auth.js"></script>
 </body>
 </html>
 
 
+  <!-- Universal Appointment Booking Modal -->
+  <div id="appointment-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-[#FAF5F0] dark:bg-[#1C1917] rounded-3xl shadow-2xl border border-sand-300 dark:border-white/10 overflow-hidden animate-fade-in">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-5 bg-gradient-to-r from-primary-600 to-primary-500 text-white flex items-center justify-between">
+        <div>
+          <h3 class="font-heading text-xl font-bold">Book a Confidential Session</h3>
+          <p class="text-xs text-primary-100">100% HIPAA-compliant & judgment-free intake</p>
+        </div>
+        <button type="button" id="appointment-modal-close" class="text-white/80 hover:text-white w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-colors" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body / Form -->
+      <form id="appointment-booking-form" class="p-6 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Your Full Name *</label>
+            <input type="text" name="name" required placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Email Address *</label>
+            <input type="email" name="email" required placeholder="alex@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Session Format *</label>
+            <select name="format" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+              <option value="telehealth">Telehealth (Secure Video)</option>
+              <option value="manhattan">In-Person (Manhattan Sanctuary)</option>
+              <option value="brooklyn">In-Person (Brooklyn Heights Suite)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Service Desired</label>
+            <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+              <option value="">Select Service (or General Intake)</option>
+              <option value="individual">Individual Therapy</option>
+              <option value="couples">Couples Counseling</option>
+              <option value="teen">Teen Counseling</option>
+              <option value="trauma">Trauma & EMDR Recovery</option>
+              <option value="cbt">CBT for Anxiety & Panic</option>
+              <option value="telehealth">Online Video Therapy</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">Preferred Clinician</label>
+            <select name="therapist" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500">
+              <option value="">First Available Specialist</option>
+              <option value="sarah">Dr. Sarah Jenkins, Psy.D. (Psychologist)</option>
+              <option value="marcus">Dr. Marcus Vance, LMFT (Couples)</option>
+              <option value="elena">Elena Rostova, LCSW (Trauma / EMDR)</option>
+              <option value="david">Dr. David Kim, M.D. (Child / Adolescent)</option>
+              <option value="maya">Dr. Maya Patel, Ph.D. (Neuropsychology)</option>
+              <option value="james">James Thornton, LPC (Mindfulness / CBT)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-sand-200 mb-1">What brings you to counseling? (Confidential)</label>
+          <textarea name="notes" rows="2" placeholder="Briefly describe what you'd like support with..." class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-espresso-800 border border-sand-300 dark:border-white/10 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-primary-500"></textarea>
+        </div>
+
+        <div class="flex items-start gap-2 pt-1">
+          <input type="checkbox" id="modal-hipaa" required class="mt-0.5 rounded text-primary-600 focus:ring-primary-500">
+          <label for="modal-hipaa" class="text-[11px] text-slate-500 dark:text-sand-400">
+            I understand that Calmind protects all information under federal HIPAA guidelines and state medical confidentiality laws.
+          </label>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all duration-200 hover:scale-[1.02] active:scale-95">
+          Submit Confidential Booking Request
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#FAF5F0] dark:bg-[#1C1917] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
+    <div>
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-sand-300/60 dark:border-white/10">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-primary-600 flex items-center justify-center text-white">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <span class="font-heading font-bold text-lg text-slate-900 dark:text-white">Calmind</span>
+        </div>
+        <button type="button" id="mobile-menu-close" class="text-slate-400 hover:text-slate-600 dark:hover:text-sand-200 text-base w-8 h-8 rounded-full bg-white dark:bg-espresso-800 flex items-center justify-center" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-1.5 text-xs font-semibold text-slate-700 dark:text-sand-200">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-home text-primary-500 w-4"></i> Home (Balance & Care)</a>
+        <a href="home-agency.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-brain text-primary-500 w-4"></i> Home 2 (Specialized)</a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-heart text-primary-500 w-4"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-hand-holding-heart text-primary-500 w-4"></i> Services</a>
+        <a href="service-details.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600 pl-7 rtl:pl-3 rtl:pr-7 text-slate-500"><i class="fas fa-angle-right text-[10px] w-3"></i> Service Details (CBT)</a>
+        <a href="therapists.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-user-md text-primary-500 w-4"></i> Therapists</a>
+        <a href="resources.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-lungs text-primary-500 w-4"></i> Self-Help & Breathing</a>
+        <a href="pricing.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-tags text-primary-500 w-4"></i> Pricing & Plans</a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-newspaper text-primary-500 w-4"></i> Wellness Blog</a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-primary-50 dark:hover:bg-espresso-800 hover:text-primary-600"><i class="fas fa-envelope text-primary-500 w-4"></i> Contact</a>
+        <div class="pt-2 border-t border-sand-300/60 dark:border-white/10 space-y-1.5">
+          <a href="client-dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-primary-50 dark:bg-espresso-800 text-primary-700 dark:text-primary-300 font-bold"><i class="fas fa-user-circle w-4"></i> Patient Portal</a>
+          <a href="admin-dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-sand-200 dark:bg-espresso-800 text-slate-800 dark:text-sand-200 font-bold"><i class="fas fa-chart-line w-4"></i> Clinician Workspace</a>
+          <a href="login.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-white dark:hover:bg-espresso-800"><i class="fas fa-sign-in-alt w-4 text-slate-400"></i> Login / Register</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-sand-300/60 dark:border-white/10 space-y-3">
+      <a href="login.html" class="w-full py-3 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95">
+        <i class="fas fa-user-circle"></i> Login / Register
+      </a>
+      <div class="text-center">
+        <a href="tel:988" class="text-xs text-primary-600 font-bold hover:underline flex items-center justify-center gap-1.5">
+          <i class="fas fa-phone-alt"></i> 24/7 Crisis Hotline: 988
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="back-to-top" class="fixed bottom-6 left-6 rtl:left-auto rtl:right-6 w-10 h-10 rounded-full bg-primary-600 text-white shadow-lg shadow-primary-600/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary-700 z-30" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up text-xs"></i>
+  </button>
+
+  <!-- Core JavaScript Engine -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

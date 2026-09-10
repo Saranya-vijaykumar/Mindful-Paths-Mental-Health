@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In &mdash; Aquarium Pro Swimming Academy</title>
-  <meta name="description" content="Sign in to your Aquarium Pro member portal to manage class schedules, coach assessments and swimmer progress.">
-  
-  <link rel="icon" type="image/png" href="assets/img/aquariumpro-logo.jpg">
+  <title>Sign In | Client & Clinician Sanctuary | Mindful Paths — Mental Health Counseling & Psychological Wellness</title>
+  <meta name="description" content="Confidential login portal for clients and clinicians.">
+  <meta property="og:title" content="Sign In | Client & Clinician Sanctuary | Mindful Paths">
+  <meta property="og:description" content="Confidential login portal for clients and clinicians.">
+  <meta property="og:type" content="website">
 
   <!-- Early Theme & Direction Persistence Handler -->
   <script>
     (function() {
-      var t = localStorage.getItem('aquapro_theme');
+      var t = localStorage.getItem('mindfulpaths_theme') || localStorage.getItem('calmind_theme') || localStorage.getItem('serenemind_theme');
       if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-      var d = localStorage.getItem('aquapro_direction');
+      var d = localStorage.getItem('mindfulpaths_direction') || localStorage.getItem('calmind_direction') || localStorage.getItem('serenemind_direction');
       if (d === 'rtl') {
         document.documentElement.setAttribute('dir', 'rtl');
       } else {
@@ -26,7 +27,12 @@
     })();
   </script>
 
-  <!-- Tailwind CSS CDN + Config -->
+  <!-- Google Fonts: Fraunces, Outfit, Cormorant Garamond, and Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN + Mindful Paths Palette Configuration -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,27 +41,74 @@
         extend: {
           colors: {
             primary: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
+              50: '#fdf7f5',
+              100: '#fbeee9',
+              200: '#f7d8ce',
+              300: '#f0baa9',
+              400: '#e6c8b9',
+              500: '#debdb0',
+              600: '#D7B7A5', // Warm Sand / Coastal Blush
+              700: '#c5a390',
+              800: '#8d4b39',
+              900: '#743f32',
+              950: '#3e1e17',
             },
-            accent: {
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
+            cream: {
+              50: '#fcfbfa',
+              100: '#F8F6F1', // Alabaster Background
+              200: '#EBF1F4',
+              300: '#d6e1e8',
+              400: '#d5bda0',
+              500: '#c2a483',
+            },
+            teal: {
+              50: '#f2f7f7',
+              100: '#e0edec',
+              200: '#c3dbd9',
+              300: '#98c1be',
+              400: '#6d95a8',
+              500: '#476f82',
+              600: '#294657', // Deep Oceanic Slate
+              700: '#1e3543',
+              800: '#162731',
+              900: '#1d3340',
+              950: '#0e1f1e',
+            },
+            sage: {
+              50: '#f6f8f6',
+              100: '#ecf2eb',
+              200: '#d8e4d6',
+              300: '#b9ceb7',
+              400: '#9ebc9b',
+              500: '#8FAFC0', // Glacier Mist
+              600: '#6f886d',
+              700: '#576c55',
+            },
+            brown: {
+              50: '#f8f6f5',
+              100: '#ede8e5',
+              200: '#ddd3cd',
+              300: '#7d8d96',
+              400: '#ab9284',
+              500: '#937666',
+              600: '#27343B', // Charcoal body
+              700: '#5c4338',
+              800: '#4d3930',
+              900: '#41312a',
+              950: '#241914',
+            },
+            darkbg: {
+              900: '#11191f',
+              800: '#17232b',
+              700: '#1e2d37',
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Outfit"', 'sans-serif'],
-            rtl: ['"Cairo"', '"Plus Jakarta Sans"', 'sans-serif']
+            sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Fraunces"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Fraunces"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            rtl: ['"Cairo"', '"Outfit"', 'sans-serif']
           }
         }
       }
@@ -65,201 +118,860 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <!-- Top Navigation Header with Responsive Mobile Hamburger -->
-    <!-- Header / Navigation -->
-  <header id="main-header" class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 py-4 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center group" title="Aquarium Pro Home">
-        <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro Swimming Academy" class="logo-brand-img h-12 sm:h-14 w-auto max-w-[210px] object-contain">
-      </a>
+  <section class="min-h-screen flex items-stretch bg-white dark:bg-[#11191f]">
+    
+    <!-- Left Hero Image Banner -->
+    <div class="hidden lg:block lg:w-1/2 relative bg-[#17232b] overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80" alt="Serene forest sunlight canopy" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-1000 hover:scale-100">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#11191f]/95 via-[#17232b]/40 to-transparent flex flex-col justify-between p-12 text-white">
+        <a href="index.html" class="flex items-center gap-3 group w-fit">
+          <div class="w-11 h-11 rounded-2xl bg-[#D7B7A5] flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div>
+            <span class="font-heading text-2xl font-bold tracking-tight block">Mindful Paths</span>
+            <span class="text-[10px] text-[#8FAFC0] tracking-widest uppercase font-semibold">Psychological Sanctuary</span>
+          </div>
+        </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="hidden lg:flex items-center space-x-7 rtl:space-x-reverse text-sm font-bold text-slate-700 dark:text-slate-200">
-        <div class="relative group">
-          <button class="flex items-center gap-1 py-4 hover:text-sky-600 dark:hover:text-sky-400">Home <i class="fas fa-chevron-down text-[9px]"></i></button>
-          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 w-52 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-            <a href="index.html" class="block rounded-xl px-3 py-2.5 hover:bg-sky-50 dark:hover:bg-slate-800">Home 1 &middot; Academy</a>
-            <a href="home-agency.html" class="block rounded-xl px-3 py-2.5 hover:bg-sky-50 dark:hover:bg-slate-800">Home 2 &middot; Wellness</a>
+        <div class="space-y-4 max-w-md">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-[#8FAFC0]">
+            <span class="w-2 h-2 rounded-full bg-[#8FAFC0] animate-pulse"></span>
+            Confidential Client Sanctuary
+          </div>
+          <h2 class="font-heading text-3xl xl:text-4xl font-bold leading-tight">Your private space for continuous healing &amp; clinical reflections.</h2>
+          <p class="text-xs text-[#EBF1F4]/80 leading-relaxed">Protected by HIPAA-compliant 256-bit AES encryption, encrypted session transcripts, and licensed clinical oversight.</p>
+          
+          <div class="pt-4 flex items-center gap-6 border-t border-white/10 text-xs text-white/70">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-shield-alt text-[#8FAFC0]"></i>
+              <span>HIPAA Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-lock text-[#8FAFC0]"></i>
+              <span>End-to-End Encrypted</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-user-check text-[#8FAFC0]"></i>
+              <span>Verified Intake</span>
+            </div>
           </div>
         </div>
-        <a href="about.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">About Us</a>
-        <a href="programs.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Programs</a>
-        <a href="coaches.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Coaches</a>
-        <a href="batch-timings.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Batch Timings</a>
-        <a href="facilities.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Facilities &amp; Pools</a>
-        <a href="pricing.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Pricing</a>
-        <a href="blog.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Blog</a>
-        <a href="contact.html" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Contact</a>
-      </nav>
-
-      <!-- Right Controls: RTL + Dark Mode + CTA -->
-      <div class="flex items-center gap-1.5 sm:gap-2.5 rtl:space-x-reverse shrink-0">
-        <button class="rtl-toggle-btn w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition-colors" title="Toggle RTL">
-          <span class="rtl-text text-[11px] sm:text-xs">RTL</span>
-        </button>
-        <button class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
-          <i class="fas fa-moon moon-icon text-xs sm:text-sm"></i>
-          <i class="fas fa-sun sun-icon hidden text-amber-400 text-xs sm:text-sm"></i>
-        </button>
-        <button data-open-trial class="hidden sm:inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold shadow-lg shadow-sky-500/25 transition-all transform hover:-translate-y-0.5">
-          Book Free Trial
-        </button>
-        <button id="mobile-menu-toggle" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
-          <i class="fas fa-bars text-sm"></i>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile Menu Drawer (100% Functional Hamburger Navigation) -->
-    <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-white dark:bg-slate-900 z-50 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full rtl:-translate-x-full transition-transform duration-300 overflow-y-auto">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
-        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse" title="Back to Home">
-          <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro" class="logo-brand-img h-10 w-auto rounded-lg">
-        </a>
-        <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-slate-600">
-          <i class="fas fa-times text-lg"></i>
-        </button>
-      </div>
-      <div class="py-6 space-y-4 font-bold text-slate-700 dark:text-slate-200 text-sm">
-        <div class="py-2">
-          <span class="block text-sky-600 text-xs uppercase font-black tracking-wider">Home</span>
-          <a href="index.html" class="block py-1 pl-4 text-xs hover:text-sky-600">Home 1 &middot; Academy</a>
-          <a href="home-agency.html" class="block py-1 pl-4 text-xs hover:text-sky-600">Home 2 &middot; Wellness</a>
-        </div>
-        <a href="about.html" class="block py-2 hover:text-sky-600">About Us</a>
-        <a href="programs.html" class="block py-2 hover:text-sky-600">Programs &amp; Curriculums</a>
-        <a href="coaches.html" class="block py-2 hover:text-sky-600">Certified Coaches</a>
-        <a href="batch-timings.html" class="block py-2 hover:text-sky-600">Batch Timings</a>
-        <a href="facilities.html" class="block py-2 hover:text-sky-600">Facilities &amp; Pool Specs</a>
-        <a href="pricing.html" class="block py-2 hover:text-sky-600">Pricing &amp; Memberships</a>
-        <a href="blog.html" class="block py-2 hover:text-sky-600">News &amp; Guides</a>
-        <a href="contact.html" class="block py-2 hover:text-sky-600">Enrollment &amp; Contact</a>
-        <a href="login.html" class="block py-2 text-sky-500 font-extrabold"><i class="fas fa-user mr-1.5"></i> Member Login</a>
       </div>
     </div>
-    <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
-      <button data-open-trial class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md">Book Free Assessment</button>
-    </div>
-  </aside>
 
-  <!-- Login Form Container -->
-  <main class="flex-grow flex items-center justify-center p-4 sm:p-6 my-8 sm:my-12">
-    <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-2xl max-w-md w-full space-y-6">
-      
-      <div class="text-center space-y-2">
-        <a href="index.html" class="inline-block mx-auto mb-2" title="Aquarium Pro Home">
-          <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro Swimming Academy" class="h-14 sm:h-16 w-auto rounded-2xl shadow-md border border-slate-700/30 object-contain mx-auto">
-        </a>
-        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-heading">Welcome Back</h1>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Sign in to manage your family's swimming schedules and milestones.</p>
-      </div>
-
-      <form data-aquapro-form class="space-y-4">
-        <div>
-          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
-          <input name="email" type="email" required placeholder="parent@example.com" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500 transition-colors">
+    <!-- Right Login Form Area -->
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 md:p-12 bg-[#F8F6F1] dark:bg-[#11191f] overflow-y-auto">
+      <div class="w-full max-w-md space-y-5 my-auto">
+        
+        <!-- Top Controls: Back and Theme -->
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#27343B] dark:text-[#7d8d96] hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] transition-colors py-1.5 px-2.5 rounded-lg hover:bg-white/60 dark:hover:bg-white/5">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+          </a>
+          <button type="button" class="theme-toggle-btn w-9 h-9 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10 shadow-sm hover:scale-105 transition-all" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <i class="fas fa-moon moon-icon text-xs"></i>
+            <i class="fas fa-sun sun-icon text-xs hidden"></i>
+          </button>
         </div>
 
-        <div>
-          <div class="flex items-center justify-between mb-1">
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Password</label>
-            <a href="#" onclick="alert('Password reset link sent to your registered email.')" class="text-[11px] font-bold text-sky-600 dark:text-sky-400 hover:underline">Forgot password?</a>
+        <!-- Active Session Banner (Shown if user is already logged in) -->
+        <div id="active-session-banner" class="hidden p-4 rounded-2xl bg-white dark:bg-[#17232b] border border-[#8FAFC0]/40 dark:border-[#8FAFC0]/20 shadow-sm">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] flex items-center justify-center font-bold text-sm">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">Currently logged in as</p>
+                <h4 id="active-user-display" class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1]">Alex Morgan</h4>
+              </div>
+            </div>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-bold">Active</span>
           </div>
-          <input name="password" type="password" required placeholder="&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500 transition-colors">
+          <div class="mt-3 pt-3 border-t border-[#EBF1F4] dark:border-white/10 flex items-center gap-2">
+            <a id="active-dashboard-link" href="dashboard.html" class="flex-1 py-2 px-3 rounded-xl bg-[#294657] hover:bg-[#1e3543] text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span>Enter Sanctuary</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <button type="button" id="active-logout-btn" class="py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/15 text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all" title="Sign out of this session">
+              Sign Out
+            </button>
+          </div>
         </div>
 
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-lg shadow-sky-500/25 transition-all">
-          Sign In to Member Portal
-        </button>
-      </form>
+        <!-- Header Titles -->
+        <div class="space-y-1.5">
+          <span id="portal-subtitle" class="text-xs font-bold uppercase tracking-wider text-[#D7B7A5]">Welcome Back</span>
+          <h1 id="portal-title" class="font-heading text-2xl sm:text-3xl font-bold text-[#294657] dark:text-[#F8F6F1]">Sign in to your sanctuary</h1>
+          <p id="portal-desc" class="text-xs text-[#27343B]/80 dark:text-[#7d8d96]">Manage appointments, review clinical reflection notes, and track your wellness journey.</p>
+        </div>
 
-      <div class="relative flex items-center justify-center my-4">
-        <div class="border-t border-slate-200 dark:border-slate-800 w-full"></div>
-        <span class="bg-white dark:bg-slate-900 px-3 text-[10px] font-bold uppercase tracking-widest text-slate-400">Or Continue With</span>
+        <!-- Portal Role Selector Tabs -->
+        <div class="flex items-center p-1 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 shadow-sm" role="tablist">
+          <button type="button" id="tab-client" role="tab" aria-selected="true" class="flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 bg-[#D7B7A5] text-white shadow-sm">
+            <i class="fas fa-heart text-[11px]"></i>
+            <span>Client Sanctuary</span>
+          </button>
+          <button type="button" id="tab-clinician" role="tab" aria-selected="false" class="flex-1 py-2 px-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 text-[#27343B] dark:text-[#7d8d96] hover:text-[#294657] dark:hover:text-white">
+            <i class="fas fa-user-md text-[11px]"></i>
+            <span>Clinician &amp; Staff</span>
+          </button>
+        </div>
+
+        <!-- Inline Dynamic Feedback Alert Banner -->
+        <div id="login-alert" class="hidden p-3.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition-all"></div>
+
+        <!-- Demo Accounts Quick Fill & 1-Click Instant Login -->
+        <div class="p-3.5 rounded-2xl bg-white dark:bg-[#17232b] border border-[#EBF1F4] dark:border-white/10 space-y-2 shadow-sm">
+          <div class="flex items-center justify-between text-[11px]">
+            <span class="font-bold text-[#294657] dark:text-[#8FAFC0] uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fas fa-key text-[10px] text-[#D7B7A5]"></i>
+              Demo Accounts
+            </span>
+            <span class="text-[#27343B]/70 dark:text-[#7d8d96]/70">Password: <strong class="font-mono text-[#294657] dark:text-[#F8F6F1]">demo12345</strong></span>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" id="demo-client-btn" class="py-2 px-2.5 rounded-xl bg-[#D7B7A5]/15 hover:bg-[#D7B7A5]/25 text-[#D7B7A5] text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-[#D7B7A5]/30" title="Autofill client credentials (Alex Morgan)">
+              <i class="fas fa-user text-[11px]"></i>
+              <span>Client Demo</span>
+            </button>
+            <button type="button" id="demo-admin-btn" class="py-2 px-2.5 rounded-xl bg-[#294657]/15 hover:bg-[#294657]/25 text-[#294657] dark:text-[#8FAFC0] text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-[#294657]/30 dark:border-white/10" title="Autofill clinician credentials (Dr. Sarah Jenkins)">
+              <i class="fas fa-user-md text-[11px]"></i>
+              <span>Clinician Demo</span>
+            </button>
+          </div>
+
+          <!-- Instant 1-Click Login Helper -->
+          <div class="pt-1 flex items-center justify-between text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">
+            <span>Need fast test access?</span>
+            <button type="button" id="instant-login-btn" class="font-bold text-[#D7B7A5] hover:underline flex items-center gap-1">
+              <span>Instant Client Sign In</span>
+              <i class="fas fa-bolt text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Primary Login Form -->
+        <form id="portal-login-form" class="space-y-3.5 text-xs" novalidate>
+          
+          <!-- Email Input Field -->
+          <div>
+            <label for="login-email" class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1 flex items-center justify-between">
+              <span>Email Address <span class="text-[#D7B7A5]">*</span></span>
+              <span id="email-format-badge" class="hidden text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
+                <i class="fas fa-check-circle"></i> Valid format
+              </span>
+            </label>
+            <div class="relative">
+              <input type="email" id="login-email" required placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <i class="far fa-envelope absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
+              <button type="button" id="clear-email-btn" class="hidden absolute right-3 top-3 text-[#27343B]/40 hover:text-[#27343B] dark:text-white/40 dark:hover:text-white" title="Clear email">
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </div>
+            <p id="email-error-msg" class="hidden mt-1 text-[11px] text-red-500 font-medium"></p>
+          </div>
+
+          <!-- Password Input Field -->
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="login-password" class="block font-bold text-[#294657] dark:text-[#EBF1F4]">
+                Password <span class="text-[#D7B7A5]">*</span>
+              </label>
+              <button type="button" id="forgot-pass-btn" class="text-[11px] text-[#D7B7A5] hover:underline font-semibold focus:outline-none">
+                Forgot password?
+              </button>
+            </div>
+            <div class="relative">
+              <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <i class="fas fa-lock absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
+              <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
+                <i class="far fa-eye" id="login-pass-eye"></i>
+              </button>
+            </div>
+            <!-- Caps Lock Warning Badge -->
+            <div id="caps-lock-warning" class="hidden mt-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/50 text-[11px] text-amber-800 dark:text-amber-300 font-medium flex items-center gap-1.5">
+              <i class="fas fa-exclamation-triangle text-amber-500"></i>
+              <span>Caps Lock is ON</span>
+            </div>
+            <p id="password-error-msg" class="hidden mt-1 text-[11px] text-red-500 font-medium"></p>
+          </div>
+
+          <!-- Remember Me & Security Badge -->
+          <div class="flex items-center justify-between text-[11px] pt-1">
+            <label class="flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96] cursor-pointer select-none">
+              <input type="checkbox" id="remember-me" checked class="rounded border-gray-300 text-[#D7B7A5] focus:ring-[#D7B7A5] dark:bg-[#1e2d37] dark:border-white/20">
+              <span>Remember this browser</span>
+            </label>
+            <span class="text-[#27343B]/60 dark:text-[#7d8d96]/70 flex items-center gap-1">
+              <i class="fas fa-shield-alt text-emerald-600 text-[10px]"></i>
+              <span>256-Bit SSL</span>
+            </span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="login-submit-btn" class="w-full py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2">
+            <span id="submit-btn-text">Sign In to Sanctuary</span>
+            <i class="fas fa-arrow-right text-[10px]" id="submit-btn-icon"></i>
+          </button>
+        </form>
+
+        <!-- Alternative SSO Divider -->
+        <div class="relative flex py-1 items-center">
+          <div class="flex-grow border-t border-[#EBF1F4] dark:border-white/10"></div>
+          <span class="flex-shrink mx-3 text-[10px] text-[#27343B]/50 dark:text-white/40 uppercase tracking-widest font-semibold">Or continue with</span>
+          <div class="flex-grow border-t border-[#EBF1F4] dark:border-white/10"></div>
+        </div>
+
+        <!-- SSO Quick Buttons -->
+        <div class="grid grid-cols-2 gap-2.5">
+          <button type="button" id="sso-google-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#D7B7A5] text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
+            <i class="fab fa-google text-red-500"></i>
+            <span>Google</span>
+          </button>
+          <button type="button" id="sso-health-btn" class="py-2.5 px-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 hover:border-[#8FAFC0] text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm hover:scale-[1.01]">
+            <i class="fas fa-hospital-user text-[#8FAFC0]"></i>
+            <span>Epic / MyChart</span>
+          </button>
+        </div>
+
+        <!-- Registration Link -->
+        <div class="text-center text-xs text-[#27343B] dark:text-[#7d8d96] pt-2 border-t border-[#EBF1F4] dark:border-white/10">
+          Don't have an account yet? <a href="register.html" class="font-bold text-[#D7B7A5] hover:underline">Complete Intake Registration</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Password Recovery Modal -->
+  <div id="forgot-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="forgot-modal-title">
+    <div class="bg-white dark:bg-[#17232b] w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#EBF1F4] dark:border-white/10 space-y-4 relative transform transition-transform">
+      
+      <!-- Close Button -->
+      <button type="button" id="close-forgot-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center justify-center transition-colors" aria-label="Close modal">
+        <i class="fas fa-times text-xs"></i>
+      </button>
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-[#D7B7A5]/20 text-[#D7B7A5] flex items-center justify-center text-lg">
+          <i class="fas fa-key"></i>
+        </div>
+        <div>
+          <h3 id="forgot-modal-title" class="font-heading text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">Recover Confidential Account</h3>
+          <p class="text-[11px] text-[#27343B]/70 dark:text-[#7d8d96]">Password reset &amp; account lookup service</p>
+        </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-3">
-        <button type="button" onclick="window.showToast ? window.showToast('Google login simulated successfully.', 'info') : alert('Google Login')" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors">
-          <i class="fab fa-google text-red-500"></i> Google
-        </button>
-        <button type="button" onclick="window.showToast ? window.showToast('Apple login simulated successfully.', 'info') : alert('Apple Login')" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors">
-          <i class="fab fa-apple text-slate-900 dark:text-white"></i> Apple
-        </button>
-      </div>
-
-      <p class="text-center text-xs text-slate-500 dark:text-slate-400 pt-2">
-        New to Aquarium Pro? <a href="register.html" class="text-sky-600 dark:text-sky-400 font-bold hover:underline">Create an account</a>
+      <p class="text-xs text-[#27343B]/80 dark:text-[#7d8d96] leading-relaxed">
+        Enter your registered email address below. We'll search our HIPAA-compliant database and provide your verified credentials immediately.
       </p>
 
-    </div>
-  </main>
+      <!-- Recovery Alert Banner -->
+      <div id="recovery-alert" class="hidden p-3 rounded-xl text-xs font-semibold flex items-center gap-2"></div>
 
-  <!-- Global Clean Footer -->
-  <footer class="site-footer bg-slate-950 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-        <a href="index.html" class="flex items-center gap-2 text-white font-bold text-xs">
-          <img src="assets/img/aquariumpro-logo.png" alt="Aquarium Pro" class="h-6 w-auto rounded">
-          <span>Aquarium Pro Swimming Academy</span>
-        </a>
-      </div>
-      <p class="text-[11px] text-slate-500">&copy; 2026 Aquarium Pro Swimming Academy. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/forms.js"></script>
-  <script src="assets/js/nav-active.js"></script>
-
-  <!-- Free Trial Modal (100% Functional) -->
-  <div id="trial-modal" class="modal-container fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
-    <div id="trial-backdrop" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm"></div>
-    <div class="relative bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-slate-200 dark:border-slate-800 z-10">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+      <!-- Recovery Form -->
+      <form id="recovery-form" class="space-y-3 text-xs">
         <div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Book Free Swimmer Assessment</h3>
-          <p class="text-xs text-slate-500">1-on-1 assessment with certified coach in heated pool.</p>
-        </div>
-        <button id="trial-close" class="p-2 text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
-      </div>
-
-      <form data-aquapro-form class="mt-4 space-y-3">
-        <input name="coach_note" type="hidden" id="modal-coach-note" value="">
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Swimmer / Parent Name</label>
-          <input name="full_name" type="text" required placeholder="Rachel Adams" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
-            <input name="phone" type="tel" required placeholder="+1 (800) 555-0199" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Age Group</label>
-            <select name="age_group" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-sky-500">
-              <option>Toddlers (Ages 2-4)</option>
-              <option>Kids Junior (Ages 5-11)</option>
-              <option>Teens (Ages 12-17)</option>
-              <option>Adults (18+)</option>
-            </select>
+          <label for="recovery-email" class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1">Registered Email Address</label>
+          <div class="relative">
+            <input type="email" id="recovery-email" required placeholder="alex@example.com" class="w-full pl-9 pr-3.5 py-2.5 rounded-xl bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5]">
+            <i class="far fa-envelope absolute left-3 top-3 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md transition-colors mt-2">
-          Confirm Free Trial Session
-        </button>
+
+        <div class="flex items-center gap-2 pt-1">
+          <button type="submit" id="recovery-submit-btn" class="flex-1 py-2.5 px-4 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white font-bold text-xs shadow-md transition-all">
+            Find My Password
+          </button>
+          <button type="button" id="cancel-recovery-btn" class="py-2.5 px-4 rounded-full bg-gray-100 dark:bg-white/10 text-[#27343B] dark:text-[#F8F6F1] text-xs font-semibold hover:bg-gray-200 dark:hover:bg-white/15 transition-all">
+            Cancel
+          </button>
+        </div>
       </form>
+
+      <!-- Recovery Result Card -->
+      <div id="recovery-result" class="hidden p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50 space-y-2">
+        <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-bold text-xs">
+          <i class="fas fa-check-circle"></i>
+          <span>Account Found!</span>
+        </div>
+        <p class="text-[11px] text-emerald-900/90 dark:text-emerald-200">
+          Account for <strong id="recovery-found-name">User</strong> is active.
+        </p>
+        <div class="p-2 rounded-lg bg-white dark:bg-[#11191f] border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-between text-xs">
+          <span class="text-gray-500 dark:text-gray-400">Password:</span>
+          <span class="font-mono font-bold text-[#294657] dark:text-[#F8F6F1]" id="recovery-found-password">demo12345</span>
+        </div>
+        <button type="button" id="recovery-autofill-btn" class="w-full py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition-all shadow-sm flex items-center justify-center gap-1.5">
+          <i class="fas fa-magic"></i>
+          <span>Autofill and Sign In Now</span>
+        </button>
+      </div>
+
+      <div class="pt-2 border-t border-[#EBF1F4] dark:border-white/10 text-[11px] text-[#27343B]/60 dark:text-white/40 flex items-center justify-between">
+        <span>Clinical Hotline: <strong>(555) 234-7890</strong></span>
+        <span>HIPAA Verification</span>
+      </div>
     </div>
   </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      'use strict';
+
+      // -------------------------------------------------------------
+      // Element References
+      // -------------------------------------------------------------
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectTarget = urlParams.get('redirect');
+      const reason = urlParams.get('reason');
+      const isLoggedOut = urlParams.get('logged_out');
+      const isRegistered = urlParams.get('registered');
+      const registeredEmail = urlParams.get('email');
+
+      const alertEl = document.getElementById('login-alert');
+      const emailInput = document.getElementById('login-email');
+      const passInput = document.getElementById('login-password');
+      const clearEmailBtn = document.getElementById('clear-email-btn');
+      const togglePassBtn = document.getElementById('toggle-login-password');
+      const passEye = document.getElementById('login-pass-eye');
+      const capsWarning = document.getElementById('caps-lock-warning');
+      const rememberMeCheck = document.getElementById('remember-me');
+      const form = document.getElementById('portal-login-form');
+      const submitBtn = document.getElementById('login-submit-btn');
+      const submitText = document.getElementById('submit-btn-text');
+      const submitIcon = document.getElementById('submit-btn-icon');
+      const emailBadge = document.getElementById('email-format-badge');
+      const emailErrorMsg = document.getElementById('email-error-msg');
+      const passErrorMsg = document.getElementById('password-error-msg');
+
+      // Portal Tabs
+      const tabClient = document.getElementById('tab-client');
+      const tabClinician = document.getElementById('tab-clinician');
+      const portalTitle = document.getElementById('portal-title');
+      const portalSubtitle = document.getElementById('portal-subtitle');
+      const portalDesc = document.getElementById('portal-desc');
+
+      // Active Session
+      const activeSessionBanner = document.getElementById('active-session-banner');
+      const activeUserDisplay = document.getElementById('active-user-display');
+      const activeDashboardLink = document.getElementById('active-dashboard-link');
+      const activeLogoutBtn = document.getElementById('active-logout-btn');
+
+      // Demo buttons
+      const demoClientBtn = document.getElementById('demo-client-btn');
+      const demoAdminBtn = document.getElementById('demo-admin-btn');
+      const instantLoginBtn = document.getElementById('instant-login-btn');
+      const ssoGoogleBtn = document.getElementById('sso-google-btn');
+      const ssoHealthBtn = document.getElementById('sso-health-btn');
+
+      // Forgot Modal elements
+      const forgotBtn = document.getElementById('forgot-pass-btn');
+      const forgotModal = document.getElementById('forgot-modal');
+      const closeForgotModal = document.getElementById('close-forgot-modal');
+      const cancelRecoveryBtn = document.getElementById('cancel-recovery-btn');
+      const recoveryForm = document.getElementById('recovery-form');
+      const recoveryEmail = document.getElementById('recovery-email');
+      const recoveryAlert = document.getElementById('recovery-alert');
+      const recoveryResult = document.getElementById('recovery-result');
+      const recoveryFoundName = document.getElementById('recovery-found-name');
+      const recoveryFoundPass = document.getElementById('recovery-found-password');
+      const recoveryAutofillBtn = document.getElementById('recovery-autofill-btn');
+
+      let currentRole = 'client'; // 'client' | 'admin'
+      const REMEMBERED_EMAIL_KEY = 'mindfulpaths_remembered_email';
+
+      // -------------------------------------------------------------
+      // 1. Alert Banner Utilities
+      // -------------------------------------------------------------
+      function showAlert(msg, type = 'error') {
+        if (!alertEl) return;
+        alertEl.className = 'p-3.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition-all';
+        if (type === 'error') {
+          alertEl.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200', 'dark:bg-red-950/40', 'dark:text-red-300', 'dark:border-red-800/50');
+          alertEl.innerHTML = '<i class="fas fa-exclamation-circle text-red-500"></i> <span>' + msg + '</span>';
+        } else if (type === 'success') {
+          alertEl.classList.add('bg-emerald-50', 'text-emerald-800', 'border', 'border-emerald-200', 'dark:bg-emerald-950/40', 'dark:text-emerald-300', 'dark:border-emerald-800/50');
+          alertEl.innerHTML = '<i class="fas fa-check-circle text-emerald-500"></i> <span>' + msg + '</span>';
+        } else {
+          alertEl.classList.add('bg-amber-50', 'text-amber-800', 'border', 'border-amber-200', 'dark:bg-amber-950/40', 'dark:text-amber-300', 'dark:border-amber-800/50');
+          alertEl.innerHTML = '<i class="fas fa-info-circle text-amber-500"></i> <span>' + msg + '</span>';
+        }
+        alertEl.classList.remove('hidden');
+      }
+
+      function hideAlert() {
+        if (alertEl) alertEl.classList.add('hidden');
+      }
+
+      // -------------------------------------------------------------
+      // 2. Active Session Detection
+      // -------------------------------------------------------------
+      function checkActiveSession() {
+        if (!window.MindfulAuth) return;
+        const currentUser = window.MindfulAuth.getUser();
+        if (currentUser && currentUser.email) {
+          if (activeSessionBanner) {
+            activeSessionBanner.classList.remove('hidden');
+            if (activeUserDisplay) {
+              activeUserDisplay.textContent = currentUser.name + ' (' + currentUser.email + ')';
+            }
+            if (activeDashboardLink) {
+              activeDashboardLink.href = currentUser.role === 'admin' ? 'admin-dashboard.html' : 'dashboard.html';
+            }
+          }
+        } else {
+          if (activeSessionBanner) activeSessionBanner.classList.add('hidden');
+        }
+      }
+
+      if (activeLogoutBtn) {
+        activeLogoutBtn.addEventListener('click', () => {
+          if (window.MindfulAuth) {
+            window.MindfulAuth.logout('login.html?logged_out=true');
+          }
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 3. Portal Tab Switcher (Client Sanctuary vs Clinician Portal)
+      // -------------------------------------------------------------
+      function setPortalTab(role) {
+        currentRole = role;
+        hideAlert();
+        if (role === 'client') {
+          tabClient.classList.add('bg-[#D7B7A5]', 'text-white', 'shadow-sm');
+          tabClient.classList.remove('text-[#27343B]', 'dark:text-[#7d8d96]');
+          tabClient.setAttribute('aria-selected', 'true');
+
+          tabClinician.classList.remove('bg-[#294657]', 'text-white', 'shadow-sm');
+          tabClinician.classList.add('text-[#27343B]', 'dark:text-[#7d8d96]');
+          tabClinician.setAttribute('aria-selected', 'false');
+
+          if (portalSubtitle) portalSubtitle.textContent = 'Welcome Back';
+          if (portalTitle) portalTitle.textContent = 'Sign in to your sanctuary';
+          if (portalDesc) portalDesc.textContent = 'Manage appointments, review clinical reflection notes, and track your wellness journey.';
+          if (submitText) submitText.textContent = 'Sign In to Sanctuary';
+          emailInput.placeholder = 'alex@example.com';
+        } else {
+          tabClinician.classList.add('bg-[#294657]', 'text-white', 'shadow-sm');
+          tabClinician.classList.remove('text-[#27343B]', 'dark:text-[#7d8d96]');
+          tabClinician.setAttribute('aria-selected', 'true');
+
+          tabClient.classList.remove('bg-[#D7B7A5]', 'text-white', 'shadow-sm');
+          tabClient.classList.add('text-[#27343B]', 'dark:text-[#7d8d96]');
+          tabClient.setAttribute('aria-selected', 'false');
+
+          if (portalSubtitle) portalSubtitle.textContent = 'Clinical Oversight';
+          if (portalTitle) portalTitle.textContent = 'Clinician & Staff Gateway';
+          if (portalDesc) portalDesc.textContent = 'Access encrypted patient records, manage daily clinical caseload, and file therapeutic evaluations.';
+          if (submitText) submitText.textContent = 'Access Clinical Portal';
+          emailInput.placeholder = 'sarah.jenkins@mindfulpaths.com';
+        }
+      }
+
+      if (tabClient) tabClient.addEventListener('click', () => setPortalTab('client'));
+      if (tabClinician) tabClinician.addEventListener('click', () => setPortalTab('admin'));
+
+      // -------------------------------------------------------------
+      // 4. Remember Me Auto-fill & Input Cleanup
+      // -------------------------------------------------------------
+      try {
+        const rememberedEmail = localStorage.getItem(REMEMBERED_EMAIL_KEY);
+        if (rememberedEmail) {
+          emailInput.value = rememberedEmail;
+          if (rememberMeCheck) rememberMeCheck.checked = true;
+          if (clearEmailBtn) clearEmailBtn.classList.remove('hidden');
+          validateEmailFormat(false);
+        }
+      } catch (e) {}
+
+      if (clearEmailBtn) {
+        clearEmailBtn.addEventListener('click', () => {
+          emailInput.value = '';
+          clearEmailBtn.classList.add('hidden');
+          emailBadge.classList.add('hidden');
+          emailInput.focus();
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 5. Query Parameter Messages
+      // -------------------------------------------------------------
+      if (isRegistered === 'true' && registeredEmail) {
+        emailInput.value = registeredEmail;
+        showAlert('Registration successful! Please enter your password to sign in.', 'success');
+        if (clearEmailBtn) clearEmailBtn.classList.remove('hidden');
+        passInput.focus();
+      } else if (reason === 'unauthorized') {
+        showAlert('Please sign in to access your confidential sanctuary.', 'info');
+      } else if (isLoggedOut === 'true') {
+        showAlert('You have been signed out safely.', 'info');
+      }
+
+      // -------------------------------------------------------------
+      // 6. Live Email & Password Validation
+      // -------------------------------------------------------------
+      function isValidEmail(val) {
+        return /^[^s@]+@[^s@]+.[^s@]+$/.test(val.trim());
+      }
+
+      function validateEmailFormat(showError = false) {
+        const val = (emailInput.value || '').trim();
+        if (clearEmailBtn) {
+          if (val.length > 0) clearEmailBtn.classList.remove('hidden');
+          else clearEmailBtn.classList.add('hidden');
+        }
+
+        if (!val) {
+          emailBadge.classList.add('hidden');
+          emailInput.classList.remove('border-red-500', 'border-emerald-500');
+          emailErrorMsg.classList.add('hidden');
+          return false;
+        }
+
+        if (isValidEmail(val)) {
+          emailBadge.classList.remove('hidden');
+          emailInput.classList.remove('border-red-500');
+          emailInput.classList.add('border-emerald-500');
+          emailErrorMsg.classList.add('hidden');
+          return true;
+        } else {
+          emailBadge.classList.add('hidden');
+          if (showError) {
+            emailInput.classList.add('border-red-500');
+            emailInput.classList.remove('border-emerald-500');
+            emailErrorMsg.textContent = 'Please enter a valid email format (e.g. name@domain.com)';
+            emailErrorMsg.classList.remove('hidden');
+          }
+          return false;
+        }
+      }
+
+      emailInput.addEventListener('input', () => validateEmailFormat(false));
+      emailInput.addEventListener('blur', () => validateEmailFormat(true));
+
+      // -------------------------------------------------------------
+      // 7. Password Visibility & Caps Lock Indicator
+      // -------------------------------------------------------------
+      if (togglePassBtn && passInput && passEye) {
+        togglePassBtn.addEventListener('click', () => {
+          const isPassword = passInput.getAttribute('type') === 'password';
+          passInput.setAttribute('type', isPassword ? 'text' : 'password');
+          passEye.classList.toggle('fa-eye', !isPassword);
+          passEye.classList.toggle('fa-eye-slash', isPassword);
+          togglePassBtn.setAttribute('title', isPassword ? 'Hide password' : 'Show password');
+        });
+      }
+
+      passInput.addEventListener('keyup', (e) => {
+        if (e.getModifierState && capsWarning) {
+          const isCaps = e.getModifierState('CapsLock');
+          if (isCaps) capsWarning.classList.remove('hidden');
+          else capsWarning.classList.add('hidden');
+        }
+      });
+
+      passInput.addEventListener('blur', () => {
+        if (capsWarning) capsWarning.classList.add('hidden');
+      });
+
+      // -------------------------------------------------------------
+      // 8. Demo Quick Fill Handlers
+      // -------------------------------------------------------------
+      if (demoClientBtn) {
+        demoClientBtn.addEventListener('click', () => {
+          setPortalTab('client');
+          emailInput.value = 'alex@example.com';
+          passInput.value = 'demo12345';
+          hideAlert();
+          validateEmailFormat(false);
+          passInput.classList.remove('border-red-500');
+          if (window.showToast) window.showToast('Client demo credentials filled (Alex Morgan)', 'info');
+          passInput.focus();
+        });
+      }
+
+      if (demoAdminBtn) {
+        demoAdminBtn.addEventListener('click', () => {
+          setPortalTab('admin');
+          emailInput.value = 'sarah.jenkins@mindfulpaths.com';
+          passInput.value = 'demo12345';
+          hideAlert();
+          validateEmailFormat(false);
+          passInput.classList.remove('border-red-500');
+          if (window.showToast) window.showToast('Clinician demo credentials filled (Dr. Sarah Jenkins)', 'info');
+          passInput.focus();
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 9. Instant Login Helper (1-Click Test Access)
+      // -------------------------------------------------------------
+      function performInstantLogin(userData, targetRedirect) {
+        if (!window.MindfulAuth) return;
+        showAlert('Instant authentication active. Entering sanctuary...', 'success');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Entering Sanctuary...</span>';
+        }
+        const user = window.MindfulAuth.login(userData);
+        if (window.showToast) window.showToast('Welcome back, ' + user.name.split(' ')[0] + '! Opening Sanctuary...', 'success');
+        setTimeout(() => {
+          window.location.href = targetRedirect || (user.role === 'admin' ? 'admin-dashboard.html' : 'dashboard.html');
+        }, 350);
+      }
+
+      if (instantLoginBtn) {
+        instantLoginBtn.addEventListener('click', () => {
+          performInstantLogin({
+            name: 'Alex Morgan',
+            email: 'alex@example.com',
+            role: 'client'
+          }, getNextPage('client'));
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 10. Social / SSO Simulated Sign-In
+      // -------------------------------------------------------------
+      if (ssoGoogleBtn) {
+        ssoGoogleBtn.addEventListener('click', () => {
+          showAlert('Authenticating with Google Single Sign-On...', 'info');
+          if (window.showToast) window.showToast('Connecting to Google Healthcare SSO...', 'info');
+          setTimeout(() => {
+            performInstantLogin({
+              name: 'Alex Morgan (Google)',
+              email: 'alex.morgan.google@example.com',
+              role: 'client'
+            }, getNextPage('client'));
+          }, 600);
+        });
+      }
+
+      if (ssoHealthBtn) {
+        ssoHealthBtn.addEventListener('click', () => {
+          showAlert('Authenticating with Epic MyChart Health Identity...', 'info');
+          if (window.showToast) window.showToast('Connecting to Epic Systems / MyChart...', 'info');
+          setTimeout(() => {
+            performInstantLogin({
+              name: 'Alex Morgan (MyChart)',
+              email: 'alex.morgan.mychart@hospital.org',
+              role: 'client'
+            }, getNextPage('client'));
+          }, 600);
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 11. Target Page Redirection Logic
+      // -------------------------------------------------------------
+      function getNextPage(defaultRole) {
+        if (redirectTarget) {
+          return decodeURIComponent(redirectTarget);
+        }
+        return defaultRole === 'admin' ? 'admin-dashboard.html' : 'dashboard.html';
+      }
+
+      // -------------------------------------------------------------
+      // 12. Main Login Form Submission
+      // -------------------------------------------------------------
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          hideAlert();
+          emailErrorMsg.classList.add('hidden');
+          passErrorMsg.classList.add('hidden');
+          emailInput.classList.remove('border-red-500');
+          passInput.classList.remove('border-red-500');
+
+          const email = (emailInput.value || '').trim();
+          const password = passInput.value || '';
+
+          if (!email) {
+            showAlert('Please enter your registered email address.', 'error');
+            emailInput.classList.add('border-red-500');
+            emailErrorMsg.textContent = 'Email address is required.';
+            emailErrorMsg.classList.remove('hidden');
+            emailInput.focus();
+            return;
+          }
+
+          if (!isValidEmail(email)) {
+            showAlert('Please enter a valid email address.', 'error');
+            emailInput.classList.add('border-red-500');
+            emailErrorMsg.textContent = 'Please enter a valid email format (e.g. alex@example.com).';
+            emailErrorMsg.classList.remove('hidden');
+            emailInput.focus();
+            return;
+          }
+
+          if (!password) {
+            showAlert('Please enter your password.', 'error');
+            passInput.classList.add('border-red-500');
+            passErrorMsg.textContent = 'Password is required to access your sanctuary.';
+            passErrorMsg.classList.remove('hidden');
+            passInput.focus();
+            return;
+          }
+
+          // Handle Remember Me persistence
+          try {
+            if (rememberMeCheck && rememberMeCheck.checked) {
+              localStorage.setItem(REMEMBERED_EMAIL_KEY, email);
+            } else {
+              localStorage.removeItem(REMEMBERED_EMAIL_KEY);
+            }
+          } catch (err) {}
+
+          // Strict verification against registered users in MindfulAuth
+          if (!window.MindfulAuth) {
+            showAlert('Authentication system offline. Please refresh and try again.', 'error');
+            return;
+          }
+
+          const authResult = window.MindfulAuth.authenticate(email, password);
+
+          if (!authResult.success) {
+            showAlert(authResult.error, 'error');
+            passInput.classList.add('border-red-500');
+            if (window.showToast) window.showToast(authResult.error, 'error');
+            return;
+          }
+
+          // Authentication successful!
+          const user = window.MindfulAuth.login(authResult.user);
+          showAlert('Authentication successful! Entering sanctuary...', 'success');
+          if (window.showToast) window.showToast('Welcome back, ' + user.name.split(' ')[0] + '! Opening Sanctuary...', 'success');
+
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Entering Sanctuary...</span>';
+          }
+
+          setTimeout(() => {
+            window.location.href = getNextPage(user.role);
+          }, 450);
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 13. Interactive Forgot Password Recovery Modal
+      // -------------------------------------------------------------
+      function openForgotModal() {
+        if (!forgotModal) return;
+        forgotModal.classList.remove('hidden');
+        if (recoveryAlert) recoveryAlert.classList.add('hidden');
+        if (recoveryResult) recoveryResult.classList.add('hidden');
+        if (recoveryEmail) {
+          recoveryEmail.value = emailInput.value || '';
+          recoveryEmail.focus();
+        }
+      }
+
+      function hideForgotModal() {
+        if (forgotModal) forgotModal.classList.add('hidden');
+      }
+
+      if (forgotBtn) {
+        forgotBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openForgotModal();
+        });
+      }
+
+      if (closeForgotModal) closeForgotModal.addEventListener('click', hideForgotModal);
+      if (cancelRecoveryBtn) cancelRecoveryBtn.addEventListener('click', hideForgotModal);
+
+      // Close modal on backdrop click
+      if (forgotModal) {
+        forgotModal.addEventListener('click', (e) => {
+          if (e.target === forgotModal) hideForgotModal();
+        });
+      }
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && forgotModal && !forgotModal.classList.contains('hidden')) {
+          hideForgotModal();
+        }
+      });
+
+      // Recovery form submission
+      if (recoveryForm) {
+        recoveryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (recoveryAlert) recoveryAlert.classList.add('hidden');
+          if (recoveryResult) recoveryResult.classList.add('hidden');
+
+          const reqEmail = (recoveryEmail.value || '').trim().toLowerCase();
+          if (!reqEmail) {
+            showRecoveryAlert('Please enter your registered email address.', 'error');
+            return;
+          }
+
+          if (!window.MindfulAuth) {
+            showRecoveryAlert('Authentication database not accessible.', 'error');
+            return;
+          }
+
+          const users = window.MindfulAuth.getRegisteredUsers();
+          const match = users.find(u => u.email.toLowerCase() === reqEmail);
+
+          if (match) {
+            if (recoveryResult) {
+              recoveryResult.classList.remove('hidden');
+              if (recoveryFoundName) recoveryFoundName.textContent = match.name;
+              if (recoveryFoundPass) recoveryFoundPass.textContent = match.password;
+            }
+            if (window.showToast) window.showToast('Account record retrieved for ' + match.name, 'success');
+          } else {
+            showRecoveryAlert('No registered account found with this email. Please check spelling or register for an intake account.', 'error');
+          }
+        });
+      }
+
+      function showRecoveryAlert(msg, type) {
+        if (!recoveryAlert) return;
+        recoveryAlert.className = 'p-3 rounded-xl text-xs font-semibold flex items-center gap-2';
+        if (type === 'error') {
+          recoveryAlert.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200', 'dark:bg-red-950/40', 'dark:text-red-300');
+          recoveryAlert.innerHTML = '<i class="fas fa-exclamation-circle text-red-500"></i> <span>' + msg + '</span>';
+        } else {
+          recoveryAlert.classList.add('bg-emerald-50', 'text-emerald-800', 'border', 'border-emerald-200');
+          recoveryAlert.innerHTML = '<i class="fas fa-check-circle text-emerald-500"></i> <span>' + msg + '</span>';
+        }
+        recoveryAlert.classList.remove('hidden');
+      }
+
+      // Autofill retrieved credentials from recovery modal
+      if (recoveryAutofillBtn) {
+        recoveryAutofillBtn.addEventListener('click', () => {
+          const reqEmail = (recoveryEmail.value || '').trim();
+          const reqPass = recoveryFoundPass.textContent;
+          if (reqEmail && reqPass) {
+            emailInput.value = reqEmail;
+            passInput.value = reqPass;
+            hideForgotModal();
+            validateEmailFormat(false);
+            showAlert('Credentials restored! Click Sign In below to enter.', 'success');
+            if (window.showToast) window.showToast('Credentials filled from recovery', 'success');
+            submitBtn.focus();
+          }
+        });
+      }
+
+      // Initial check on load
+      checkActiveSession();
+    });
+  </script>
 </body>
 </html>
-
