@@ -171,7 +171,7 @@
 
         <!-- Pages Dropdown (Matching Reference Theme) -->
         <div class="relative group py-2 flex items-center">
-          <a href="#" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 ">
+          <a href="sitemap.html" class="inline-flex items-center gap-1.5 hover:text-primary-600 dark:hover:text-primary-400 ">
             Pages <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
           <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -274,7 +274,7 @@
     </div>
 
     <!-- Notification Form -->
-    <form class="flex gap-2 max-w-sm mx-auto" onsubmit="event.preventDefault(); window.showToast('Thank you! We will notify you once portal upgrades finish.', 'success'); this.reset();">
+    <form id="maintenance-notify-form" class="flex gap-2 max-w-sm mx-auto" onsubmit="event.preventDefault(); window.showToast('Thank you! We will notify you once portal upgrades finish.', 'success'); this.reset();">
       <input type="email" required placeholder="Enter email for notice..." class="flex-1 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-teal-500">
       <button type="submit" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs shadow">Notify Me</button>
     </form>
