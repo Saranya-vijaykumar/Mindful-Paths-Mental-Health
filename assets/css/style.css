@@ -41,10 +41,10 @@
   --color-section-bg: #E8EFE9;
 
   /* ✨ Accent / Small Highlights: Muted Peach — #D9A38F */
-  --color-accent: #D9A38F;
-  --color-accent-hover: #c9937f;
-  --color-accent-light: #fbf3ef;
-  --color-peach: #D9A38F;
+  --color-accent: #8FAF9A;
+  --color-accent-hover: #7ea08b;
+  --color-accent-light: #E8EFE9;
+  --color-peach: #8FAF9A;
   --color-terracotta: #29483A; /* Buttons: Deep Forest */
   --color-terracotta-hover: #1f372c;
   --color-terracotta-light: #E8EFE9;
@@ -123,7 +123,7 @@ html.dark body {
   background-color: #11191f;
   background-image:
     radial-gradient(ellipse 75% 50% at 15% 10%, rgba(29, 76, 86, 0.28) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(215, 183, 165, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(143, 175, 154, 0.09) 0%, transparent 60%),
     radial-gradient(ellipse 55% 45% at 50% 55%, rgba(41, 70, 87, 0.20) 0%, transparent 60%),
     radial-gradient(ellipse 70% 50% at 80% 90%, rgba(29, 76, 86, 0.25) 0%, transparent 65%);
   background-attachment: fixed;
@@ -687,9 +687,9 @@ html:not(.dark) body {
   background-color: #F8F6F1;
   background-image: 
     radial-gradient(ellipse 70% 50% at 12% 8%, rgba(143, 175, 192, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(215, 183, 165, 0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(143, 175, 154, 0.14) 0%, transparent 65%),
     radial-gradient(ellipse 55% 40% at 50% 50%, rgba(165, 196, 189, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 50% at 18% 85%, rgba(215, 183, 165, 0.10) 0%, transparent 65%),
+    radial-gradient(ellipse 65% 50% at 18% 85%, rgba(143, 175, 154, 0.10) 0%, transparent 65%),
     radial-gradient(ellipse 70% 50% at 85% 90%, rgba(143, 175, 192, 0.10) 0%, transparent 70%);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -931,7 +931,7 @@ html:not(.dark) div.rounded-3xl.bg-\[\#F8F6F1\]:not(#appointment-modal *):not(#c
 html:not(.dark) div.rounded-2xl.bg-white:not(#appointment-modal *):not(#crisis-modal *):not(header):not(nav):not(#main-header):not(table):not(.no-card-gradient):not(.mock-mood-emoji):not(input):not(select):not(textarea) {
   background: linear-gradient(145deg, #FFFFFF 0%, #F5F9FB 52%, #FAF4EE 100%) !important;
   border: 1.5px solid #D2E1EA !important;
-  box-shadow: 0 8px 24px -4px rgba(29, 70, 87, 0.08), 0 3px 10px -2px rgba(215, 183, 165, 0.12) !important;
+  box-shadow: 0 8px 24px -4px rgba(29, 70, 87, 0.08), 0 3px 10px -2px rgba(143, 175, 154, 0.12) !important;
   position: relative;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease !important;
 }
@@ -978,14 +978,14 @@ html:not(.dark) .grid > article:nth-child(6n+2),
 html:not(.dark) .grid > div[class*="rounded-3xl"]:nth-child(6n+2) {
   background: linear-gradient(145deg, #FFFFFF 0%, #FDF7F2 48%, #F9ECE0 100%) !important;
   border: 1.5px solid #ECCDC0 !important;
-  box-shadow: 0 10px 26px -6px rgba(178, 83, 56, 0.1), 0 3px 10px -2px rgba(215, 183, 165, 0.22) !important;
+  box-shadow: 0 10px 26px -6px rgba(178, 83, 56, 0.1), 0 3px 10px -2px rgba(143, 175, 154, 0.22) !important;
 }
 html:not(.dark) .grid > .card-wellness:nth-child(6n+2):hover,
 html:not(.dark) .grid > .clinician-card:nth-child(6n+2):hover,
 html:not(.dark) .grid > article:nth-child(6n+2):hover {
   background: linear-gradient(145deg, #FFFFFF 0%, #FBECE0 45%, #F4DEC6 100%) !important;
   border-color: #B25338 !important;
-  box-shadow: 0 20px 40px -8px rgba(178, 83, 56, 0.18), 0 6px 18px -2px rgba(215, 183, 165, 0.3) !important;
+  box-shadow: 0 20px 40px -8px rgba(178, 83, 56, 0.18), 0 6px 18px -2px rgba(143, 175, 154, 0.3) !important;
 }
 
 /* --- Palette 3: Botanical Sage & Eucalyptus Calm (Grounding, Mindfulness, Zen) --- */
@@ -1765,28 +1765,28 @@ html.dark #mobile-menu-drawer nav a:hover {
 
 :root {
   /* Soft Ambient Light-Coloured Glow Tokens (Terracotta-Peach & Mist Tones) */
-  --glow-ambient-card: 0 10px 30px -4px rgba(217, 163, 143, 0.22), 0 4px 14px -2px rgba(143, 175, 154, 0.16);
-  --glow-ambient-card-hover: 0 18px 40px -6px rgba(217, 163, 143, 0.32), 0 8px 20px -3px rgba(143, 175, 154, 0.22);
-  --glow-ambient-btn: 0 8px 24px -2px rgba(41, 72, 58, 0.3), 0 3px 10px -1px rgba(217, 163, 143, 0.22);
-  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(41, 72, 58, 0.42), 0 4px 14px -1px rgba(217, 163, 143, 0.3);
-  --glow-ambient-icon: 0 6px 18px -2px rgba(215, 183, 165, 0.26), 0 2px 8px -1px rgba(143, 175, 192, 0.18);
-  --glow-ambient-image: 0 14px 34px -6px rgba(215, 183, 165, 0.24), 0 6px 16px -2px rgba(143, 175, 192, 0.18);
-  --glow-ambient-nav: 0 4px 22px -2px rgba(215, 183, 165, 0.18), 0 2px 8px -1px rgba(143, 175, 192, 0.12);
-  --glow-ambient-modal: 0 20px 48px -8px rgba(215, 183, 165, 0.32), 0 8px 22px -3px rgba(143, 175, 192, 0.22);
-  --glow-ambient-interactive: 0 4px 14px -2px rgba(215, 183, 165, 0.24);
+  --glow-ambient-card: 0 10px 30px -4px rgba(143, 175, 154, 0.22), 0 4px 14px -2px rgba(143, 175, 154, 0.16);
+  --glow-ambient-card-hover: 0 18px 40px -6px rgba(143, 175, 154, 0.32), 0 8px 20px -3px rgba(143, 175, 154, 0.22);
+  --glow-ambient-btn: 0 8px 24px -2px rgba(41, 72, 58, 0.3), 0 3px 10px -1px rgba(143, 175, 154, 0.22);
+  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(41, 72, 58, 0.42), 0 4px 14px -1px rgba(143, 175, 154, 0.3);
+  --glow-ambient-icon: 0 6px 18px -2px rgba(143, 175, 154, 0.26), 0 2px 8px -1px rgba(143, 175, 192, 0.18);
+  --glow-ambient-image: 0 14px 34px -6px rgba(143, 175, 154, 0.24), 0 6px 16px -2px rgba(143, 175, 192, 0.18);
+  --glow-ambient-nav: 0 4px 22px -2px rgba(143, 175, 154, 0.18), 0 2px 8px -1px rgba(143, 175, 192, 0.12);
+  --glow-ambient-modal: 0 20px 48px -8px rgba(143, 175, 154, 0.32), 0 8px 22px -3px rgba(143, 175, 192, 0.22);
+  --glow-ambient-interactive: 0 4px 14px -2px rgba(143, 175, 154, 0.24);
 }
 
 html.dark {
   /* Soft Ambient Luminescence in Dark Mode (Warm Terracotta / Twilight Aura) */
-  --glow-ambient-card: 0 10px 30px -4px rgba(0, 0, 0, 0.32), 0 0 24px 2px rgba(215, 183, 165, 0.1), 0 0 1px 1px rgba(255, 255, 255, 0.08);
-  --glow-ambient-card-hover: 0 16px 40px -6px rgba(0, 0, 0, 0.42), 0 0 32px 4px rgba(215, 183, 165, 0.2);
-  --glow-ambient-btn: 0 8px 24px -2px rgba(215, 183, 165, 0.3), 0 0 16px 2px rgba(215, 183, 165, 0.2);
-  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(215, 183, 165, 0.44), 0 0 22px 3px rgba(215, 183, 165, 0.3);
-  --glow-ambient-icon: 0 6px 18px -2px rgba(0, 0, 0, 0.25), 0 0 14px 2px rgba(215, 183, 165, 0.16);
+  --glow-ambient-card: 0 10px 30px -4px rgba(0, 0, 0, 0.32), 0 0 24px 2px rgba(143, 175, 154, 0.1), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  --glow-ambient-card-hover: 0 16px 40px -6px rgba(0, 0, 0, 0.42), 0 0 32px 4px rgba(143, 175, 154, 0.2);
+  --glow-ambient-btn: 0 8px 24px -2px rgba(143, 175, 154, 0.3), 0 0 16px 2px rgba(143, 175, 154, 0.2);
+  --glow-ambient-btn-hover: 0 12px 28px -2px rgba(143, 175, 154, 0.44), 0 0 22px 3px rgba(143, 175, 154, 0.3);
+  --glow-ambient-icon: 0 6px 18px -2px rgba(0, 0, 0, 0.25), 0 0 14px 2px rgba(143, 175, 154, 0.16);
   --glow-ambient-image: 0 14px 34px -6px rgba(0, 0, 0, 0.35), 0 0 24px 2px rgba(143, 175, 192, 0.16);
-  --glow-ambient-nav: 0 4px 22px -2px rgba(0, 0, 0, 0.3), 0 0 18px 2px rgba(215, 183, 165, 0.1);
-  --glow-ambient-modal: 0 20px 48px -8px rgba(0, 0, 0, 0.5), 0 0 32px 3px rgba(215, 183, 165, 0.22);
-  --glow-ambient-interactive: 0 4px 14px -2px rgba(0, 0, 0, 0.25), 0 0 12px 1px rgba(215, 183, 165, 0.18);
+  --glow-ambient-nav: 0 4px 22px -2px rgba(0, 0, 0, 0.3), 0 0 18px 2px rgba(143, 175, 154, 0.1);
+  --glow-ambient-modal: 0 20px 48px -8px rgba(0, 0, 0, 0.5), 0 0 32px 3px rgba(143, 175, 154, 0.22);
+  --glow-ambient-interactive: 0 4px 14px -2px rgba(0, 0, 0, 0.25), 0 0 12px 1px rgba(143, 175, 154, 0.18);
 }
 
 /* 1. All Cards: Soft ambient floating shadow */
@@ -1918,7 +1918,7 @@ button[type="submit"]:hover,
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(215, 183, 165, 0.3), 0 4px 14px -2px rgba(215, 183, 165, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(143, 175, 154, 0.3), 0 4px 14px -2px rgba(143, 175, 154, 0.2) !important;
 }
 
 /* ===================================================================
@@ -1977,13 +1977,13 @@ html.dark #page-transition-overlay {
   margin-top: -62px;
   margin-left: -48px;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(215, 183, 165, 0.55) 0%, rgba(230, 200, 185, 0.25) 50%, rgba(215, 183, 165, 0) 75%);
+  background: radial-gradient(circle, rgba(143, 175, 154, 0.55) 0%, rgba(230, 200, 185, 0.25) 50%, rgba(143, 175, 154, 0) 75%);
   pointer-events: none;
   animation: breatheBloom 3.6s ease-in-out infinite;
 }
 
 html.dark .transition-logo-glow {
-  background: radial-gradient(circle, rgba(215, 183, 165, 0.45) 0%, rgba(143, 175, 192, 0.22) 50%, rgba(215, 183, 165, 0) 75%);
+  background: radial-gradient(circle, rgba(143, 175, 154, 0.45) 0%, rgba(143, 175, 192, 0.22) 50%, rgba(143, 175, 154, 0) 75%);
 }
 
 @keyframes breatheBloom {
@@ -2015,11 +2015,11 @@ html.dark .transition-logo-glow {
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  box-shadow: 0 10px 30px -4px rgba(215, 183, 165, 0.4), 0 0 20px 2px rgba(215, 183, 165, 0.25);
+  box-shadow: 0 10px 30px -4px rgba(143, 175, 154, 0.4), 0 0 20px 2px rgba(143, 175, 154, 0.25);
 }
 
 html.dark .transition-logo-box {
-  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), 0 0 25px 3px rgba(215, 183, 165, 0.3);
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), 0 0 25px 3px rgba(143, 175, 154, 0.3);
 }
 
 .transition-brand-title {
@@ -2111,13 +2111,13 @@ button[type="submit"]:not(.bg-white):not(.bg-teal-600):hover {
   background-color: #1f372c !important;
 }
 
-/* Small Highlights & Accents: Muted Peach (#D9A38F) */
+/* Small Highlights & Accents: Sage Green (#8FAF9A) - No Peach */
 .highlight-peach,
 .text-peach,
 .stylish-italic,
 .font-heading em,
 .font-heading i {
-  color: #D9A38F !important;
+  color: #5c7d67 !important; /* Elegant Deeper Sage for contrast */
 }
 
 /* Cards: White (#FFFFFF) or Soft Sage (#E8EFE9) */
