@@ -812,34 +812,30 @@
 
   
   // ==========================================
-  // 16. Mindful "Breathe In & Breathe Out" Website Opening & Page Transition Suite
+  // 16. Mindful "Breathe In & Breathe Out" Starting Load Experience (Home Page Only)
   // ==========================================
   function initPageTransitions() {
-    let overlay = document.getElementById('page-transition-overlay');
+    const overlay = document.getElementById('page-transition-overlay');
     if (!overlay) return;
 
     const statusTitle = overlay.querySelector('#breathe-status-title');
-    const statusSub = overlay.querySelector('#breathe-status-sub');
-    const pill1 = overlay.querySelector('#step-pill-1');
-    const pill2 = overlay.querySelector('#step-pill-2');
-    const pill3 = overlay.querySelector('#step-pill-3');
-    const skipBtn = overlay.querySelector('#breathe-skip-btn');
 
-    let isDismissed = false;
-    function dismissOverlay() {
-      if (isDismissed || !overlay) return;
-      isDismissed = true;
-      overlay.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease';
-      overlay.classList.add('is-hidden');
-      document.body.classList.remove('page-is-leaving');
+    // Only display on the starting home load
+    const isStartingPage = window.location.pathname.endsWith('index.html') || 
+                           window.location.pathname.endsWith('/') || 
+                           window.location.pathname === '';
+
+    if (!isStartingPage) {
+      overlay.style.display = 'none';
+      return;
     }
 
-    // Only skip when user explicitly clicks the skip button (prevents accidental touch cancellation)
-    if (skipBtn) {
-      skipBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dismissOverlay();
-      });
+    function dismissOverlay() {
+      overlay.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease';
+      overlay.classList.add('is-hidden');
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 650);
     }
 
     // =======================================================
@@ -850,102 +846,26 @@
     // Step 1: INHALE (0.0s – 1.0s)
     overlay.classList.remove('breathe-state-hold', 'breathe-state-exhale');
     overlay.classList.add('breathe-state-inhale');
-    if (pill1 && pill2 && pill3) {
-      pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#294657] text-white shadow-md scale-105';
-      pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-      pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-    }
     if (statusTitle) statusTitle.textContent = 'Breathe in...';
-    if (statusSub) statusSub.textContent = 'Inhale peace & clarity (1s)';
 
     // Step 2: HOLD (1.0s – 2.0s)
     setTimeout(() => {
-      if (isDismissed) return;
       overlay.classList.remove('breathe-state-inhale');
       overlay.classList.add('breathe-state-hold');
-      if (pill1 && pill2 && pill3) {
-        pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-        pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#D7B7A5] text-white shadow-md scale-105';
-        pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-      }
       if (statusTitle) statusTitle.textContent = 'Hold...';
-      if (statusSub) statusSub.textContent = 'Savor the stillness (1s)';
     }, 1000);
 
     // Step 3: EXHALE (2.0s – 3.0s)
     setTimeout(() => {
-      if (isDismissed) return;
       overlay.classList.remove('breathe-state-hold');
       overlay.classList.add('breathe-state-exhale');
-      if (pill1 && pill2 && pill3) {
-        pill1.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-        pill2.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-stone-200 dark:bg-stone-800 text-stone-500';
-        pill3.className = 'px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider transition-all duration-300 bg-[#8FAFC0] text-white shadow-md scale-105';
-      }
       if (statusTitle) statusTitle.textContent = 'Breathe out...';
-      if (statusSub) statusSub.textContent = 'Release tension & arrive (1s)';
     }, 2000);
 
-    // Step 4: Welcome Message (3.0s – 3.8s)
-    setTimeout(() => {
-      if (isDismissed) return;
-      if (statusTitle) statusTitle.textContent = 'Welcome to Mindful Paths';
-      if (statusSub) statusSub.textContent = 'Your psychological sanctuary';
-    }, 3000);
-
-    // Step 5: Graceful Dissolve (3.8s)
+    // Step 4: Graceful Dissolve at 3.0s (No extra text, no interruption)
     setTimeout(() => {
       dismissOverlay();
-    }, 3800);
-
-    // Intercept internal page navigations
-    document.addEventListener('click', (e) => {
-      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
-        return;
-      }
-
-      const link = e.target.closest('a');
-      if (!link) return;
-
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      // Skip non-page links
-      if (
-        href.startsWith('#') ||
-        href.startsWith('javascript:') ||
-        href.startsWith('mailto:') ||
-        href.startsWith('tel:') ||
-        link.target === '_blank' ||
-        link.hasAttribute('download')
-      ) {
-        return;
-      }
-
-      let targetUrl;
-      try {
-        targetUrl = new URL(href, window.location.href);
-      } catch (err) {
-        return;
-      }
-
-      if (targetUrl.origin !== window.location.origin) return;
-      if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search) return;
-
-      e.preventDefault();
-      isDismissed = false;
-      if (statusTitle && statusSub) {
-        statusTitle.textContent = 'Breathe in...';
-        statusSub.textContent = 'Preparing your sanctuary';
-      }
-      overlay.style.transition = 'opacity 0.22s ease-out, visibility 0.22s ease-out';
-      overlay.classList.remove('is-hidden');
-      document.body.classList.add('page-is-leaving');
-
-      requestAnimationFrame(() => {
-        window.location.href = targetUrl.href;
-      });
-    });
+    }, 3000);
   }
 
   function initApp() {
