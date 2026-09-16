@@ -269,9 +269,40 @@
     }
   });
 
+  // Real-time Phone Sanitization: Strictly digits, +, -, (), and spaces only
+  document.addEventListener('input', (e) => {
+    if (e.target && (e.target.name === 'phone' || e.target.type === 'tel' || e.target.id === 'phone')) {
+      const original = e.target.value;
+      const sanitized = original.replace(/[^0-9+\-()\s]/g, '');
+      if (original !== sanitized) {
+        e.target.value = sanitized;
+      }
+    }
+  });
+
   if (appointmentForm) {
     appointmentForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Strict Phone Number Validation: Reject alphabets, require 7-15 digits
+      const phoneInput = appointmentForm.querySelector('input[name="phone"], input[type="tel"]');
+      if (phoneInput) {
+        const phoneVal = phoneInput.value.trim();
+        const hasAlphabets = /[a-zA-Z]/.test(phoneVal);
+        const digits = phoneVal.replace(/\D/g, '');
+
+        if (hasAlphabets || digits.length < 7 || digits.length > 15) {
+          phoneInput.classList.add('border-rose-500', 'ring-2', 'ring-rose-500/20');
+          phoneInput.focus();
+          if (window.showToast) {
+            window.showToast('Please enter a valid phone number with digits only (at least 7–10 digits).', 'error', 4500);
+          }
+          return;
+        } else {
+          phoneInput.classList.remove('border-rose-500', 'ring-2', 'ring-rose-500/20');
+        }
+      }
+
       const submitBtn = appointmentForm.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -607,38 +638,58 @@
     const counters = document.querySelectorAll('[data-counter-target]');
     if (!counters.length) return;
 
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-counter-target'), 10);
-          const prefix = el.getAttribute('data-counter-prefix') || '';
-          const suffix = el.getAttribute('data-counter-suffix') || '';
-          const duration = 1600;
-          const startTime = performance.now();
+    function startCountAnimation(el) {
+      if (el.dataset.counterStarted) return;
+      el.dataset.counterStarted = 'true';
 
-          function updateCount(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const currentVal = Math.floor(easeOut * target);
+      const target = parseFloat(el.getAttribute('data-counter-target')) || 0;
+      const prefix = el.getAttribute('data-counter-prefix') || '';
+      const suffix = el.getAttribute('data-counter-suffix') || '';
+      const decimals = parseInt(el.getAttribute('data-counter-decimals') || '0', 10);
+      const duration = 1600;
+      const startTime = performance.now();
 
-            el.textContent = `${prefix}${currentVal.toLocaleString()}${suffix}`;
+      function updateCount(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentNum = easeOut * target;
+        const displayVal = decimals > 0 ? currentNum.toFixed(decimals) : Math.floor(currentNum).toLocaleString();
 
-            if (progress < 1) {
-              requestAnimationFrame(updateCount);
-            } else {
-              el.textContent = `${prefix}${target.toLocaleString()}${suffix}`;
-            }
-          }
+        el.textContent = `${prefix}${displayVal}${suffix}`;
 
+        if (progress < 1) {
           requestAnimationFrame(updateCount);
-          counterObserver.unobserve(el);
+        } else {
+          const finalVal = decimals > 0 ? target.toFixed(decimals) : target.toLocaleString();
+          el.textContent = `${prefix}${finalVal}${suffix}`;
+        }
+      }
+
+      requestAnimationFrame(updateCount);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCountAnimation(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      counters.forEach(c => {
+        const rect = c.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          startCountAnimation(c);
+        } else {
+          counterObserver.observe(c);
         }
       });
-    }, { threshold: 0.2 });
-
-    counters.forEach(c => counterObserver.observe(c));
+    } else {
+      counters.forEach(startCountAnimation);
+    }
   }
   // ==========================================
   // 12. Clean Static Background (Zero Animations)
