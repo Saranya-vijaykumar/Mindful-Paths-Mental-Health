@@ -716,16 +716,20 @@
       // -------------------------------------------------------------
       function performInstantLogin(userData, targetRedirect) {
         if (!window.MindfulAuth) return;
-        showAlert('Login Successful! Entering Sanctuary...', 'success');
+        showAlert('Login Successful! Welcome to your Sanctuary.', 'success');
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful! Entering Sanctuary...</span>';
+          submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful!</span>';
         }
         const user = window.MindfulAuth.login(userData);
         if (window.showToast) window.showToast('Login Successful! Welcome to Mindful Paths Sanctuary.', 'success');
+        checkActiveSession();
         setTimeout(() => {
-          window.location.href = targetRedirect || (user.role === 'admin' ? 'admin-dashboard.html' : 'dashboard.html');
-        }, 400);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful!</span>';
+          }
+        }, 600);
       }
 
       if (instantLoginBtn) {
@@ -817,14 +821,14 @@
           }
 
           // Show ONLY "Login Successful!" - No errors ever
-          showAlert('Login Successful! Entering Sanctuary...', 'success');
+          showAlert('Login Successful! Welcome to your Sanctuary.', 'success');
           if (window.showToast) {
             window.showToast('Login Successful! Welcome to Mindful Paths Sanctuary.', 'success');
           }
 
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful! Entering Sanctuary...</span>';
+            submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful!</span>';
           }
 
           // Persist login state
@@ -837,10 +841,14 @@
             });
           }
 
+          // Stay on login page - do NOT redirect to dashboard!
+          checkActiveSession();
           setTimeout(() => {
-            const targetPage = getNextPage(role);
-            window.location.href = targetPage;
-          }, 400);
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful!</span>';
+            }
+          }, 600);
         });
       }
 
