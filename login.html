@@ -268,13 +268,13 @@
           <!-- Email Input Field -->
           <div>
             <label for="login-email" class="block font-bold text-[#294657] dark:text-[#EBF1F4] mb-1 flex items-center justify-between">
-              <span>Email Address <span class="text-[#D7B7A5]">*</span></span>
+              <span>Email Address</span>
               <span id="email-format-badge" class="hidden text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
                 <i class="fas fa-check-circle"></i> Valid format
               </span>
             </label>
             <div class="relative">
-              <input type="email" id="login-email" required placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <input type="text" id="login-email" placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
               <i class="far fa-envelope absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
               <button type="button" id="clear-email-btn" class="hidden absolute right-3 top-3 text-[#27343B]/40 hover:text-[#27343B] dark:text-white/40 dark:hover:text-white" title="Clear email">
                 <i class="fas fa-times-circle"></i>
@@ -287,14 +287,14 @@
           <div>
             <div class="flex items-center justify-between mb-1">
               <label for="login-password" class="block font-bold text-[#294657] dark:text-[#EBF1F4]">
-                Password <span class="text-[#D7B7A5]">*</span>
+                Password
               </label>
               <button type="button" id="forgot-pass-btn" class="text-[11px] text-[#D7B7A5] hover:underline font-semibold focus:outline-none">
                 Forgot password?
               </button>
             </div>
             <div class="relative">
-              <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
               <i class="fas fa-lock absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
               <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
                 <i class="far fa-eye" id="login-pass-eye"></i>
@@ -637,35 +637,21 @@
       }
 
       function validateEmailFormat(showError = false) {
-        const val = (emailInput.value || '').trim();
+        const val = (emailInput ? emailInput.value : '').trim();
         if (clearEmailBtn) {
           if (val.length > 0) clearEmailBtn.classList.remove('hidden');
           else clearEmailBtn.classList.add('hidden');
         }
-
-        if (!val) {
-          emailBadge.classList.add('hidden');
-          emailInput.classList.remove('border-red-500', 'border-emerald-500');
-          emailErrorMsg.classList.add('hidden');
-          return false;
-        }
-
-        if (isValidEmail(val)) {
+        if (val.length > 0 && emailBadge) {
           emailBadge.classList.remove('hidden');
           emailInput.classList.remove('border-red-500');
           emailInput.classList.add('border-emerald-500');
-          emailErrorMsg.classList.add('hidden');
-          return true;
-        } else {
+        } else if (emailBadge) {
           emailBadge.classList.add('hidden');
-          if (showError) {
-            emailInput.classList.add('border-red-500');
-            emailInput.classList.remove('border-emerald-500');
-            emailErrorMsg.textContent = 'Please enter a valid email format (e.g. name@domain.com)';
-            emailErrorMsg.classList.remove('hidden');
-          }
-          return false;
+          emailInput.classList.remove('border-red-500', 'border-emerald-500');
         }
+        if (emailErrorMsg) emailErrorMsg.classList.add('hidden');
+        return true;
       }
 
       emailInput.addEventListener('input', () => validateEmailFormat(false));
@@ -730,16 +716,16 @@
       // -------------------------------------------------------------
       function performInstantLogin(userData, targetRedirect) {
         if (!window.MindfulAuth) return;
-        showAlert('Instant authentication active. Entering sanctuary...', 'success');
+        showAlert('Login Successful! Entering Sanctuary...', 'success');
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Entering Sanctuary...</span>';
+          submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful! Entering Sanctuary...</span>';
         }
         const user = window.MindfulAuth.login(userData);
-        if (window.showToast) window.showToast('Welcome back, ' + user.name.split(' ')[0] + '! Opening Sanctuary...', 'success');
+        if (window.showToast) window.showToast('Login Successful! Welcome to Mindful Paths Sanctuary.', 'success');
         setTimeout(() => {
           window.location.href = targetRedirect || (user.role === 'admin' ? 'admin-dashboard.html' : 'dashboard.html');
-        }, 350);
+        }, 400);
       }
 
       if (instantLoginBtn) {
@@ -808,84 +794,53 @@
       }
 
       // -------------------------------------------------------------
-      // 12. Main Login Form Submission
+      // 12. Main Login Form Submission (Dummy Mode - Only "Login Successful")
       // -------------------------------------------------------------
       if (form) {
         form.addEventListener('submit', (e) => {
           e.preventDefault();
           hideAlert();
-          emailErrorMsg.classList.add('hidden');
-          passErrorMsg.classList.add('hidden');
-          emailInput.classList.remove('border-red-500');
-          passInput.classList.remove('border-red-500');
+          if (emailErrorMsg) emailErrorMsg.classList.add('hidden');
+          if (passErrorMsg) passErrorMsg.classList.add('hidden');
+          if (emailInput) emailInput.classList.remove('border-red-500');
+          if (passInput) passInput.classList.remove('border-red-500');
 
-          const email = (emailInput.value || '').trim();
-          const password = passInput.value || '';
-
-          if (!email) {
-            showAlert('Please enter your registered email address.', 'error');
-            emailInput.classList.add('border-red-500');
-            emailErrorMsg.textContent = 'Email address is required.';
-            emailErrorMsg.classList.remove('hidden');
-            emailInput.focus();
-            return;
-          }
-
-          if (!isValidEmail(email)) {
-            showAlert('Please enter a valid email address.', 'error');
-            emailInput.classList.add('border-red-500');
-            emailErrorMsg.textContent = 'Please enter a valid email format (e.g. alex@example.com).';
-            emailErrorMsg.classList.remove('hidden');
-            emailInput.focus();
-            return;
-          }
-
-          if (!password) {
-            showAlert('Please enter your password.', 'error');
-            passInput.classList.add('border-red-500');
-            passErrorMsg.textContent = 'Password is required to access your sanctuary.';
-            passErrorMsg.classList.remove('hidden');
-            passInput.focus();
-            return;
-          }
-
-          // Handle Remember Me persistence
-          try {
-            if (rememberMeCheck && rememberMeCheck.checked) {
-              localStorage.setItem(REMEMBERED_EMAIL_KEY, email);
-            } else {
-              localStorage.removeItem(REMEMBERED_EMAIL_KEY);
+          const rawEmail = emailInput ? (emailInput.value || '').trim() : '';
+          const email = rawEmail || (currentRole === 'admin' ? 'sarah.jenkins@mindfulpaths.com' : 'alex@example.com');
+          const role = (currentRole === 'admin' || email.includes('admin') || email.includes('dr.')) ? 'admin' : 'client';
+          let displayName = role === 'admin' ? 'Dr. Sarah Jenkins' : 'Alex Morgan';
+          if (rawEmail && rawEmail.includes('@') && !rawEmail.startsWith('alex@')) {
+            const prefix = rawEmail.split('@')[0].replace(/[._-]/g, ' ');
+            if (prefix.length > 0) {
+              displayName = prefix.charAt(0).toUpperCase() + prefix.slice(1);
             }
-          } catch (err) {}
-
-          // Strict verification against registered users in MindfulAuth
-          if (!window.MindfulAuth) {
-            showAlert('Authentication system offline. Please refresh and try again.', 'error');
-            return;
           }
 
-          const authResult = window.MindfulAuth.authenticate(email, password);
-
-          if (!authResult.success) {
-            showAlert(authResult.error, 'error');
-            passInput.classList.add('border-red-500');
-            if (window.showToast) window.showToast(authResult.error, 'error');
-            return;
+          // Show ONLY "Login Successful!" - No errors ever
+          showAlert('Login Successful! Entering Sanctuary...', 'success');
+          if (window.showToast) {
+            window.showToast('Login Successful! Welcome to Mindful Paths Sanctuary.', 'success');
           }
-
-          // Authentication successful!
-          const user = window.MindfulAuth.login(authResult.user);
-          showAlert('Authentication successful! Entering sanctuary...', 'success');
-          if (window.showToast) window.showToast('Welcome back, ' + user.name.split(' ')[0] + '! Opening Sanctuary...', 'success');
 
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Entering Sanctuary...</span>';
+            submitBtn.innerHTML = '<i class="fas fa-check-circle text-emerald-400 mr-1.5"></i> <span>Login Successful! Entering Sanctuary...</span>';
+          }
+
+          // Persist login state
+          let loggedUser = null;
+          if (window.MindfulAuth) {
+            loggedUser = window.MindfulAuth.login({
+              name: displayName,
+              email: email,
+              role: role
+            });
           }
 
           setTimeout(() => {
-            window.location.href = getNextPage(user.role);
-          }, 450);
+            const targetPage = getNextPage(role);
+            window.location.href = targetPage;
+          }, 400);
         });
       }
 

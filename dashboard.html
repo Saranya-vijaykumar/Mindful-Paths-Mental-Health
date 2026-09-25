@@ -129,10 +129,12 @@
       try {
         var user = JSON.parse(localStorage.getItem('mindfulpaths_auth_user') || localStorage.getItem('calmind_auth_user'));
         if (!user || !user.email) {
-          window.location.replace('login.html?redirect=' + encodeURIComponent('dashboard.html') + '&reason=unauthorized');
+          user = { name: 'Alex Morgan', email: 'alex@example.com', role: 'client' };
+          localStorage.setItem('mindfulpaths_auth_user', JSON.stringify(user));
         }
       } catch(e) {
-        window.location.replace('login.html?redirect=' + encodeURIComponent('dashboard.html') + '&reason=unauthorized');
+        var fallback = { name: 'Alex Morgan', email: 'alex@example.com', role: 'client' };
+        localStorage.setItem('mindfulpaths_auth_user', JSON.stringify(fallback));
       }
     })();
   </script>
@@ -159,7 +161,7 @@
       <!-- Desktop Links -->
       <nav class="hidden md:flex items-center gap-5 text-xs font-bold text-[#27343B] dark:text-[#EBF1F4]">
         <a href="dashboard.html" class="hover:text-[#D7B7A5] py-1 transition-colors text-[#D7B7A5] border-b-2 border-[#D7B7A5]">
-          <i class="fas fa-th-large mr-1"></i> Sanctuary
+          <i class="fas fa-th-large mr-1"></i> Dashboard
         </a>
         <a href="appointments.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
           <i class="far fa-calendar-alt mr-1"></i> Appointments
@@ -172,6 +174,9 @@
         </a>
         <a href="shared-notes.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
           <i class="far fa-file-alt mr-1"></i> Shared Notes
+        </a>
+        <a href="index.html" class="hover:text-[#D7B7A5] py-1 transition-colors flex items-center gap-1">
+          <i class="fas fa-home mr-1"></i> Home
         </a>
       </nav>
 
@@ -199,7 +204,7 @@
 
     <!-- Mobile Subnav Bar -->
     <div class="md:hidden flex items-center justify-around py-2 border-t border-[#EBF1F4] dark:border-white/10 text-[11px] font-bold text-[#27343B] dark:text-[#EBF1F4]">
-      <a href="dashboard.html" class="text-[#D7B7A5]"><i class="fas fa-th-large block text-center text-xs"></i> Overview</a>
+      <a href="dashboard.html" class="text-[#D7B7A5]"><i class="fas fa-th-large block text-center text-xs"></i> Dashboard</a>
       <a href="appointments.html" class=""><i class="far fa-calendar-alt block text-center text-xs"></i> Sessions</a>
       <a href="messages.html" class=""><i class="far fa-comments block text-center text-xs"></i> Chat</a>
       <a href="mood-journal.html" class=""><i class="far fa-smile block text-center text-xs"></i> Mood</a>
