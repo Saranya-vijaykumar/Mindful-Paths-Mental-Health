@@ -203,13 +203,12 @@ window.MindfulAuth = (function () {
     document.querySelectorAll('.nav-auth-btn').forEach(btn => {
       if (!isAuthPage) {
         if (user && user.email) {
-          btn.href = user.role === 'admin' ? 'admin-dashboard.html' : 'dashboard.html';
+          btn.href = 'login.html';
           const label = btn.querySelector('.nav-auth-text');
           if (label) {
-            const firstName = user.name ? user.name.split(' ')[0] : 'Portal';
-            label.textContent = firstName;
+            label.textContent = 'Client Login';
           }
-          btn.title = 'Access Sanctuary (' + user.name + ')';
+          btn.title = 'Sign In to Portal (Active session: ' + user.name + ')';
         } else {
           btn.href = 'login.html';
           const label = btn.querySelector('.nav-auth-text');

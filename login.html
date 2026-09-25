@@ -274,7 +274,7 @@
               </span>
             </label>
             <div class="relative">
-              <input type="text" id="login-email" placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <input type="text" id="login-email" value="alex@example.com" placeholder="alex@example.com" autocomplete="email" class="w-full pl-9 pr-9 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
               <i class="far fa-envelope absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
               <button type="button" id="clear-email-btn" class="hidden absolute right-3 top-3 text-[#27343B]/40 hover:text-[#27343B] dark:text-white/40 dark:hover:text-white" title="Clear email">
                 <i class="fas fa-times-circle"></i>
@@ -294,7 +294,7 @@
               </button>
             </div>
             <div class="relative">
-              <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
+              <input type="password" id="login-password" value="demo12345" placeholder="••••••••" autocomplete="current-password" class="w-full pl-9 pr-10 py-3 rounded-xl bg-white dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10 text-xs text-[#294657] dark:text-[#F8F6F1] focus:outline-none focus:border-[#D7B7A5] dark:focus:border-[#D7B7A5] transition-all shadow-sm">
               <i class="fas fa-lock absolute left-3 top-3.5 text-[#27343B]/40 dark:text-[#7d8d96]/50"></i>
               <button type="button" id="toggle-login-password" class="absolute right-3 top-2.5 text-[#27343B]/60 dark:text-[#7d8d96]/60 hover:text-[#D7B7A5] dark:hover:text-[#D7B7A5] p-1.5 transition-colors focus:outline-none" aria-label="Toggle password visibility" title="Show/hide password">
                 <i class="far fa-eye" id="login-pass-eye"></i>
@@ -572,7 +572,7 @@
           if (portalTitle) portalTitle.textContent = 'Sign in to your sanctuary';
           if (portalDesc) portalDesc.textContent = 'Manage appointments, review clinical reflection notes, and track your wellness journey.';
           if (submitText) submitText.textContent = 'Sign In to Sanctuary';
-          emailInput.placeholder = 'alex@example.com';
+          emailInput.placeholder = 'alex@example.com'; emailInput.value = 'alex@example.com'; passInput.value = 'demo12345';
         } else {
           tabClinician.classList.add('bg-[#294657]', 'text-white', 'shadow-sm');
           tabClinician.classList.remove('text-[#27343B]', 'dark:text-[#7d8d96]');
@@ -586,7 +586,7 @@
           if (portalTitle) portalTitle.textContent = 'Clinician & Staff Gateway';
           if (portalDesc) portalDesc.textContent = 'Access encrypted patient records, manage daily clinical caseload, and file therapeutic evaluations.';
           if (submitText) submitText.textContent = 'Access Clinical Portal';
-          emailInput.placeholder = 'sarah.jenkins@mindfulpaths.com';
+          emailInput.placeholder = 'sarah.jenkins@mindfulpaths.com'; emailInput.value = 'sarah.jenkins@mindfulpaths.com'; passInput.value = 'demo12345';
         }
       }
 
