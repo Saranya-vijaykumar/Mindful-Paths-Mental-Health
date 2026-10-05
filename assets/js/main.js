@@ -193,6 +193,28 @@
     if (drawerLink) {
       closeMobileMenu();
     }
+
+    // 5. Desktop/Tablet (1024px) Dropdown Toggle Support
+    const navDropdownTrigger = e.target.closest('header nav .group > a');
+    if (navDropdownTrigger && window.innerWidth >= 1024) {
+      const parentGroup = navDropdownTrigger.closest('.group');
+      const dropdownMenu = parentGroup ? parentGroup.querySelector('div.absolute') : null;
+      if (dropdownMenu) {
+        const hasOpenClass = parentGroup.classList.contains('is-open');
+        document.querySelectorAll('header nav .group.is-open').forEach(g => {
+          if (g !== parentGroup) g.classList.remove('is-open');
+        });
+        if (!hasOpenClass) {
+          if (e.pointerType === 'touch' || e.target.closest('i.fa-chevron-down') || window.innerWidth <= 1024) {
+            e.preventDefault();
+            parentGroup.classList.add('is-open');
+            return;
+          }
+        }
+      }
+    } else if (!e.target.closest('header nav .group')) {
+      document.querySelectorAll('header nav .group.is-open').forEach(g => g.classList.remove('is-open'));
+    }
   });
 
   // ==========================================

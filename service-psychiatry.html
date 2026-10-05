@@ -149,11 +149,14 @@
   </div>
 
   <!-- Main Navbar Header -->
+    <!-- =========================================================================
+       GLOBAL NAVIGATION HEADER (Accessible, Responsive & Theme-Aware)
+       ========================================================================= -->
   <header id="main-header" class="sticky top-0 z-40 bg-[#F8F6F1]/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#d6e1e8]/60 dark:border-white/10 transition-all duration-300 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 lg:gap-4">
       
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 group shrink-0" title="Mindful Paths — Mental Health Counseling & Psychological Wellness">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0" title="Mindful Paths — Mental Health Counseling">
         <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#D7B7A5] to-[#e6c8b9] flex items-center justify-center text-white shadow-md shadow-[#D7B7A5]/25 group-hover:scale-105 transition-transform duration-300">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -164,15 +167,15 @@
         </span>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
+      <!-- Desktop Nav Menu (Responsive Spacing at 1024px) -->
+      <nav class="hidden lg:flex items-center gap-3.5 lg:gap-4 xl:gap-7 text-xs lg:text-[13px] xl:text-sm font-semibold text-[#27343B] dark:text-[#EBF1F4]">
         <!-- Home Dropdown -->
         <div class="relative group py-2 flex items-center">
-          <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] ">
-            Home <i class="fas fa-chevron-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          <a href="index.html" class="inline-flex items-center gap-1 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+            Home <i class="fas fa-chevron-down text-[9px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
           </a>
-          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2">
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2 space-y-1">
               <a href="index.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
                 <i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 &middot; Multipurpose Services
               </a>
@@ -183,39 +186,79 @@
           </div>
         </div>
 
-        <a href="about.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">About</a>
+        <a href="about.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">About</a>
 
-        <!-- Services Link (Direct - No Dropdown) -->
-        <a href="services.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Services</a>
+        <!-- Services Dropdown -->
+        <div class="relative group py-2 flex items-center">
+          <a href="services.html" class="inline-flex items-center gap-1 text-[#D7B7A5] dark:text-[#e6c8b9] font-bold">
+            Services <i class="fas fa-chevron-down text-[9px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2 space-y-0.5">
+              <a href="services.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> All Therapy Directory
+              </a>
+              <a href="service-individual-therapy.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-brain text-[#D7B7A5] w-4"></i> Individual Psychotherapy
+              </a>
+              <a href="service-couples-therapy.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-hands-holding-child text-[#D7B7A5] w-4"></i> Couples & Marriage
+              </a>
+              <a href="service-trauma-emdr.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-feather-pointed text-[#D7B7A5] w-4"></i> Trauma & EMDR Recovery
+              </a>
+              <a href="service-teen-counseling.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-user-graduate text-[#D7B7A5] w-4"></i> Teen & Adolescent Care
+              </a>
+              <a href="service-telehealth.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-laptop-medical text-[#D7B7A5] w-4"></i> Telehealth Video Care
+              </a>
+              <a href="service-mindfulness.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-spa text-[#D7B7A5] w-4"></i> Mindfulness & Somatics
+              </a>
+            </div>
+          </div>
+        </div>
 
-        <!-- Therapists Link (Direct - No Dropdown) -->
-        <a href="therapists.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Therapists</a>
+        <!-- Therapists Dropdown -->
+        <div class="relative group py-2 flex items-center">
+          <a href="therapists.html" class="inline-flex items-center gap-1 hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+            Therapists <i class="fas fa-chevron-down text-[9px] opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div class="absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-[#17232b] rounded-2xl shadow-xl border border-[#EBF1F4] dark:border-white/10 p-2">
+              <a href="therapists.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-user-md text-[#D7B7A5] w-4"></i> Clinician Directory
+              </a>
+              <a href="therapist-details.html" class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold hover:bg-[#fdf7f5] dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">
+                <i class="fas fa-id-card-alt text-[#D7B7A5] w-4"></i> Dr. Sarah Jenkins Profile
+              </a>
+            </div>
+          </div>
+        </div>
 
-        <a href="resources.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Resources</a>
-        <a href="pricing.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Pricing</a>
-
-        <!-- Blog Link (Direct - No Dropdown) -->
-        <a href="blog.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Blog</a>
-
-        <a href="contact.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors ">Contact</a>
+        <a href="resources.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Resources</a>
+        <a href="pricing.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Pricing</a>
+        <a href="blog.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Blog</a>
+        <a href="contact.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Contact</a>
         <a href="dashboard.html" class="inline-flex items-center hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] transition-colors">Dashboard</a>
       </nav>
 
-      <!-- Right Action Controls (Desktop Only) -->
-      <div class="hidden lg:flex items-center gap-3 shrink-0">
-        <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
-          <i class="fas fa-moon moon-icon text-xs"></i>
-          <i class="fas fa-sun sun-icon text-xs hidden"></i>
+      <!-- Right Action Controls (Desktop Only - Equal h-11 Heights & Iconless RTL) -->
+      <div class="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
+        <!-- Theme Toggle: h-11 -->
+        <button type="button" class="theme-toggle-btn w-11 h-11 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] flex items-center justify-center transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon moon-icon text-sm"></i>
+          <i class="fas fa-sun sun-icon text-sm hidden"></i>
         </button>
 
-        <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center gap-1.5" title="Toggle Direction" aria-label="Toggle Direction">
-          <i class="fas fa-globe text-xs"></i> <span class="rtl-text">RTL</span>
+        <!-- RTL Toggle: h-11, text only (no globe icon) -->
+        <button type="button" class="rtl-toggle-btn px-4 h-11 rounded-full bg-white dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] dark:hover:text-[#e6c8b9] text-xs font-bold transition-colors border border-[#EBF1F4] dark:border-white/10 shadow-sm flex items-center justify-center" title="Toggle Direction" aria-label="Toggle Direction">
+          <span class="rtl-text tracking-wider">RTL</span>
         </button>
 
-        <!-- Terracotta Pill Client Login Button -->
-        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-6 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
+        <!-- Terracotta Pill Client Login Button: h-11 -->
+        <a href="login.html" class="nav-auth-btn inline-flex items-center justify-center gap-2 px-5 xl:px-6 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all duration-200 hover:scale-105 active:scale-95 shrink-0" title="Sign In to Portal">
           <i class="fas fa-user-circle text-sm"></i> <span class="nav-auth-text">Client Login</span>
         </a>
       </div>
@@ -230,19 +273,16 @@
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <div class="py-4 bg-[#EBF1F4]/40 dark:bg-[#17232b] border-b border-[#EBF1F4] dark:border-white/10 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#27343B] dark:text-[#7d8d96]">
-      <a href="index.html" class="hover:text-[#D7B7A5] transition-colors">Home</a>
-      <span>/</span>
-      <a href="services.html" class="hover:text-[#D7B7A5] transition-colors">Services</a>
-      <span>/</span>
-      <span class="text-[#294657] dark:text-[#F8F6F1] font-bold">Telehealth Video Care</span>
-    </div>
-  </div>
+  
 
   <!-- Main Service Detail Section -->
-  <section class="py-16 bg-white dark:bg-[#17232b] transition-colors">
+  <section class="relative py-16 bg-white dark:bg-[#17232b] transition-colors">
+    <!-- Ambient Contextual Hero Photography Overlay -->
+    <div class="hero-bg-overlay absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-10 dark:opacity-15">
+      <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1600&q=80" alt="Hero visual ambience" class="w-full h-full object-cover object-center filter blur-[1px] transform scale-105">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8F6F1]/60 to-[#F8F6F1] dark:via-[#11191f]/60 dark:to-[#11191f]"></div>
+    </div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
@@ -692,6 +732,7 @@
   </div>
 
   <!-- Mobile Navigation Drawer (Houses all links, theme, RTL & login) -->
+  <!-- Mobile Navigation Drawer & Backdrop -->
   <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
   <aside id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-[85vw] h-full bg-[#F8F6F1] dark:bg-[#17232b] z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col justify-between" aria-label="Mobile Navigation">
     <div>
@@ -709,7 +750,7 @@
         </button>
       </div>
 
-      <!-- Drawer Controls (Theme & RTL) -->
+      <!-- Drawer Controls (Theme & Text-Only RTL) -->
       <div class="grid grid-cols-2 gap-2 mb-4 pb-4 border-b border-[#EBF1F4] dark:border-white/10">
         <button type="button" class="theme-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
           <i class="fas fa-moon moon-icon text-xs"></i>
@@ -717,16 +758,15 @@
           <span class="theme-label">Theme</span>
         </button>
         <button type="button" class="rtl-toggle-btn py-2 px-3 rounded-xl bg-white dark:bg-[#1e2d37] text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4] border border-[#EBF1F4] dark:border-white/10 flex items-center justify-center gap-2">
-          <i class="fas fa-globe text-xs"></i>
-          <span class="rtl-text">RTL</span>
+          <span class="rtl-text tracking-wider">RTL</span>
         </button>
       </div>
 
       <nav class="space-y-1.5 text-xs font-semibold text-[#27343B] dark:text-[#EBF1F4]">
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home</a>
-        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> The Wellness Journey</a>
+        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-compass text-[#D7B7A5] w-4"></i> Home 1 &middot; Multipurpose</a>
+        <a href="home-2.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-heart text-[#D7B7A5] w-4"></i> Home 2 &middot; Wellness Sanctuary</a>
         <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-shield-heart text-[#D7B7A5] w-4"></i> About Us</a>
-        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> Services</a>
+        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-hand-holding-heart text-[#D7B7A5] w-4"></i> Services Directory</a>
         <a href="therapists.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-user-md text-[#D7B7A5] w-4"></i> Therapists</a>
         <a href="resources.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-lungs text-[#D7B7A5] w-4"></i> Resources</a>
         <a href="pricing.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white dark:hover:bg-[#1e2d37] hover:text-[#D7B7A5] transition-colors"><i class="fas fa-tags text-[#D7B7A5] w-4"></i> Pricing</a>

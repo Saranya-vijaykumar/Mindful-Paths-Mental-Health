@@ -6,13 +6,32 @@
                Cormorant Garamond (Editorial Luxury Serif), Cairo (RTL)
    =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Letter 'f' and typography ligature normalization across all pages */
+*, *::before, *::after {
+  font-variant-ligatures: none !important;
+  -webkit-font-variant-ligatures: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading, .font-display, .font-serif-luxury, p, a, span, button {
+  font-feature-settings: "liga" 0, "dlig" 0, "hlig" 0, "calt" 1 !important;
+  font-variant-ligatures: none !important;
+  -webkit-font-feature-settings: "liga" 0, "dlig" 0, "hlig" 0, "calt" 1 !important;
+}
+
+/* Tablet & Desktop Dropdown Hover & Touch Reliability */
+header nav .group.is-open > div.absolute {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
 
 :root {
-  --font-heading: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Fraunces', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif-luxury: 'Cormorant Garamond', Georgia, serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-serif-luxury: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
   --font-rtl: 'Cairo', 'Outfit', sans-serif;
 
   /* Calm Oceanic Palette Specifications 🌊 */
@@ -797,8 +816,15 @@ html:not(.dark) footer h1,
 html:not(.dark) footer h2,
 html:not(.dark) footer h3,
 html:not(.dark) footer h4,
-html:not(.dark) footer .font-heading {
+html:not(.dark) footer .font-heading,
+html:not(.dark) footer a[title="Mindful Paths"] span,
+html:not(.dark) footer a[title="Mindful Paths"] .font-heading {
   color: #FFFFFF !important;
+}
+
+html:not(.dark) footer a[title="Mindful Paths"] svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
 }
 
 html:not(.dark) .bg-\[\#102B31\] .text-\[\#9DC3C8\],
