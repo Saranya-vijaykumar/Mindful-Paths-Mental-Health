@@ -956,3 +956,17 @@
     initApp();
   }
 })();
+
+  // ==========================================
+  // Global Email Lowercase Sanitizer
+  // ==========================================
+  document.addEventListener('input', function(e) {
+    if (e.target && e.target.type === 'email') {
+      var start = e.target.selectionStart;
+      var end = e.target.selectionEnd;
+      e.target.value = e.target.value.toLowerCase();
+      if (start !== null && end !== null) {
+        e.target.setSelectionRange(start, end);
+      }
+    }
+  });

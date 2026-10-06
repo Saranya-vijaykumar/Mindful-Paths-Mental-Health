@@ -277,13 +277,13 @@ function buildIndividualTherapistPage(t) {
           </div>
 
           <!-- Schedule Booking Action Box -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#294657] to-[#1d3340] text-white shadow-xl space-y-4">
+          <div class="p-6 sm:p-8 rounded-3xl bg-[#294657] dark:bg-[#11191f] text-white shadow-2xl space-y-5 border-2 border-[#8FAFC0]/40 relative overflow-hidden">
             <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
               <div>
                 <h4 class="font-heading text-xl font-bold">Schedule Intake with ${t.shortName}</h4>
                 <p class="text-xs text-[#EBF1F4]">Next available opening: <strong class="text-[#f0baa9]">${t.opening}</strong></p>
               </div>
-              <button type="button" class="open-appointment-btn px-8 py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-lg transition-all hover:scale-105 active:scale-95 shrink-0">
+              <button type="button" class="open-appointment-btn px-8 py-3.5 rounded-full bg-white text-[#294657] hover:bg-[#F8F6F1] hover:text-[#1d3340] text-xs font-black shadow-xl hover:shadow-2xl transition-all hover:scale-105 active:scale-95 shrink-0 uppercase tracking-wider">
                 Book Confidential Session
               </button>
             </div>

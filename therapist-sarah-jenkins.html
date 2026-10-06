@@ -128,8 +128,8 @@
 
 
   <!-- Top 24/7 Crisis Helpline & Support Bar -->
-  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 px-4 border-b border-white/10">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+  <div class="bg-[#1d3340] dark:bg-[#0e1f1e] text-[#F8F6F1] text-xs font-medium py-2.5 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="bg-[#D7B7A5]/20 text-[#f0baa9] border border-[#D7B7A5]/30 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-[#D7B7A5] animate-pulse"></span> 24/7 Crisis Support
@@ -394,24 +394,26 @@
             </div>
           </div>
 
-          <!-- Schedule Booking Action Box -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#294657] to-[#1d3340] text-white shadow-xl space-y-4">
-            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
-              <div>
-                <h4 class="font-heading text-xl font-bold">Schedule Intake with Dr. Sarah Jenkins</h4>
-                <p class="text-xs text-[#EBF1F4]">Next available opening: <strong class="text-[#f0baa9]">This Thursday at 2:00 PM EST</strong></p>
+          <!-- Schedule Booking Action Box (High Contrast in Bright & Dark Mode) -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-[#294657] dark:bg-[#11191f] text-white shadow-2xl space-y-5 border-2 border-[#8FAFC0]/40 relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-5 relative z-10">
+              <div class="space-y-1.5">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-[#F8F6F1] text-[11px] font-bold uppercase tracking-wider">
+                  <span class="w-2 h-2 rounded-full bg-[#8FAFC0] animate-pulse"></span> Intake Available
+                </span>
+                <h4 class="font-heading text-2xl font-bold text-white tracking-tight">Schedule Intake with Dr. Sarah Jenkins</h4>
+                <p class="text-xs text-[#EBF1F4]">Next available opening: <strong class="text-white font-bold underline decoration-[#D7B7A5] decoration-2">This Thursday at 2:00 PM EST</strong></p>
               </div>
-              <button type="button" class="open-appointment-btn px-8 py-3.5 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-lg transition-all hover:scale-105 active:scale-95 shrink-0">
+              <button type="button" class="open-appointment-btn px-8 py-3.5 rounded-full bg-white text-[#294657] hover:bg-[#F8F6F1] hover:text-[#1d3340] text-xs font-black shadow-xl hover:shadow-2xl transition-all hover:scale-105 active:scale-95 shrink-0 uppercase tracking-wider">
                 Book Confidential Session
               </button>
             </div>
-            <div class="pt-3 border-t border-white/15 flex flex-wrap gap-4 text-xs text-white/80">
-              <span><i class="fas fa-check-circle text-[#8FAFC0] mr-1"></i> Dedicated Clinical Hour</span>
-              <span><i class="fas fa-check-circle text-[#8FAFC0] mr-1"></i> Out-of-Network Superbills</span>
-              <span><i class="fas fa-check-circle text-[#8FAFC0] mr-1"></i> Manhattan Suite or Encrypted Video</span>
+            <div class="pt-4 border-t border-white/20 flex flex-wrap gap-5 text-xs text-white/90">
+              <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-[#8FAFC0]"></i> Dedicated Clinical Hour</span>
+              <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-[#8FAFC0]"></i> Out-of-Network Superbills</span>
+              <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-[#8FAFC0]"></i> Free 15-Min Phone Consult</span>
             </div>
           </div>
-
         </div>
 
       </div>

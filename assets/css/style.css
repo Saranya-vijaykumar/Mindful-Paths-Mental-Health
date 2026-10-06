@@ -28,10 +28,10 @@ header nav .group.is-open > div.absolute {
 }
 
 :root {
-  --font-heading: 'Fraunces', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Playfair Display', 'Plus Jakarta Sans', Georgia, serif;
   --font-sans: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif-luxury: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
   --font-rtl: 'Cairo', 'Outfit', sans-serif;
 
   /* Calm Oceanic Palette Specifications 🌊 */
@@ -104,8 +104,8 @@ body {
 /* Stylish Headings with bespoke editorial elegance */
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: var(--font-heading);
-  letter-spacing: -0.025em;
-  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: -0.02em;
+  font-feature-settings: "kern" 1, "liga" 0, "dlig" 0, "calt" 1;
   color: var(--color-teal);
   line-height: 1.22;
   text-rendering: optimizeLegibility;
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Headings with Italic Accent flourish */
 .font-heading em, .font-heading i, .stylish-italic {
-  font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 400;
   color: var(--color-accent);
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Luxury Editorial Quotes */
 blockquote, .quote-editorial {
-  font-family: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-style: italic;
   letter-spacing: -0.01em;
 }
@@ -817,14 +817,24 @@ html:not(.dark) footer h2,
 html:not(.dark) footer h3,
 html:not(.dark) footer h4,
 html:not(.dark) footer .font-heading,
+footer a[title="Mindful Paths"],
+footer a[title="Mindful Paths"] span,
+footer a[title="Mindful Paths"] .font-heading,
+html:not(.dark) footer a[title="Mindful Paths"],
 html:not(.dark) footer a[title="Mindful Paths"] span,
 html:not(.dark) footer a[title="Mindful Paths"] .font-heading {
   color: #FFFFFF !important;
 }
 
+footer a[title="Mindful Paths"] svg,
 html:not(.dark) footer a[title="Mindful Paths"] svg {
   color: #FFFFFF !important;
   fill: #FFFFFF !important;
+}
+
+footer a[title="Mindful Paths"] .bg-gradient-to-tr,
+html:not(.dark) footer a[title="Mindful Paths"] .bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, #D7B7A5, #e6c8b9) !important;
 }
 
 html:not(.dark) .bg-\[\#102B31\] .text-\[\#9DC3C8\],
@@ -2087,7 +2097,7 @@ html.dark .breathe-circle-inner {
 }
 
 .breathe-status-title {
-  font-family: var(--font-heading, 'Fraunces', serif);
+  font-family: var(--font-heading, 'Playfair Display', serif);
   letter-spacing: -0.01em;
 }
 
