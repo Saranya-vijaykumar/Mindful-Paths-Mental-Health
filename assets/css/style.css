@@ -2118,3 +2118,21 @@ body.page-is-leaving {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Universal High-Contrast Rule: All headings in dark containers or with text-white are ALWAYS white */
+.text-white,
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6, .text-white .font-heading,
+[class*="text-white"] h1, [class*="text-white"] h2, [class*="text-white"] h3, [class*="text-white"] h4, [class*="text-white"] h5, [class*="text-white"] h6, [class*="text-white"] .font-heading,
+h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white, .font-heading.text-white,
+[class*="from-[#294657]"] h1, [class*="from-[#294657]"] h2, [class*="from-[#294657]"] h3, [class*="from-[#294657]"] h4, [class*="from-[#294657]"] .font-heading,
+[class*="from-[#1d3340]"] h1, [class*="from-[#1d3340]"] h2, [class*="from-[#1d3340]"] h3, [class*="from-[#1d3340]"] h4, [class*="from-[#1d3340]"] .font-heading,
+[class*="bg-[#294657]"] h1, [class*="bg-[#294657]"] h2, [class*="bg-[#294657]"] h3, [class*="bg-[#294657]"] h4, [class*="bg-[#294657]"] .font-heading,
+[class*="bg-[#1d3340]"] h1, [class*="bg-[#1d3340]"] h2, [class*="bg-[#1d3340]"] h3, [class*="bg-[#1d3340]"] h4, [class*="bg-[#1d3340]"] .font-heading,
+html:not(.dark) [class*="from-[#294657]"] h1, html:not(.dark) [class*="from-[#294657]"] h2, html:not(.dark) [class*="from-[#294657]"] h3, html:not(.dark) [class*="from-[#294657]"] h4, html:not(.dark) [class*="from-[#294657]"] .font-heading,
+html:not(.dark) [class*="from-[#1d3340]"] h1, html:not(.dark) [class*="from-[#1d3340]"] h2, html:not(.dark) [class*="from-[#1d3340]"] h3, html:not(.dark) [class*="from-[#1d3340]"] h4, html:not(.dark) [class*="from-[#1d3340]"] .font-heading,
+html:not(.dark) [class*="bg-[#294657]"] h1, html:not(.dark) [class*="bg-[#294657]"] h2, html:not(.dark) [class*="bg-[#294657]"] h3, html:not(.dark) [class*="bg-[#294657]"] h4, html:not(.dark) [class*="bg-[#294657]"] .font-heading,
+html:not(.dark) [class*="bg-[#1d3340]"] h1, html:not(.dark) [class*="bg-[#1d3340]"] h2, html:not(.dark) [class*="bg-[#1d3340]"] h3, html:not(.dark) [class*="bg-[#1d3340]"] h4, html:not(.dark) [class*="bg-[#1d3340]"] .font-heading,
+html:not(.dark) .text-white h1, html:not(.dark) .text-white h2, html:not(.dark) .text-white h3, html:not(.dark) .text-white h4, html:not(.dark) .text-white .font-heading,
+html:not(.dark) [class*="text-white"] h1, html:not(.dark) [class*="text-white"] h2, html:not(.dark) [class*="text-white"] h3, html:not(.dark) [class*="text-white"] h4, html:not(.dark) [class*="text-white"] .font-heading {
+  color: #FFFFFF !important;
+}
