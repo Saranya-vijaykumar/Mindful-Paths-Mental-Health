@@ -41,9 +41,6 @@
     localStorage.setItem('calmind_theme', isDark ? 'dark' : 'light');
     localStorage.setItem('serenemind_theme', isDark ? 'dark' : 'light');
     updateThemeIcons(isDark);
-    if (window.showToast) {
-      window.showToast(`Switched to ${isDark ? 'Dark' : 'Light'} Mode`, 'info', 2000);
-    }
   }
 
   window.toggleTheme = toggleTheme;

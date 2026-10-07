@@ -817,23 +817,63 @@ html:not(.dark) footer h2,
 html:not(.dark) footer h3,
 html:not(.dark) footer h4,
 html:not(.dark) footer .font-heading,
+/* Bulletproof Universal Footer Logo Preservation: Invariant across Light and Dark Themes */
 footer a[title="Mindful Paths"],
 footer a[title="Mindful Paths"] span,
 footer a[title="Mindful Paths"] .font-heading,
+footer a[title*="Mindful Paths"],
+footer a[title*="Mindful Paths"] span,
+footer a[title*="Mindful Paths"] .font-heading,
+footer a.group[href*="index.html"],
+footer a.group[href*="index.html"] span,
+footer a.group[href*="index.html"] .font-heading,
+footer .footer-brand-logo,
+footer .footer-brand-logo span,
+footer .footer-brand-logo .font-heading,
 html:not(.dark) footer a[title="Mindful Paths"],
 html:not(.dark) footer a[title="Mindful Paths"] span,
-html:not(.dark) footer a[title="Mindful Paths"] .font-heading {
+html:not(.dark) footer a[title="Mindful Paths"] .font-heading,
+html:not(.dark) footer a[title*="Mindful Paths"],
+html:not(.dark) footer a[title*="Mindful Paths"] span,
+html:not(.dark) footer a[title*="Mindful Paths"] .font-heading,
+html:not(.dark) footer a.group[href*="index.html"],
+html:not(.dark) footer a.group[href*="index.html"] span,
+html:not(.dark) footer a.group[href*="index.html"] .font-heading,
+html:not(.dark) footer .footer-brand-logo,
+html:not(.dark) footer .footer-brand-logo span,
+html:not(.dark) footer .footer-brand-logo .font-heading,
+footer a[title*="Mindful Paths"]:hover,
+footer a[title*="Mindful Paths"]:hover span,
+footer a[title*="Mindful Paths"]:visited,
+footer a[title*="Mindful Paths"]:visited span,
+footer a[title*="Mindful Paths"]:focus,
+footer a[title*="Mindful Paths"]:focus span {
   color: #FFFFFF !important;
+  text-decoration: none !important;
 }
 
-footer a[title="Mindful Paths"] svg,
-html:not(.dark) footer a[title="Mindful Paths"] svg {
+footer a[title*="Mindful Paths"] svg,
+footer a.group[href*="index.html"] svg,
+footer .footer-brand-logo svg,
+html:not(.dark) footer a[title*="Mindful Paths"] svg,
+html:not(.dark) footer a.group[href*="index.html"] svg,
+html:not(.dark) footer .footer-brand-logo svg {
   color: #FFFFFF !important;
   fill: #FFFFFF !important;
 }
 
-footer a[title="Mindful Paths"] .bg-gradient-to-tr,
-html:not(.dark) footer a[title="Mindful Paths"] .bg-gradient-to-tr {
+footer a[title*="Mindful Paths"] .bg-gradient-to-tr,
+footer a[title*="Mindful Paths"] div.rounded-2xl,
+footer a.group[href*="index.html"] .bg-gradient-to-tr,
+footer a.group[href*="index.html"] div.rounded-2xl,
+footer .footer-brand-logo .bg-gradient-to-tr,
+footer .footer-brand-logo div.rounded-2xl,
+html:not(.dark) footer a[title*="Mindful Paths"] .bg-gradient-to-tr,
+html:not(.dark) footer a[title*="Mindful Paths"] div.rounded-2xl,
+html:not(.dark) footer a.group[href*="index.html"] .bg-gradient-to-tr,
+html:not(.dark) footer a.group[href*="index.html"] div.rounded-2xl,
+html:not(.dark) footer .footer-brand-logo .bg-gradient-to-tr,
+html:not(.dark) footer .footer-brand-logo div.rounded-2xl {
   background-image: linear-gradient(to top right, #D7B7A5, #e6c8b9) !important;
 }
 
