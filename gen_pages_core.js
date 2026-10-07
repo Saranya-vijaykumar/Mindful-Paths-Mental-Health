@@ -2187,7 +2187,7 @@ function buildContact() {
           </div>
         </div>
 
-        <div class="lg:col-span-7 lg:mt-6">
+        <div class="lg:col-span-7 mt-6 lg:mt-16">
           <div class="p-8 rounded-3xl bg-[#F8F6F1] dark:bg-[#11191f] border border-[#EBF1F4] dark:border-white/10 space-y-4 shadow-sm">
             <h2 class="font-heading text-2xl font-bold text-[#294657] dark:text-[#F8F6F1]">Send a Confidential Inquiry</h2>
             <form id="contact-inquiry-form" class="space-y-4 text-xs">
