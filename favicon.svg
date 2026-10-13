@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D7B7A5"/>
+      <stop offset="100%" stop-color="#C5A390"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded Squircle Background -->
+  <rect x="2" y="2" width="60" height="60" rx="16" ry="16" fill="url(#mpGrad)"/>
+  <!-- Signature Mindful Paths Heart Icon -->
+  <path d="M32 46.7l-2.9-2.64C18.8 34.72 12 28.56 12 21c0-6.16 4.84-11 11-11 3.48 0 6.82 1.62 9 4.18C34.18 11.62 37.52 10 41 10c6.16 0 11 4.84 11 11 0 7.56-6.8 13.72-17.1 23.08L32 46.7z" fill="#FFFFFF"/>
+</svg>
