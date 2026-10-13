@@ -109,8 +109,8 @@
           },
           fontFamily: {
             sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Fraunces"', '"Cormorant Garamond"', 'Georgia', 'serif'],
-            display: ['"Fraunces"', 'serif'],
+            heading: ['"Playfair Display"', '"Plus Jakarta Sans"', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', '"Plus Jakarta Sans"', 'Georgia', 'serif'],
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             rtl: ['"Cairo"', '"Outfit"', 'sans-serif']
           }
@@ -139,75 +139,130 @@
     })();
   </script>
   </head>
-<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-[#F8F6F1] text-[#27343B] dark:bg-[#11191f] dark:text-[#F8F6F1] transition-colors duration-300 min-h-screen flex flex-col lg:flex-row antialiased">
   
 
 
-  <!-- Client Portal Top Navigation Bar -->
-  <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#EBF1F4] dark:border-white/10 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
-      <!-- Brand & Section -->
-      <div class="flex items-center gap-4">
-        <a href="index.html" class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-[#D7B7A5] flex items-center justify-center text-white">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <!-- Backdrop for Mobile / Tablet Sidebar Drawer -->
+  <div id="dashboard-sidebar-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity duration-300"></div>
+
+  <!-- DEDICATED SANCTUARY SIDEBAR NAVIGATION -->
+  <aside id="dashboard-sidebar" class="fixed inset-y-0 left-0 rtl:left-auto rtl:right-0 z-50 w-72 bg-white dark:bg-[#17232b] border-r rtl:border-r-0 rtl:border-l border-[#EBF1F4] dark:border-white/10 flex flex-col justify-between p-6 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 transition-transform duration-300 shadow-2xl lg:shadow-none lg:static lg:h-screen lg:shrink-0">
+    <div class="space-y-6">
+      <!-- Sanctuary Brand Logo -->
+      <div class="flex items-center justify-between pb-5 border-b border-[#EBF1F4] dark:border-white/10">
+        <a href="index.html" class="flex items-center gap-3 group" title="Mindful Paths — Sanctuary">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#D7B7A5] to-[#e6c8b9] flex items-center justify-center text-white shadow-md shadow-[#D7B7A5]/25 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           </div>
-          <span class="font-heading font-bold text-lg text-[#294657] dark:text-[#F8F6F1]">Mindful Paths</span>
+          <div>
+            <span class="font-heading text-lg font-bold text-[#294657] dark:text-[#F8F6F1] block leading-none">Mindful Paths</span>
+            <span class="text-[10px] text-[#8FAFC0] uppercase tracking-wider font-bold">Client Sanctuary</span>
+          </div>
         </a>
-        <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#8FAFC0]/20 text-[#294657] dark:text-[#8FAFC0] font-bold hidden sm:inline-block">Client Sanctuary</span>
+        <button type="button" id="dashboard-sidebar-close" class="lg:hidden text-[#27343B] dark:text-[#CBD5E1] p-2 rounded-xl hover:bg-[#F8F6F1] dark:hover:bg-white/5" aria-label="Close Sidebar">
+          <i class="fas fa-times text-base"></i>
+        </button>
       </div>
 
-      <!-- Desktop Links -->
-      <nav class="hidden md:flex items-center gap-5 text-xs font-bold text-[#27343B] dark:text-[#EBF1F4]">
-        <a href="dashboard.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
-          <i class="fas fa-th-large mr-1"></i> Sanctuary
+      <!-- Navigation Links -->
+      <nav class="space-y-1 text-xs font-semibold">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-[#27343B] dark:text-[#CBD5E1] hover:bg-[#FAF8F5] dark:hover:bg-white/5 hover:text-[#D7B7A5] transition-colors">
+          <i class="fas fa-th-large w-4 text-center"></i>
+          <span>Sanctuary Overview</span>
         </a>
-        <a href="appointments.html" class="hover:text-[#D7B7A5] py-1 transition-colors text-[#D7B7A5] border-b-2 border-[#D7B7A5]">
-          <i class="far fa-calendar-alt mr-1"></i> Appointments
+        <a href="appointments.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#D7B7A5]/15 text-[#D7B7A5] font-bold shadow-sm transition-colors">
+          <i class="far fa-calendar-alt w-4 text-center"></i>
+          <span>My Appointments</span>
         </a>
-        <a href="messages.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
-          <i class="far fa-comments mr-1"></i> Messages
+        <a href="messages.html" class="flex items-center justify-between px-4 py-3 rounded-2xl text-[#27343B] dark:text-[#CBD5E1] hover:bg-[#FAF8F5] dark:hover:bg-white/5 hover:text-[#D7B7A5] transition-colors">
+          <div class="flex items-center gap-3">
+            <i class="far fa-comments w-4 text-center"></i>
+            <span>Counselor Chat</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-[#8FAFC0] text-white text-[10px] font-bold">2 New</span>
         </a>
-        <a href="mood-journal.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
-          <i class="far fa-smile mr-1"></i> Mood Journal
+        <a href="mood-journal.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-[#27343B] dark:text-[#CBD5E1] hover:bg-[#FAF8F5] dark:hover:bg-white/5 hover:text-[#D7B7A5] transition-colors">
+          <i class="far fa-smile w-4 text-center"></i>
+          <span>Mood Tracker</span>
         </a>
-        <a href="shared-notes.html" class="hover:text-[#D7B7A5] py-1 transition-colors ">
-          <i class="far fa-file-alt mr-1"></i> Shared Notes
+        <a href="shared-notes.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-[#27343B] dark:text-[#CBD5E1] hover:bg-[#FAF8F5] dark:hover:bg-white/5 hover:text-[#D7B7A5] transition-colors">
+          <i class="far fa-file-alt w-4 text-center"></i>
+          <span>Shared Care Notes</span>
         </a>
       </nav>
 
-      <!-- Right Profile & Logout -->
-      <div class="flex items-center gap-3">
-        <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-full bg-[#F8F6F1] dark:bg-[#1e2d37] text-[#27343B] dark:text-[#F8F6F1] flex items-center justify-center border border-[#EBF1F4] dark:border-white/10" aria-label="Toggle Theme">
-          <i class="fas fa-moon moon-icon text-xs"></i>
-          <i class="fas fa-sun sun-icon text-xs hidden"></i>
-        </button>
-
-        <!-- User Profile Pill -->
-        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F8F6F1] dark:bg-[#1e2d37] border border-[#EBF1F4] dark:border-white/10">
-          <div class="w-6 h-6 rounded-full bg-[#D7B7A5] text-white flex items-center justify-center text-[10px] font-bold">AM</div>
-          <span class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1] hidden sm:inline" id="portal-user-name">Alex Morgan</span>
+      <!-- Quick Emergency Hotline Card in Sidebar -->
+      <div class="p-4 rounded-2xl bg-[#EBF1F4]/70 dark:bg-white/5 border border-[#EBF1F4] dark:border-white/10 space-y-2">
+        <div class="flex items-center gap-2 text-rose-500 font-bold text-xs">
+          <i class="fas fa-heart-pulse"></i> 24/7 Crisis Support
         </div>
+        <p class="text-[11px] text-[#27343B] dark:text-[#CBD5E1] leading-relaxed">
+          Need urgent help? Call or text <a href="tel:988" class="font-bold underline text-[#D7B7A5]">988</a> anytime for confidential support.
+        </p>
+      </div>
+    </div>
 
-        <!-- Safe Logout Button -->
-        <button type="button" id="auth-logout-btn" data-action="logout" class="px-3.5 py-1.5 rounded-full bg-red-50 hover:bg-red-100 text-red-600 dark:bg-red-900/20 dark:hover:bg-red-900/40 dark:text-red-300 text-xs font-bold transition-colors flex items-center gap-1.5" title="Sign Out Safely">
-          <i class="fas fa-sign-out-alt"></i> <span class="hidden sm:inline">Sign Out</span>
-        </button>
+    <!-- User Profile & Website Return Controls -->
+    <div class="pt-5 border-t border-[#EBF1F4] dark:border-white/10 space-y-3">
+      <!-- Profile Snapshot -->
+      <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-[#FAF8F5] dark:bg-white/5 border border-[#EBF1F4] dark:border-white/10">
+        <div class="w-10 h-10 rounded-full bg-[#D7B7A5] text-white flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
+          AM
+        </div>
+        <div class="overflow-hidden">
+          <div class="text-xs font-bold text-[#294657] dark:text-[#F8F6F1] truncate">Alex Morgan</div>
+          <div class="text-[10px] text-[#8FAFC0] truncate">alex@example.com</div>
+        </div>
       </div>
 
-    </div>
+      <!-- Return to Public Site Link -->
+      <a href="index.html" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#EBF1F4] dark:bg-white/5 hover:bg-[#D7B7A5] hover:text-white text-[#294657] dark:text-[#CBD5E1] text-xs font-bold transition-all duration-200">
+        <i class="fas fa-arrow-left text-[11px]"></i> Return to Main Website
+      </a>
 
-    <!-- Mobile Subnav Bar -->
-    <div class="md:hidden flex items-center justify-around py-2 border-t border-[#EBF1F4] dark:border-white/10 text-[11px] font-bold text-[#27343B] dark:text-[#EBF1F4]">
-      <a href="dashboard.html" class=""><i class="fas fa-th-large block text-center text-xs"></i> Overview</a>
-      <a href="appointments.html" class="text-[#D7B7A5]"><i class="far fa-calendar-alt block text-center text-xs"></i> Sessions</a>
-      <a href="messages.html" class=""><i class="far fa-comments block text-center text-xs"></i> Chat</a>
-      <a href="mood-journal.html" class=""><i class="far fa-smile block text-center text-xs"></i> Mood</a>
-      <a href="shared-notes.html" class=""><i class="far fa-file-alt block text-center text-xs"></i> Notes</a>
+      <!-- Safe Sign Out Button -->
+      <button type="button" id="auth-logout-btn" data-action="logout" class="flex items-center justify-center gap-2 w-full py-2 rounded-xl text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/20 text-xs font-bold transition-colors">
+        <i class="fas fa-sign-out-alt"></i> Sign Out Safely
+      </button>
     </div>
-  </header>
+  </aside>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <div class="flex-1 flex flex-col min-h-screen overflow-y-auto">
+    
+    <!-- Top Action Bar (Mobile Toggle + Utilities) -->
+    <header class="sticky top-0 z-30 bg-white/95 dark:bg-[#17232b]/95 backdrop-blur-md border-b border-[#EBF1F4] dark:border-white/10 px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between gap-4 shadow-sm">
+      <div class="flex items-center gap-3">
+        <!-- Mobile Sidebar Toggle -->
+        <button type="button" id="dashboard-sidebar-toggle" class="lg:hidden w-11 h-11 rounded-2xl bg-[#FAF8F5] dark:bg-white/5 border border-[#EBF1F4] dark:border-white/10 text-[#294657] dark:text-[#F8F6F1] flex items-center justify-center text-base" aria-label="Open Sidebar Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div>
+          <h1 class="font-heading text-lg sm:text-xl font-bold text-[#294657] dark:text-[#F8F6F1]">My Appointments</h1>
+          <p class="text-[11px] text-[#8FAFC0] hidden sm:block">Upcoming and past clinical therapy sessions</p>
+        </div>
+      </div>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Theme Toggle: w-11 h-11 -->
+        <button type="button" class="theme-toggle-btn w-11 h-11 rounded-full bg-[#FAF8F5] dark:bg-white/5 border border-[#EBF1F4] dark:border-white/10 text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] flex items-center justify-center transition-colors shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon moon-icon text-sm"></i>
+          <i class="fas fa-sun sun-icon text-sm hidden"></i>
+        </button>
+
+        <!-- RTL Toggle: h-11 px-4, text-only -->
+        <button type="button" class="rtl-toggle-btn px-4 h-11 rounded-full bg-[#FAF8F5] dark:bg-white/5 border border-[#EBF1F4] dark:border-white/10 text-[#27343B] dark:text-[#F8F6F1] hover:text-[#D7B7A5] text-xs font-bold transition-colors flex items-center justify-center shadow-sm" title="Toggle Direction" aria-label="Toggle Direction">
+          <span class="rtl-text tracking-wider">RTL</span>
+        </button>
+
+        <!-- Book Next Session CTA -->
+        <button type="button" class="open-appointment-btn px-5 h-11 rounded-full bg-[#D7B7A5] hover:bg-[#c5a390] text-white text-xs font-bold shadow-md shadow-[#D7B7A5]/25 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+          <i class="far fa-calendar-plus"></i> <span class="hidden sm:inline">Book Session</span>
+        </button>
+      </div>
+    </header>
   
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
@@ -576,6 +631,37 @@
   </button>
 
   <!-- Core JavaScript Engines -->
+    </div> <!-- End Main Content Container -->
+
+  <script>
+    (function() {
+      const sidebar = document.getElementById('dashboard-sidebar');
+      const backdrop = document.getElementById('dashboard-sidebar-backdrop');
+      const toggleBtn = document.getElementById('dashboard-sidebar-toggle');
+      const closeBtn = document.getElementById('dashboard-sidebar-close');
+
+      function openSidebar() {
+        if (!sidebar || !backdrop) return;
+        sidebar.classList.remove('-translate-x-full', 'rtl:translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        backdrop.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSidebar() {
+        if (!sidebar || !backdrop) return;
+        sidebar.classList.remove('translate-x-0');
+        sidebar.classList.add('-translate-x-full', 'rtl:translate-x-full');
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (toggleBtn) toggleBtn.addEventListener('click', openSidebar);
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (backdrop) backdrop.addEventListener('click', closeSidebar);
+    })();
+  </script>
+
   <script src="assets/js/main.js"></script>
   <script src="assets/js/auth.js"></script>
 </body>
