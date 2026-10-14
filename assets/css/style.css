@@ -2182,47 +2182,53 @@ html:not(.dark) [class*="text-white"] h1, html:not(.dark) [class*="text-white"] 
    Prevents CTA button clipping & crowded link wrapping on iPad Pro / 1024px laptops
    =================================================================== */
 @media (min-width: 1024px) and (max-width: 1279px) {
+  /* Aligns navbar container with exact lg:px-8 (2rem / 32px) margins of the entire page */
   #main-header .max-w-7xl {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
   #main-header nav {
-    gap: 0.5rem !important; /* 8px gap */
+    gap: 0.35rem !important; /* Precise compact spacing so all 7 links fit with zero overflow */
     font-size: 11px !important;
   }
   #main-header nav > div > a,
   #main-header nav > a {
-    padding-left: 2px !important;
-    padding-right: 2px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    white-space: nowrap !important;
   }
   #main-header .shrink-0:has(.theme-toggle-btn),
-  #main-header div.hidden.lg\:flex.items-center.gap-2\.5 {
-    gap: 0.375rem !important; /* 6px gap */
+  #main-header div.hidden.lg\:flex.items-center.gap-2\.5,
+  #main-header div.hidden.lg\:flex.items-center.shrink-0 {
+    gap: 0.35rem !important;
   }
   #main-header .theme-toggle-btn {
-    width: 2.25rem !important; /* 36px */
-    height: 2.25rem !important;
+    width: 2.125rem !important;
+    height: 2.125rem !important;
+    min-width: 2.125rem !important;
   }
   #main-header .rtl-toggle-btn {
-    height: 2.25rem !important;
-    padding-left: 0.625rem !important; /* 10px */
-    padding-right: 0.625rem !important;
+    height: 2.125rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
     font-size: 11px !important;
   }
+  #main-header .nav-auth-btn,
   #main-header .open-appointment-btn,
   #main-header .btn-terracotta,
   #main-header a.btn-terracotta {
-    height: 2.25rem !important;
-    padding-left: 0.75rem !important; /* 12px */
-    padding-right: 0.75rem !important;
+    height: 2.125rem !important;
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
     font-size: 11px !important;
+    white-space: nowrap !important;
   }
   #main-header a[title*="Mindful Paths"] span {
-    font-size: 1.25rem !important; /* 20px */
+    font-size: 1.15rem !important;
   }
   #main-header a[title*="Mindful Paths"] div {
-    width: 2.25rem !important;
-    height: 2.25rem !important;
+    width: 2.125rem !important;
+    height: 2.125rem !important;
   }
 }
 
